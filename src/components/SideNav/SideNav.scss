@@ -5,83 +5,71 @@
   top: 0;
   left: 0;
   background: rgba(42, 188, 161, 0.05);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr; 
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; 
+  gap: 20px 20px;
+  font-size: 12px;
 
-  &__dashboard {
+
+
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: space-around;
+  // align-items: center;
+
+  &__logo {
+    display: flex;
+    align-self: center;
+    justify-self: center;
+    grid-area: 1 / 1 / 3 / 2;
+    height: 71.8px;
+    width: 73px;
+  }
+
+  &__items {
+    grid-area: 3 / 1 / 5 / 2;
+    color: #AAB3BE;
+    font-weight: 500;
+  }
+
+  &__item {
     width: 177px;
     height: 44px;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    // margin-top: 40px;
+    margin-bottom: 25px;
   } 
 
-  &__dashboard:hover {
+  &__item:hover {
     background-color: #DAF0ED;
     border-radius: 15px;
   }
 
-
-  &__security {
-    width: 177px;
-    height: 44px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-  } 
-
-  &__security:hover {
-    background-color: #DAF0ED;
-    border-radius: 15px;
-  }
-
-  &__devices {
-    width: 177px;
-    height: 44px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-  } 
-
-  &__deivces:hover {
-    background-color: #DAF0ED;
-    border-radius: 15px;
-  }
-
-  &__network {
-    width: 177px;
-    height: 44px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-  } 
-
-  &__network:hover {
-    background-color: #DAF0ED;
-    border-radius: 15px;
-  }
-
-  &__settings {
-    width: 177px;
-    height: 44px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-  } 
-
-  &__settings:hover {
-    background-color: #DAF0ED;
-    border-radius: 15px;
-  }
 
   &__logout {
+    background: #2ABCA1;
+    border-radius: 18px;
+    width: 133px;
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-self: center; 
+    align-self: center; 
+    // text-align:center;
+    color: white;
+    font-weight: 700;
+    grid-area: 9 / 1 / 10 / 2;
+  }
+
+  &__item--image {
+    height: 20px;
+    width: 18.5px;
+    margin-right: 10px;
     
   }
 
