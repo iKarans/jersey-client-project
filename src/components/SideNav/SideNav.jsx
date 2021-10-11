@@ -9,24 +9,30 @@ const SideNav = () => {
         
       </div>
 
-      <div className="sidenav__dashboard">
-        <p href="#section">Dashboard</p>
+      <div className="sidenav__menu--items">
+        <div className="sidenav__dashboard">
+          <p>Dashboard</p>
+        </div>
+
+        <div className="sidenav__security">
+          <p>Security</p>
+        </div>
+
+        <div className="sidenav__devices">
+          <p>Device</p>
+        </div>
+
+        <div className="sidenav__network">
+          <p>Network</p>
+        </div>
+
+        <div className="sidenav__settings">
+          <p>Settings</p>
+        </div>
       </div>
 
-      <div className="sidenav__security">
-        <p href="#section">Security</p>
-      </div>
-
-      <div className="sidenav__devices">
-        <p href="#section">Device</p>
-      </div>
-
-      <div className="sidenav__network">
-        <p href="#section">Network</p>
-      </div>
-
-      <div className="sidenav__settings">
-        <p href="#section">Settings</p>
+      <div className="sidenav__logout">
+        <p>Logout</p>
       </div>
 
     </div>
