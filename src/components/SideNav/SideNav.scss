@@ -1,0 +1,83 @@
+.sidenav {
+  height: 100%;
+  width: 227px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(42, 188, 161, 0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__dashboard {
+    width: 177px;
+    height: 44px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  } 
+
+  &__dashboard:hover {
+    background-color: #DAF0ED;
+    border-radius: 15px;
+  }
+
+
+  &__security {
+    width: 177px;
+    height: 44px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  } 
+
+  &__security:hover {
+    background-color: #DAF0ED;
+    border-radius: 15px;
+  }
+
+  &__devices {
+    width: 177px;
+    height: 44px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  } 
+
+  &__deivces:hover {
+    background-color: #DAF0ED;
+    border-radius: 15px;
+  }
+
+  &__network {
+    width: 177px;
+    height: 44px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  } 
+
+  &__network:hover {
+    background-color: #DAF0ED;
+    border-radius: 15px;
+  }
+
+  &__settings {
+    width: 177px;
+    height: 44px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  } 
+
+  &__settings:hover {
+    background-color: #DAF0ED;
+    border-radius: 15px;
+  }
+
+}
