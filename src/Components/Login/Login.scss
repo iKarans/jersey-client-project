@@ -88,12 +88,12 @@
             font-size: 0.75rem;
             font-weight: 400;
             color: $text-tertiary;
+            margin: 0.5rem auto;
 
             a {
                 font-size: 0.75rem;
                 font-weight: 600;
                 color: $text-tertiary;
-                
             }
         }
 
@@ -102,7 +102,13 @@
             font-weight: 600;
             color: $text-tertiary;
             text-decoration: none;
-            
+        }
+
+        &--chat-button {
+            padding-top: 1rem;
+            margin-right: 2rem;
+            align-self: flex-end;
+            cursor: pointer;
         }
     }
 }
