@@ -1,3 +1,15 @@
 @use "../../assets/styles/variables" as*;
 @use "../../assets/styles/mixins" as*;
 @use "../../assets/styles/typography" as*;
+
+.login {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(110.53deg, #2ABCA1 4.37%, #0A7AA7 98.99%);
+    
+    &__page {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
