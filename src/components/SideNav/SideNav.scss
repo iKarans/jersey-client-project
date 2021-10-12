@@ -52,12 +52,15 @@
     // padding-left: 50px;
     color: #2ABCA1;
 
+    svg path {
+      fill: #2ABCA1;
+    }
+
   }
 
-  &__item:hover .--image {
-    fill: #2ABCA1;
-
-  }
+  // &__item:hover .--image {
+  //   fill: #2ABCA1;
+  // }
 
 
   &__logout {
@@ -85,10 +88,10 @@
 
   }
 
-  &__item--image:hover path {
-    fill: #2ABCA1;
-    transition: all ease 0.3s;
-  }
+  // &__item--image:hover path {
+  //   fill: #2ABCA1;
+  //   transition: all ease 0.3s;
+  // }
 
 
 }
