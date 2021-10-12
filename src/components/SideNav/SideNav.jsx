@@ -1,18 +1,18 @@
 import React from 'react';
 import "./SideNav.scss";
-import home from "../../assets/nav/home.svg";
-import security from "../../assets/nav/security.svg";
-import device from "../../assets/nav/device.svg";
-import network from "../../assets/nav/network.svg";
-import settings from "../../assets/nav/settings.svg";
-import logo from "../../assets/global/lujam-logo-green.svg"
-import { ReactComponent as DevicesIcon } from "../../assets/nav/device.svg"
+import logo from "../../assets/global/lujam-logo-green.svg";
+import { ReactComponent as HomeIcon } from "../../assets/nav/home.svg";
+import { ReactComponent as SecurityIcon } from "../../assets/nav/security.svg";
+import { ReactComponent as DevicesIcon } from "../../assets/nav/device.svg";
+import { ReactComponent as NetworkIcon } from "../../assets/nav/network.svg";
+import { ReactComponent as SettingsIcon } from "../../assets/nav/settings.svg";
+import greyDropdown from "../../assets/global/grey-dropdown.svg";
 
 
 const SideNav = () => {
   return (
 
-    <div className="sidenav">
+    <div className="navigation">
 
       <div className="sidenav">
 
@@ -21,11 +21,11 @@ const SideNav = () => {
         </div>
         <div className="sidenav__items">
           <div className="sidenav__dashboard sidenav__item">
-            <img className="sidenav__item--image" src={home} alt="" />
+            <HomeIcon className="sidenav__item--image" />
             <p>Dashboard</p>
           </div>
           <div className="sidenav__security sidenav__item">
-            <img className="sidenav__item--image" src={security} alt="" />
+            <SecurityIcon className="sidenav__item--image" />
             <p>Security</p>
           </div>
           <div className="sidenav__devices sidenav__item">
@@ -33,11 +33,11 @@ const SideNav = () => {
             <p>Device</p>
           </div>
           <div className="sidenav__network sidenav__item">
-            <img className="sidenav__item--image" src={network} alt="" />
+            <NetworkIcon className="sidenav__item--image" />
             <p>Network</p>
           </div>
           <div className="sidenav__settings sidenav__item">
-            <img className="sidenav__item--image" src={settings} alt="" />
+            <SettingsIcon className="sidenav__item--image" />
             <p>Settings</p>
           </div>
         </div>
@@ -45,7 +45,16 @@ const SideNav = () => {
           <p>Logout</p>
         </div>
       </div>
-    
+
+      <div className="mobileNav">
+        <div>
+        
+        <p>Dashboard</p>
+        </div>
+        <img className="sidenav__item--image" src={greyDropdown} alt="" />
+
+      </div>
+
     </div>
 
 
