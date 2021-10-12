@@ -1,0 +1,11 @@
+@use "../../assets/styles/variables" as *;
+
+.user-bar {
+  position: absolute;
+  width: 1178px;
+  height: 100px;
+  left: 0px;
+  top: 0px;
+  background: #4fd1c5;
+  border-radius: 7px;
+}

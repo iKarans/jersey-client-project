@@ -1,0 +1,22 @@
+@use "../../../assets/styles/variables" as *;
+@use "../../../assets/styles/typography" as *;
+@use "../../../assets/styles/mixins" as *;
+
+.device-ID {
+  position: absolute;
+  width: 109px;
+  height: 15px;
+  left: 32px;
+  top: 23px;
+
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 15px;
+  /* identical to box height */
+
+  display: flex;
+  align-items: center;
+
+  color: $text-tertiary;
+}
