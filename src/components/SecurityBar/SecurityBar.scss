@@ -41,6 +41,9 @@
 &__buttons {
   width: 40%;
   height: 52%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 }

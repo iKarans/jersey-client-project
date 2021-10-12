@@ -1,5 +1,6 @@
 import React from 'react'
 import alertIcon from "../../../assets/header/alert-icon.svg"
+import "./Alerts.scss"
 
 const Alerts = () => {
   return (
