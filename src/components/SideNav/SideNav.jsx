@@ -18,7 +18,7 @@ const SideNav = () => {
 
       <div className="sidenav__items">
         <div className="sidenav__dashboard sidenav__item">
-          <img className="sidenav__item--image"src={home} alt="" />
+          <img className="sidenav__item--image" id="icon-hover" src={home} alt="" />
           <p>Dashboard</p>
         </div>
 
