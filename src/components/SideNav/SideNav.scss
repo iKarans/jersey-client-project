@@ -54,7 +54,7 @@
 
   }
 
-  &__item:hover>--image {
+  &__item:hover .--image {
     fill: #2ABCA1;
 
   }
@@ -91,4 +91,22 @@
   }
 
 
+}
+
+.sidenav__item:hover ~ .sidenav__item--image{
+
+fill: #2ABCA1;
+
+}
+
+
+.mobileNav {
+  display: none;
+
+  @include mobile {    
+    display: flex;
+    flex-direction: row;
+
+
+  }
 }
