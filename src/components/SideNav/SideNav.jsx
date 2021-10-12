@@ -43,8 +43,6 @@ const SideNav = () => {
         </div>
       </div>
 
-    
-
       <div className="sidenav__logout">
         <p>Logout</p>
       </div>
