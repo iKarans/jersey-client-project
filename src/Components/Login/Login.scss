@@ -58,6 +58,7 @@
                 accent-color: $primary-color;
                 display: inline;
                 margin-left: 15%;
+                padding-top: 0.5rem;
             }
 
             .checkbox-label {
@@ -85,13 +86,23 @@
 
         &--sign-up {
             font-size: 0.75rem;
-            font-weight: 600;
+            font-weight: 400;
             color: $text-tertiary;
+
+            a {
+                font-size: 0.75rem;
+                font-weight: 600;
+                color: $text-tertiary;
+                
+            }
         }
+
         &--link {
             font-size: 0.75rem;
             font-weight: 600;
             color: $text-tertiary;
+            text-decoration: none;
+            
         }
     }
 }

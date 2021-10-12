@@ -1,11 +1,14 @@
 import React from 'react'
 
 import LoginPageNav from '../LoginPageNav/LoginPageNav'
+
 import Logo from "../../assets/global/lujam-logo-white.svg"
+import ChatIcon from "../../assets/login/chat-icon.svg"
 
 import "./Login.scss"
 
 const Login = () => {
+
     return (
         <section className="login">
             <LoginPageNav />
@@ -22,8 +25,9 @@ const Login = () => {
                     <label htmlFor="remember-me" className="checkbox-label">Remember Me</label>
                     <button className="login__page--form-button">Login</button>
                 </form>
-                <p className="login__page--sign-up">Dont have an account? <a classname="login__page--link "href="#">Sign Up</a></p>
-                <a classname="login__page--link "href="#">Forgotten Your Password?</a>
+                <p className="login__page--sign-up">Don't have an account? <a href="#">Sign Up</a></p>
+                <a className="login__page--link" href="#">Forgotten Your Password?</a>
+                <img src={ChatIcon} alt="chat icon" className="login__page--chat-button" />
                 
             </div>
             
