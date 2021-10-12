@@ -15,6 +15,7 @@ const DeviceID = () => {
           </p>
           <p class="device-ID__dropdown-content-link">1a3cc5d0-49d9v2</p>
           <p class="device-ID__dropdown-content-link">1a3cc5d0-49d9v2</p>
+          <p class="device-ID__dropdown-content-link">1a3cc5d0-49d9v2</p>
         </div>
       </div>
     </div>
