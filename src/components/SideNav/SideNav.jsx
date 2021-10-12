@@ -6,7 +6,7 @@ import { ReactComponent as SecurityIcon } from "../../assets/nav/security.svg";
 import { ReactComponent as DevicesIcon } from "../../assets/nav/device.svg";
 import { ReactComponent as NetworkIcon } from "../../assets/nav/network.svg";
 import { ReactComponent as SettingsIcon } from "../../assets/nav/settings.svg";
-import greyDropdown from "../../assets/global/grey-dropdown.svg";
+import { ReactComponent as GreyDropdown } from "../../assets/global/grey-dropdown.svg";
 
 
 const SideNav = () => {
@@ -45,15 +45,18 @@ const SideNav = () => {
           <p>Logout</p>
         </div>
       </div>
-
+      <div className="placeholderHeader"></div>
       <div className="mobileNav">
-        <div>
-        
-        <p>Dashboard</p>
+        <div className="mobileNav__items-left">
+          <HomeIcon className="mobileNav__item--image" />
+          <p>Dashboard</p>
         </div>
-        <img className="sidenav__item--image" src={greyDropdown} alt="" />
-
+          <GreyDropdown className="mobileNav____image--arrow" />
       </div>
+
+
+
+
 
     </div>
 

@@ -101,15 +101,74 @@
 fill: #2ABCA1;
 
 }
+.placeholderHeader {
+  display: none;
 
+
+  @include mobile { 
+  display: block;
+  height: 100px;
+  background: linear-gradient(0deg, rgba(42, 188, 161, 0.62), rgba(42, 188, 161, 0.62));
+}
+
+}
 
 .mobileNav {
   display: none;
 
-  @include mobile {    
+
+  @include mobile { 
+    position: absolute;
+    top: 73px;
+    width: 100%;
+    height: 66px;   
     display: flex;
     flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(112.83deg, rgba(255, 255, 255, 0.82) 0%, rgba(255, 255, 255, 0.8) 110.84%);
+    border: 1.5px solid #FFFFFF;
+    box-shadow: 0px 2px 5.5px rgba(0, 0, 0, 0.02);
+    backdrop-filter: blur(21px);
+    /* Note: backdrop-filter has minimal browser support */
+    border-radius: 15px;
+
+
+  }
+
+  &__items-left {
+    display: none;
+
+    @include mobile {  
+      margin-left: 10px;
+      width: 100px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 16px;
+      font-weight: 600;
+      color: #454756;
+    }
+
+
+  }
+
+}
+
+.mobileNav____image--arrow {
+  display: none;
+
+  @include mobile {  
+    display: block;
+    margin-right: 10px;
 
 
   }
 }
+
+
+
+  
+
+
