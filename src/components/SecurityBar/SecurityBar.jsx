@@ -6,7 +6,7 @@ import HighRisk from "./HighRisk/HighRisk";
 
 const SecurityBar = () => {
   return (
-    <div class="user-bar">
+    <div class="security-bar">
       <div>
         <h1>Dashboard</h1>
       </div>
