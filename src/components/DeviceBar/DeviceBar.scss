@@ -1,0 +1,8 @@
+@use "../../assets/styles/variables" as *;
+@use "../../assets/styles/mixins" as *;
+@use "../../assets/styles/typography" as *;
+
+.deviceBar {
+  display: unset;
+  display: flex;
+}
