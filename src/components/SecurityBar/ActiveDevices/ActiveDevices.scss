@@ -1,0 +1,32 @@
+@use "../../assets/styles/variables" as *;
+@use "../../assets/styles/typography" as *;
+@use "../../assets/styles/mixins" as *;
+
+.active-devices {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+
+  &__icon {
+    background-color: $primary-color;
+    height: 70%;
+    width: 25%;
+    border-radius: 15px;
+  }
+
+  &____info {
+    display: flex;
+    flex-direction: column;
+    height: 70%;
+    align-items: flex-start;
+    justify-content: space-evenly;
+
+    &--heading {
+      color: $text-primary;
+    }
+
+    &--number {
+      color: $text-secondary;
+    }
+  }
+}
