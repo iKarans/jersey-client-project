@@ -1,4 +1,7 @@
+@use '../../assets/styles/variables' as *;
+@use '../../assets/styles/mixins' as *;
 .sidenav {
+  
   height: 100%;
   width: 227px;
   position: fixed;
@@ -10,6 +13,10 @@
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; 
   gap: 20px 20px;
   font-size: 12px;
+
+   @include mobile {    
+    display: none;
+ }
 
   &__logo {
     display: flex;
@@ -74,5 +81,10 @@
 
     
   }
+
+}
+
+.sidenav__item:hover  .sidenav__item--image{
+  fill: green;
 
 }
