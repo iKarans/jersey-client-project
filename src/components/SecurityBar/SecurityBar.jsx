@@ -6,9 +6,9 @@ import HighRisk from "./HighRisk/HighRisk";
 
 const SecurityBar = () => {
   return (
-    <div class="security-bar">
+    <div className="security-bar">
       <div>
-        <h1>Dashboard</h1>
+        <h1 className="security-bar__heading">Dashboard</h1>
       </div>
       <div>
         <ActiveDevices />

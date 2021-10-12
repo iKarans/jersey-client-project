@@ -17,24 +17,25 @@
   /* Note: backdrop-filter has minimal browser support */
 
   border-radius: 15px;
+
+
+  &__heading {
+    position: absolute;
+    left: 5.43%;
+    right: 80.22%;
+    top: 41px;
+    width: 169px;
+    height: 39px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 39px;
+    /* identical to box height */
+  
+    display: flex;
+    align-items: center;
+  
+    color: #454756;
 }
 
-h1 {
-  position: absolute;
-  left: 64px;
-  right: 80.22%;
-  top: 114px;
-  bottom: 21.13%;
-  width: 169px;
-  height: 39px;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 32px;
-  line-height: 39px;
-  /* identical to box height */
-
-  display: flex;
-  align-items: center;
-
-  color: #454756;
 }
