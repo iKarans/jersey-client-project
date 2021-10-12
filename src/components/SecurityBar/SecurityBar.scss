@@ -17,13 +17,13 @@
   /* Note: backdrop-filter has minimal browser support */
 
   border-radius: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
 
   &__heading {
-    position: absolute;
-    left: 5.43%;
-    right: 80.22%;
-    top: 41px;
+    margin-left: 15%;
     width: 169px;
     height: 39px;
     font-style: normal;
@@ -36,6 +36,11 @@
     align-items: center;
   
     color: #454756;
+}
+
+&__buttons {
+  width: 40%;
+  height: 52%;
 }
 
 }

@@ -1,17 +1,26 @@
-@use "../../assets/styles/variables" as *;
-@use "../../assets/styles/typography" as *;
-@use "../../assets/styles/mixins" as *;
+@use "../../../assets/styles/variables" as *;
+@use "../../../assets/styles/typography" as *;
+@use "../../../assets/styles/mixins" as *;
 
 .active-devices {
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
+  height: 100%;
+  width: 30%;
+  border-radius: 7px;
+  background-color: $text-tertiary;
+  box-shadow: 0px 3.5px 5.5px rgba(0, 0, 0, 0.05);
 
   &__icon {
     background-color: $primary-color;
-    height: 70%;
+    height: 60%;
     width: 25%;
-    border-radius: 15px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   &____info {
@@ -21,12 +30,14 @@
     align-items: flex-start;
     justify-content: space-evenly;
 
-    &--heading {
+  }
+  &__info--heading {
+    
       color: $text-primary;
-    }
+    
+  }
 
-    &--number {
-      color: $text-secondary;
-    }
+  &__info--number {
+    color: $text-secondary;
   }
 }

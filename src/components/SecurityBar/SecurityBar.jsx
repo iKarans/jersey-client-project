@@ -10,7 +10,7 @@ const SecurityBar = () => {
       <div>
         <h1 className="security-bar__heading">Dashboard</h1>
       </div>
-      <div>
+      <div className="security-bar__buttons">
         <ActiveDevices />
         <Alerts />
         <HighRisk />
