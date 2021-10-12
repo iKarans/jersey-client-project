@@ -27,10 +27,8 @@ const Login = () => {
                 </form>
                 <p className="login__page--sign-up">Don't have an account? <a href="#">Sign Up</a></p>
                 <a className="login__page--link" href="#">Forgotten Your Password?</a>
-                <img src={ChatIcon} alt="chat icon" className="login__page--chat-button" />
-                
             </div>
-            
+            <img src={ChatIcon} alt="chat icon" className="login__chat-button" />
         </section>
     )
 }
