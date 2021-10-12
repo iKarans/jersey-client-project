@@ -1,0 +1,20 @@
+@use "../../../assets/styles/variables" as *;
+@use "../../../assets/styles/typography" as *;
+@use "../../../assets/styles/mixins" as *;
+
+.user-info {
+  position: absolute;
+  width: 98px;
+  height: 15px;
+  left: 1029px;
+  top: 25px;
+
+  font-family: Inter;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  /* identical to box height */
+
+  color: $text-tertiary;
+}
