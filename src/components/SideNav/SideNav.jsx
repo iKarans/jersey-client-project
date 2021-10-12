@@ -6,7 +6,7 @@ import device from "../../assets/nav/device.svg";
 import network from "../../assets/nav/network.svg";
 import settings from "../../assets/nav/settings.svg";
 import logo from "../../assets/global/lujam-logo-green.svg"
-import { ReactComponent as Logo } from "../../assets/nav/device.svg"
+import { ReactComponent as DevicesIcon } from "../../assets/nav/device.svg"
 
 
 const SideNav = () => {
@@ -29,7 +29,7 @@ const SideNav = () => {
         </div>
 
         <div className="sidenav__devices sidenav__item">
-          <Logo className="sidenav__item--image" />
+          <DevicesIcon className="sidenav__item--image" />
           <p>Device</p>
         </div>
 
