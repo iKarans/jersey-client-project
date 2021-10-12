@@ -11,8 +11,8 @@ import { ReactComponent as DevicesIcon } from "../../assets/nav/device.svg"
 
 const SideNav = () => {
   return (
-  
-      <div className="sidenav">
+
+    <div className="sidenav">
 
       <div className="sidenav__logo">
         <img src={logo} alt="" />
@@ -49,8 +49,8 @@ const SideNav = () => {
         <p>Logout</p>
       </div>
     </div>
-    
-    
+
+
   );
 };
 
