@@ -11,6 +11,19 @@
     top: 21px;
     border-radius: 50%;
     background: #84f1dd;
+
+    @include mobile {
+      // display: block;
+      // position: absolute;
+      top: 17px;
+      right: 19px;
+      left: unset;
+      bottom: unset;
+      width: 39px;
+      height: 39px;
+      border-radius: 50%;
+      background-color: #84F1DD;
+    }
   }
 
   &__dropdown {
@@ -25,6 +38,10 @@
     font-size: 12px;
 
     color: $text-tertiary;
+
+    @include mobile {
+      display: none;
+    }
   }
 
   &__name {
@@ -112,4 +129,6 @@
   &__dropdown:hover &__dropdown-content {
     display: block;
   }
+
+  
 }
