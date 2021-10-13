@@ -9,7 +9,10 @@ import { ReactComponent as SettingsIcon } from "../../assets/nav/settings.svg";
 import { ReactComponent as GreyDropdown } from "../../assets/global/grey-dropdown.svg";
 
 
-const SideNav = () => {
+const SideNav = (props) => {
+
+  const {handleClick} = props;
+  
   return (
 
     <div className="navigation">
@@ -46,7 +49,7 @@ const SideNav = () => {
         </div>
       </div>
       <div className="placeholderHeader"></div>
-      <div className="mobileNav">
+      <div className="mobileNav" onClick={handleClick}>
         <div className="mobileNav__items-left">
           <HomeIcon className="mobileNav__item--image" />
           <p>Dashboard</p>

@@ -3,8 +3,12 @@ import './App.css';
 import SideNav from './components/SideNav/SideNav';
 
 const App = () => {
+
+  const handleClick = () => {
+    console.log("working")
+  }
   return (
-    <SideNav />
+    <SideNav handleClick={handleClick}/>
   );
 }
 
