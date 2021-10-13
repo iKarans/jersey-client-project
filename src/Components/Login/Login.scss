@@ -14,12 +14,25 @@
         flex-direction: column;
         position: relative;
 
+        @include mobile {
+            height: 100vh;
+            padding-bottom: 6rem;
+        }
+
+        &--logo {
+            @include mobile {}
+        }
+
         &--form {
             background: rgba(20, 126, 136, 0.42);
             border-radius: 5px 5px 15px 15px;
             height: 26.4rem;
             width: 28.6rem;
             margin: 4rem 0 2rem 0;
+
+            @include mobile {
+                width: 90%;
+            }
 
             &-rectangle {
                 height: 0.3rem;
@@ -73,11 +86,19 @@
                     height: 0.98rem;
                     width: auto;
                     cursor: pointer;
+
+                    @include mobile {
+                        right: 19%;
+                    }
                 }
 
                 .hidepassword {
                     top: 0.85rem;
                     right: 5.6rem;
+
+                    @include mobile {
+                        right: 19%;
+                    }
                 }
             }
 
@@ -134,8 +155,6 @@
             color: $text-tertiary;
             text-decoration: none;
         }
-
-
     }
 
     &__chat {
@@ -151,5 +170,9 @@
         cursor: pointer;
         bottom: 2.8rem;
         right: 2.8rem;
+
+        @include mobile {
+            display: none;
+        }
     }
 }
