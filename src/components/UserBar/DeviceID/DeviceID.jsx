@@ -6,16 +6,18 @@ const DeviceID = () => {
   return (
     <div className="device-ID">
       <div className="device-ID__dropdown">
-        <button className="device-ID__dropdown-button">1a3cc5d0-49d9v2 </button>
-        <img
-          className="device-ID__dropdown-arrow"
-          src={whiteDropdown}
-          alt="White Dropdown Arrow"
-        ></img>
+        <button className="device-ID__dropdown-button">
+          1a3cc5d0-49d9v2{" "}
+          <img
+            className="device-ID__dropdown-arrow"
+            src={whiteDropdown}
+            alt="White Dropdown Arrow"
+          ></img>
+        </button>
 
         <div className="device-ID__dropdown-content">
           <p className="device-ID__dropdown-content--heading">
-            <b>Please choose a network from the list below:</b>
+            Please choose a network from the list below:
           </p>
           <a className="device-ID__dropdown-content--link" href="#">
             1a3cc5d0-49d9v2
