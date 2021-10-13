@@ -8,17 +8,16 @@
   height: 15px;
   left: 32px;
   top: 23px;
-
+  
   @include mobile {
     top: 27px;
     bottom: 57px;
     left: 65px;
   }
 
-  &__dropdown {
-  }
-
   &__dropdown &__dropdown-button {
+    display: flex;
+    align-items: center;
     font-size: 12px;
     font-style: normal;
     font-weight: 600;
@@ -26,11 +25,11 @@
     outline: none;
     color: $text-tertiary;
     background-color: inherit;
+    cursor: pointer;
   }
 
   &__dropdown-arrow {
-    padding-left: 15px;
-    padding-bottom: 2px;
+    margin-left: 15px;
   }
 
   &__dropdown-content {
@@ -67,12 +66,9 @@
     font-size: 12px;
   }
 
-  
-
   &__dropdown-content--link:hover {
     background: rgba(56, 196, 175, 0.15);
-    color: rgba(159, 172, 190, 1)
-
+    color: rgba(159, 172, 190, 1);
   }
 
   &__dropdown:hover &__dropdown-content {
