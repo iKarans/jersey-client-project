@@ -4,18 +4,28 @@ import whiteDropdown from "./../../../assets/global/white-dropdown.svg";
 
 const DeviceID = () => {
   return (
-    <div class="device-ID">
-      <div class="device-ID__dropdown">
-        <p>1a3cc5d0-49d9v2</p>
-        <img src={whiteDropdown} alt="White Dropdown Arrow"></img>
+    <div className="device-ID">
+      <div className="device-ID__dropdown">
+        <button className="device-ID__dropdown-button">1a3cc5d0-49d9v2 </button>
+        <img
+          className="device-ID__dropdown-arrow"
+          src={whiteDropdown}
+          alt="White Dropdown Arrow"
+        ></img>
 
-        <div class="device-ID__dropdown-content">
-          <p>
+        <div className="device-ID__dropdown-content">
+          <p className="device-ID__dropdown-content--heading">
             <b>Please choose a network from the list below:</b>
           </p>
-          <p class="device-ID__dropdown-content-link">1a3cc5d0-49d9v2</p>
-          <p class="device-ID__dropdown-content-link">1a3cc5d0-49d9v2</p>
-          <p class="device-ID__dropdown-content-link">1a3cc5d0-49d9v2</p>
+          <a className="device-ID__dropdown-content--link" href="#">
+            1a3cc5d0-49d9v2
+          </a>
+          <a className="device-ID__dropdown-content--link" href="#">
+            4950cc70-8b1d
+          </a>
+          <a className="device-ID__dropdown-content--link" href="#">
+            d64dc599-6550
+          </a>
         </div>
       </div>
     </div>

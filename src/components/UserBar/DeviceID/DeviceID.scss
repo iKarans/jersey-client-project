@@ -4,47 +4,72 @@
 
 .device-ID {
   position: absolute;
-  width: 109px;
+  width: auto;
   height: 15px;
   left: 32px;
   top: 23px;
 
-  font-style: normal;
-  font-weight: 600;
-  font-size: 12px;
-  line-height: 15px;
-  /* identical to box height */
-
-  display: flex;
-  align-items: center;
-
-  color: $text-tertiary;
-
   &__dropdown {
-    position: relative;
-    display: inline-block;
+  }
+
+  &__dropdown &__dropdown-button {
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    border: none;
+    outline: none;
+    color: $text-tertiary;
+    background-color: inherit;
+  }
+
+  &__dropdown-arrow {
+    padding-left: 15px;
+    padding-bottom: 2px;
   }
 
   &__dropdown-content {
     display: none;
+    width: 281px;
+    height: auto;
     position: absolute;
-    background-color: $text-tertiary;
-    min-width: 275px;
+    background: #ffffff;
     box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.15);
-    padding: 12px 5px;
-    z-index: 1;
-    color: #2d3748;
     border-radius: 7px;
+    z-index: 1;
   }
 
-  &__dropdown-content-link {
-    color: #737886;
-    padding: 10px 5px 10px 5px;
-    border-top: 0.5px solid #ebebeb;
+  &__dropdown-content--heading {
+    float: none;
+    color: rgba(45, 55, 72, 1);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    border-bottom: 1px solid rgba(235, 235, 235, 1);
+    font-weight: 600;
+    font-size: 12px;
+  }
+  &__dropdown-content--link {
+    float: none;
+    color: rgba(115, 120, 134, 1);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    border-bottom: 1px solid rgba(235, 235, 235, 1);
+    font-weight: 500;
+    font-size: 12px;
+  }
+
+  
+
+  &__dropdown-content--link:hover {
+    background: rgba(56, 196, 175, 0.15);
+    color: rgba(159, 172, 190, 1)
+
   }
 
   &__dropdown:hover &__dropdown-content {
     display: block;
-    text-align: left;
   }
 }
