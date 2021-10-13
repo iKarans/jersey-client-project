@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./DeviceBar.scss";
 import optionsIcon from "../../assets/devices/optionsIcon.png";
 import appleIcon from "../../assets/devices/apple.svg";
@@ -17,7 +17,7 @@ export const DeviceBar = (props) => {
   // setting icon from type
   const typeIcon = () => {
     let typeText = "";
-    type == "laptop" ? (typeText = laptopIcon) : (typeText = mobileIcon);
+    type === "laptop" ? (typeText = laptopIcon) : (typeText = mobileIcon);
     return typeText;
   };
   typeIcon();
@@ -25,19 +25,19 @@ export const DeviceBar = (props) => {
   // setting icon from brand
   const brandIcon = () => {
     let brandText = "";
-    if (brand == "dell") {
+    if (brand === "dell") {
       brandText = dellIcon;
       return brandText;
-    } else if (brand == "apple") {
+    } else if (brand === "apple") {
       brandText = appleIcon;
       return brandText;
-    } else if (brand == "huawei") {
+    } else if (brand === "huawei") {
       brandText = huaweiIcon;
       return brandText;
-    } else if (brand == "lenovo") {
+    } else if (brand === "lenovo") {
       brandText = lenovoIcon;
       return brandText;
-    } else if ((brand = "samsung")) {
+    } else if (brand === "samsung") {
       brandText = samsungIcon;
       return brandText;
     }
@@ -45,7 +45,6 @@ export const DeviceBar = (props) => {
   // deviceBar__SecurityRisk--low
   //setting threat level styles
 
-  const threatStyle = () => {};
   return (
     <div className="deviceBar">
       <h4>{name}</h4>
