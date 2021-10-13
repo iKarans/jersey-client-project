@@ -5,7 +5,7 @@ import LoginPageNav from '../LoginPageNav/LoginPageNav'
 import Logo from "../../assets/global/lujam-logo-white.svg"
 import ChatIcon from "../../assets/login/chat-icon.svg"
 import ShowPassword from "../../assets/login/show-password.svg"
-import HidePassword from "../../assets/login/hide-password.svg"
+import HidePassword from "../../assets/login/Group.svg"
 
 import "./Login.scss"
 
@@ -27,7 +27,8 @@ const Login = () => {
                     <label htmlFor="password" className="login__page--form-label">Password</label>
                     <div className="login__page--form-password-container">
                         <input type="password" id="password" className="login__page--form-input" />
-                        <img src={ShowPassword} className="showpassword" alt="Show password icon" />
+                        {showPassword && <img src={HidePassword} className="hidepassword" alt="Hide password icon" onClick={handleShowPassword} />}
+                        {!showPassword && <img src={ShowPassword} className="showpassword" alt="Show password icon" onClick={handleShowPassword} />}
                     </div>
                     <div className="login__page--form-checkbox-container"><input type="checkbox" id="remember-me" className="login__page--form-checkbox" />
                         <label htmlFor="remember-me" className="checkbox-label">Remember Me</label>

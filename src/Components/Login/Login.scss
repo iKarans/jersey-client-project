@@ -61,12 +61,19 @@
                 height: 2.5rem;
                 margin-bottom: 1.5rem;
 
-                .showpassword {
+                .showpassword,
+                .hidepassword {
                     position: absolute;
                     top: 0.78rem;
                     right: 5.5rem;
                     height: 0.98rem;
                     width: auto;
+                    cursor: pointer;
+                }
+
+                .hidepassword {
+                    top: 0.85rem;
+                    right: 5.6rem;
                 }
             }
 
