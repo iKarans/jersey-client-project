@@ -1,9 +1,8 @@
-import React from 'react'
-import "./NetworkAlert.scss"
+import React from "react";
+import "./NetworkAlert.scss";
 
 const NetworkAlert = (props) => {
-
-  const { alertImg, alertText, atRisk } = props
+  const { alertImg, alertText, atRisk } = props;
 
   let alertStyle = "network-alert";
 
@@ -14,8 +13,7 @@ const NetworkAlert = (props) => {
       <img className="network-alert__img" src={alertImg} alt={alertText} />
       <p className="network-alert__text">{alertText}</p>
     </button>
-  )
-}
+  );
+};
 
-export default NetworkAlert
-          
+export default NetworkAlert;
