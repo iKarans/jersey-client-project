@@ -10,9 +10,21 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-gap: 20px;
+  color: $text-secondary;
+  font-weight: bold;
   align-items: center;
   justify-content: center;
   text-align: center;
   margin: 5px;
   padding: 10px;
+}
+.searchOptions {
+  display: flex;
+  align-items: center;
+}
+.search-bar {
+  margin: 10px;
+  > img {
+    margin: 10px;
+  }
 }

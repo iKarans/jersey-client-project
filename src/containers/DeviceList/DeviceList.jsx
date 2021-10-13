@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { devices } from "../../data/devices";
 import { DeviceBar } from "../../components/DeviceBar/DeviceBar";
 import "./DeviceList.scss";
+import search from "../../assets/devices/search.png";
 
 export const DeviceList = () => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -24,6 +25,7 @@ export const DeviceList = () => {
     <div className="devices">
       <div className="searchOptions">
         <form className="search-bar">
+          <img src={search} />
           <input
             type="text"
             name="deviceSearch"
@@ -31,7 +33,7 @@ export const DeviceList = () => {
             className="search-bar__input"
           />
           <label htmlFor="deviceSearch" className="search-bar__label">
-            Search for Devices
+            Search by Device name
           </label>
         </form>
       </div>
