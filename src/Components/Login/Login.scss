@@ -55,20 +55,23 @@
                 padding-left: 1rem;
             }
 
+            &-checkbox-container {
+                width: 75%;
+                margin: 0 auto;
+                display: flex;
+                align-items: center;
+            }
+
             &-checkbox {
                 accent-color: $primary-color;
-                display: inline;
-                margin-left: 12.5%;
                 padding-top: 0.5rem;
             }
 
             .checkbox-label {
-                display: inline;
                 color: #C5CCD6;
                 font-weight: 500;
                 font-size: 0.75rem;
-                margin-left: 0.8rem;
-                vertical-align: middle;
+                margin-left: 0.6rem;
             }
 
             &-button {
@@ -109,11 +112,8 @@
 
     }
 
-
-
     &__chat {
         position: absolute;
-
         display: flex;
         justify-content: center;
         align-items: center;

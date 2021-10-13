@@ -21,8 +21,9 @@ const Login = () => {
                     <input type="text" id="email" className="login__page--form-input" />
                     <label htmlFor="email" className="login__page--form-label">Password</label>
                     <input type="password" id="password" className="login__page--form-input" />
-                    <input type="checkbox" id="remember-me" className="login__page--form-checkbox" />
-                    <label htmlFor="remember-me" className="checkbox-label">Remember Me</label>
+                    <div className="login__page--form-checkbox-container"><input type="checkbox" id="remember-me" className="login__page--form-checkbox" />
+                        <label htmlFor="remember-me" className="checkbox-label">Remember Me</label>
+                    </div>
                     <button className="login__page--form-button">Login</button>
                 </form>
                 <p className="login__page--sign-up">Don't have an account? <a href="#">Sign Up</a></p>
