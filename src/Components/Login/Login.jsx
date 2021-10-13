@@ -14,6 +14,8 @@ const Login = () => {
     const handleShowPassword = () => {
         setShowPassword(!showPassword)
     }
+
+
     return (
         <section className="login">
             <LoginPageNav />
@@ -26,9 +28,9 @@ const Login = () => {
                     <input type="text" id="email" className="login__page--form-input" />
                     <label htmlFor="password" className="login__page--form-label">Password</label>
                     <div className="login__page--form-password-container">
-                        <input type="password" id="password" className="login__page--form-input" />
-                        {showPassword && <img src={HidePassword} className="hidepassword" alt="Hide password icon" onClick={handleShowPassword} />}
-                        {!showPassword && <img src={ShowPassword} className="showpassword" alt="Show password icon" onClick={handleShowPassword} />}
+                        <input type={!showPassword ? "password" : "text"} id="password" className="login__page--form-input" />
+                        {!showPassword && <img src={HidePassword} className="hidepassword" alt="Hide password icon" onClick={handleShowPassword} />}
+                        {showPassword && <img src={ShowPassword} className="showpassword" alt="Show password icon" onClick={handleShowPassword} />}
                     </div>
                     <div className="login__page--form-checkbox-container"><input type="checkbox" id="remember-me" className="login__page--form-checkbox" />
                         <label htmlFor="remember-me" className="checkbox-label">Remember Me</label>
