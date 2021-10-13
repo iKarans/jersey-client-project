@@ -9,6 +9,12 @@
   left: 32px;
   top: 23px;
 
+  @include mobile {
+    top: 27px;
+    bottom: 57px;
+    left: 65px;
+  }
+
   &__dropdown {
   }
 

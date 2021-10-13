@@ -2,15 +2,17 @@ import React from "react";
 import "./UserBar.scss";
 import DeviceID from "./DeviceID/DeviceID";
 import UserInfo from "./UserInfo/UserInfo";
-import "../../assets/header/background-waves.svg";
+import wavesSVG from "../../assets/header/background-waves.svg";
+import mobileLogo from "../../assets/global/lujam-logo-mobile.svg"
 
 const UserBar = () => {
   return (
-    <div class="user-bar">
-      <div>
+    <div className="user-bar">
+      <img src={mobileLogo} alt="Lujam logo" />
+      <div className="user-bar__devices">
         <DeviceID />
       </div>
-      <div>
+      <div className="user-bar__user">
         <UserInfo />
       </div>
     </div>
