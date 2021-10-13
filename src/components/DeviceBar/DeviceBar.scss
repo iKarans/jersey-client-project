@@ -1,8 +1,16 @@
-@use "../../assets/styles/variables" as *;
-@use "../../assets/styles/mixins" as *;
-@use "../../assets/styles/typography" as *;
-
 .deviceBar {
-  display: unset;
-  display: flex;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+.deviceBar {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 20px;
+  text-align: center;
+  margin: 5px;
+}
+
+.deviceBar__SecurityRisk {
+  border: 1px solid black;
+  border-radius: 10px;
 }

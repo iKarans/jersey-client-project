@@ -1,6 +1,7 @@
 import React from "react";
 import { devices } from "../../data/devices";
 import { DeviceBar } from "../../components/DeviceBar/DeviceBar";
+import "./DeviceList.scss";
 console.log(devices);
 export const DeviceList = () => {
   return (
