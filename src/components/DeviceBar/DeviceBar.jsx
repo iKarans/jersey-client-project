@@ -1,10 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import "./DeviceBar.scss";
 import optionsIcon from "../../assets/devices/optionsIcon.png";
+import appleIcon from "../../assets/devices/apple.svg";
+import dellIcon from "../../assets/devices/dell.svg";
+import huaweiIcon from "../../assets/devices/huawei.svg";
+import lenovoIcon from "../../assets/devices/lenovo.svg";
+import samsungIcon from "../../assets/devices/samsung.svg";
+import laptopIcon from "../../assets/devices/laptop.svg";
+import mobileIcon from "../../assets/devices/mobile.svg";
+
 export const DeviceBar = (props) => {
   const { device } = props;
   const { name, type, brand, model, OS, ipAddress, lastActive, securityRisk } =
     device;
+  // setting icon from type
+  const [typeIcon, setTypeIcon] = useState({ laptopIcon });
+  const checkType = () => {};
+  // setting icon from brand
+
   return (
     <div className="deviceBar">
       <h4>{name}</h4>
