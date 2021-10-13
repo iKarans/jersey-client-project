@@ -1,14 +1,19 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 import LoginPageNav from '../LoginPageNav/LoginPageNav'
 
 import Logo from "../../assets/global/lujam-logo-white.svg"
 import ChatIcon from "../../assets/login/chat-icon.svg"
+import ShowPassword from "../../assets/login/show-password.svg"
+import HidePassword from "../../assets/login/hide-password.svg"
 
 import "./Login.scss"
 
 const Login = () => {
-
+    const [showPassword, setShowPassword] = useState(false)
+    const handleShowPassword = () => {
+        setShowPassword(!showPassword)
+    }
     return (
         <section className="login">
             <LoginPageNav />
@@ -19,8 +24,11 @@ const Login = () => {
                     <h3 className="login__page--form-header">Login</h3>
                     <label htmlFor="email" className="login__page--form-label">Email Address</label>
                     <input type="text" id="email" className="login__page--form-input" />
-                    <label htmlFor="email" className="login__page--form-label">Password</label>
-                    <input type="password" id="password" className="login__page--form-input" />
+                    <label htmlFor="password" className="login__page--form-label">Password</label>
+                    <div className="login__page--form-password-container">
+                        <input type="password" id="password" className="login__page--form-input" />
+                        <img src={ShowPassword} className="showpassword" alt="Show password icon" />
+                    </div>
                     <div className="login__page--form-checkbox-container"><input type="checkbox" id="remember-me" className="login__page--form-checkbox" />
                         <label htmlFor="remember-me" className="checkbox-label">Remember Me</label>
                     </div>
