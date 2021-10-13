@@ -17,4 +17,9 @@
   /* identical to box height */
 
   color: $text-tertiary;
+
+  @include mobile {
+    position: absolute;
+    
+  }
 }

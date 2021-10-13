@@ -8,7 +8,7 @@ import mobileLogo from "../../assets/global/lujam-logo-mobile.svg"
 const UserBar = () => {
   return (
     <div className="user-bar">
-      <img src={mobileLogo} alt="Lujam logo" />
+      <img className="user-bar__img" src={mobileLogo} alt="Lujam logo" />
       <div className="user-bar__devices">
         <DeviceID />
       </div>

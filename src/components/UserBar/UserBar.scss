@@ -17,6 +17,18 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-radius: 0;
 
+  }
+
+  &__img {
+    display: none;
+
+    @include mobile {
+      display: block;
+      position: absolute;
+      top: 14px;
+      left: 19px;
+    }
   }
 }
