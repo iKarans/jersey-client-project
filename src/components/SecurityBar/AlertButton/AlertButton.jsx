@@ -9,7 +9,7 @@ const AlertButton = (props) => {
   isHigh ? (buttonStyle += " high") : (buttonStyle += " primary");
 
   return (
-    <div className="button">
+    <button className="button">
       <div className={buttonStyle}>
         <img className="button__icon--svg" src={iconImage} alt="alerts" />
       </div>
@@ -17,7 +17,7 @@ const AlertButton = (props) => {
         <p className="button__info--heading">{buttonText}</p>
         <p className="button__info--number">{buttonNumber}</p>
       </div>
-    </div>
+    </button>
   );
 };
 
