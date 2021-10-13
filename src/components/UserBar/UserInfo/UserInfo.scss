@@ -3,17 +3,29 @@
 @use "../../../assets/styles/mixins" as *;
 
 .user-info {
-  position: absolute;
-  width: auto;
-  height: 15px;
-  left: 1029px;
-  top: 23px;
+  &__img {
+    position: absolute;
+    width: 39px;
+    height: 39px;
+    left: 972px;
+    top: 21px;
+    border-radius: 50%;
+    background: #84f1dd;
+  }
 
-  font-style: normal;
-  font-weight: bold;
-  font-size: 12px;
+  &__dropdown {
+    position: absolute;
+    width: auto;
+    height: 15px;
+    left: 1029px;
+    top: 23px;
 
-  color: $text-tertiary;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+
+    color: $text-tertiary;
+  }
 
   &__name {
     display: flex;
@@ -61,6 +73,8 @@
     width: 281px;
     height: auto;
     position: absolute;
+    top: 16px;
+
     background: #ffffff;
     box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.15);
     border-radius: 7px;
