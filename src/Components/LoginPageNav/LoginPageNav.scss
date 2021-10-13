@@ -1,6 +1,6 @@
-@use "../../assets/styles/variables" as *;
-@use "../../assets/styles/mixins" as *;
-@use "../../assets/styles/typography" as *;
+@use "../../assets/styles/variables"as *;
+@use "../../assets/styles/mixins"as *;
+@use "../../assets/styles/typography"as *;
 
 .login__nav {
   width: 80%;
@@ -9,6 +9,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @include mobile {
+    display: none;
+  }
 
   &--logo {
     height: 40%;
