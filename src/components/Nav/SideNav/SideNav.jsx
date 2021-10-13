@@ -1,24 +1,30 @@
-import React from 'react';
+import React, {useState} from 'react';
 import "./SideNav.scss";
-import logo from "../../assets/global/lujam-logo-green.svg";
-import { ReactComponent as HomeIcon } from "../../assets/nav/home.svg";
-import { ReactComponent as SecurityIcon } from "../../assets/nav/security.svg";
-import { ReactComponent as DevicesIcon } from "../../assets/nav/device.svg";
-import { ReactComponent as NetworkIcon } from "../../assets/nav/network.svg";
-import { ReactComponent as SettingsIcon } from "../../assets/nav/settings.svg";
-import { ReactComponent as GreyDropdown } from "../../assets/global/grey-dropdown.svg";
+import logo from "../../../assets/global/lujam-logo-green.svg";
+import MobileNav from '../MobileNav/MobileNav';
+import { ReactComponent as HomeIcon } from "../../../assets/nav/home.svg";
+import { ReactComponent as SecurityIcon } from "../../../assets/nav/security.svg";
+import { ReactComponent as DevicesIcon } from "../../../assets/nav/device.svg";
+import { ReactComponent as NetworkIcon } from "../../../assets/nav/network.svg";
+import { ReactComponent as SettingsIcon } from "../../../assets/nav/settings.svg";
+import { ReactComponent as GreyDropdown } from "../../../assets/global/grey-dropdown.svg";
 
 
-const SideNav = (props) => {
 
-  const {handleClick} = props;
+const SideNav = () => {
+  const [showNav, setShowNav] = useState(false)
+
+  const toggleNav = () => {
+    setShowNav(!showNav)
+    console.log(showNav)
+  }
   
   return (
 
     <div className="navigation">
-
+      {showNav && <MobileNav />}  
       <div className="sidenav">
-
+        
         <div className="sidenav__logo">
           <img src={logo} alt="" />
         </div>
@@ -49,18 +55,13 @@ const SideNav = (props) => {
         </div>
       </div>
       <div className="placeholderHeader"></div>
-      <div className="mobileNav" onClick={handleClick}>
-        <div className="mobileNav__items-left">
-          <HomeIcon className="mobileNav__item--image" />
-          <p>Dashboard</p>
-        </div>
-          <GreyDropdown className="mobileNav____image--arrow" />
+      <div className="mobileNavHeader" onClick={toggleNav}>
+        <div className="mobileNavHeader__items-left">
+        <HomeIcon className="mobileNavHeader__item--image" />
+        <p>Dashboard</p>
       </div>
-
-
-
-
-
+        <GreyDropdown className="mobileNavHeader____image--arrow" />
+      </div>
     </div>
 
 

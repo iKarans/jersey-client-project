@@ -1,0 +1,75 @@
+@use '../../../assets/styles/variables' as *;
+@use '../../../assets/styles/mixins' as *;
+
+.menuItems {
+  display: none;
+
+
+
+  @include mobile {    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+ }
+
+}
+
+.mobileNav {
+
+  display: none;
+
+  @include mobile {
+  position: absolute;
+  top: 137px;    
+  height: 445px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1.5fr 0.5fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  background: linear-gradient(180deg, #DFDFDF 0%, #F9F9F9 0.01%, #FFFFFF 52.65%);
+  border-radius: 0px 0px 12px 12px;
+
+  }
+
+&__item {
+  display: none;
+
+
+  @include mobile {
+    display: flex;
+    align-items: center;
+    justify-self: flex-start;
+    margin-left: 25px;
+    flex-direction: row;
+    border-bottom: 1px solid  #EBEBEB;
+    width: 355px;
+    
+
+  }
+p {
+  display: none;
+
+  @include mobile {
+    display: block;
+    font-size: 16px;
+    color: #454756;
+    font-weight: 500;
+    position: absolute;
+    left: 70px;
+  }
+}
+}
+
+&__item--image {
+  display: none;
+
+  @include mobile {
+    display: block;
+    margin-right: 25px;
+  }
+}
+}
+

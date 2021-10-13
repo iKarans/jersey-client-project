@@ -1,6 +1,6 @@
 
 import './App.css';
-import SideNav from './components/SideNav/SideNav';
+import SideNav from './components/Nav/SideNav/SideNav';
 
 const App = () => {
 
