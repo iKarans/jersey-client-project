@@ -19,8 +19,8 @@ const Login = () => {
                     <h3 className="login__page--form-header">Login</h3>
                     <label htmlFor="email" className="login__page--form-label">Email Address</label>
                     <input type="text" id="email" className="login__page--form-input"/>
-                    <label htmlFor="email" className="login__page--form-label">Name</label>
-                    <input type="password" id="name" className="login__page--form-input"/>
+                    <label htmlFor="email" className="login__page--form-label">Password</label>
+                    <input type="password" id="password" className="login__page--form-input"/>
                     <input type="checkbox" id="remember-me" className="login__page--form-checkbox" />
                     <label htmlFor="remember-me" className="checkbox-label">Remember Me</label>
                     <button className="login__page--form-button">Login</button>
