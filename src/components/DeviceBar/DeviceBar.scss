@@ -5,12 +5,15 @@
   border: 1px solid black;
   border-radius: 10px;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-gap: 20px;
+  align-items: center;
+  justify-content: center;
   text-align: center;
   margin: 5px;
+  padding: 10px;
+
   &__SecurityRisk {
-    border: 1px solid black;
     border-radius: 10px;
     &--low {
       color: $low-color;
@@ -24,5 +27,8 @@
       color: $high-color;
       background-color: rgba($high-color, 0.17);
     }
+  }
+  > img {
+    margin: auto;
   }
 }

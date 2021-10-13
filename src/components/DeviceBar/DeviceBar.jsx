@@ -1,5 +1,6 @@
 import React from "react";
 import "./DeviceBar.scss";
+import optionsIcon from "../../assets/devices/optionsIcon.png";
 export const DeviceBar = (props) => {
   const { device } = props;
   const { name, type, brand, model, OS, ipAddress, lastActive, securityRisk } =
@@ -18,6 +19,7 @@ export const DeviceBar = (props) => {
       <span className="deviceBar__SecurityRisk deviceBar__SecurityRisk--high">
         <h4>{securityRisk}</h4>
       </span>
+      <img src={optionsIcon}></img>
     </div>
   );
 };
