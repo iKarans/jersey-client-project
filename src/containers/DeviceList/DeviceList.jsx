@@ -9,15 +9,15 @@ export const DeviceList = () => {
     <div className="devices">
       <div classname="searchOptions">
         <form className="search-bar">
-          <label htmlFor="deviceSearch" className="search-bar__label">
-            Search
-          </label>
           <input
             type="text"
             name="deviceSearch"
             onInput={handleinput()}
             className="search-bar__input"
           />
+          <label htmlFor="deviceSearch" className="search-bar__label">
+            Search
+          </label>
         </form>
       </div>
       <div className="devicesList">

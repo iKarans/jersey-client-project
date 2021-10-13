@@ -15,7 +15,7 @@ export const DeviceBar = (props) => {
       <p>{OS}</p>
       <p>{ipAddress}</p>
       <p>{lastActive}</p>
-      <span className="deviceBar__SecurityRisk">
+      <span className="deviceBar__SecurityRisk deviceBar__SecurityRisk--high">
         <h4>{securityRisk}</h4>
       </span>
     </div>

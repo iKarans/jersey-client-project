@@ -1,16 +1,28 @@
+@use "../../assets/styles/variables" as *;
+@use "../../assets/styles/typography" as *;
+@use "../../assets/styles/mixins" as *;
 .deviceBar {
   border: 1px solid black;
   border-radius: 10px;
-}
-.deviceBar {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-gap: 20px;
   text-align: center;
   margin: 5px;
-}
-
-.deviceBar__SecurityRisk {
-  border: 1px solid black;
-  border-radius: 10px;
+  &__SecurityRisk {
+    border: 1px solid black;
+    border-radius: 10px;
+    &--low {
+      color: $low-color;
+      background-color: rgba($low-color, 0.17);
+    }
+    &--medium {
+      color: $medium-color;
+      background-color: rgba($medium-color, 0.17);
+    }
+    &--high {
+      color: $high-color;
+      background-color: rgba($high-color, 0.17);
+    }
+  }
 }
