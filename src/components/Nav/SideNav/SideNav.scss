@@ -1,5 +1,6 @@
 @use '../../../assets/styles/variables' as *;
 @use '../../../assets/styles/mixins' as *;
+
 .sidenav {
 
   height: 100%;
@@ -126,10 +127,11 @@ fill: #2ABCA1;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    background: linear-gradient(112.83deg, rgba(255, 255, 255, 0.82) 0%, rgba(255, 255, 255, 0.8) 110.84%);
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.82) 0%, rgba(255, 255, 255, 0.2) 110.84%);
     border: 1.5px solid #FFFFFF;
     box-shadow: 0px 2px 5.5px rgba(0, 0, 0, 0.02);
     backdrop-filter: blur(21px);
+    // -webkit-filter: blur(0.2px);
     /* Note: backdrop-filter has minimal browser support */
     border-radius: 15px;
 
@@ -146,8 +148,6 @@ fill: #2ABCA1;
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
-      font-size: 16px;
-      font-weight: 600;
       color: #454756;
       
       svg path {
@@ -158,6 +158,31 @@ fill: #2ABCA1;
 
   }
 
+  &__item--image {
+    display: none;
+
+    @include mobile {  
+      display: block;
+      position: absolute;
+      left: 34px;
+    }
+
+  }
+
+  &__heading {
+    display: none;
+
+    @include mobile {  
+      display: block;
+      position: absolute;
+      left: 72px;
+      font-weight: 600;
+      font-size: 16px;
+      color: #454756
+    }
+
+  }
+
 }
 
 .mobileNavHeader____image--arrow {
@@ -165,8 +190,8 @@ fill: #2ABCA1;
 
   @include mobile {  
     display: block;
-    margin-right: 10px;
-
+    position: absolute;
+    left: 383px;
 
   }
 }

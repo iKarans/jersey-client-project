@@ -58,7 +58,7 @@ const SideNav = () => {
       <div className="mobileNavHeader" onClick={toggleNav}>
         <div className="mobileNavHeader__items-left">
         <HomeIcon className="mobileNavHeader__item--image" />
-        <p>Dashboard</p>
+        <p className="mobileNavHeader__heading">Dashboard</p>
       </div>
         <GreyDropdown className="mobileNavHeader____image--arrow" />
       </div>
