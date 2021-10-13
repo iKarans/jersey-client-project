@@ -13,23 +13,53 @@ export const DeviceBar = (props) => {
   const { device } = props;
   const { name, type, brand, model, OS, ipAddress, lastActive, securityRisk } =
     device;
-  // setting icon from type
-  const [typeIcon, setTypeIcon] = useState({ laptopIcon });
-  const checkType = () => {};
-  // setting icon from brand
 
+  // setting icon from type
+  const typeIcon = () => {
+    let typeText = "";
+    type == "laptop" ? (typeText = laptopIcon) : (typeText = mobileIcon);
+    return typeText;
+  };
+  typeIcon();
+
+  // setting icon from brand
+  const brandIcon = () => {
+    let brandText = "";
+    if (brand == "dell") {
+      brandText = dellIcon;
+      return brandText;
+    } else if (brand == "apple") {
+      brandText = appleIcon;
+      return brandText;
+    } else if (brand == "huawei") {
+      brandText = huaweiIcon;
+      return brandText;
+    } else if (brand == "lenovo") {
+      brandText = lenovoIcon;
+      return brandText;
+    } else if ((brand = "samsung")) {
+      brandText = samsungIcon;
+      return brandText;
+    }
+  };
+  // deviceBar__SecurityRisk--low
+  //setting threat level styles
+
+  const threatStyle = () => {};
   return (
     <div className="deviceBar">
       <h4>{name}</h4>
       {/* <img {type} />
       <img {brand}/> */}
-      <p>{type}</p>
-      <p>{brand}</p>
+      <img src={typeIcon()} />
+      <img src={brandIcon()} />
       <p>{model}</p>
       <p>{OS}</p>
       <p>{ipAddress}</p>
       <p>{lastActive}</p>
-      <span className="deviceBar__SecurityRisk deviceBar__SecurityRisk--high">
+      <span
+        className={`deviceBar__SecurityRisk deviceBar__SecurityRisk--${securityRisk}`}
+      >
         <h4>{securityRisk}</h4>
       </span>
       <img src={optionsIcon}></img>

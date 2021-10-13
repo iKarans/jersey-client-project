@@ -7,7 +7,7 @@ const handleinput = () => {};
 export const DeviceList = () => {
   return (
     <div className="devices">
-      <div classname="searchOptions">
+      <div className="searchOptions">
         <form className="search-bar">
           <input
             type="text"
