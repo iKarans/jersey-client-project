@@ -19,15 +19,9 @@ const NetworkID = () => {
           <p className="network-ID__dropdown-content--heading">
             Please choose a network from the list below:
           </p>
-          <a className="network-ID__dropdown-content--link" href="#">
-            1a3cc5d0-49d9v2
-          </a>
-          <a className="network-ID__dropdown-content--link" href="#">
-            4950cc70-8b1d
-          </a>
-          <a className="network-ID__dropdown-content--link" href="#">
-            d64dc599-6550
-          </a>
+          <p className="network-ID__dropdown-content--link">1a3cc5d0-49d9v2</p>
+          <p className="network-ID__dropdown-content--link">4950cc70-8b1d</p>
+          <p className="network-ID__dropdown-content--link">d64dc599-6550</p>
         </div>
       </div>
     </div>
