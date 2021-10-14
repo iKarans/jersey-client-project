@@ -14,7 +14,6 @@ export const DeviceList = () => {
   const [filtered, setFiltered] = useState(false);
   const sort = () => {
     if (!sorted) {
-      console.log("not sorted");
       setDeviceList(
         devices.sort((a, b) => {
           return order[a.securityRisk] - order[b.securityRisk];
@@ -22,7 +21,6 @@ export const DeviceList = () => {
       );
       setSorted(!sorted);
     } else {
-      console.log("sorted");
       setDeviceList(devices);
       setSorted(!sorted);
     }
