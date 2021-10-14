@@ -12,7 +12,7 @@ export const DeviceList = () => {
   const [deviceList, setDeviceList] = useState([]);
   const [sorted, setSorted] = useState(false);
   const [filtered, setFiltered] = useState(false);
-  const sort = () => {
+  const sortDevices = () => {
     if (!sorted) {
       setDeviceList(
         devices.sort((a, b) => {
@@ -25,7 +25,7 @@ export const DeviceList = () => {
       setSorted(!sorted);
     }
   };
-  const filter = () => {
+  const filterDevices = () => {
     if (!filtered) {
       setDeviceList(devices.filter((device) => device.securityRisk === "high"));
       setFiltered(!filtered);
@@ -64,8 +64,8 @@ export const DeviceList = () => {
           <label htmlFor="deviceSearch" className="search-bar__label"></label>
         </form>
         <div className="filterAndSort">
-          <img src={sortIcon} alt="sort icon" onClick={sort} />
-          <img src={filterIcon} alt="filter icon" onClick={filter} />
+          <img src={sortIcon} alt="sort icon" onClick={sortDevices} />
+          <img src={filterIcon} alt="filter icon" onClick={filterDevices} />
         </div>
       </div>
       <div className="deviceListLabels">
