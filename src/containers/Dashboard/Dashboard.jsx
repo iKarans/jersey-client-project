@@ -1,6 +1,6 @@
 import React from 'react';
 import "./Dashboard.scss";
-import LargeLineGraph from "../LargeLineGraph/LargeLineGraph.jsx";
+import LargeLineGraph from "../../components/LargeLineGraph/LargeLineGraph.jsx";
 
 const Dashboard = () => {
     const largeLineGraphTitle = "Devices on Network";
