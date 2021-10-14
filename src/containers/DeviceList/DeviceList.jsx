@@ -15,7 +15,7 @@ export const DeviceList = () => {
   const sortDevices = () => {
     if (!sorted) {
       setDeviceList(
-        devices.sort((a, b) => {
+        [...devices].sort((a, b) => {
           return order[a.securityRisk] - order[b.securityRisk];
         })
       );
@@ -35,14 +35,16 @@ export const DeviceList = () => {
     }
   };
   const handleInput = (event) => {
-    const input = event.target.value;
+    const input = event.target.value.toLowerCase();
     setSearchTerm(input);
   };
 
   useEffect(() => {
     if (searchTerm.length !== 0) {
       setDeviceList(
-        devices.filter((device) => device.name.includes(searchTerm))
+        devices.filter((device) =>
+          device.name.toLowerCase().includes(searchTerm)
+        )
       );
     } else {
       setDeviceList(devices);
