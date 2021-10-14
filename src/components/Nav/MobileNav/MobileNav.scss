@@ -65,9 +65,20 @@
         color: $text-secondary;
         font-weight: 500;
         left: 90px;
+        
       }
     }
   }
+
+  &__item--text {
+    display: none;
+
+    @include mobile {
+      display: block;
+      text-decoration: none;
+      color: $text-secondary;
+  }
+}
 
     &__item--image {
       display: none;
@@ -78,6 +89,8 @@
     }
 
   }
+
+
 
   &__item--logout {
     display: none;

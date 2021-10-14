@@ -16,27 +16,28 @@ const MobileNav = (props) => {
     <div className="mobileNav">
       <div  className="mobileNav__item mobileNav--dashboard">
         <HomeIcon className="mobileNav__item--image" />
-        <Link to = "/dashboard"><p onClick={handleClick}>Dashboard</p></Link>
+        <Link to = "/dashboard" className="mobileNav__item--text " onClick={handleClick}>Dashboard</Link>
       </div>
       <div  className="mobileNav__item">
         <SecurityIcon className="mobileNav__item--image" />
-        <Link to = "/security" ><p onClick={handleClick}>Security</p></Link>
+        <Link to = "/security" className="mobileNav__item--text "onClick={handleClick}>Security</Link>
       </div>
       <div  className="mobileNav__item">
         <DevicesIcon className="mobileNav__item--image" />
-        <Link to = "/devices"><p onClick={handleClick}>Devices</p></Link>
+        <Link to = "/devices" className="mobileNav__item--text " onClick={handleClick}>Device</Link>
       </div>
       <div  className="mobileNav__item">
         <NetworkIcon className="mobileNav__item--image" />
-        <Link to = "/network"><p onClick={handleClick}>Network</p></Link>
+        <Link to = "/network" className="mobileNav__item--text " onClick={handleClick}>Network</Link>
       </div>
       <div  className="mobileNav__item">
         <SettingsIcon className="mobileNav__item--image" />
-        <Link to = "/settings"><p onClick={handleClick}>Settings</p></Link>
+        <Link to = "/settings" className="mobileNav__item--text " onClick={handleClick}>Setting</Link>
       </div>
       <div  className="mobileNav__item--logout">
         <p className="mobileNav__logout">Logout</p>
       </div>
+
       
     </div>
     

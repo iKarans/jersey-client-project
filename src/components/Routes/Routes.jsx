@@ -12,7 +12,7 @@ const Routes = () => {
 
 
    return (
-      <div>
+      <div className="routes">
          <Switch>
             <Route exact path="/dashboard">
                <Dashboard />
