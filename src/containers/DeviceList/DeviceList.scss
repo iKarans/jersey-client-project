@@ -17,6 +17,9 @@
   text-align: center;
   margin: 5px;
   padding: 10px;
+  @include mobile {
+    display: none;
+  }
 }
 .searchOptions {
   display: flex;
@@ -41,5 +44,8 @@
   > img {
     margin: 10px;
     margin-bottom: 0px;
+    @include mobile {
+      display: none;
+    }
   }
 }

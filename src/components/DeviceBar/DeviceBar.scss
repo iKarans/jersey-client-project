@@ -31,4 +31,11 @@
   > img {
     margin: auto;
   }
+  @include mobile {
+    display: flex;
+    justify-content: space-around;
+    .hiddenOnMobile {
+      display: none;
+    }
+  }
 }

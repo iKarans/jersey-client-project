@@ -9,24 +9,37 @@ import sortIcon from "../../assets/devices/sortIcon.png";
 
 export const DeviceList = () => {
   const [searchTerm, setSearchTerm] = useState("");
-  const [deviceList, setDeviceList] = useState(devices);
-  const [sort, setSort] = useState([])
-
+  const [deviceList, setDeviceList] = useState([]);
+  const [sorted, setSorted] = useState(false);
+  const [filtered, setFiltered] = useState(false);
+  const sort = () => {
+    if (!sorted) {
+      console.log("not sorted");
+      setDeviceList(
+        devices.sort((a, b) => {
+          return order[a.securityRisk] - order[b.securityRisk];
+        })
+      );
+      setSorted(!sorted);
+    } else {
+      console.log("sorted");
+      setDeviceList(devices);
+      setSorted(!sorted);
+    }
+  };
+  const filter = () => {
+    if (!filtered) {
+      setDeviceList(devices.filter((device) => device.securityRisk === "high"));
+      setFiltered(!filtered);
+    } else if (filtered) {
+      setDeviceList(devices);
+      setFiltered(!filtered);
+    }
+  };
   const handleInput = (event) => {
     const input = event.target.value;
     setSearchTerm(input);
   };
-
-  const filterDevices = () => {
-    setDeviceList(devices.filter(device => device.securityRisk === "high"))
-  }
-
-  const sortDevices = () => {
-    setDeviceList(
-        devices.sort( (a, b) => { return order[a.securityRisk] - order[b.securityRisk]})
-    )
-    console.log(devices)
-}
 
   useEffect(() => {
     if (searchTerm.length !== 0) {
@@ -53,12 +66,10 @@ export const DeviceList = () => {
           <label htmlFor="deviceSearch" className="search-bar__label"></label>
         </form>
         <div className="filterAndSort">
-          <img src={sortIcon} alt="sort icon" />
-          <img src={filterIcon} alt="filter icon" />
+          <img src={sortIcon} alt="sort icon" onClick={sort} />
+          <img src={filterIcon} alt="filter icon" onClick={filter} />
         </div>
       </div>
-        <button onClick={sortDevices}>sort</button>
-        <button onClick={filterDevices}>filter</button>
       <div className="deviceListLabels">
         <p>Device Name</p>
         <p>Device Type</p>
@@ -72,7 +83,6 @@ export const DeviceList = () => {
       <div className="devicesList">
         {deviceList && deviceList.length !== 0 ? (
           deviceList.map((device) => (
-              
             <DeviceBar key={device.name} device={device} />
           ))
         ) : (
