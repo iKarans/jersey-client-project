@@ -3,7 +3,7 @@ import "./Network.scss"
 
 const Network = () => {
   return (
-    <div>
+    <div className="network__text">
       <h1>Network Page</h1>
     </div>
   )
