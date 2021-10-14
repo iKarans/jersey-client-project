@@ -33,10 +33,9 @@ export const DeviceList = () => {
             name="deviceSearch"
             onInput={handleInput}
             className="search-bar__input"
+            placeholder="Search by Device name"
           />
-          <label htmlFor="deviceSearch" className="search-bar__label">
-            Search by Device name
-          </label>
+          <label htmlFor="deviceSearch" className="search-bar__label"></label>
         </form>
         <div className="filterAndSort">
           <img src={sortIcon} alt="sort icon" />
