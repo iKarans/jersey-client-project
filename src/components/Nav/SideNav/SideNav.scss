@@ -45,13 +45,14 @@
     align-items: center;
     // margin-top: 40px;
     margin-bottom: 25px;
+    
   }
 
   &__item:hover {
     background-color: #DAF0ED;
     border-radius: 15px;
     // padding-left: 50px;
-    color: #2ABCA1;
+    color: $primary-color;
 
     svg path {
       fill: #2ABCA1;
@@ -85,20 +86,8 @@
 
 
   }
-
-  // &__item--image:hover path {
-  //   fill: #2ABCA1;
-  //   transition: all ease 0.3s;
-  // }
-
-
 }
 
-.sidenav__item:hover ~ .sidenav__item--image{
-
-fill: #2ABCA1;
-
-}
 .placeholderHeader {
   display: none;
 
@@ -145,7 +134,7 @@ fill: #2ABCA1;
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
-      color: #454756;
+      color: $text-secondary;
       
       svg path {
         fill: #2ABCA1;
@@ -175,7 +164,7 @@ fill: #2ABCA1;
       left: 72px;
       font-weight: 600;
       font-size: 16px;
-      color: #454756
+      color: $text-secondary;
     }
 
   }
@@ -188,7 +177,7 @@ fill: #2ABCA1;
   @include mobile {  
     display: block;
     position: absolute;
-    left: 383px;
+    left: 90%;
 
   }
 }

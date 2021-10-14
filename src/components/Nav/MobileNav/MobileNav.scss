@@ -66,7 +66,7 @@
       @include mobile {
         display: block;
         font-size: 16px;
-        color: #454756;
+        color: $text-secondary;
         font-weight: 500;
         position: absolute;
         left: 90px;
@@ -109,7 +109,7 @@
       font-size: 14px;
       font-weight: bold;
       color: #FFFFFF;
-      background-color: #2ABCA1;
+      background-color:$primary-color;
       justify-content: center;
       align-items: center;
     }
