@@ -12,7 +12,7 @@ const MobileNav = () => {
  
   return (
     <div className="mobileNav">
-      <div  className="mobileNav__item">
+      <div  className="mobileNav__item mobileNav--dashboard">
         <HomeIcon className="mobileNav__item--image" />
         <p>Dashboard</p>
       </div>
@@ -32,7 +32,7 @@ const MobileNav = () => {
         <SettingsIcon className="mobileNav__item--image" />
         <p>Settings</p>
       </div>
-      <div  className="mobileNav__item">
+      <div  className="mobileNav__item--logout">
         <p className="mobileNav__logout">Logout</p>
       </div>
     </div>
