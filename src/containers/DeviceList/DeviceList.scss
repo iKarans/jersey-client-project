@@ -9,7 +9,7 @@
     width: 95%;
     margin: 0 auto;
   }
-  &__list-labels {
+  &__list--labels {
     display: grid;
     grid-template-columns: repeat(9, 1fr);
     grid-gap: 20px;
@@ -37,12 +37,11 @@
       width: 90%;
       margin: 20px auto;
     }
-  }
-
-  &__filter-and-sort {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
+    &--filter-and-sort {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+    }
   }
   &__search-bar {
     display: flex;

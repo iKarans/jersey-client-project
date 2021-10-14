@@ -3,7 +3,7 @@ import { devices } from "../../data/devices";
 import { order } from "../../data/devices";
 import { DeviceBar } from "../../components/DeviceBar/DeviceBar";
 import "./DeviceList.scss";
-import search from "../../assets/devices/search.png";
+import searchIcon from "../../assets/devices/searchIcon.png";
 import filterIcon from "../../assets/devices/filterIcon.png";
 import sortIcon from "../../assets/devices/sortIcon.png";
 
@@ -12,6 +12,10 @@ export const DeviceList = () => {
   const [deviceList, setDeviceList] = useState([]);
   const [sorted, setSorted] = useState(false);
   const [filtered, setFiltered] = useState(false);
+  const highRisk = devices.filter((device) => device.securityRisk === "high");
+  const search = devices.filter((device) =>
+    device.name.toLowerCase().includes(searchTerm)
+  );
   const sortDevices = () => {
     if (!sorted) {
       setDeviceList(
@@ -27,7 +31,7 @@ export const DeviceList = () => {
   };
   const filterDevices = () => {
     if (!filtered) {
-      setDeviceList(devices.filter((device) => device.securityRisk === "high"));
+      setDeviceList(highRisk);
       setFiltered(!filtered);
     } else if (filtered) {
       setDeviceList(devices);
@@ -41,11 +45,7 @@ export const DeviceList = () => {
 
   useEffect(() => {
     if (searchTerm.length !== 0) {
-      setDeviceList(
-        devices.filter((device) =>
-          device.name.toLowerCase().includes(searchTerm)
-        )
-      );
+      setDeviceList(search);
     } else {
       setDeviceList(devices);
     }
@@ -55,7 +55,7 @@ export const DeviceList = () => {
     <div className="devices">
       <div className="devices__search-options">
         <form className="devices__search-options--search-bar">
-          <img src={search} alt="search icon" />
+          <img src={searchIcon} alt="search icon" />
           <input
             type="text"
             name="deviceSearch"
@@ -70,7 +70,7 @@ export const DeviceList = () => {
           <img src={filterIcon} alt="filter icon" onClick={filterDevices} />
         </div>
       </div>
-      <div className="devices__list-labels">
+      <div className="devices__list--labels">
         <p>Device Name</p>
         <p>Device Type</p>
         <p>Brand</p>
