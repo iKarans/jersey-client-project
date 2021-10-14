@@ -3,7 +3,7 @@ import "./UserBar.scss";
 import DeviceID from "./DeviceID/DeviceID";
 import UserInfo from "./UserInfo/UserInfo";
 import wavesSVG from "../../assets/header/background-waves.svg";
-import mobileLogo from "../../assets/global/lujam-logo-mobile.svg"
+import mobileLogo from "../../assets/global/lujam-logo-mobile.svg";
 
 const UserBar = () => {
   return (
