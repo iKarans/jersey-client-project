@@ -12,7 +12,10 @@ import { ReactComponent as GreyDropdown } from "../../../assets/global/grey-drop
 
 
 
-const SideNav = () => {
+const SideNav = (props) => {
+
+  const {selectedPage} = props
+
   const [showNav, setShowNav] = useState(false)
   const [heading, setHeading] = useState("Dashboard")
 
@@ -76,7 +79,7 @@ const SideNav = () => {
       <div className="mobileNavHeader" onClick={toggleNav}>
         <div className="mobileNavHeader__items-left">
           <HomeIcon className="mobileNavHeader__item--image" />
-          <p className="mobileNavHeader__heading">Menu</p>
+          <p className="mobileNavHeader__heading">{selectedPage}</p>
         </div>
         <GreyDropdown className="mobileNavHeader____image--arrow" />
       </div>

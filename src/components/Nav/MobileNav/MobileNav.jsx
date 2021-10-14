@@ -24,7 +24,7 @@ const MobileNav = (props) => {
       </div>
       <div  className="mobileNav__item">
         <DevicesIcon className="mobileNav__item--image" />
-        <Link to = "/devices" className="mobileNav__item--text " onClick={handleClick}>Device</Link>
+        <Link to = "/devices" className="mobileNav__item--text " onClick={handleClick}>Devices</Link>
       </div>
       <div  className="mobileNav__item">
         <NetworkIcon className="mobileNav__item--image" />

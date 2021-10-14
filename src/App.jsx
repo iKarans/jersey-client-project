@@ -15,14 +15,11 @@ import Routes from './components/Routes/Routes';
 
 const App = () => {
 
-  const handleClick = () => {
-    console.log("working")
-  }
-
+  
   return (
     <Router>
       <div className="App">
-        <SideNav handleClick={handleClick} />
+        
         <Routes />
       </div>
     </Router>
