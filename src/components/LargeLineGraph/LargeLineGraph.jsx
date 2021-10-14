@@ -11,11 +11,11 @@ const LargeLineGraph = (props) => {
         gradient.addColorStop(0, "rgba(42, 188, 161, 0.54")
         gradient.addColorStop(0.95, "rgba(42, 188, 161, 0");
         return {
-            labels: (labels.length == data.length ? labels : [0]),
+            labels: (labels.length === data.length ? labels : [0]),
             datasets: [
                 {
                   label: "Devices on Network",
-                  data: labels.length == data.length ? data : [0],
+                  data: labels.length === data.length ? data : [0],
                   fill: true,
                   backgroundColor: gradient,
                   borderWidth: 0,
