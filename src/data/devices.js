@@ -10,7 +10,7 @@ export const devices = [
     securityRisk: "low",
   },
   {
-    name: "fc7e3bc7",
+    name: "Morris-PC",
     type: "mobile",
     brand: "lenovo",
     model: "XPS 15",
@@ -41,8 +41,8 @@ export const devices = [
   },
   {
     name: "fc7e3bc4",
-    type: "laptop",
-    brand: "dell",
+    type: "mobile",
+    brand: "huawei",
     model: "XPS 15",
     OS: "Windows 10",
     ipAddress: "152.15.152.50",

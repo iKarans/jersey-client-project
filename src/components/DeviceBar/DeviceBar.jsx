@@ -50,8 +50,8 @@ export const DeviceBar = (props) => {
       <h4>{name}</h4>
       {/* <img {type} />
       <img {brand}/> */}
-      <img src={typeIcon()} />
-      <img src={brandIcon()} />
+      <img src={typeIcon()} alt={type} />
+      <img src={brandIcon()} alt={brand} />
       <p>{model}</p>
       <p>{OS}</p>
       <p>{ipAddress}</p>
@@ -61,7 +61,7 @@ export const DeviceBar = (props) => {
       >
         <h4>{securityRisk}</h4>
       </span>
-      <img src={optionsIcon}></img>
+      <img src={optionsIcon} alt="options"></img>
     </div>
   );
 };

@@ -3,6 +3,8 @@ import { devices } from "../../data/devices";
 import { DeviceBar } from "../../components/DeviceBar/DeviceBar";
 import "./DeviceList.scss";
 import search from "../../assets/devices/search.png";
+import filterIcon from "../../assets/devices/filterIcon.png";
+import sortIcon from "../../assets/devices/sortIcon.png";
 
 export const DeviceList = () => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -25,7 +27,7 @@ export const DeviceList = () => {
     <div className="devices">
       <div className="searchOptions">
         <form className="search-bar">
-          <img src={search} />
+          <img src={search} alt="search icon" />
           <input
             type="text"
             name="deviceSearch"
