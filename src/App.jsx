@@ -11,40 +11,22 @@ import {
   Switch,
   Route
 } from "react-router-dom";
+import Routes from './components/Routes/Routes';
 
 const App = () => {
-  
 
   const handleClick = () => {
     console.log("working")
   }
+
   return (
-    <div className="App">
-      <SideNav handleClick={handleClick}/>
-
     <Router>
-      <Switch>
-        <Route exact path="/dashboard">
-          <Dashboard />
-        </Route>
-        <Route exact path="/devices">
-          <Devices />
-        </Route>
-        <Route exact path="/security">
-          <Security />
-        </Route>
-        <Route exact path="/network">
-          <Network />
-        </Route>
-        <Route exact path="/settings">
-          <Settings />
-        </Route>
-      </Switch>
+      <div className="App">
+        <SideNav handleClick={handleClick} />
+        <Routes />
+      </div>
     </Router>
-
-  </div>
-    
-  );
+  )
 }
 
 export default App;

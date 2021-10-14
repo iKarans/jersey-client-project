@@ -1,6 +1,6 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import "./SideNav.scss";
-import { Link, BrowserRouter as Router, } from "react-router-dom";
+import { Link } from "react-router-dom";
 import logo from "../../../assets/global/lujam-logo-green.svg";
 import MobileNav from '../MobileNav/MobileNav';
 import { ReactComponent as HomeIcon } from "../../../assets/nav/home.svg";
@@ -19,41 +19,38 @@ const SideNav = () => {
     setShowNav(!showNav)
     console.log(showNav)
   }
-  
+
   return (
 
     <div className="navigation">
-      {showNav && <MobileNav />}  
+      {showNav && <MobileNav />}
       <div className="sidenav">
-        
+
         <div className="sidenav__logo">
           <img src={logo} alt="" />
         </div>
-        
+
         <div className="sidenav__items">
-          <Router>
           <div className="sidenav__dashboard sidenav__item">
-          <HomeIcon className="sidenav__item--image" />
-          <Link to="/dashboard" className="sidenav__text">Dashboard</Link>
+            <HomeIcon className="sidenav__item--image" />
+            <Link to="/dashboard" className="sidenav__text">Dashboard</Link>
           </div>
           <div className="sidenav__security sidenav__item">
-          <SecurityIcon className="sidenav__item--image"/>
-          <Link to="/security" className="sidenav__text">Security</Link>
+            <SecurityIcon className="sidenav__item--image" />
+            <Link to="/security" className="sidenav__text">Security</Link>
           </div>
           <div className="sidenav__devices sidenav__item">
-          <DevicesIcon className="sidenav__item--image" />
-          <Link to="/device" className="sidenav__text">Device</Link>
+            <DevicesIcon className="sidenav__item--image" />
+            <Link to="/device" className="sidenav__text">Device</Link>
           </div>
           <div className="sidenav__network sidenav__item">
-          <NetworkIcon className="sidenav__item--image" />
-          <Link to="/network" className="sidenav__text">Network</Link>
+            <NetworkIcon className="sidenav__item--image" />
+            <Link to="/network" className="sidenav__text">Network</Link>
           </div>
           <div className="sidenav__settings sidenav__item">
-          <SettingsIcon className="sidenav__item--image" />
-          <Link to="/settings" className="sidenav__text">Settings</Link>
+            <SettingsIcon className="sidenav__item--image" />
+            <Link to="/settings" className="sidenav__text">Settings</Link>
           </div>
-          </Router>
-          
         </div>
         <div className="sidenav__logout">
           <p>Logout</p>
@@ -62,9 +59,9 @@ const SideNav = () => {
       <div className="placeholderHeader"></div>
       <div className="mobileNavHeader" onClick={toggleNav}>
         <div className="mobileNavHeader__items-left">
-        <HomeIcon className="mobileNavHeader__item--image" />
-        <p className="mobileNavHeader__heading">Dashboard</p>
-      </div>
+          <HomeIcon className="mobileNavHeader__item--image" />
+          <p className="mobileNavHeader__heading">Dashboard</p>
+        </div>
         <GreyDropdown className="mobileNavHeader____image--arrow" />
       </div>
     </div>
