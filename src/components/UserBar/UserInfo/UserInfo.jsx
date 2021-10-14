@@ -2,8 +2,6 @@ import React from "react";
 import "./UserInfo.scss";
 import whiteDropdown from "./../../../assets/global/white-dropdown.svg";
 
-import placeholderProfile from "./../../../assets/header/placeholder-profile.jpg";
-
 const UserInfo = () => {
   return (
     <div className="user-info">
@@ -19,7 +17,9 @@ const UserInfo = () => {
         </button>
         <p className="user-info__title">Admin</p>
         <div className="user-info__dropdown-content">
-          <p className="user-info__dropdown-content--heading">Filler Text - nothing on figma</p>
+          <p className="user-info__dropdown-content--heading">
+            Filler Text - nothing on figma
+          </p>
           <a className="user-info__dropdown-content--link" href="#"></a>
           <a className="user-info__dropdown-content--link" href="#"></a>
           <a className="user-info__dropdown-content--link" href="#"></a>
