@@ -1,20 +1,23 @@
 @use "../../assets/styles/variables" as *;
 @use "../../assets/styles/typography" as *;
 @use "../../assets/styles/mixins" as *;
+
 .deviceBar {
   border: 1px solid $text-primary;
   border-radius: 10px;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-gap: 20px;
+  grid-template-columns: repeat(9, 1fr);
+  grid-gap: 10px;
   align-items: center;
   justify-content: center;
   text-align: center;
   margin: 5px;
   padding: 10px;
+  color: $text-secondary;
 
   &__SecurityRisk {
     border-radius: 10px;
+    padding: 5px;
     &--low {
       color: $low-color;
       background-color: rgba($low-color, 0.17);
@@ -31,11 +34,12 @@
   > img {
     margin: auto;
   }
-  @include mobile {
-    display: flex;
-    justify-content: space-around;
-    .hiddenOnMobile {
-      display: none;
+    @include mobile {
+        display: flex;
+        justify-content: space-around;
+        
+        .hiddenOnMobile {
+        display: none;
+        }
     }
-  }
 }

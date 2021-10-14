@@ -1,49 +1,65 @@
 @use "../../assets/styles/variables" as *;
 @use "../../assets/styles/mixins" as *;
 @use "../../assets/styles/typography" as *;
-.deviceList {
+
+.devicesList {
   display: grid;
   grid-template-columns: 1fr;
-  margin: 5px;
+  width: 95%;
+  margin: 0 auto;
 }
 .deviceListLabels {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(9, 1fr);
   grid-gap: 20px;
   color: $text-secondary;
   font-weight: bold;
   align-items: center;
   justify-content: center;
   text-align: center;
-  margin: 5px;
-  padding: 10px;
+  width: 90%;
+  margin: 10px auto;
+
   @include mobile {
+      width: 95%;
     display: none;
   }
 }
 .searchOptions {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+    width: 95%;
+    margin: 40px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include mobile {
+        width: 90%;
+        margin: 20px auto;
+    }
 }
+
 .filterAndSort {
   display: flex;
   justify-content: space-between;
-  > img {
-    margin-right: 60px;
-  }
+  gap: 20px;
+//   > img {
+//     margin-right: 60px;
+//   }
 }
 .search-bar {
-  margin-bottom: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+
   &__input {
-    border-top-style: hidden;
-    border-right-style: hidden;
-    border-left-style: hidden;
-    border-bottom-style: groove;
+      border: none;
+    // border-top-style: hidden;
+    // border-right-style: hidden;
+    // border-left-style: hidden;
+    // border-bottom-style: groove;
   }
   > img {
-    margin: 10px;
-    margin-bottom: 0px;
     @include mobile {
       display: none;
     }
