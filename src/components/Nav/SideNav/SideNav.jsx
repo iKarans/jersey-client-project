@@ -56,7 +56,7 @@ const SideNav = () => {
           <p>Logout</p>
         </div>
       </div>
-      <div className="placeholderHeader"></div>
+   
       <div className="mobileNavHeader" onClick={toggleNav}>
         <div className="mobileNavHeader__items-left">
           <HomeIcon className="mobileNavHeader__item--image" />
