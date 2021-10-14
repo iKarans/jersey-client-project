@@ -142,10 +142,12 @@
             color: $text-tertiary;
             margin-bottom: 0.5rem;
 
-            a {
+            span {
                 font-size: 0.75rem;
                 font-weight: 600;
                 color: $text-tertiary;
+                text-decoration: underline;
+                cursor: pointer;
             }
         }
 
@@ -153,7 +155,7 @@
             font-size: 0.75rem;
             font-weight: 600;
             color: $text-tertiary;
-            text-decoration: none;
+            cursor: pointer;
         }
     }
 
