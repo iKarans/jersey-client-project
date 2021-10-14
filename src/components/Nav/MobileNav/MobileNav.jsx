@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import "./MobileNav.scss"
 import { ReactComponent as SecurityIcon } from "../../../assets/nav/securityGreen.svg";
 import { ReactComponent as DevicesIcon } from "../../../assets/nav/deviceGreen.svg";
@@ -14,7 +15,7 @@ const MobileNav = () => {
     <div className="mobileNav">
       <div  className="mobileNav__item mobileNav--dashboard">
         <HomeIcon className="mobileNav__item--image" />
-        <p>Dashboard</p>
+        <Link to = "/dashboard"><p>Dashboard</p></Link>
       </div>
       <div  className="mobileNav__item">
         <SecurityIcon className="mobileNav__item--image" />
