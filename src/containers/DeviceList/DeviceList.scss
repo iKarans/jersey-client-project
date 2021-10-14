@@ -11,6 +11,7 @@
   }
   &__list--labels {
     display: grid;
+    justify-content: center;
     grid-template-columns: repeat(9, 1fr);
     grid-gap: 20px;
     color: $text-secondary;

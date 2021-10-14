@@ -12,10 +12,6 @@ export const DeviceList = () => {
   const [deviceList, setDeviceList] = useState([]);
   const [sorted, setSorted] = useState(false);
   const [filtered, setFiltered] = useState(false);
-  const highRisk = devices.filter((device) => device.securityRisk === "high");
-  const search = devices.filter((device) =>
-    device.name.toLowerCase().includes(searchTerm)
-  );
   const sortDevices = () => {
     if (!sorted) {
       setDeviceList(
@@ -31,6 +27,9 @@ export const DeviceList = () => {
   };
   const filterDevices = () => {
     if (!filtered) {
+      const highRisk = devices.filter(
+        (device) => device.securityRisk === "high"
+      );
       setDeviceList(highRisk);
       setFiltered(!filtered);
     } else if (filtered) {
@@ -45,6 +44,9 @@ export const DeviceList = () => {
 
   useEffect(() => {
     if (searchTerm.length !== 0) {
+      const search = devices.filter((device) =>
+        device.name.toLowerCase().includes(searchTerm)
+      );
       setDeviceList(search);
     } else {
       setDeviceList(devices);

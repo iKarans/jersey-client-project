@@ -37,7 +37,7 @@
   @include mobile {
     display: flex;
     justify-content: space-around;
-    .hiddenOnMobile {
+    &__hidden-on-mobile {
       display: none;
     }
   }
