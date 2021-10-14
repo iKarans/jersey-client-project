@@ -85,11 +85,11 @@
 
   &__dropdown-content {
     display: none;
-    width: 281px;
+    width: 177px;
     height: auto;
     position: absolute;
-    top: 14px;
-    left: -160px;
+    top: 15px;
+    left: -55px;
     background: #ffffff;
     box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.15);
     border-radius: 7px;
@@ -122,7 +122,7 @@
 
   &__dropdown-content--link:hover {
     background: rgba(56, 196, 175, 0.15);
-    color: rgba(159, 172, 190, 1);
+    color: $text-secondary;
   }
 
   &__dropdown:hover &__dropdown-content {
