@@ -38,6 +38,10 @@ export const DeviceList = () => {
             Search by Device name
           </label>
         </form>
+        <div className="filterAndSort">
+          <img src={sortIcon} alt="sort icon" />
+          <img src={filterIcon} alt="filter icon" />
+        </div>
       </div>
       <div className="deviceListLabels">
         <p>Device Name</p>
