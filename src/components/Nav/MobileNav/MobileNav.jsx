@@ -37,7 +37,9 @@ const MobileNav = (props) => {
       <div  className="mobileNav__item--logout">
         <p className="mobileNav__logout">Logout</p>
       </div>
+      
     </div>
+    
   )
 }
 

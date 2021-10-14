@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import "./SideNav.scss";
 import { Link } from "react-router-dom";
 import logo from "../../../assets/global/lujam-logo-green.svg";
@@ -14,11 +14,27 @@ import { ReactComponent as GreyDropdown } from "../../../assets/global/grey-drop
 
 const SideNav = () => {
   const [showNav, setShowNav] = useState(false)
+  const [heading, setHeading] = useState("Dashboard")
 
   const toggleNav = () => {
     setShowNav(!showNav)
-    console.log(showNav)
   }
+  const handleDash = () => {
+    setHeading("Dashboard")
+    console.log("security")
+ 
+   }
+ 
+   const handleSecurity = () => {
+     setHeading("Security")
+     console.log("security")
+ 
+   }
+
+
+  
+
+  
 
   return (
 
@@ -32,12 +48,12 @@ const SideNav = () => {
 
         <div className="sidenav__items">
           <div className="sidenav__dashboard sidenav__item">
-            <HomeIcon className="sidenav__item--image" />
+            <HomeIcon className="sidenav__item--image"/>
             <Link to="/dashboard" className="sidenav__text">Dashboard</Link>
           </div>
           <div className="sidenav__security sidenav__item">
             <SecurityIcon className="sidenav__item--image" />
-            <Link to="/security" className="sidenav__text">Security</Link>
+            <Link to="/security" className="sidenav__text">Security </Link>
           </div>
           <div className="sidenav__devices sidenav__item">
             <DevicesIcon className="sidenav__item--image" />
@@ -60,7 +76,7 @@ const SideNav = () => {
       <div className="mobileNavHeader" onClick={toggleNav}>
         <div className="mobileNavHeader__items-left">
           <HomeIcon className="mobileNavHeader__item--image" />
-          <p className="mobileNavHeader__heading">Dashboard</p>
+          <p className="mobileNavHeader__heading">Menu</p>
         </div>
         <GreyDropdown className="mobileNavHeader____image--arrow" />
       </div>

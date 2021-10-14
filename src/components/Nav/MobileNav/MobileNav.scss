@@ -83,9 +83,10 @@
     display: none;
 
     @include mobile {
+      width: 100vw;
       display: flex;
-      align-self: center;
-      justify-self: center;
+      align-items: center;
+      justify-content: center;
      
     }
 
@@ -98,7 +99,7 @@
 
     @include mobile {
       display: flex;
-      width: 354px;
+      width: 80vw;
       height: 50px;
       border-radius: 12px;
       font-size: 14px;
