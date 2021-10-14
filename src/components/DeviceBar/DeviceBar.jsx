@@ -13,15 +13,12 @@ export const DeviceBar = (props) => {
   const { name, type, brand, model, OS, ipAddress, lastActive, securityRisk } =
     props.device;
 
-  // setting icon from type
   const typeIcon = () => {
     let typeText = "";
     type === "laptop" ? (typeText = laptopIcon) : (typeText = mobileIcon);
     return typeText;
   };
-  typeIcon();
 
-  // setting icon from brand
   const brandIcon = () => {
     let brandText = "";
     if (brand === "dell") {
@@ -73,4 +70,3 @@ export const DeviceBar = (props) => {
     </div>
   );
 };
-//type, brand,
