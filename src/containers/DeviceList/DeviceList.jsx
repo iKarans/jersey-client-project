@@ -1,15 +1,30 @@
 import React, { useState, useEffect } from "react";
 import { devices } from "../../data/devices";
+import { order } from "../../data/devices";
 import { DeviceBar } from "../../components/DeviceBar/DeviceBar";
 import "./DeviceList.scss";
 
 export const DeviceList = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [deviceList, setDeviceList] = useState(devices);
+  const [sort, setSort] = useState([])
+
   const handleInput = (event) => {
     const input = event.target.value;
     setSearchTerm(input);
   };
+
+  const filterDevices = () => {
+    setDeviceList(devices.filter(device => device.securityRisk === "high"))
+  }
+
+  const sortDevices = () => {
+    setDeviceList(
+        devices.sort( (a, b) => { return order[a.securityRisk] - order[b.securityRisk]})
+    )
+    console.log(devices)
+}
+
   useEffect(() => {
     if (searchTerm.length !== 0) {
       setDeviceList(
@@ -35,6 +50,8 @@ export const DeviceList = () => {
           </label>
         </form>
       </div>
+        <button onClick={sortDevices}>sort</button>
+        <button onClick={filterDevices}>filter</button>
       <div className="deviceListLabels">
         <p>Device Name</p>
         <p>Device Type</p>
@@ -48,6 +65,7 @@ export const DeviceList = () => {
       <div className="devicesList">
         {deviceList && deviceList.length !== 0 ? (
           deviceList.map((device) => (
+              
             <DeviceBar key={device.name} device={device} />
           ))
         ) : (

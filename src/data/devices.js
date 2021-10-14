@@ -57,6 +57,32 @@ export const devices = [
     OS: "Windows 10",
     ipAddress: "152.15.152.50",
     lastActive: "12 hours ago",
-    securityRisk: "low",
+    securityRisk: "high",
   },
-];
+  {
+    name: "cc7e34c9",
+    type: "mobile",
+    brand: "apple",
+    model: "XPS 15",
+    OS: "Windows 10",
+    ipAddress: "152.15.152.50",
+    lastActive: "12 hours ago",
+    securityRisk: "medium",
+  },
+  {
+    name: "dd4e54c0",
+    type: "laptop",
+    brand: "lenovo",
+    model: "XPS 15",
+    OS: "Windows 10",
+    ipAddress: "152.15.152.50",
+    lastActive: "12 hours ago",
+    securityRisk: "high",
+  }
+],
+
+order = {
+    high: 1,
+    medium: 2,
+    low: 3
+};
