@@ -15,7 +15,7 @@ export const DeviceList = () => {
   const sortDevices = () => {
     if (!sorted) {
       setDeviceList(
-        devices.sort((a, b) => {
+        [...devices].sort((a, b) => {
           return order[a.securityRisk] - order[b.securityRisk];
         })
       );
