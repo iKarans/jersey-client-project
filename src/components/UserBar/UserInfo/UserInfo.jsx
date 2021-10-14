@@ -19,7 +19,7 @@ const UserInfo = () => {
         </button>
         <p className="user-info__title">Admin</p>
         <div className="user-info__dropdown-content">
-          <p className="user-info__dropdown-content--heading">Filler Text</p>
+          <p className="user-info__dropdown-content--heading">Filler Text - nothing on figma</p>
           <a className="user-info__dropdown-content--link" href="#"></a>
           <a className="user-info__dropdown-content--link" href="#"></a>
           <a className="user-info__dropdown-content--link" href="#"></a>

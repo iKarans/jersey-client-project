@@ -8,7 +8,10 @@
   height: 100px;
   left: 0px;
   top: 0px;
-  background: #4fd1c5;
+
+  background-image: url("../../assets/header/background-image.png");
+  background-position:  center;
+
   border-radius: 7px;
 
   @include mobile {
@@ -30,6 +33,4 @@
       left: 19px;
     }
   }
-
-  
 }
