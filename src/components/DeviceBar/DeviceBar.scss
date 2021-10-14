@@ -2,7 +2,7 @@
 @use "../../assets/styles/typography" as *;
 @use "../../assets/styles/mixins" as *;
 .deviceBar {
-  border: 1px solid black;
+  border: 1px solid $text-primary;
   border-radius: 10px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;

@@ -10,9 +10,36 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-gap: 20px;
+  color: $text-secondary;
+  font-weight: bold;
   align-items: center;
   justify-content: center;
   text-align: center;
   margin: 5px;
   padding: 10px;
+}
+.searchOptions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.filterAndSort {
+  display: flex;
+  justify-content: space-between;
+  > img {
+    margin-right: 60px;
+  }
+}
+.search-bar {
+  margin-bottom: 5px;
+  &__input {
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    border-bottom-style: groove;
+  }
+  > img {
+    margin: 10px;
+    margin-bottom: 0px;
+  }
 }
