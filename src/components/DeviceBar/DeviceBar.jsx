@@ -10,9 +10,8 @@ import laptopIcon from "../../assets/devices/laptop.svg";
 import mobileIcon from "../../assets/devices/mobile.svg";
 
 export const DeviceBar = (props) => {
-  const { device } = props;
   const { name, type, brand, model, OS, ipAddress, lastActive, securityRisk } =
-    device;
+    props.device;
 
   // setting icon from type
   const typeIcon = () => {
@@ -44,21 +43,33 @@ export const DeviceBar = (props) => {
   };
 
   return (
-    <div className="deviceBar">
+    <div className="device-bar">
       <h4>{name}</h4>
-      <img src={typeIcon()} alt={type} className="hiddenOnMobile" />
-      <img src={brandIcon()} alt={brand} className="hiddenOnMobile" />
-      <p className="hiddenOnMobile">{model}</p>
-      <p className="hiddenOnMobile"> {OS}</p>
-      <p className="hiddenOnMobile">{ipAddress}</p>
-      <p className="hiddenOnMobile">{lastActive}</p>
+      <img
+        src={typeIcon()}
+        alt={type}
+        className="device-bar__hidden-on-mobile"
+      />
+      <img
+        src={brandIcon()}
+        alt={brand}
+        className="device-bar__hidden-on-mobile"
+      />
+      <p className="device-bar__hidden-on-mobile">{model}</p>
+      <p className="device-bar__hidden-on-mobile"> {OS}</p>
+      <p className="device-bar__hidden-on-mobile">{ipAddress}</p>
+      <p className="device-bar__hidden-on-mobile">{lastActive}</p>
 
       <span
-        className={`deviceBar__SecurityRisk deviceBar__SecurityRisk--${securityRisk}`}
+        className={`device-bar__security-risk device-bar__security-risk--${securityRisk}`}
       >
         <h4>{securityRisk}</h4>
       </span>
-      <img src={optionsIcon} alt="options" className="hiddenOnMobile"></img>
+      <img
+        src={optionsIcon}
+        alt="options"
+        className="device-bar__hidden-on-mobile"
+      ></img>
     </div>
   );
 };

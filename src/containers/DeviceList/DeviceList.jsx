@@ -53,8 +53,8 @@ export const DeviceList = () => {
 
   return (
     <div className="devices">
-      <div className="searchOptions">
-        <form className="search-bar">
+      <div className="devices__search-options">
+        <form className="devices__search-options--search-bar">
           <img src={search} alt="search icon" />
           <input
             type="text"
@@ -65,12 +65,12 @@ export const DeviceList = () => {
           />
           <label htmlFor="deviceSearch" className="search-bar__label"></label>
         </form>
-        <div className="filterAndSort">
+        <div className="devices__search-options--filter-and-sort">
           <img src={sortIcon} alt="sort icon" onClick={sortDevices} />
           <img src={filterIcon} alt="filter icon" onClick={filterDevices} />
         </div>
       </div>
-      <div className="deviceListLabels">
+      <div className="devices__list-labels">
         <p>Device Name</p>
         <p>Device Type</p>
         <p>Brand</p>
@@ -80,7 +80,7 @@ export const DeviceList = () => {
         <p>Last Active</p>
         <p>Security Risk</p>
       </div>
-      <div className="devicesList">
+      <div className="devices__list">
         {deviceList && deviceList.length !== 0 ? (
           deviceList.map((device) => (
             <DeviceBar key={device.name} device={device} />

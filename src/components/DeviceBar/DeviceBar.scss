@@ -1,7 +1,7 @@
 @use "../../assets/styles/variables" as *;
 @use "../../assets/styles/typography" as *;
 @use "../../assets/styles/mixins" as *;
-.deviceBar {
+.device-bar {
   border: 1px solid $text-primary;
   border-radius: 50px;
   display: grid;
@@ -14,7 +14,7 @@
   padding: 10px 20px;
   color: $text-secondary;
 
-  &__SecurityRisk {
+  &__security-risk {
     border-radius: 10px;
     padding: 5px;
     min-width: 100px;

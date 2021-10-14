@@ -2,30 +2,31 @@
 @use "../../assets/styles/mixins" as *;
 @use "../../assets/styles/typography" as *;
 
-.devicesList {
-  display: grid;
-  grid-template-columns: 1fr;
-  width: 95%;
-  margin: 0 auto;
-}
-.deviceListLabels {
-  display: grid;
-  grid-template-columns: repeat(9, 1fr);
-  grid-gap: 20px;
-  color: $text-secondary;
-  font-weight: bold;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  width: 90%;
-  margin: 10px auto;
-
-  @include mobile {
-      width: 95%;
-    display: none;
+.devices {
+  &__list {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 95%;
+    margin: 0 auto;
   }
-}
-.searchOptions {
+  &__list-labels {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-gap: 20px;
+    color: $text-secondary;
+    font-weight: bold;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 90%;
+    margin: 10px auto;
+
+    @include mobile {
+      width: 95%;
+      display: none;
+    }
+  }
+  &__search-options {
     width: 95%;
     margin: 40px auto;
     display: flex;
@@ -33,35 +34,29 @@
     justify-content: space-between;
 
     @include mobile {
-        width: 90%;
-        margin: 20px auto;
+      width: 90%;
+      margin: 20px auto;
     }
-}
+  }
 
-.filterAndSort {
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
-//   > img {
-//     margin-right: 60px;
-//   }
-}
-.search-bar {
+  &__filter-and-sort {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  &__search-bar {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 5px;
 
-  &__input {
+    &__input {
       border: none;
-    // border-top-style: hidden;
-    // border-right-style: hidden;
-    // border-left-style: hidden;
-    // border-bottom-style: groove;
-  }
-  > img {
-    @include mobile {
-      display: none;
+    }
+    > img {
+      @include mobile {
+        display: none;
+      }
     }
   }
 }
