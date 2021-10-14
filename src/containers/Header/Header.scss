@@ -4,6 +4,10 @@
 
 .header {
   position: relative;
+  left: 247px;
 
-  
+  @include mobile {
+    position: unset;
+    left: 0px;
+  }
 }
