@@ -19,19 +19,19 @@ const MobileNav = () => {
       </div>
       <div  className="mobileNav__item">
         <SecurityIcon className="mobileNav__item--image" />
-        <p>Security</p>
+        <Link to = "/security"><p>Security</p></Link>
       </div>
       <div  className="mobileNav__item">
         <DevicesIcon className="mobileNav__item--image" />
-        <p>Devices</p>
+        <Link to = "/devices"><p>Devices</p></Link>
       </div>
       <div  className="mobileNav__item">
         <NetworkIcon className="mobileNav__item--image" />
-        <p>Network</p>
+        <Link to = "/network"><p>Network</p></Link>
       </div>
       <div  className="mobileNav__item">
         <SettingsIcon className="mobileNav__item--image" />
-        <p>Settings</p>
+        <Link to = "/settings"><p>Settings</p></Link>
       </div>
       <div  className="mobileNav__item--logout">
         <p className="mobileNav__logout">Logout</p>

@@ -1,0 +1,18 @@
+@use '../../assets/styles/variables' as *;
+@use '../../assets/styles/mixins' as *;
+
+.security__text {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 227px;
+
+
+  @include mobile {    
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+}
