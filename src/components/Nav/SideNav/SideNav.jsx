@@ -58,6 +58,7 @@ const SideNav = () => {
       <div className="mobileNavHeader" onClick={toggleNav}>
         <div className="mobileNavHeader__items-left">
         <HomeIcon className="mobileNavHeader__item--image" />
+        {/* //We are going to need to useState to adjust this header depending on wherever the person is on the page. */}
         <p>Dashboard</p>
       </div>
         <GreyDropdown className="mobileNavHeader____image--arrow" />
