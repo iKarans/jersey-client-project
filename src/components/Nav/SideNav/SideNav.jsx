@@ -23,7 +23,7 @@ const SideNav = () => {
   return (
 
     <div className="navigation">
-      {showNav && <MobileNav />}
+      {showNav && <MobileNav  handleClick={toggleNav}/>}
       <div className="sidenav">
 
         <div className="sidenav__logo">
