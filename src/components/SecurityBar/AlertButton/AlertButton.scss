@@ -6,9 +6,11 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: flex-start;
   height: 100%;
-  width: 30%;
+  max-width: 174px;
+  min-width: 150px;
+  padding: 0 10px;
   border-radius: 7px;
   border: none;
   background-color: $text-tertiary;
@@ -16,12 +18,13 @@
 
   &__icon {
     
-    height: 60%;
-    width: 25%;
+    height: 38px;
+    width: 38px;
     border-radius: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-right: 10px;
   }
 
   &____info {
@@ -29,7 +32,8 @@
     flex-direction: column;
     height: 70%;
     align-items: flex-start;
-    justify-content: space-evenly;
+    // justify-content: left;
+    
 
   }
   &__info--heading {
@@ -40,6 +44,9 @@
 
   &__info--number {
     color: $text-secondary;
+    text-align: left;
+    font-weight: bold;
+    font-size: 20px;
   }
 }
 

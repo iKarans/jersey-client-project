@@ -7,7 +7,7 @@ import deviceIcon from "../../assets/header/device-icon.svg";
 import alertIcon from "../../assets/header/alert-icon.svg";
 import highRiskWhite from "../../assets/header/high-risk-white.svg";
 import greenTick from "../../assets/login/green-tick.svg";
-import highRiskRed from "../../assets/header/high-risk-red.svg";
+
 
 const SecurityBar = () => {
   return (
