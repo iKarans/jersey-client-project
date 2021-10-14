@@ -42,20 +42,17 @@ export const DeviceBar = (props) => {
       return brandText;
     }
   };
-  // deviceBar__SecurityRisk--low
-  //setting threat level styles
 
   return (
     <div className="deviceBar">
       <h4>{name}</h4>
-      {/* <img {type} />
-      <img {brand}/> */}
       <img src={typeIcon()} alt={type} />
       <img src={brandIcon()} alt={brand} />
       <p>{model}</p>
       <p>{OS}</p>
       <p>{ipAddress}</p>
       <p>{lastActive}</p>
+
       <span
         className={`deviceBar__SecurityRisk deviceBar__SecurityRisk--${securityRisk}`}
       >
