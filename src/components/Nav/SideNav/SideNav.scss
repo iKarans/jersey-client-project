@@ -28,6 +28,12 @@
     width: 73px;
   }
 
+  &__text {
+    text-decoration: none;
+  }
+
+  &__text:visited{ color: #AAB3BE }
+
   &__items {
     grid-area: 3 / 1 / 5 / 2;
     color: #AAB3BE;

@@ -13,7 +13,15 @@ import {
 } from "react-router-dom";
 
 const App = () => {
-  <div className="App">
+  
+
+  const handleClick = () => {
+    console.log("working")
+  }
+  return (
+    <div className="App">
+      <SideNav handleClick={handleClick}/>
+
     <Router>
       <Switch>
         <Route exact path="/dashboard">
@@ -33,13 +41,9 @@ const App = () => {
         </Route>
       </Switch>
     </Router>
-  </div>
 
-  const handleClick = () => {
-    console.log("working")
-  }
-  return (
-    <SideNav handleClick={handleClick}/>
+  </div>
+    
   );
 }
 

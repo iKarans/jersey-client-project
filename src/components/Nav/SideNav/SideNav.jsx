@@ -31,7 +31,7 @@ const SideNav = () => {
         </div>
         
         <div className="sidenav__items">
-          
+          <Router>
           <div className="sidenav__dashboard sidenav__item">
           <HomeIcon className="sidenav__item--image" />
           <Link to="/dashboard" className="sidenav__text">Dashboard</Link>
@@ -52,6 +52,7 @@ const SideNav = () => {
           <SettingsIcon className="sidenav__item--image" />
           <Link to="/settings" className="sidenav__text">Settings</Link>
           </div>
+          </Router>
           
         </div>
         <div className="sidenav__logout">
