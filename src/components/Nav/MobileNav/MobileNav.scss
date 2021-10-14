@@ -4,8 +4,6 @@
 .menuItems {
   display: none;
 
-
-
   @include mobile {    
     display: flex;
     flex-direction: column;
@@ -20,18 +18,17 @@
   display: none;
 
   @include mobile {
-  position: absolute;
-  top: 137px;    
-  height: 445px;
-  width: 100%;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1.5fr 0.5fr;
-  gap: 0px 0px;
-  grid-auto-flow: row;
-  background: linear-gradient(180deg, #DFDFDF 0%, #F9F9F9 0.01%, #FFFFFF 52.65%);
-  border-radius: 0px 0px 12px 12px;
-
+    position: absolute;
+    top: 137px;    
+    height: 445px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1.5fr 0.5fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    background: linear-gradient(180deg, #DFDFDF 0%, #F9F9F9 0.01%, #FFFFFF 52.65%);
+    border-radius: 0px 0px 12px 12px;
   }
 
   &--dashboard {
@@ -56,7 +53,6 @@
       flex-direction: row;
       border-bottom: 1px solid  #EBEBEB;
       width: 355px;
-    
     }
 
 
@@ -68,7 +64,6 @@
         font-size: 16px;
         color: $text-secondary;
         font-weight: 500;
-        position: absolute;
         left: 90px;
       }
     }
@@ -108,12 +103,11 @@
       border-radius: 12px;
       font-size: 14px;
       font-weight: bold;
-      color: #FFFFFF;
-      background-color: #2ABCA1;
+      color: $text-tertiary;
+      background-color: $primary-color;
       justify-content: center;
       align-items: center;
     }
-
 
   }
 
