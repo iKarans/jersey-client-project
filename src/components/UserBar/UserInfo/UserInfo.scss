@@ -13,8 +13,6 @@
     background-image: url("../../../assets/header/user-image.svg");
 
     @include mobile {
-      // display: block;
-      // position: absolute;
       top: 17px;
       right: 19px;
       left: unset;
