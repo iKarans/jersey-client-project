@@ -4,7 +4,7 @@
 .sidenav {
 
   height: 100%;
-  width: 227px;
+  min-width: 227px;
   position: fixed;
   top: 0;
   left: 0;
@@ -30,9 +30,12 @@
 
   &__text {
     text-decoration: none;
+    color: inherit;
   }
 
-  &__text:visited{ color: #AAB3BE }
+  &__text:visited{ 
+    text-decoration: none;
+  }
 
   &__items {
     grid-area: 3 / 1 / 5 / 2;
