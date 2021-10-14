@@ -41,7 +41,7 @@ const SideNav = () => {
           </div>
           <div className="sidenav__devices sidenav__item">
             <DevicesIcon className="sidenav__item--image" />
-            <Link to="/device" className="sidenav__text">Device</Link>
+            <Link to="/devices" className="sidenav__text">Devices</Link>
           </div>
           <div className="sidenav__network sidenav__item">
             <NetworkIcon className="sidenav__item--image" />
