@@ -3,7 +3,10 @@ import React, {useState} from 'react'
 import ShowPassword from "../../assets/login/show-password.svg"
 import HidePassword from "../../assets/login/Group.svg"
 
+
+
 import "./LoginForm.scss"
+
 
 const LoginForm = () => {
     
@@ -13,7 +16,7 @@ const LoginForm = () => {
     }
     
     return (
-        <div>
+        <div className = "login__form-container">
             <form action="submit" className="login__form">
                 <div className="login__form-rectangle"></div>
                     <h3 className="login__form-header">Login</h3>

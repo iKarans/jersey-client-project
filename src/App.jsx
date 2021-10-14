@@ -1,6 +1,6 @@
 import "./App.css";
 
-import Login from "./Components/Login/Login";
+import Login from "./components/Login/Login";
 
 const App = () => {
   return <div className="App">

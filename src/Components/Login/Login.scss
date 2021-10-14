@@ -22,24 +22,5 @@
         &--logo {
             @include mobile {}
         }
-
-
-    &__chat {
-        position: absolute;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background: linear-gradient(147deg, #2ABCA1 15.72%, #1A9BA4 97.46%);
-        box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.25);
-        width: 3.125rem;
-        height: 3.125rem;
-        border-radius: 1.65rem;
-        cursor: pointer;
-        bottom: 2.8rem;
-        right: 2.8rem;
-
-        @include mobile {
-            display: none;
-        }
     }
-}}
+}
