@@ -17,10 +17,9 @@ const UserInfo = () => {
         </button>
         <p className="user-info__title">Admin</p>
         <div className="user-info__dropdown-content">
-
-          <a className="user-info__dropdown-content--link" href="#">View Profile</a>
-          <a className="user-info__dropdown-content--link" href="#">Settings</a>
-          <a className="user-info__dropdown-content--link" href="#">Logout</a>
+          <p className="user-info__dropdown-content--link">View Profile</p>
+          <p className="user-info__dropdown-content--link">Settings</p>
+          <p className="user-info__dropdown-content--link">Logout</p>
         </div>
       </div>
     </div>
