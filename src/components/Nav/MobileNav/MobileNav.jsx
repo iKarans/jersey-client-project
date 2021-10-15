@@ -13,35 +13,34 @@ const MobileNav = (props) => {
   const {handleClick} = props
  
   return (
-    <div className="mobileNav">
-      <div  className="mobileNav__item mobileNav--dashboard">
-        <HomeIcon className="mobileNav__item--image" />
-        <Link to = "/dashboard" className="mobileNav__item--text " onClick={handleClick}>Dashboard</Link>
-      </div>
-      <div  className="mobileNav__item">
-        <SecurityIcon className="mobileNav__item--image" />
-        <Link to = "/security" className="mobileNav__item--text "onClick={handleClick}>Security</Link>
-      </div>
-      <div  className="mobileNav__item">
-        <DevicesIcon className="mobileNav__item--image" />
-        <Link to = "/devices" className="mobileNav__item--text " onClick={handleClick}>Devices</Link>
-      </div>
-      <div  className="mobileNav__item">
-        <NetworkIcon className="mobileNav__item--image" />
-        <Link to = "/network" className="mobileNav__item--text " onClick={handleClick}>Network</Link>
-      </div>
-      <div  className="mobileNav__item">
-        <SettingsIcon className="mobileNav__item--image" />
-        <Link to = "/settings" className="mobileNav__item--text " onClick={handleClick}>Setting</Link>
-      </div>
-      <div  className="mobileNav__item--logout">
-        <p className="mobileNav__logout">Logout</p>
-      </div>
 
-      
+    <div className="mobilenav">
+      <div  className="mobilenav__item mobilenav--dashboard">
+        <HomeIcon className="mobilenav__item--image" />
+        <Link to = "/dashboard" className="mobilenav__item--text " onClick={handleClick}>Dashboard</Link>
+      </div>
+      <div  className="mobilenav__item">
+        <SecurityIcon className="mobilenav__item--image" />
+        <Link to = "/security" className="mobilenav__item--text "onClick={handleClick}>Security</Link>
+      </div>
+      <div  className="mobilenav__item">
+        <DevicesIcon className="mobilenav__item--image" />
+        <Link to = "/devices" className="mobilenav__item--text " onClick={handleClick}>Devices</Link>
+      </div>
+      <div  className="mobilenav__item">
+        <NetworkIcon className="mobilenav__item--image" />
+        <Link to = "/network" className="mobilenav__item--text " onClick={handleClick}>Network</Link>
+      </div>
+      <div  className="mobilenav__item">
+        <SettingsIcon className="mobilenav__item--image" />
+        <Link to = "/settings" className="mobilenav__item--text " onClick={handleClick}>Settings</Link>
+      </div>
+      <div  className="mobilenav__item--logout">
+        <p className="mobilenav__logout">Logout</p>
+      </div>
     </div>
     
   )
 }
 
-export default MobileNav
+export default MobileNav;

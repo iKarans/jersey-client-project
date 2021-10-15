@@ -22,23 +22,8 @@ const SideNav = (props) => {
   const toggleNav = () => {
     setShowNav(!showNav)
   }
-  const handleDash = () => {
-    setHeading("Dashboard")
-    console.log("security")
- 
-   }
- 
-   const handleSecurity = () => {
-     setHeading("Security")
-     console.log("security")
- 
-   }
-
 
   
-
-  
-
   return (
 
     <div className="navigation">
@@ -76,12 +61,12 @@ const SideNav = (props) => {
         </div>
       </div>
    
-      <div className="mobileNavHeader" onClick={toggleNav}>
-        <div className="mobileNavHeader__items-left">
-          <HomeIcon className="mobileNavHeader__item--image" />
-          <p className="mobileNavHeader__heading">{selectedPage}</p>
+      <div className="mobilenavheader" onClick={toggleNav}>
+        <div className="mobilenavheader__items-left">
+          <HomeIcon className="mobilenavheader__item--image" />
+          <p className="mobilenavheader__heading">{selectedPage}</p>
         </div>
-        <GreyDropdown className="mobileNavHeader____image--arrow" />
+        <GreyDropdown className="mobilenavheader____image--arrow" />
       </div>
     </div>
 

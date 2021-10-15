@@ -9,33 +9,28 @@ import Settings from '../../components/Routes/Routes.jsx'
 
 const Routes = () => {
    
-   
-   const handleClick = () => {
-      console.log("working")
-    }
-  
 
 
    return (
       <div className="routes">
          <Switch>
             <Route exact path="/dashboard">
-               <SideNav selectedPage= "Dashboard" handleClick={handleClick} />
+               <SideNav selectedPage= "Dashboard" />
                <Dashboard />
             </Route>
             <Route exact path="/devices">
-               <SideNav selectedPage= "Devices" handleClick={handleClick} />
+               <SideNav selectedPage= "Devices" />
                <Devices />
             </Route>
             <Route exact path="/security">
-               <SideNav selectedPage= "Security" handleClick={handleClick} />
+               <SideNav selectedPage= "Security" />
                <Security />
             </Route>
             <Route exact path="/network">
-               <SideNav selectedPage= "Network" handleClick={handleClick} />
+               <SideNav selectedPage= "Network" />
                <Network />
             </Route>
-            <SideNav selectedPage= "Settings" handleClick={handleClick} />
+            <SideNav selectedPage= "Settings" />
             <Route exact path="/settings">
                <Settings />
             </Route>

@@ -65,7 +65,6 @@
   }
 
 
-
   &__logout {
     background: #2ABCA1;
     border-radius: 18px;
@@ -91,19 +90,8 @@
   }
 }
 
-.placeholderHeader {
-  display: none;
 
-
-  @include mobile { 
-  display: block;
-  height: 100px;
-  background: linear-gradient(0deg, rgba(42, 188, 161, 0.62), rgba(42, 188, 161, 0.62));
-}
-
-}
-
-.mobileNavHeader {
+.mobilenavheader {
   display: none;
 
 
@@ -173,7 +161,7 @@
 
 }
 
-.mobileNavHeader____image--arrow {
+.mobilenavheader____image--arrow {
   display: none;
 
   @include mobile {  

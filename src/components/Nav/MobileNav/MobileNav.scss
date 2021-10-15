@@ -1,19 +1,8 @@
 @use '../../../assets/styles/variables' as *;
 @use '../../../assets/styles/mixins' as *;
 
-.menuItems {
-  display: none;
 
-  @include mobile {    
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
- }
-
-}
-
-.mobileNav {
+.mobilenav {
 
   display: none;
 
@@ -31,14 +20,6 @@
     border-radius: 0px 0px 12px 12px;
   }
 
-  &--dashboard {
-    // display: none;
-
-    @include mobile {
-      // height: 83px;
-    }
-
-  }
 
   &__item {
     display: none;
@@ -51,19 +32,11 @@
       margin-left: 39px;
       flex-direction: row;
       border-bottom: 1px solid  #EBEBEB;
-      width: 355px;
+      width: 80vw;
     }
 
-
-    p {
-      display: none;
-
-      @include mobile {
-        
-        
-      }
-    }
   }
+
 
   &__item--text {
     display: none;
