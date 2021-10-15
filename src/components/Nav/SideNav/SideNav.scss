@@ -96,6 +96,7 @@
 
 
   @include mobile { 
+    z-index: 1;
     cursor: pointer;
     position: absolute;
     top: 73px;
