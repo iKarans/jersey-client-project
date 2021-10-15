@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { devices, order } from "../../data/devices";
-import { DeviceBar } from "../../components/DeviceBar/DeviceBar";
+import DeviceBar from "../../components/DeviceBar/DeviceBar";
 import searchIcon from "../../assets/devices/searchIcon.png";
 import filterIcon from "../../assets/devices/filterIcon.png";
 import sortIcon from "../../assets/devices/sortIcon.png";
@@ -18,11 +18,10 @@ export const DeviceList = () => {
           return order[a.securityRisk] - order[b.securityRisk];
         })
       );
-      setSorted(!sorted);
     } else {
       setDeviceList(devices);
-      setSorted(!sorted);
     }
+    setSorted(!sorted);
   };
   const filterDevices = () => {
     if (!filtered) {
