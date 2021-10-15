@@ -19,7 +19,6 @@ const App = () => {
   return (
     <Router>
       <div className="App">
-        
         <Routes />
       </div>
     </Router>

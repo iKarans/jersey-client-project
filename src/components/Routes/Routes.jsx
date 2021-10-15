@@ -7,9 +7,7 @@ import Security from '../Security/Security'
 import Settings from '../Settings/Settings'
 import SideNav from '../Nav/SideNav/SideNav'
 
-const Routes = (props) => {
-   
-   const {selectedPage} = props
+const Routes = () => {
    
    const handleClick = () => {
       console.log("working")
@@ -21,23 +19,23 @@ const Routes = (props) => {
       <div className="routes">
          <Switch>
             <Route exact path="/dashboard">
-               <SideNav selectedPage= "Dashboard" handleClick={handleClick} />
+               <SideNav selectedPage= "Dashboard" />
                <Dashboard />
             </Route>
             <Route exact path="/devices">
-               <SideNav selectedPage= "Devices" handleClick={handleClick} />
+               <SideNav selectedPage= "Devices"  />
                <Devices />
             </Route>
             <Route exact path="/security">
-               <SideNav selectedPage= "Security" handleClick={handleClick} />
+               <SideNav selectedPage= "Security"  />
                <Security />
             </Route>
-               <SideNav selectedPage= "Network" handleClick={handleClick} />
-               <Route exact path="/network">
+            <Route exact path="/network">
+               <SideNav selectedPage= "Network"  />
                <Network />
             </Route>
-               <SideNav selectedPage= "Settings" handleClick={handleClick} />
-               <Route exact path="/settings">
+            <Route exact path="/settings">
+               <SideNav selectedPage= "Settings"  />
                <Settings />
             </Route>
          </Switch>
