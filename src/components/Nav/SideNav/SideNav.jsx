@@ -36,7 +36,7 @@ const SideNav = (props) => {
         <div className="sidenav__items">
           <div className="sidenav__dashboard sidenav__item">
             <HomeIcon className="sidenav__item--image"/>
-            <Link to="/dashboard" className="sidenav__text">Dashboard</Link>
+            <Link to="/" className="sidenav__text">Dashboard</Link>
           </div>
           <div className="sidenav__security sidenav__item">
             <SecurityIcon className="sidenav__item--image" />

@@ -4,8 +4,9 @@ import { Route, Switch } from 'react-router-dom'
 import Dashboard from '../Dashboard/Dashboard'
 import Devices from '../Devices/Devices'
 import Security from '../Security/Security'
-import SideNav from '../Nav/SideNav/SideNav'
-import Settings from '../../components/Routes/Routes.jsx'
+import SideNav from '../../components/Nav/SideNav/SideNav'
+import Settings from '../../containers/Settings/Settings'
+import Header from '../Header/Header'
 
 const Routes = () => {
    
@@ -14,25 +15,30 @@ const Routes = () => {
    return (
       <div className="routes">
          <Switch>
-            <Route exact path="/dashboard">
-               <SideNav selectedPage= "Dashboard" />
-               <Dashboard />
+            <Route exact path="/settings">
+               <Header pageHeading="Settings"/>
+               <SideNav selectedPage= "Settings" />
+               <Settings />
             </Route>
             <Route exact path="/devices">
+               <Header pageHeading="Devices"/>
                <SideNav selectedPage= "Devices" />
                <Devices />
             </Route>
             <Route exact path="/security">
+               <Header pageHeading="Security"/>
                <SideNav selectedPage= "Security" />
                <Security />
             </Route>
             <Route exact path="/network">
+               <Header pageHeading="Network"/>
                <SideNav selectedPage= "Network" />
                <Network />
             </Route>
-            <SideNav selectedPage= "Settings" />
-            <Route exact path="/settings">
-               <Settings />
+            <Route path="/">
+               <Header pageHeading="Dashboard"/>
+               <SideNav selectedPage= "Dashboard" />
+               <Dashboard />
             </Route>
          </Switch>
       </div>

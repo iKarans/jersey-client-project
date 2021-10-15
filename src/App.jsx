@@ -1,7 +1,7 @@
 
 import './App.css';
 import { BrowserRouter as Router } from "react-router-dom";
-import Routes from './components/Routes/Routes';
+import Routes from './containers/Routes/Routes';
 import Header from "./containers/Header/Header";
 
 const App = () => {
@@ -11,7 +11,6 @@ const App = () => {
     <Router>
       <div className="App">
         <Routes />
-        <Header pageHeading="Dashboard"/>
       </div>
     </Router>
   )
