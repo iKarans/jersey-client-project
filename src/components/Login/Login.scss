@@ -1,7 +1,7 @@
 @use "../../assets/styles/variables"as*;
 @use "../../assets/styles/mixins"as*;
 
-.login {
+.login-page {
     width: 100%;
     height: 100vh;
     background: $background-gradient;
@@ -10,7 +10,7 @@
         background: $background-gradient-mobile;
     }
 
-    &__page {
+    &__container {
         display: flex;
         justify-content: center;
         align-items: center;
