@@ -5,8 +5,8 @@ import "./ChatButton.scss"
 
 const ChatButton = () => {
     return (  
-        <div className="chat__button">
-            <img src={ChatIcon} alt="chat icon" className="chat__button--icon" />
+        <div className="chat-button">
+            <img src={ChatIcon} alt="chat icon" className="chat-button__icon" />
         </div>
     )
 }
