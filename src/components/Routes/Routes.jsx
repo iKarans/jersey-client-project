@@ -9,6 +9,13 @@ import Settings from '../../components/Routes/Routes.jsx'
 
 const Routes = () => {
    
+<<<<<<< HEAD
+=======
+   const handleClick = () => {
+      console.log("working")
+    }
+  
+>>>>>>> 369b3e4634cb8b04f4e0e02fbd48a481be60ddff
 
 
    return (
@@ -19,6 +26,7 @@ const Routes = () => {
                <Dashboard />
             </Route>
             <Route exact path="/devices">
+<<<<<<< HEAD
                <SideNav selectedPage= "Devices" />
                <Devices />
             </Route>
@@ -32,6 +40,21 @@ const Routes = () => {
             </Route>
             <SideNav selectedPage= "Settings" />
             <Route exact path="/settings">
+=======
+               <SideNav selectedPage= "Devices"  />
+               <Devices />
+            </Route>
+            <Route exact path="/security">
+               <SideNav selectedPage= "Security"  />
+               <Security />
+            </Route>
+            <Route exact path="/network">
+               <SideNav selectedPage= "Network"  />
+               <Network />
+            </Route>
+            <Route exact path="/settings">
+               <SideNav selectedPage= "Settings"  />
+>>>>>>> 369b3e4634cb8b04f4e0e02fbd48a481be60ddff
                <Settings />
             </Route>
          </Switch>
