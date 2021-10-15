@@ -4,14 +4,14 @@ import "./LargeLineGraph.scss";
 import { Line } from "react-chartjs-2";
 
 const LargeLineGraph = (props) => {
-    const {title, subtitle, labels, data, min, max} = props;
+    const {title, subtitle, labels, data, max} = props;
     const generateGraphSettings = (canvas) => {
         const ctx=canvas.getContext("2d");
         let gradient = ctx.createLinearGradient(0, 0, 0, 250);
         gradient.addColorStop(0, "rgba(42, 188, 161, 0.54")
         gradient.addColorStop(0.95, "rgba(42, 188, 161, 0");
         return {
-            labels: (labels.length === data.length ? labels : [0]),
+            labels: (labels.length === data.length ? labels : ["Monday"]),
             datasets: [
                 {
                   label: "Devices on Network",
@@ -34,7 +34,7 @@ const LargeLineGraph = (props) => {
             <Line
                 data={generateGraphSettings}
                 height={250}
-                width={500}
+                width={520}
                 options={{
                     maintainAspectRatio: false,
                     plugins: {
@@ -46,7 +46,7 @@ const LargeLineGraph = (props) => {
                         xAxis: {
                             ticks: {
                                 beginAtZero: false,
-                                padding: 3,
+                                padding: 5,
                                 font: {
                                     size: 9,
                                 },
@@ -56,11 +56,10 @@ const LargeLineGraph = (props) => {
                             }
                         },
                         yAxis: {
-                            min: (min > Math.min(...data) ? Math.min(...data) - 10 : min),
                             max: (max < Math.max(...data) ? Math.max(...data) + 10 : max),
+                            beginAtZero: true,
                             ticks: {
-                                beginAtZero: true,
-                                padding: 8,
+                                padding: 10,
                                 font: {
                                     size: 9,
                                 },

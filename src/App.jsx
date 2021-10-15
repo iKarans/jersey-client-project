@@ -5,7 +5,7 @@ import Dashboard from "./containers/Dashboard/Dashboard";
 const App = () => {
   return (
     <div className="App">
-      <Header pageHeading="Dashboard"/>
+      {/* <Header pageHeading="Dashboard"/> */}
       <Dashboard />
     </div>
   );
