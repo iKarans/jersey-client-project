@@ -41,6 +41,9 @@
       display: flex;
       justify-content: space-between;
       gap: 20px;
+      @include mobile {
+        display: none;
+      }
     }
   }
   &__search-bar {
@@ -51,11 +54,6 @@
 
     &__input {
       border: none;
-    }
-    > img {
-      @include mobile {
-        display: none;
-      }
     }
   }
 }

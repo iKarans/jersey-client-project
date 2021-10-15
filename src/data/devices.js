@@ -78,11 +78,11 @@ export const devices = [
     ipAddress: "152.15.152.50",
     lastActive: "12 hours ago",
     securityRisk: "high",
-  }
-],
+  },
+];
 
 export const order = {
-    high: 1,
-    medium: 2,
-    low: 3
+  high: 1,
+  medium: 2,
+  low: 3,
 };
