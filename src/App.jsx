@@ -11,7 +11,6 @@ const App = () => {
     <Router>
       <div className="App">
         <Routes />
-        <Header pageHeading="Dashboard"/>
       </div>
     </Router>
   )
