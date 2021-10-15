@@ -32,12 +32,12 @@ const Routes = (props) => {
                <SideNav selectedPage= "Security" handleClick={handleClick} />
                <Security />
             </Route>
+            <Route exact path="/network">
                <SideNav selectedPage= "Network" handleClick={handleClick} />
-               <Route exact path="/network">
                <Network />
             </Route>
+            <Route exact path="/settings">
                <SideNav selectedPage= "Settings" handleClick={handleClick} />
-               <Route exact path="/settings">
                <Settings />
             </Route>
          </Switch>
