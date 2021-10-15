@@ -7,7 +7,7 @@
     background: $background-gradient;
 
     @include mobile {
-        background: $backgroun-gradient-mobile;
+        background: $background-gradient-mobile;
     }
 
     &__page {

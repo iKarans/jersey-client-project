@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 
 import ShowPassword from "../../assets/login/show-password.svg"
-import HidePassword from "../../assets/login/Group.svg"
+import HidePassword from "../../assets/login/hide-password.svg"
 
 
 
