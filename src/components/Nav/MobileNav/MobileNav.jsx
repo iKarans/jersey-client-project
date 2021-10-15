@@ -1,11 +1,10 @@
-import React from 'react'
+import React from 'react';
 import { Link } from 'react-router-dom';
-import "./MobileNav.scss"
+import "./MobileNav.scss";
 import { ReactComponent as SecurityIcon } from "../../../assets/nav/securityGreen.svg";
 import { ReactComponent as DevicesIcon } from "../../../assets/nav/deviceGreen.svg";
 import { ReactComponent as NetworkIcon } from "../../../assets/nav/networkGreen.svg";
 import { ReactComponent as SettingsIcon } from "../../../assets/nav/settingsGreen.svg";
-import { ReactComponent as GreyDropdown } from "../../../assets/global/grey-dropdown.svg";
 import { ReactComponent as HomeIcon } from "../../../assets/nav/homeGreen.svg";
 
 const MobileNav = (props) => {

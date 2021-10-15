@@ -1,6 +1,6 @@
-import React, {useState} from 'react'
+import React from 'react'
 import Network from '../Network/Network'
-import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom'
+import { Route, Switch } from 'react-router-dom'
 import Dashboard from '../Dashboard/Dashboard'
 import Devices from '../Devices/Devices'
 import Security from '../Security/Security'

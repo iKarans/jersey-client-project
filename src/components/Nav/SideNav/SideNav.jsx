@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import "./SideNav.scss";
 import { Link } from "react-router-dom";
 import logo from "../../../assets/global/lujam-logo-green.svg";
@@ -17,7 +17,6 @@ const SideNav = (props) => {
   const {selectedPage} = props
 
   const [showNav, setShowNav] = useState(false)
-  const [heading, setHeading] = useState("Dashboard")
 
   const toggleNav = () => {
     setShowNav(!showNav)
