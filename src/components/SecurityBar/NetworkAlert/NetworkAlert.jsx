@@ -6,7 +6,7 @@ const NetworkAlert = (props) => {
 
   let alertStyle = "network-alert";
 
-  atRisk ? (alertStyle += " risk") : (alertStyle += " secure");
+  atRisk ? (alertStyle += "--risk") : (alertStyle += "--secure");
 
   return (
     <button className={alertStyle}>

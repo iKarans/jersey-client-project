@@ -2,13 +2,14 @@ import React from "react";
 import "./UserInfo.scss";
 import whiteDropdown from "./../../../assets/global/white-dropdown.svg";
 
-const UserInfo = () => {
+const UserInfo = (props) => {
+  const {userName} = props;
   return (
     <div className="user-info">
       <div className="user-info__img"></div>
       <div className="user-info__dropdown">
         <button className="user-info__name">
-          Richard Kovacek{" "}
+          {userName}
           <img
             className="user-info__dropdown-arrow"
             src={whiteDropdown}

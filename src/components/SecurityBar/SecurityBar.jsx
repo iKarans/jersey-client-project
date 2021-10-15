@@ -8,11 +8,12 @@ import alertIcon from "../../assets/header/alert-icon.svg";
 import highRiskWhite from "../../assets/header/high-risk-white.svg";
 import greenTick from "../../assets/login/green-tick.svg";
 
-const SecurityBar = () => {
+const SecurityBar = (props) => {
+  const {pageHeading} = props;
   return (
     <div className="security-bar">
       <div>
-        <h1 className="security-bar__heading">Dashboard</h1>
+        <h1 className="security-bar__heading">{pageHeading}</h1>
       </div>
       <NetworkAlert
         alertImg={greenTick}

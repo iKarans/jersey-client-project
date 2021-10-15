@@ -6,7 +6,7 @@ const AlertButton = (props) => {
 
   let buttonStyle = "button__icon";
 
-  isHigh ? (buttonStyle += " high") : (buttonStyle += " primary");
+  isHigh ? (buttonStyle += "--high") : (buttonStyle += "--primary");
 
   return (
     <button className="button">
