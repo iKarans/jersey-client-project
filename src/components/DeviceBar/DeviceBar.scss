@@ -1,6 +1,6 @@
 @use "../../assets/styles/variables" as *;
-@use "../../assets/styles/typography" as *;
 @use "../../assets/styles/mixins" as *;
+
 .device-bar {
   border: 1px solid $text-primary;
   border-radius: 50px;

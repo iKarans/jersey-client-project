@@ -70,3 +70,4 @@ export const DeviceBar = (props) => {
     </div>
   );
 };
+export default DeviceBar;

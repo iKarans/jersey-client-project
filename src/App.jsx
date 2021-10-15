@@ -1,5 +1,5 @@
 import "./App.css";
-import { DeviceList } from "./containers/DeviceList/DeviceList";
+import DeviceList from "./containers/DeviceList/DeviceList";
 const App = () => {
   return (
     <div className="App">

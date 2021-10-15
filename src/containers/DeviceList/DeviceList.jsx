@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { devices } from "../../data/devices";
-import { order } from "../../data/devices";
+import { devices, order } from "../../data/devices";
 import { DeviceBar } from "../../components/DeviceBar/DeviceBar";
-import "./DeviceList.scss";
 import searchIcon from "../../assets/devices/searchIcon.png";
 import filterIcon from "../../assets/devices/filterIcon.png";
 import sortIcon from "../../assets/devices/sortIcon.png";
+import "./DeviceList.scss";
 
 export const DeviceList = () => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -31,11 +30,10 @@ export const DeviceList = () => {
         (device) => device.securityRisk === "high"
       );
       setDeviceList(highRisk);
-      setFiltered(!filtered);
     } else if (filtered) {
       setDeviceList(devices);
-      setFiltered(!filtered);
     }
+    setFiltered(!filtered);
   };
   const handleInput = (event) => {
     const input = event.target.value.toLowerCase();
@@ -94,3 +92,4 @@ export const DeviceList = () => {
     </div>
   );
 };
+export default DeviceList;

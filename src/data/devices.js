@@ -81,7 +81,7 @@ export const devices = [
   }
 ],
 
-order = {
+export const order = {
     high: 1,
     medium: 2,
     low: 3
