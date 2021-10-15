@@ -6,6 +6,7 @@ import Devices from './components/Devices/Devices';
 import Security from './components/Security/Security';
 import Network from './components/Network/Network';
 import Settings from './components/Settings/Settings';
+import Header from "./containers/Header/Header";
 import {
   BrowserRouter as Router,
   Switch,
@@ -19,7 +20,7 @@ const App = () => {
   return (
     <Router>
       <div className="App">
-        
+        <Header pageHeading="Dashboard"/>
         <Routes />
       </div>
     </Router>

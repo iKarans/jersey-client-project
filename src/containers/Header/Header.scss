@@ -1,0 +1,12 @@
+@use "../../assets/styles/mixins" as *;
+@use "../../assets/styles/variables" as *;
+
+.header {
+  position: relative;
+  left: 247px;
+
+  @include mobile {
+    position: unset;
+    left: 0px;
+  }
+}
