@@ -71,10 +71,6 @@
                 height: 0.98rem;
                 width: auto;
                 cursor: pointer;
-    
-                @include mobile {
-                    right: 19%;
-                }
             }
     
             .hidepassword {
