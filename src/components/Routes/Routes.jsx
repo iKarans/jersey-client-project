@@ -6,6 +6,7 @@ import Devices from '../Devices/Devices'
 import Security from '../Security/Security'
 import SideNav from '../Nav/SideNav/SideNav'
 import Settings from '../../components/Routes/Routes.jsx'
+import Header from '../../containers/Header/Header'
 
 const Routes = () => {
    
@@ -19,18 +20,22 @@ const Routes = () => {
       <div className="routes">
          <Switch>
             <Route exact path="/dashboard">
+               <Header pageHeading="Dashboard"/>
                <SideNav selectedPage= "Dashboard" />
                <Dashboard />
             </Route>
             <Route exact path="/devices">
+               <Header pageHeading="Dashboard"/>
                <SideNav selectedPage= "Devices"  />
                <Devices />
             </Route>
             <Route exact path="/security">
+               <Header pageHeading="Dashboard"/>   
                <SideNav selectedPage= "Security"  />
                <Security />
             </Route>
             <Route exact path="/network">
+               <Header pageHeading="Dashboard"/>
                <SideNav selectedPage= "Network"  />
                <Network />
             </Route>
