@@ -11,10 +11,10 @@ import "./Login.scss"
 const Login = () => {
     
     return (
-        <section className="login">
+        <section className="login-page">
             <LoginPageNav />
-            <div className="login__page">
-                <img src={Logo} alt="lujam logo" className="login__page--logo" />
+            <div className="login-page__container">
+                <img src={Logo} alt="lujam logo" />
                 <LoginForm/>
             </div>
             <ChatButton/>
