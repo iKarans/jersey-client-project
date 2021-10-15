@@ -1,7 +1,7 @@
 import React from 'react';
 import "./Devices.scss";
 
-const Devices = (props) => {
+const Devices = () => {
   return (
     <div className="devices__text">
       <h1>Devices Page</h1>

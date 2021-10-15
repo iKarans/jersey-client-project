@@ -4,12 +4,11 @@ import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom'
 import Dashboard from '../Dashboard/Dashboard'
 import Devices from '../Devices/Devices'
 import Security from '../Security/Security'
-import Settings from '../Settings/Settings'
 import SideNav from '../Nav/SideNav/SideNav'
+import Settings from '../../components/Routes/Routes.jsx'
 
-const Routes = (props) => {
+const Routes = () => {
    
-   const {selectedPage} = props
    
    const handleClick = () => {
       console.log("working")
@@ -36,8 +35,8 @@ const Routes = (props) => {
                <SideNav selectedPage= "Network" handleClick={handleClick} />
                <Network />
             </Route>
+            <SideNav selectedPage= "Settings" handleClick={handleClick} />
             <Route exact path="/settings">
-               <SideNav selectedPage= "Settings" handleClick={handleClick} />
                <Settings />
             </Route>
          </Switch>
