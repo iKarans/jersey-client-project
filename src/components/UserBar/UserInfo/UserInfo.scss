@@ -1,0 +1,126 @@
+@use "../../../assets/styles/variables" as *;
+@use "../../../assets/styles/mixins" as *;
+
+.user-info {
+  &__img {
+    position: absolute;
+    width: 39px;
+    height: 39px;
+    left: 972px;
+    top: 21px;
+
+    background-image: url("../../../assets/header/user-image.svg");
+
+    @include mobile {
+      top: 17px;
+      right: 19px;
+      left: unset;
+      bottom: unset;
+    }
+  }
+
+  &__dropdown {
+    position: absolute;
+    width: auto;
+    height: 15px;
+    left: 1029px;
+    top: 23px;
+
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+
+    color: $text-tertiary;
+
+    @include mobile {
+      display: none;
+    }
+  }
+
+  &__name {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    border: none;
+    outline: none;
+    color: $text-tertiary;
+    background-color: inherit;
+    cursor: pointer;
+  }
+
+  &__dropdown-arrow {
+    margin-left: 15px;
+  }
+
+  &__title {
+    font-weight: normal;
+    font-size: 10px;
+
+    color: $text-secondary;
+  }
+
+  &__dropdown &__dropdown-button {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    border: none;
+    outline: none;
+    color: $text-tertiary;
+    background-color: inherit;
+    cursor: pointer;
+  }
+
+  &__dropdown-arrow {
+    margin-left: 15px;
+  }
+
+  &__dropdown-content {
+    display: none;
+    width: 177px;
+    height: auto;
+    position: absolute;
+    top: 15px;
+    left: -55px;
+    background: #ffffff;
+    box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.15);
+    border-radius: 7px;
+    z-index: 1;
+  }
+
+  &__dropdown-content--heading {
+    float: none;
+    color: rgba(45, 55, 72, 1);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    border-bottom: 1px solid rgba(235, 235, 235, 1);
+    font-weight: 600;
+    font-size: 12px;
+  }
+
+  &__dropdown-content--link {
+    float: none;
+    color: rgba(159, 172, 190, 1);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    border-bottom: 1px solid rgba(235, 235, 235, 1);
+    font-weight: 500;
+    font-size: 12px;
+  }
+
+  &__dropdown-content--link:hover {
+    background: rgba(56, 196, 175, 0.15);
+    color: $text-secondary;
+  }
+
+  &__dropdown:hover &__dropdown-content {
+    display: block;
+  }
+}
