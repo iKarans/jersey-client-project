@@ -1,3 +1,5 @@
+import React from 'react';
+
 import "./App.css";
 import DeviceList from "./containers/DeviceList/DeviceList";
 import Header from "./containers/Header/Header";
