@@ -20,6 +20,9 @@ const SecurityRiskBreakdown = (props) => {
                   display: false,
                 },
               },
+              yAxis: {
+                max: Math.max(...data) + 10,
+              },
             },
             maintainAspectRatio: false,
             plugins: {

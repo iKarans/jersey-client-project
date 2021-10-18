@@ -1,0 +1,21 @@
+@use '../../assets/styles/variables' as *;
+@use '../../assets/styles/mixins' as *;
+
+h1 {
+  text-align: center;
+}
+
+.devices__text { 
+
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 227px;
+
+  @include mobile {   
+    display: none; 
+    height: 100vh;
+ }
+
+}
