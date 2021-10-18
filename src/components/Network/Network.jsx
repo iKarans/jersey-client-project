@@ -13,15 +13,19 @@ const Network = () => {
       <div className="network__search">
         <div className="network__search-box">
           <img src={SearchIcon} alt="search-icon" />
-          <input type="text" placeholder="Search" className="search-input" />
+          <input
+            type="text"
+            placeholder="Search Alerts"
+            className="search-input"
+          />
         </div>
-        <div className="network__filter-sort">
+        <div className="network__search-filter-sort">
           <div className="network-sort">
             <img src={SortIcon} alt="sort-icon" />
             <p>Sort</p>
           </div>
-          <div className="network-Filter">
-            <img src={FilterIcon} alt="Filter-icon" />
+          <div className="network-filter">
+            <img src={FilterIcon} alt="filter-icon" />
             <p>Filter</p>
           </div>
         </div>

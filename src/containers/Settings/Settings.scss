@@ -1,0 +1,17 @@
+@use '../../assets/styles/variables' as *;
+@use '../../assets/styles/mixins' as *;
+
+
+.settings__text {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 227px;
+  
+    @include mobile {  
+      display: none;
+      width: 480px;  
+      height: 100vh;
+   }
+  }
