@@ -1,12 +1,14 @@
-import React from 'react';
+import React from "react";
+import DeviceRisk from "../../components/DeviceRisk/DeviceRisk";
 import "./Devices.scss";
 
 const Devices = () => {
   return (
     <div className="devices__text">
-      <h1>Devices Page</h1>
+      
+      <DeviceRisk title="hello" message="Risky device" />
     </div>
-  )
-}
+  );
+};
 
-export default Devices
+export default Devices;
