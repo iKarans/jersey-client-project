@@ -1,4 +1,4 @@
-export const network = [
+export const networks = [
   {
     alertType: "New Device Connected",
     summary: "Unrecognised device connected for first time.",
@@ -7,7 +7,8 @@ export const network = [
   },
   {
     alertType: "High risk device detected",
-    summary: "Device with name Dave’s-macbook-pro poses significant risk to network. Action Needed.",
+    summary:
+      "Device with name Dave’s-macbook-pro poses significant risk to network. Action Needed.",
     created: "47 minutes ago",
     importanceLevel: "High",
   },
@@ -19,7 +20,8 @@ export const network = [
   },
   {
     alertType: "Security Score Calculated",
-    summary: "Security score calculated as 540. View security tab for more information.",
+    summary:
+      "Security score calculated as 540. View security tab for more information.",
     created: "75 minutes ago",
     importanceLevel: "Low",
   },
@@ -49,7 +51,8 @@ export const network = [
   },
   {
     alertType: "High risk device detected",
-    summary: "Device with name Dave’s-macbook-pro poses significant risk to network. Action Needed.",
+    summary:
+      "Device with name Dave’s-macbook-pro poses significant risk to network. Action Needed.",
     created: "123 minutes ago",
     importanceLevel: "High",
   },
@@ -61,7 +64,8 @@ export const network = [
   },
   {
     alertType: "High risk device detected",
-    summary: "Device with name Dave’s-macbook-pro poses significant risk to network. Action Needed.",
+    summary:
+      "Device with name Dave’s-macbook-pro poses significant risk to network. Action Needed.",
     created: "47 minutes ago",
     importanceLevel: "High",
   },
@@ -73,7 +77,8 @@ export const network = [
   },
   {
     alertType: "Security Score Calculated",
-    summary: "Security score calculated as 540. View security tab for more information.",
+    summary:
+      "Security score calculated as 540. View security tab for more information.",
     created: "75 minutes ago",
     importanceLevel: "Low",
   },
@@ -103,8 +108,9 @@ export const network = [
   },
   {
     alertType: "High risk device detected",
-    summary: "Device with name Dave’s-macbook-pro poses significant risk to network. Action Needed.",
+    summary:
+      "Device with name Dave’s-macbook-pro poses significant risk to network. Action Needed.",
     created: "123 minutes ago",
     importanceLevel: "High",
   },
-]
+];

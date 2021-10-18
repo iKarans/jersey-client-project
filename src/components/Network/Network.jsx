@@ -1,5 +1,8 @@
 import React from "react";
 
+import NetworkItem from "../NetworkItem/NetworkItem";
+import { networks } from "../../data/network.js";
+
 import SearchIcon from "../../assets/global/search-icon.svg";
 import SortIcon from "../../assets/global/sort-icon.svg";
 import FilterIcon from "../../assets/devices/filterIcon.png";
@@ -8,6 +11,17 @@ import WhiteDropDown from "../../assets/global/white-dropdown.svg";
 import "./Network.scss";
 
 const Network = () => {
+  const networkItemJSX = networks.map((network, index) => {
+    return (
+      <NetworkItem
+        key={network + index}
+        name={network.alertType}
+        summary={network.summary}
+        created={network.created}
+        importanceLevel={network.importanceLevel}
+      />
+    );
+  });
   return (
     <section className="network">
       <div className="network__search">
@@ -48,7 +62,7 @@ const Network = () => {
             <img src={WhiteDropDown} alt="dropdown" />
           </div>
         </div>
-        <div className="network-alerts__alerts"></div>
+        <div className="network-alerts__alerts">{networkItemJSX}</div>
         <div className="network-alerts__pages"></div>
       </div>
     </section>
