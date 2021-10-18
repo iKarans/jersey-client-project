@@ -54,7 +54,7 @@
   }
 
   &__item:hover {
-    background-color: #DAF0ED;
+    background-color: $nav-hover-color;
     border-radius: 15px;
     color: $primary-color;
 
