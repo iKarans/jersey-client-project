@@ -8,6 +8,7 @@ import SideNav from "../../components/Nav/SideNav/SideNav";
 import Settings from "../../containers/Settings/Settings";
 import Header from "../Header/Header";
 import Login from "../Login/Login";
+import SignUp from "../SignUp/SignUp";
 
 const Routes = () => {
   return (
@@ -37,6 +38,9 @@ const Routes = () => {
           <Header pageHeading="Dashboard" />
           <SideNav selectedPage="Dashboard" />
           <Dashboard />
+        </Route>
+             <Route exact path="/signup">
+          <SignUp />
         </Route>
         <Route path="/">
           <Login />

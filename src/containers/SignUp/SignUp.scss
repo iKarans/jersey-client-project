@@ -1,0 +1,25 @@
+@use "../../assets/styles/variables"as*;
+@use "../../assets/styles/mixins"as*;
+
+.login-page {
+    width: 100%;
+    min-height: 100vh;
+    background: $background-gradient;
+
+    @include mobile {
+        background: $background-gradient-mobile;
+    }
+
+    &__container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        position: relative;
+
+        @include mobile {
+            height: 100vh;
+            padding-bottom: 6rem;
+        }
+    }
+}
