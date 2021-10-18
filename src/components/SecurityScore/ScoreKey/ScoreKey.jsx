@@ -23,7 +23,7 @@ const ScoreKey = () => {
       <div className="score-key__cell score-key__cell--dark-green"></div>
       <p className="score-key__cell score-key__cell--score">800 - 999</p>
       <p className="score-key__cell score-key__cell--explain">(Excellent)</p>
-
+      
       
     </div>
   )

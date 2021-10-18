@@ -1,4 +1,7 @@
 @use "../../../assets/styles/variables" as *;
 @use "../../../assets/styles/mixins" as *;
 
-.score-key {}
+.score-key {
+  display: grid;
+  grid-template-columns: 1fr 3fr 3fr;
+}
