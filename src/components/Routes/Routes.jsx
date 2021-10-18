@@ -25,17 +25,17 @@ const Routes = () => {
                <Dashboard />
             </Route>
             <Route exact path="/devices">
-               <Header pageHeading="Dashboard"/>
+               <Header pageHeading="Devices"/>
                <SideNav selectedPage= "Devices"  />
                <Devices />
             </Route>
             <Route exact path="/security">
-               <Header pageHeading="Dashboard"/>   
+               <Header pageHeading="Security"/>   
                <SideNav selectedPage= "Security"  />
                <Security />
             </Route>
             <Route exact path="/network">
-               <Header pageHeading="Dashboard"/>
+               <Header pageHeading="Network"/>
                <SideNav selectedPage= "Network"  />
                <Network />
             </Route>

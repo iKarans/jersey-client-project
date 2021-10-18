@@ -8,6 +8,7 @@ import alertIcon from "../../assets/header/alert-icon.svg";
 import highRiskWhite from "../../assets/header/high-risk-white.svg";
 import greenTick from "../../assets/login/green-tick.svg";
 
+
 const SecurityBar = (props) => {
   const {pageHeading} = props;
   return (
