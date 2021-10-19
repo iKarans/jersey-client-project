@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import ShowPassword from "../../assets/login/show-password.svg";
 import HidePassword from "../../assets/login/hide-password.svg";
@@ -7,10 +7,8 @@ import HidePassword from "../../assets/login/hide-password.svg";
 import "./SignUpForm.scss";
 
 const SignUpForm = () => {
-  const [showPassword, setShowPassword] = useState(false);
-  const handleShowPassword = () => {
-    setShowPassword(!showPassword);
-  };
+
+  
 
   return (
     <div className="signup">
@@ -31,11 +29,9 @@ const SignUpForm = () => {
         <input type="email" id="email" className="login-form__input" />
 
 
-        <button className="signup-form__button">Sign Up</button>
       </form>
-
       <p className="signup-login">
-        Already have an account? <Link to = "/login">Login</Link>
+        Already have an account? <Link to="/login">Login</Link>
       </p>
     </div>
   );
