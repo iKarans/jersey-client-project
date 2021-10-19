@@ -7,19 +7,29 @@ import { users } from "../../data/users";
 
 
 const SecurityScore = () => {
-  const userScore = users[2].score;
+  const userScore = users[0].score;
   return (
     <article className="security-score">
       <div className="security-score__key">
-        <h2 className="security-score__key--header">Security Score</h2>
-        <img className="security-score__key--icon" src={infoIcon} alt="info icon" />
+        <div className="security-score__key--title">
+          <h3 className="security-score__key--header">Security Score</h3>
+          <img className="security-score__key--icon" src={infoIcon} alt="info icon" />
+
+        </div>
         <div className="security-score__key--grid">
           <ScoreKey />
         </div>
       </div>  
       <div className="security-score__chart">
         <SecurityScoreChart userScore={userScore}/>
+        <div className="security-score__chart--score">
+          <h1>{userScore}</h1>
+          
+          <p>/ 999</p>
+        
+        </div>
       </div>
+
       
     </article>
   );

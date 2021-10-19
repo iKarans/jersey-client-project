@@ -34,7 +34,7 @@ const SecurityScoreChart = (props) => {
                     backgroundColor: chartColors,
                     rotation: (360 / 7) * 4.5,
                     spacing: 15,
-                    cutout: "75%",
+                    cutout: "80%",
                     borderWidth: 0,
                   },
                 ],
