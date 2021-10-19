@@ -1,3 +1,11 @@
 @use "../../assets/styles/variables" as *;
 @use "../../assets/styles/mixins" as *;
 
+.security-score {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 800px;
+  background-color: $background-color;
+  padding: 20px;
+}

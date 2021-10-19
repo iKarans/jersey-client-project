@@ -16,10 +16,11 @@ const SecurityScore = () => {
         <div className="security-score__key--grid">
           <ScoreKey />
         </div>
-        <div className="security-score__chart">
-          <SecurityScoreChart userScore={userScore}/>
-        </div>
+      </div>  
+      <div className="security-score__chart">
+        <SecurityScoreChart userScore={userScore}/>
       </div>
+      
     </article>
   );
 };

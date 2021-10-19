@@ -1,6 +1,5 @@
 import React from 'react';
 import { Doughnut } from "react-chartjs-2";
-import "../../assets/styles/variables.scss"
 import "./SecurityScoreChart.scss";
 
 const SecurityScoreChart = (props) => {
@@ -8,23 +7,23 @@ const SecurityScoreChart = (props) => {
     let chartColors;
     switch(true) {
         case userScore <= 199:
-            chartColors = ["#F04A68", "#F2F2F2", "#F2F2F2", "#F2F2F2","#F2F2F2","#FFFFFF"];
+            chartColors = ["#F04A68", "#F2F2F2", "#F2F2F2", "#F2F2F2","#F2F2F2","#f8f9fa"];
             break;
         case userScore <= 399:
-            chartColors = ["#F04A68", "#F0B78E", "#F2F2F2", "#F2F2F2","#F2F2F2","#FFFFFF"];
+            chartColors = ["#F04A68", "#F0B78E", "#F2F2F2", "#F2F2F2","#F2F2F2","#f8f9fa"];
             break;
         case userScore <= 599:
-            chartColors = ["#F04A68", "#F0B78E", "#FFF9C0", "#F2F2F2","#F2F2F2","#FFFFFF"];
+            chartColors = ["#F04A68", "#F0B78E", "#FFF9C0", "#F2F2F2","#F2F2F2","#f8f9fa"];
             break;
         case userScore <= 799:
-            chartColors = ["#F04A68", "#F0B78E", "#FFF9C0", "#2ABCA1","#F2F2F2","#FFFFFF"];
+            chartColors = ["#F04A68", "#F0B78E", "#FFF9C0", "#2ABCA1","#F2F2F2","#f8f9fa"];
             break;
         case userScore <= 999:
-            chartColors = ["#F04A68", "#F0B78E", "#FFF9C0", "#2ABCA1","#20837F","#FFFFFF"];
+            chartColors = ["#F04A68", "#F0B78E", "#FFF9C0", "#2ABCA1","#20837F","#f8f9fa"];
             break;
         default:
-            chartColors = [$security-none, "#F2F2F2", "#F2F2F2", "#F2F2F2","#F2F2F2","#FFFFFF"]
-        console.log(chartColors);
+            chartColors = ["#F04A68", "#F2F2F2", "#F2F2F2", "#F2F2F2","#F2F2F2","#f8f9fa"]
+        
     }
     return (
             <Doughnut 
