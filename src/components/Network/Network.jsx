@@ -1,6 +1,7 @@
 import React from "react";
 
 import NetworkItem from "../NetworkItem/NetworkItem";
+import ChatButton from "../ChatButton/ChatButton";
 import { networks } from "../../data/network.js";
 import NetworkFilter from "./NetworkFilter/NetworkFilter";
 
@@ -8,11 +9,14 @@ import SearchIcon from "../../assets/global/search-icon.svg";
 import SortIcon from "../../assets/global/sort-icon.svg";
 import FilterIcon from "../../assets/devices/filterIcon.png";
 import WhiteDropDown from "../../assets/global/white-dropdown.svg";
+import NetworkArrow from "../../assets/network/network-arrow.svg"
 
 import "./Network.scss";
 
 const Network = () => {
-  const networkItemJSX = networks.map((network, index) => {
+
+  const firstNineNetwork = networks.slice(0, 9)
+  const networkItemJSX = firstNineNetwork.map((network, index) => {
     return (
       <NetworkItem
         key={network + index}
@@ -20,9 +24,11 @@ const Network = () => {
         summary={network.summary}
         created={network.created}
         importanceLevel={network.importanceLevel}
+        index={index}
       />
     );
   });
+
   return (
     <>
     <NetworkFilter />
@@ -66,8 +72,15 @@ const Network = () => {
           </div>
         </div>
         <div className="network-alerts__alerts">{networkItemJSX}</div>
-        <div className="network-alerts__pages"></div>
+        <div className="network-alerts__pages">
+          <div className="network-alerts__pages-buttons">
+            <button className="network-alerts__pages-buttons-button"><img src={NetworkArrow} alt="left-arrow" className="network__left-arrow"/></button>
+          
+            <button className="network-alerts__pages-buttons-button"><img src={NetworkArrow} alt="left-arrow" className="network__right-arrow"/></button>
+          </div>
+        </div>
       </div>
+      <ChatButton />
     </section>
     </>
   );
