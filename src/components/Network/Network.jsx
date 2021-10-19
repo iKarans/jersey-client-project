@@ -3,6 +3,7 @@ import React from "react";
 import NetworkItem from "../NetworkItem/NetworkItem";
 import ChatButton from "../ChatButton/ChatButton";
 import { networks } from "../../data/network.js";
+import NetworkFilter from "./NetworkFilter/NetworkFilter";
 
 import SearchIcon from "../../assets/global/search-icon.svg";
 import SortIcon from "../../assets/global/sort-icon.svg";
@@ -30,6 +31,8 @@ const Network = () => {
   });
 
   return (
+    <>
+    <NetworkFilter />
     <section className="network">
       <div className="network__search">
         <div className="network__search-box">
@@ -80,6 +83,7 @@ const Network = () => {
       </div>
       <ChatButton />
     </section>
+    </>
   );
 };
 
