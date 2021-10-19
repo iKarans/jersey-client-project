@@ -7,8 +7,8 @@ const DeviceInfo = (props) => {
     return (
         <div className="device-info">
             <h4>Device Information</h4>
-            <p><b>Device Name:</b>{name}</p>
-            <p><b>IP Address:</b>{ipAddress}</p>
+            <p><b>Device Name:</b>{devices.name}</p>
+            <p><b>IP Address:</b>{devices.ipAddress}</p>
         </div>
     )
 }
