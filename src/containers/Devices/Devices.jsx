@@ -5,9 +5,10 @@ import "./Devices.scss";
 
 const Devices = () => {
   return (
-    <div className="devices__text">
-      <DeviceList />
-    </div>
+      <div className="devices__text">
+          <DeviceList />
+      </div>
+        
   );
 };
 
