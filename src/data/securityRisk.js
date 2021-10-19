@@ -9,3 +9,4 @@ export const data = {
     },
   ],
 };
+export const dataset = [20, 50, 30, 4];

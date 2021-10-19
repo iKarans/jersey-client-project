@@ -1,5 +1,6 @@
 @use "../../assets/styles/variables" as *;
 @use "../../assets/styles/mixins" as *;
+@use "../../assets/styles/typography" as *;
 .riskBreakdown__dashboard {
   border: 1px solid white;
   border-radius: 25px;
@@ -18,9 +19,9 @@
   }
   &--title {
     width: 500px;
-    font-weight: 600;
-    font-size: 18px;
-    margin: 15px;
+    margin: 50px;
+    margin-top: 40px;
+    margin-bottom: 15px;
   }
   &--subtitle {
     width: 500px;
