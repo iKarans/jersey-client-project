@@ -2,6 +2,8 @@ import React from 'react'
 import "./ScoreKey.scss"
 
 const ScoreKey = () => {
+
+  
   return (
     <div className="score-key">
       <div className="score-key__cell score-key__cell--red"></div>
