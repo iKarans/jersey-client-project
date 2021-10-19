@@ -62,16 +62,13 @@
       display: flex;
       background-color: $primary-color;
       border-radius: 15px 15px 0 0;
+      padding: 0 3.7rem;
       
- 
-
       &-alert,
       &-summary,
       &-created,
       &-importance {
         color: $text-tertiary;
-        width: 15%;
-        margin: auto 5%;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -80,6 +77,25 @@
           font-size: 0.62rem;
           font-weight: 700;
         }
+      }
+
+      &-alert {
+        width: 13%;
+      }
+
+      &-summary {
+        width: 40%;
+        text-align: start;
+        padding:0 1rem;
+      }
+
+      &-created {
+        width: 13%;
+      }
+
+      &-importance {
+        width: 15%;
+        padding-left: 2rem;
       }
     }
 
