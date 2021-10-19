@@ -26,6 +26,7 @@ const Network = () => {
       />
     );
   });
+
   return (
     <section className="network">
       <div className="network__search">
@@ -67,7 +68,11 @@ const Network = () => {
           </div>
         </div>
         <div className="network-alerts__alerts">{networkItemJSX}</div>
-        <div className="network-alerts__pages"></div>
+        <div className="network-alerts__pages">
+          <button className="network-alerts__pages-previous"></button>
+          
+          <button className="network-alerts__pages-next"></button>
+        </div>
       </div>
       <ChatButton />
     </section>
