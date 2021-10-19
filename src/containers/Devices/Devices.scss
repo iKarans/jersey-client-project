@@ -1,21 +1,9 @@
 @use '../../assets/styles/variables' as *;
 @use '../../assets/styles/mixins' as *;
 
-h1 {
-  text-align: center;
-}
-
-.devices__text { 
-
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-left: 227px;
-
-  @include mobile {   
-    display: none; 
-    height: 100vh;
- }
-
+.devices__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr 1fr;
+    gap: 20px;
 }

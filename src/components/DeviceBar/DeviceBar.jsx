@@ -41,7 +41,8 @@ export const DeviceBar = (props) => {
 
   return (
     <div className="device-bar">
-      <h4>{name}</h4>
+        
+        <h4>{name}</h4>
       <img
         src={typeIcon()}
         alt={type}
