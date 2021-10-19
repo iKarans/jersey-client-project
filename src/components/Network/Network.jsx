@@ -15,6 +15,7 @@ import "./Network.scss";
 const Network = () => {
 
   const firstNineNetwork = networks.slice(0, 9)
+  
   const networkItemJSX = firstNineNetwork.map((network, index) => {
     return (
       <NetworkItem
@@ -72,7 +73,7 @@ const Network = () => {
         <div className="network-alerts__pages">
           <div className="network-alerts__pages-buttons">
             <button className="network-alerts__pages-buttons-button"><img src={NetworkArrow} alt="left-arrow" className="network__left-arrow"/></button>
-          
+
             <button className="network-alerts__pages-buttons-button"><img src={NetworkArrow} alt="left-arrow" className="network__right-arrow"/></button>
           </div>
         </div>
