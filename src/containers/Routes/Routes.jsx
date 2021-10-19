@@ -8,6 +8,7 @@ import SideNav from "../../components/Nav/SideNav/SideNav";
 import Settings from "../../containers/Settings/Settings";
 import Header from "../Header/Header";
 import Login from "../Login/Login";
+import DevicesIndex from "../DevicesIndex/DevicesIndex";
 
 const Routes = () => {
   return (
@@ -22,6 +23,11 @@ const Routes = () => {
           <Header pageHeading="Devices" />
           <SideNav selectedPage="Devices" />
           <Devices />
+        </Route>
+        <Route exact path="/device/:device">
+            <Header pageHeading="Devices" />
+            <SideNav selectedPage="Devices" />
+            <DevicesIndex />
         </Route>
         <Route exact path="/security">
           <Header pageHeading="Security" />
