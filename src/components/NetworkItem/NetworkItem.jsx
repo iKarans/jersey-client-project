@@ -1,10 +1,19 @@
 import React from "react";
 
+import "./NetworkItem.scss"
+
 const NetworkItem = (props) => {
-  const { name, summary, created, importance } = props;
+  const { name, summary, created, importance, index } = props;
+
+  let className;
+  if(index % 2 == 0) {
+    className = "network-item dark"
+  } else {
+    className = "network-item light"
+  }
 
   return (
-    <div className="network-item">
+    <div className={className} >
       <h5 className="network-item__name">{name}</h5>
       <p className="network-item__parapgraph summary">{summary}</p>
       <p className="network-item__parapgraph created">{created}</p>
