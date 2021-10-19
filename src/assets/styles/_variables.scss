@@ -11,3 +11,11 @@ $background-gradient-mobile:linear-gradient(167.94deg, #2ABCA1 0%, #0A7AA7 100%)
 //breakpoint
 $breakpoint-mobile: 480px;
 $nav-hover-color: #daf0ed;
+
+// security graph
+$security-none: #f2f2f2;
+$security-very-poor : #F04A68;
+$security-poor: #F0B78E;
+$security-fair: #FFF9C0;
+$security-good: #2ABCA1;
+$security-excellent: #20837F;
