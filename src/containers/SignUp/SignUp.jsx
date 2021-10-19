@@ -10,9 +10,9 @@ import "./SignUp.scss";
 
 const Login = () => {
   return (
-    <section className="signUp-page">
+    <section className="signup-page">
       <LoginPageNav />
-      <div className="signUp-page__container">
+      <div className="signup-page__container">
         <img src={Logo} alt="lujam logo" />
         <SignUpForm />
       </div>
