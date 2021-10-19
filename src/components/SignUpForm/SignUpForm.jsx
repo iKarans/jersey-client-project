@@ -7,8 +7,30 @@ import HidePassword from "../../assets/login/hide-password.svg";
 import "./SignUpForm.scss";
 
 const SignUpForm = () => {
+  const [formValid, setFormValid] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    password: "",
+  });
 
-  
+  const handleInput = (event) => {
+    console.log(event);
+    const userInput = event.target.value;
+    const userInputName = event.target.name;
+    const userObject = { ...formValid, [userInputName]: userInput };
+    setFormValid(userObject);
+  };
+
+  const [buttonActive, setButtonActive] = useState(false);
+
+  const buttonJSX = () => {
+    if (buttonActive) {
+      return <button className="signup-form__button--active">Next</button>;
+    } else {
+      return <button className="signup-form__button--disabled">Next</button>;
+    }
+  };
 
   return (
     <div className="signup">
@@ -18,17 +40,34 @@ const SignUpForm = () => {
         <label htmlFor="text" className="signup-form__label">
           First Name
         </label>
-        <input type="text" id="first-name" className="signup-form__input" />
+        <input
+          type="text"
+          id="first-name"
+          className="signup-form__input"
+          name="firstName"
+          onChange={handleInput}
+        />
         <label htmlFor="text" className="signup-form__label">
           Last Name
         </label>
-        <input type="text" id="last-name" className="signup-form__input" />
+        <input
+          type="text"
+          id="last-name"
+          name="lastName"
+          className="signup-form__input"
+          onChange={handleInput}
+        />
         <label htmlFor="email" className="signup-form__label">
           Email Address
         </label>
-        <input type="email" id="email" className="login-form__input" />
-
-
+        <input
+          type="email"
+          name="email"
+          id="email"
+          className="login-form__input"
+          onChange={handleInput}
+        />
+        {buttonJSX()}
       </form>
       <p className="signup-login">
         Already have an account? <Link to="/login">Login</Link>

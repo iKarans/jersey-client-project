@@ -14,24 +14,24 @@
         height: 29rem;
         width: 28.6rem;
         margin: 4rem 0 2rem 0;
-    
+
         @include mobile {
             width: 90vw;
         }
-    
+
         &__rectangle {
             height: 0.3rem;
             background: #2ABCA1;
             border-radius: 15px 15px 0px 0px;
         }
-    
+
         &__header {
             color: $text-tertiary;
             text-align: center;
             display: block;
             margin: 2rem 0;
         }
-    
+
         &__label {
             display: block;
             color: $text-tertiary;
@@ -40,7 +40,7 @@
             margin: 0.5rem auto;
             font-size: 0.75rem;
         }
-    
+
         &__input {
             display: block;
             background-color: $text-tertiary;
@@ -52,17 +52,17 @@
             color: $text-secondary;
             padding-left: 1.8rem;
         }
-    
+
         &__input:focus {
             outline: 3px solid $primary-color;
         }
-    
+
         &__password-container {
             position: relative;
             width: 100%;
             height: 2.5rem;
             margin-bottom: 1.5rem;
-    
+
             .showpassword,
             .hidepassword {
                 position: absolute;
@@ -72,36 +72,36 @@
                 width: auto;
                 cursor: pointer;
             }
-    
+
             .hidepassword {
                 top: 0.85rem;
                 right: 5.6rem;
-    
+
                 @include mobile {
                     right: 19%;
                 }
             }
         }
-    
+
         &__checkbox-container {
             width: 75%;
             margin: 0 auto;
             display: flex;
             align-items: center;
         }
-    
+
         &__checkbox {
             accent-color: $primary-color;
             padding-top: 0.5rem;
         }
-    
+
         .checkbox-label {
             color: #C5CCD6;
             font-weight: 500;
             font-size: 0.75rem;
             margin-left: 0.6rem;
         }
-    
+
         &__button {
             display: block;
             width: 75%;
@@ -114,15 +114,45 @@
             font-weight: 700;
             font-size: 0.75rem;
             cursor: pointer;
+
+            &--active {
+                display: block;
+                width: 75%;
+                height: 2.5rem;
+                background-color: $primary-color;
+                margin: 3rem auto;
+                border-radius: 7px;
+                border: none;
+                color: $text-tertiary;
+                font-weight: 700;
+                font-size: 0.75rem;
+                cursor: pointer;
+                background-color: red;
+            }
+
+            &--disabled {
+                display: block;
+                width: 75%;
+                height: 2.5rem;
+                background-color: $primary-color;
+                margin: 3rem auto;
+                border-radius: 7px;
+                border: none;
+                color: $text-tertiary;
+                font-weight: 700;
+                font-size: 0.75rem;
+                cursor: pointer;
+                background-color: blue;
+            }
         }
     }
-    
+
     &-login {
         font-size: 0.75rem;
         font-weight: 400;
         color: $text-tertiary;
         margin-bottom: 0.5rem;
-    
+
         span {
             font-size: 0.75rem;
             font-weight: 600;
@@ -132,6 +162,5 @@
         }
     }
 
-    
-}
 
+}
