@@ -8,6 +8,7 @@ import SearchIcon from "../../assets/global/search-icon.svg";
 import SortIcon from "../../assets/global/sort-icon.svg";
 import FilterIcon from "../../assets/devices/filterIcon.png";
 import WhiteDropDown from "../../assets/global/white-dropdown.svg";
+import NetworkArrow from "../../assets/network/network-arrow.svg"
 
 import "./Network.scss";
 
@@ -69,9 +70,11 @@ const Network = () => {
         </div>
         <div className="network-alerts__alerts">{networkItemJSX}</div>
         <div className="network-alerts__pages">
-          <button className="network-alerts__pages-previous"></button>
+          <div className="network-alerts__pages-buttons">
+            <button className="network-alerts__pages-buttons-button"><img src={NetworkArrow} alt="left-arrow" className="network__left-arrow"/></button>
           
-          <button className="network-alerts__pages-next"></button>
+            <button className="network-alerts__pages-buttons-button"><img src={NetworkArrow} alt="left-arrow" className="network__right-arrow"/></button>
+          </div>
         </div>
       </div>
       <ChatButton />
