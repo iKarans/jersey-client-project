@@ -1,7 +1,6 @@
 @use "../../assets/styles/variables" as *;
 @use "../../assets/styles/mixins" as *;
-@use "../../assets/styles/typography" as *;
-.riskBreakdown__dashboard {
+.bar-chart {
   border: 1px solid white;
   border-radius: 25px;
   height: 385px;
@@ -11,22 +10,24 @@
   font-family: "Inter", sans-serif;
   background-color: white;
   border-radius: 10px;
-  &--chart-container {
+  @include mobile {
+    width: 300px;
+  }
+  &__chart-container {
     height: 243px;
     width: 300px;
     background-color: white;
     margin: 50px;
+    @include mobile {
+      position: relative;
+      height: 40vh;
+      width: 80vw;
+    }
   }
-  &--title {
+  &__title {
     width: 500px;
     margin: 50px;
     margin-top: 40px;
     margin-bottom: 15px;
-  }
-  &--subtitle {
-    width: 500px;
-    font-weight: 400;
-    font-size: 12px;
-    margin-bottom: 25px;
   }
 }

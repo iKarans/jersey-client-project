@@ -1,7 +1,15 @@
+@use "../../assets/styles/mixins" as *;
+@use "../../assets/styles/variables";
 .dashboard {
   background-color: #e5e5e5;
   height: 100vh;
-  padding: 50px;
+  width: 100vw;
+  margin: 50px;
   display: flex;
   justify-content: space-around;
+  @include mobile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 }

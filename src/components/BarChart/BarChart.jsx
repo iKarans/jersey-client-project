@@ -1,18 +1,23 @@
 import React from "react";
 import { Bar } from "react-chartjs-2";
-import "./SecurityRiskBreakdown.scss";
-const SecurityRiskBreakdown = (props) => {
-  const { dataset } = props;
-
+import "./BarChart.scss";
+const BarChart = (props) => {
+  const { title, labels, dataset } = props;
+  const suggestedMax = () => {
+    const max = Math.max(...dataset);
+    if (max <= 200) {
+      return Math.ceil(max / 20) * 20;
+    } else {
+      return Math.ceil(max / 50) * 50;
+    }
+  };
   return (
-    <div className="riskBreakdown__dashboard">
-      <h3 className="riskBreakdown__dashboard--title">
-        Security Risk breakdown
-      </h3>
-      <div className="riskBreakdown__dashboard--chart-container">
+    <div className="bar-chart">
+      <h3 className="bar-chart__title">{title}</h3>
+      <div className="bar-chart__chart-container">
         <Bar
           data={{
-            labels: ["N/A", "Low", "Medium", "High"],
+            labels: labels,
             datasets: [
               {
                 data: dataset,
@@ -32,9 +37,12 @@ const SecurityRiskBreakdown = (props) => {
                 },
               },
               yAxis: {
-                max: Math.max(...dataset) + 10,
+                suggestedMax: { suggestedMax },
                 ticks: {
-                  stepSize: 10,
+                  display: true,
+                  stepSize: 50,
+                  includeBounds: false,
+                  precision: 0,
                 },
               },
             },
@@ -55,4 +63,4 @@ const SecurityRiskBreakdown = (props) => {
   );
 };
 
-export default SecurityRiskBreakdown;
+export default BarChart;

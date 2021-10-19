@@ -27,10 +27,10 @@ const LargeLineGraph = (props) => {
     };
   };
   return (
-    <div className="devices-dashboard">
-      <h2 className="devices-dashboard__title">{title}</h2>
-      <p className="devices-dashboard__subtitle">{subtitle}</p>
-      <div className="devices-dashboard__chart-container">
+    <div className="network-devices">
+      <h2 className="network-devices__title">{title}</h2>
+      <p className="network-devices__subtitle">{subtitle}</p>
+      <div className="network-devices__chart-container">
         <Line
           data={generateGraphSettings}
           height={250}

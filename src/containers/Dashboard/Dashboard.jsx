@@ -1,7 +1,7 @@
 import React from "react";
 import "./Dashboard.scss";
 import LargeLineGraph from "../../components/LargeLineGraph/LargeLineGraph.jsx";
-import SecurityRiskBreakdown from "../../components/SecurityRiskBreakdown/SecurityRiskBreakdown";
+import BarChart from "../../components/BarChart/BarChart";
 
 import { dataset } from "../../data/securityRisk";
 
@@ -29,7 +29,11 @@ const Dashboard = () => {
         data={largeLineGraphData}
         max={largeLineGraphMax}
       />
-      <SecurityRiskBreakdown dataset={dataset} />
+      <BarChart
+        dataset={dataset}
+        title={"Security Risk Breakdown"}
+        labels={["N/A", "Low", "Medium", "High"]}
+      />
     </div>
   );
 };
