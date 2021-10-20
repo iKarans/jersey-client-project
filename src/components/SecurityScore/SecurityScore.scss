@@ -3,13 +3,12 @@
 
 .security-score {
   display: flex;
-  justify-content: space-between;
-  width: 700px;
+  justify-content: center;
+  width: 80vw;
   height: 315px;
   background-color: $background-color;
   padding: 20px;
   margin-top: 250px;
-  margin-left: 50px;
   overflow: hidden;
 
   @include mobile {
