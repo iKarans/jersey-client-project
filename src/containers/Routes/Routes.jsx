@@ -1,5 +1,8 @@
 import React from "react";
+<<<<<<< HEAD
 import "./Routes.scss";
+=======
+>>>>>>> 10ab97369addb10fd6339deb3d6121e78d692401
 import Network from "../Network/Network";
 import { Route, Switch } from "react-router-dom";
 import Dashboard from "../Dashboard/Dashboard";
@@ -15,6 +18,7 @@ const Routes = () => {
     <div className="routes">
       <Switch>
         <Route exact path="/settings">
+<<<<<<< HEAD
           <div className="routes__sidenav">
             <SideNav selectedPage="Settings" />
           </div>
@@ -58,6 +62,31 @@ const Routes = () => {
             <Header pageHeading="Dashboard" />
             <Dashboard />
           </div>
+=======
+          <Header pageHeading="Settings" />
+          <SideNav selectedPage="Settings" />
+          <Settings />
+        </Route>
+        <Route exact path="/devices">
+          <Header pageHeading="Devices" />
+          <SideNav selectedPage="Devices" />
+          <Devices />
+        </Route>
+        <Route exact path="/security">
+          <Header pageHeading="Security" />
+          <SideNav selectedPage="Security" />
+          <Security />
+        </Route>
+        <Route exact path="/network">
+          <Header pageHeading="Network" />
+          <SideNav selectedPage="Network" />
+          <Network />
+        </Route>
+        <Route path="/dashboard">
+          <Header pageHeading="Dashboard" />
+          <SideNav selectedPage="Dashboard" />
+          <Dashboard />
+>>>>>>> 10ab97369addb10fd6339deb3d6121e78d692401
         </Route>
         <Route path="/">
           <Login />

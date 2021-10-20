@@ -1,0 +1,18 @@
+@use '../../assets/styles/variables' as *;
+@use '../../assets/styles/mixins' as *;
+
+.security {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-left: 227px;
+  background-color: $background-color;
+
+
+  @include mobile {    
+    flex-direction: column;
+    margin-left: 0;
+ }
+}

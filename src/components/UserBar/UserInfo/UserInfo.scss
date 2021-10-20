@@ -16,8 +16,6 @@
       right: 19px;
       left: unset;
       bottom: unset;
-
-
     }
   }
 
@@ -104,7 +102,7 @@
     font-weight: 600;
     font-size: 12px;
   }
-  
+
   &__dropdown-content--link {
     float: none;
     color: rgba(159, 172, 190, 1);
@@ -125,6 +123,4 @@
   &__dropdown:hover &__dropdown-content {
     display: block;
   }
-
-  
 }
