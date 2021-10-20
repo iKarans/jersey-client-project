@@ -9,13 +9,16 @@
   background-color: $background-color;
   padding: 20px;
   margin-top: 250px;
+  margin-left: 50px;
   overflow: hidden;
+
   @include mobile {
     flex-direction: column;
     width: 100%;
     height: 450px;
     align-items: center;
     margin-top: 150px;
+    margin-left: 0;
   }
 
   &__key {
@@ -33,8 +36,10 @@
       display: flex;
       align-items: center;
     }
+
     &--info {
       display: none;
+
       @include mobile {
         display: flex;
         text-align: center;
@@ -47,6 +52,7 @@
 
     &--icon {
       padding-left: 20px;
+
       @include mobile {
         display: none;
       }
@@ -54,6 +60,8 @@
 
     &--grid {
       padding-bottom: 50px;
+      padding-left: 20px;
+
       @include mobile {
         display: none;
       }
@@ -71,6 +79,7 @@
     margin-top: 20px;
     overflow: hidden;
     position: relative;
+
     @include mobile {
       overflow: visible;
     }
