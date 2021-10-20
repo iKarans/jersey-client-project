@@ -1,16 +1,13 @@
 @use "../../assets/styles/variables" as *;
 @use "../../assets/styles/mixins" as *;
 
-.devices-index-container { 
+.devices-index { 
   
     height: 100vh;
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr;
     justify-content: center;
     align-items: center;
     margin-left: 227px;
   
-    @include mobile {   
-      display: none; 
-      height: 100vh;
-   }
 }

@@ -4,22 +4,20 @@ import "./DeviceRisk.scss";
 
 const DeviceRisk = (props) => {
   const { securityRisk } = props;
-  let safeClass = "device-risk-alert";
-  let riskClass = "device-risky";
 
   if (securityRisk == "high") {
     return (
-      <div className={riskClass}>
-        <h4 className="device-risk-alert__title">Risk:</h4>
-        <p className="device-risk-alert__body">{securityRisk}</p>
+      <div className="device-risk-alert">
+        <h4 className="device-risk-alert__title">This device poses a significant risk to the network.</h4>
+        <p className="device-risk-alert__body">This is likely due to a number of reasons including a device being old, not having anti-virus software installed or is using an outdated operating system. </p>
         <Button text="Block Device" />
       </div>
     );
   } else {
     return (
-      <div className={safeClass}>
-        <h4 className="device-risk-alert__title">Risk:</h4>
-        <p className="device-risk-alert__body">{securityRisk}</p>
+      <div className="device-risk-alert">
+        <h4 className="device-risk-alert__title">Low Risk Device. No Further Action Required. </h4>
+        <p className="device-risk-alert__body">You can rest easy knowing this device poses a zero to low risk of attack on the network. This is likely due to the device using an up-to-date operating system or that it has anti-virus and malware installed.</p>
         <Button text="Block Device" />
       </div>
     );

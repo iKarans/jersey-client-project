@@ -1,40 +1,32 @@
 import React from "react";
-import { devices } from "../../data/devices";
+import "./DeviceInfo.scss"
 
 const DeviceInfo = (props) => {
   const { name, type, brand, model, OS, ipAddress, lastActive } = props;
 
   return (
     <div className="device-info">
-      <h4>Device Information</h4>
-      <p>
-        <b>Device Type:</b>
-        {type}
-      </p>
-      <p>
-        <b>Device Name:</b>
-        {name}
-      </p>
-      <p>
-        <b>Device Brand:</b>
-        {brand}
-      </p>
-      <p>
-        <b>Device Model:</b>
-        {model}
-      </p>
-      <p>
-        <b>Operating System:</b>
-        {OS}
-      </p>
-      <p>
-        <b>IP Address:</b>
-        {ipAddress}
-      </p>
-      <p>
-        <b>Last Active:</b>
-        {lastActive}
-      </p>
+
+        <div className="device-info__list">
+            <h3>Device Information</h3>
+
+            <ul className="device-info__list--ul">
+                <li><b>Device Type:</b> {type}</li>
+                <li><b>Device Name:</b> {name}</li>
+                <li><b>Brand:</b> {brand}</li>
+                <li><b>Model:</b> {model}</li>
+                <li><b>Operating System:</b> {OS}</li>
+                <li><b>IP Address:</b> {ipAddress}</li>
+                <li><b>Last Active:</b> {lastActive}</li>
+            </ul>               
+        </div>
+
+        <div className="device-info__icon">ICON HERE</div>
+
+        <div className="device-info__edit">
+            <h4>Are these details correct?</h4>
+        </div>
+      
     </div>
   );
 };
