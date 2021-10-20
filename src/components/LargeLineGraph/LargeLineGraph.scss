@@ -42,5 +42,8 @@
     font-weight: 400;
     font-size: 12px;
     margin: 10px;
+    @include mobile {
+      font-size: 10px;
+    }
   }
 }
