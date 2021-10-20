@@ -1,0 +1,19 @@
+@use "../../assets/styles/mixins" as *;
+@use "../../assets/styles/variables" as *;
+
+.routes {
+  display: grid; 
+  grid-template-columns: 20% 80%; 
+  grid-template-rows: 1fr; 
+  gap: 0px 0px; 
+}
+.routes__sidenav { 
+  width: 20%;
+  grid-area: 1 / 1 / 2 / 2; 
+}
+
+.routes__container { 
+  width: 80%;
+  grid-area: 1 / 2 / 2 / 3;
+  margin-left: 10px;
+ }

@@ -3,7 +3,8 @@
 
 .header {
   position: relative;
-  left: 247px;
+  width: 100%;
+
 
   @include mobile {
     position: unset;
