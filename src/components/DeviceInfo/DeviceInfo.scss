@@ -1,1 +1,32 @@
+@use "../../assets/styles/variables" as *;
+@use "../../assets/styles/mixins" as *;
 
+.device-info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  width: 40%;
+  padding: 1.5rem;
+  background-color: $text-tertiary;
+  color: $text-secondary;
+  border-radius: 15px;
+  box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.15);
+
+  &__list--ul {
+      list-style-type: none;
+
+      li {
+          margin-top: 10px;
+          font-size: .8rem;
+      }
+  }
+
+  &__edit {
+    grid-column: 1 / span 2;
+    border-top: 1px solid $text-primary;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+
+  }
+}
