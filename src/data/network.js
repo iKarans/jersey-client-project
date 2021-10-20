@@ -38,6 +38,12 @@ export const networks = [
     importanceLevel: "High",
   },
   {
+    alertType: "Connection Restored",
+    summary: "Connection restored following outage at 18:23.34.",
+    created: "18 minutes ago",
+    importanceLevel: "High",
+  },
+  {
     alertType: "Device Logged On",
     summary: "Previous device logged on with IP address 195.111.190.115",
     created: "under a minute ago",
@@ -50,6 +56,12 @@ export const networks = [
     importanceLevel: "Low",
   },
   {
+    alertType: "Device Logged On",
+    summary: "Previous device logged on with IP address 195.111.190.115",
+    created: "under a minute ago",
+    importanceLevel: "Low",
+  },
+  {
     alertType: "High risk device detected",
     summary:
       "Device with name Dave’s-macbook-pro poses significant risk to network. Action Needed.",
@@ -58,6 +70,11 @@ export const networks = [
   },
   {
     alertType: "Device Logged On",
+    summary: "Previous device logged on with IP address 195.111.190.115",
+    created: "under a minute ago",
+    importanceLevel: "Low",
+  },
+  {
     alertType: "New Device Connected",
     summary: "Unrecognised device connected for first time.",
     created: "15 minutes ago",
@@ -75,6 +92,13 @@ export const networks = [
     summary: "Previous device logged on with IP address 198.68.0.1",
     created: "3 minutes ago",
     importanceLevel: "Low",
+  },
+  {
+    alertType: "High risk device detected",
+    summary:
+      "Device with name Dave’s-macbook-pro poses significant risk to network. Action Needed.",
+    created: "47 minutes ago",
+    importanceLevel: "High",
   },
   {
     alertType: "Security Score Calculated",

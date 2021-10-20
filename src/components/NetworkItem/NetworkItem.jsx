@@ -6,14 +6,14 @@ const NetworkItem = (props) => {
   const { name, summary, created, importanceLevel, index } = props;
 
   let importanceLevelStyle;
-  if(importanceLevel == "High") {
+  if(importanceLevel === "High") {
     importanceLevelStyle = {color: "rgba(243, 86, 114, 1)"}
   }else {
     importanceLevelStyle = {color: "rgba(115, 120, 134, 1)"}
   }
 
   let className;
-  if(index % 2 == 0) {
+  if(index % 2 === 0) {
     className = "network-item dark"
   } else {
     className = "network-item light"

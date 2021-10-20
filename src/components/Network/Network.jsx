@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React, {useState} from "react";
 
 import NetworkItem from "../NetworkItem/NetworkItem";
 import ChatButton from "../ChatButton/ChatButton";
@@ -14,62 +14,28 @@ import NetworkArrow from "../../assets/network/network-arrow.svg"
 import "./Network.scss";
 
 const Network = () => {
-  // const [searchTerm, setSearchTerm] = useState("");
-  // const [alert, setAlert] = useState([]);
-  // const [created, setCreated] = useState([]);
-  // const [importance, setImportance] = useState([]);
-  // const [filtered, setFiltered] = useState(false);
-  // const handleSearchInput = (event) => {
-  //   const searchInput = event.target.value.toLowerCase();
-  //   setSearchTerm(searchInput);
-  // };
-
-  // const filterNetwork = () => {
-  //   if (!filtered) {
-  //     const levelOfImportance = networks.filter(network => network.importanceLevel);
-  //     setImportance(levelOfImportance);
-  //   } else if (filtered) {
-  //     setImportance(networks);
-  //   }
-  //   setFiltered(!filtered);
-  // };
-
-  // useEffect(() => {
-  //   if (searchTerm.length !== 0) {
-  //     const search = networks.filter(network => network.alertType.toLowerCase().includes(searchTerm));
-  //     setAlert(search);
-  //   } else {
-  //     setAlert(networks);
-  //   }
-  // }, [searchTerm]);
-
-
-  let firstItem = 0;
-  let lastItem = 9;
-
   const [pages, setPages] = useState(0);
+  const [firstItem, setFirstItem] = useState(0);
+  const [lastItem, setlastItem] = useState(9);
 
   const handleDecrement = () => {
     if(pages > 0) {
       setPages(pages - 1)
-      firstItem -= 9;
-      lastItem -= 9;
+      setFirstItem(firstItem - 9);
+      setlastItem(lastItem - 9);
     }
   }
 
   const handleIncrement = () => {
-    if(pages >= 0 && pages < networks.length) {
+    if(pages >= 0 || pages < (networks.length / 9)) {
       setPages(pages + 1)
-      firstItem += 9;
-      lastItem += 9;
+      setFirstItem(firstItem + 9);
+      setlastItem(lastItem + 9);
     }
   }
 
-  let networkItemJSX = [];
-
-  const getNetworkItems = () =>{
-    const currentNetworkItems = networks.slice(firstItem, lastItem);
-    networkItemJSX = currentNetworkItems.map((network, index) => {
+  const currentNetworkItems = networks.slice(firstItem, lastItem)
+  const networkItemJSX = currentNetworkItems.map((network, index) => {
       return (
         <NetworkItem
         key={network + index}
@@ -81,15 +47,7 @@ const Network = () => {
         />
       )
     })
-  }     
-  
-  getNetworkItems();
-
-  useEffect(() => {
-    getNetworkItems();
-  }, [], [pages])
-    
-  console.log(networkItemJSX)
+       
   return (
     <>
     <NetworkFilter />
