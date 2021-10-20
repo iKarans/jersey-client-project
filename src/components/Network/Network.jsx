@@ -28,7 +28,7 @@ const Network = () => {
   }
 
   const handleIncrement = () => {
-    if(pages >= 0 || pages < (networks.length / 9)) {
+    if(pages >= 0 && pages < ((networks.length / 9) -1)) {
       setPages(pages + 1)
       setFirstItem(firstItem + 9);
       setlastItem(lastItem + 9);
@@ -47,9 +47,9 @@ const Network = () => {
         index={index}
         />
       )
-    })
+  })
   
-
+  // const buttonJSX = 
   
        
   return (
