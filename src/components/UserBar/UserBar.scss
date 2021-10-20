@@ -3,10 +3,10 @@
 
 .user-bar {
   position: relative;
-  width: 100%;
-  height: 100px;
-  left: 0px;
-  top: 0px;
+  display: flex;
+  justify-content: space-between;
+  width: 80vw;
+  height: 12vh;
 
   background-image: url("../../assets/header/background-image.png");
   background-position: center;

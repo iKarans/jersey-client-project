@@ -2,18 +2,30 @@
 @use "../../assets/styles/variables" as *;
 
 .routes {
+  position: relative;
+  height: 100vh;
   display: grid; 
   grid-template-columns: 20% 80%; 
   grid-template-rows: 1fr; 
-  gap: 0px 0px; 
+  gap: 0px 0px;
+  
+  margin-right: 10px;
 }
 .routes__sidenav { 
-  width: 20%;
   grid-area: 1 / 1 / 2 / 2; 
 }
 
 .routes__container { 
-  width: 80%;
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
   grid-area: 1 / 2 / 2 / 3;
   margin-left: 10px;
+ }
+
+ .routes__login {
+  grid-area: 1 / 1 / 2 / 3; 
  }

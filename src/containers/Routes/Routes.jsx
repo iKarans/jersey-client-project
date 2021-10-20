@@ -60,7 +60,9 @@ const Routes = () => {
           </div>
         </Route>
         <Route path="/">
+        <div className="routes__login">
           <Login />
+        </div>
         </Route>
       </Switch>
     </div>
