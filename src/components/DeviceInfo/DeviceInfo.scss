@@ -17,12 +17,16 @@
 
       li {
           margin-top: 10px;
+          font-size: .8rem;
       }
   }
 
   &__edit {
     grid-column: 1 / span 2;
     border-top: 1px solid $text-primary;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
 
   }
 }

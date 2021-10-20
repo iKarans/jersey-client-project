@@ -1,4 +1,5 @@
 import React from "react";
+import Button from "../Button/Button";
 import "./DeviceInfo.scss"
 
 const DeviceInfo = (props) => {
@@ -25,6 +26,7 @@ const DeviceInfo = (props) => {
 
         <div className="device-info__edit">
             <h4>Are these details correct?</h4>
+            <Button text="Edit"/>
         </div>
       
     </div>
