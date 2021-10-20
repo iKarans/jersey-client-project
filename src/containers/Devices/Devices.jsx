@@ -5,7 +5,7 @@ import "./Devices.scss";
 
 const Devices = () => {
   return (
-      <div className="devices__text">
+      <div className="devices-page">
           <DeviceList />
       </div>
         
