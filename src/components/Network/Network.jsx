@@ -1,9 +1,9 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 
 import NetworkItem from "../NetworkItem/NetworkItem";
 import ChatButton from "../ChatButton/ChatButton";
-import { networks } from "../../data/network.js";
 import NetworkFilter from "./NetworkFilter/NetworkFilter";
+import { networks } from "../../data/network.js";
 
 import SearchIcon from "../../assets/global/search-icon.svg";
 import SortIcon from "../../assets/global/sort-icon.svg";
@@ -15,21 +15,52 @@ import "./Network.scss";
 
 const Network = () => {
 
-  const firstNineNetwork = networks.slice(0, 9)
-  
-  const networkItemJSX = firstNineNetwork.map((network, index) => {
-    return (
-      <NetworkItem
+  let firstItem = 0;
+  let lastItem = 9;
+
+  const [pages, setPages] = useState(0);
+
+  const handleDecrement = () => {
+    if(pages > 0) {
+      setPages(pages - 1)
+      firstItem -= 9;
+      lastItem -= 9;
+    }
+  }
+
+  const handleIncrement = () => {
+    if(pages >= 0 && pages < networks.length) {
+      setPages(pages + 1)
+      firstItem += 9;
+      lastItem += 9;
+    }
+  }
+
+  let networkItemJSX = [];
+
+  const getNetworkItems = () =>{
+    const currentNetworkItems = networks.slice(firstItem, lastItem);
+    networkItemJSX = currentNetworkItems.map((network, index) => {
+      return (
+        <NetworkItem
         key={network + index}
         name={network.alertType}
         summary={network.summary}
         created={network.created}
         importanceLevel={network.importanceLevel}
         index={index}
-      />
-    );
-  });
+        />
+      )
+    })
+  }     
+  
+  getNetworkItems();
 
+  useEffect(() => {
+    getNetworkItems();
+  }, [], [pages])
+    
+  console.log(networkItemJSX)
   return (
     <>
     <NetworkFilter />
@@ -74,11 +105,11 @@ const Network = () => {
         </div>
         <div className="network-alerts__alerts">{networkItemJSX}</div>
         <div className="network-alerts__pages">
-          <div className="network-alerts__pages-buttons">
-            <button className="network-alerts__pages-buttons-button"><img src={NetworkArrow} alt="left-arrow" className="network__left-arrow"/></button>
+          {networks.length > 9 && <div className="network-alerts__pages-buttons">
+            <button className="network-alerts__pages-buttons-button"  onClick={handleDecrement}><img src={NetworkArrow} alt="left-arrow" className="network__left-arrow"/></button>
 
-            <button className="network-alerts__pages-buttons-button"><img src={NetworkArrow} alt="left-arrow" className="network__right-arrow"/></button>
-          </div>
+            <button className="network-alerts__pages-buttons-button"  onClick={handleIncrement}><img src={NetworkArrow} alt="right-arrow" className="network__right-arrow"/></button>
+          </div>}
         </div>
       </div>
       <ChatButton />
