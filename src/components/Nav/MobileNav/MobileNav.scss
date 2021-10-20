@@ -1,14 +1,12 @@
-@use '../../../assets/styles/variables' as *;
-@use '../../../assets/styles/mixins' as *;
+@use "../../../assets/styles/variables" as *;
+@use "../../../assets/styles/mixins" as *;
 
-
-.mobilenav {
-
+.mobile-nav {
   display: none;
 
   @include mobile {
     position: absolute;
-    top: 137px;    
+    top: 137px;
     height: 445px;
     width: 100%;
     display: grid;
@@ -16,14 +14,12 @@
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1.5fr 0.5fr;
     gap: 0px 0px;
     grid-auto-flow: row;
-    background: linear-gradient(180deg, #DFDFDF 0%, #F9F9F9 0.01%, #FFFFFF 52.65%);
+    background: linear-gradient(180deg, #dfdfdf 0%, #f9f9f9 0.01%, #ffffff 52.65%);
     border-radius: 0px 0px 12px 12px;
   }
 
-
   &__item {
     display: none;
-
 
     @include mobile {
       display: flex;
@@ -31,12 +27,10 @@
       justify-self: flex-start;
       margin-left: 39px;
       flex-direction: row;
-      border-bottom: 1px solid  #EBEBEB;
+      border-bottom: 1px solid #ebebeb;
       width: 80vw;
     }
-
   }
-
 
   &__item--text {
     display: none;
@@ -48,21 +42,17 @@
       font-size: 16px;
       font-weight: 500;
       left: 90px;
-      
+    }
   }
-}
 
-    &__item--image {
-      display: none;
+  &__item--image {
+    display: none;
 
     @include mobile {
       display: block;
       margin-right: 25px;
     }
-
   }
-
-
 
   &__item--logout {
     display: none;
@@ -72,14 +62,10 @@
       display: flex;
       align-items: center;
       justify-content: center;
-     
     }
-
-
   }
 
   &__logout {
-
     display: none;
 
     @include mobile {
@@ -94,8 +80,5 @@
       justify-content: center;
       align-items: center;
     }
-
   }
-
 }
-
