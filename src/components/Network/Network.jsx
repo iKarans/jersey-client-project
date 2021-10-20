@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 import NetworkItem from "../NetworkItem/NetworkItem";
 import ChatButton from "../ChatButton/ChatButton";
@@ -15,6 +15,12 @@ import "./Network.scss";
 
 const Network = () => {
 
+  const [searchTerm, setSearchTerm] = useState("");
+  const [alert, setAlert] = useState([]);
+  const [created, setCreated] = useState([]);
+  const [importance, setImportance] = useState([]);
+  const [filtered, setFiltered] = useState(false);
+
   const firstNineNetwork = networks.slice(0, 9)
   const networkItemJSX = firstNineNetwork.map((network, index) => {
     return (
@@ -28,6 +34,30 @@ const Network = () => {
       />
     );
   });
+
+  const handleSearchInput = (event) => {
+    const searchInput = event.target.value.toLowerCase();
+    setSearchTerm(searchInput);
+  };
+
+  const filterNetwork = () => {
+    if (!filtered) {
+      const levelOfImportance = networks.filter(network => network.importanceLevel);
+      setImportance(levelOfImportance);
+    } else if (filtered) {
+      setImportance(networks);
+    }
+    setFiltered(!filtered);
+  };
+
+  useEffect(() => {
+    if (searchTerm.length !== 0) {
+      const search = networks.filter(network => network.alertType.toLowerCase().includes(searchTerm));
+      setAlert(search);
+    } else {
+      setAlert(networks);
+    }
+  }, [searchTerm]);
 
   return (
     <>

@@ -1,8 +1,7 @@
 
 
 
-.network-filter {
-  background-color: aqua;
+.network-filters {
   border-radius: 7px;
   height: 408px;
   width: 190px;
@@ -15,13 +14,13 @@
     font-size: 14px;
     font-weight: 600;
     color: #454756;
-    margin: 20px 0 10px 0;
+    margin: 30px 0 10px 0;
   }
 
   &__filter-text {
     font-size: 10px;
     color: #AAB3BE;
-    margin: 10px 0 10px 0;
+    margin: 20px 0 10px 0;
   }
 
   &__checkbox-text {
@@ -31,7 +30,7 @@
   }
 
   &__apply {
-    margin-top: 60px;
+    margin-top: 30px;
     background-color: #2ABCA1;
     width: 144px;
     height: 30px;
