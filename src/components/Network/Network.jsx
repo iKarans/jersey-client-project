@@ -3,6 +3,7 @@ import React, {useState} from "react";
 import NetworkItem from "../NetworkItem/NetworkItem";
 import ChatButton from "../ChatButton/ChatButton";
 import NetworkFilter from "./NetworkFilter/NetworkFilter";
+import NetworkPageButton from "../NetworkPageButton/NetworkPageButton";
 import { networks } from "../../data/network.js";
 
 import SearchIcon from "../../assets/global/search-icon.svg";
@@ -47,6 +48,9 @@ const Network = () => {
         />
       )
     })
+  
+
+  
        
   return (
     <>
