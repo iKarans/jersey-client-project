@@ -30,11 +30,12 @@ const SignUpForm = () => {
     setUserDetailsStage(false);
   };
 
+  
   const buttonJSX = () => {
     if (
       userDetails.firstName !== "" &&
       userDetails.lastName !== "" &&
-      userDetails.email !== ""
+      /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(userDetails.email) 
     ) {
       return (
         <button className="signup-form__button--active" onClick={buttonClick}>
