@@ -4,6 +4,10 @@ import { Link } from "react-router-dom";
 import ShowPassword from "../../assets/login/show-password.svg";
 import HidePassword from "../../assets/login/hide-password.svg";
 
+import { ReactComponent as ValidInputIcon } from "../../assets/login/green-tick.svg"
+import { ReactComponent as InvalidInputIcon } from "../../assets/login/red-cross.svg"
+
+
 import "./SignUpForm.scss";
 
 const SignUpForm = () => {
@@ -12,9 +16,10 @@ const SignUpForm = () => {
     firstName: "",
     lastName: "",
     email: "",
-    // password: "",
+    password: "",
+    confirmPassword: ""
   });
-  const [userDetailsStage, setUserDetailsStage] = useState(true);
+  const [userDetailsStage, setUserDetailsStage] = useState(false);
 
   // Gathering User Form Inputs
   const handleInput = (event) => {
@@ -34,7 +39,8 @@ const SignUpForm = () => {
     if (
       userDetails.firstName !== "" &&
       userDetails.lastName !== "" &&
-      userDetails.email !== ""
+      /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(userDetails.email)
+
     ) {
       return (
         <button className="signup-form__button--active" onClick={buttonClick}>
@@ -69,6 +75,63 @@ const SignUpForm = () => {
       </div>
     );
   };
+
+  const checkPasswordLengthJSX = () => {
+    const passwordLength = userDetails.password.length
+    if (passwordLength >= 6 & passwordLength <= 8) {
+      return (
+        <div className="valid-password">
+          <ValidInputIcon />
+          <p>Between 6 and 8 characters</p>
+        </div>
+      )
+    } else {
+      return (
+        <div className="invalid-password">
+          <InvalidInputIcon />
+          <p>Between 6 and 8 characters</p>
+        </div>
+      )
+    }
+  }
+
+  const checkPasswordHasUppercaseJSX = () => {
+    const password = userDetails.password
+    const lowerCasePassword = userDetails.password.toLowerCase()
+    if (password != lowerCasePassword) {
+      return (
+        <div className="valid-password">
+          <ValidInputIcon />
+          <p>Contains at least 1 uppercase letter</p>
+        </div>
+      )
+    } else {
+      return (
+        <div className="invalid-password">
+          <InvalidInputIcon />
+          <p>Contains at least 1 uppercase letter</p>
+        </div>
+      )
+    }
+  }
+
+  const checkPasswordsMatchJSX = () => {
+    if (userDetails.password == userDetails.confirmPassword) {
+      return (
+        <div className="valid-password">
+          <ValidInputIcon />
+          <p>Passwords match</p>
+        </div>
+      )
+    } else {
+      return (
+        <div className="invalid-password">
+          <InvalidInputIcon />
+          <p>Passwords match</p>
+        </div>
+      )
+    }
+  }
 
   const inputJSX = () => {
     if (userDetailsStage) {
@@ -132,12 +195,23 @@ const SignUpForm = () => {
           </label>
           <input
             type="text"
-            id="password"
-            name="password"
+            id="password-confirm"
+            name="confirmPassword"
             className="signup-form__input"
             onChange={handleInput}
             required
           />
+          <div className="signup-form__validation">
+            <div className="signup-form__validation-item">
+              {checkPasswordLengthJSX()}
+            </div>
+            <div className="signup-form__validation-item">
+              {checkPasswordHasUppercaseJSX()}
+            </div>
+            <div className="signup-form__validation-item">
+              {checkPasswordsMatchJSX()}
+            </div>
+          </div>
         </>
       );
     }

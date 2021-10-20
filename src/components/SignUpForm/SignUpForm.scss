@@ -1,6 +1,6 @@
-@use "../../assets/styles/variables" as *;
-@use "../../assets/styles/mixins" as *;
-@use "../../assets/styles/typography" as *;
+@use "../../assets/styles/variables"as *;
+@use "../../assets/styles/mixins"as *;
+@use "../../assets/styles/typography"as *;
 
 .signup {
   display: flex;
@@ -95,6 +95,38 @@
       padding-top: 0.5rem;
     }
 
+    &__validation {
+      width: 75%;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 2.8rem;
+
+      &-item {
+        .valid-password {
+          display: flex;
+          align-items: center;
+          color: $primary-color;
+          padding-bottom: 0.5rem;
+
+          p {
+            padding-left: 0.5rem;
+          }
+        }
+
+        .invalid-password {
+          display: flex;
+          align-items: center;
+          color: $high-color;
+          padding-bottom: 0.5rem;
+
+          p {
+            padding-left: 0.5rem;
+          }
+        }
+      }
+    }
+
     .checkbox-label {
       color: #c5ccd6;
       font-weight: 500;
@@ -140,8 +172,9 @@
         display: block;
         width: 45%;
         height: 2.8rem;
-        background-color: $primary-color;
-  
+        background-color: rgba(4, 36, 30, 0.1);
+        ;
+
         border-radius: 7px;
         border: none;
         color: $text-tertiary;
