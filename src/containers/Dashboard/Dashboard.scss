@@ -5,8 +5,9 @@
   height: 100vh;
   width: 100vw;
   margin: 50px;
+  padding: 50px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   @include mobile {
     display: flex;
     flex-direction: column;

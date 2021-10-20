@@ -2,7 +2,6 @@ import React from "react";
 import "./Dashboard.scss";
 import LargeLineGraph from "../../components/LargeLineGraph/LargeLineGraph.jsx";
 import BarChart from "../../components/BarChart/BarChart";
-
 import { dataset } from "../../data/securityRisk";
 
 const Dashboard = () => {
