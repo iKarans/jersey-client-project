@@ -4,12 +4,48 @@
   background-color: #e5e5e5;
   height: 120vh;
   width: 120vw;
-  padding: 50px;
-  display: flex;
-  justify-content: space-evenly;
   @include mobile {
-    display: flex;
-    flex-direction: column;
+    height: 200vh;
+  }
+  &__content {
+    position: relative;
+    top: 120px;
+    left: 115px;
+    max-height: 1200px;
+    max-width: 1600px;
+    padding: 50px;
+    display: grid;
+    grid-template-columns: 600px 600px;
+    grid-template-rows: 500px 500px;
+
     justify-content: space-evenly;
+
+    align-items: center;
+    @include mobile {
+      position: relative;
+      top: 120px;
+      left: 0px;
+      max-height: 1200px;
+      max-width: 1600px;
+      padding: 50px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+    }
+  }
+
+  align-items: center;
+}
+.placeholder {
+  position: relative;
+  border: 1px solid white;
+  border-radius: 25px;
+  height: 385px;
+  width: 404px;
+  background-color: white;
+  @include mobile {
+    height: 360px;
+    width: 320px;
+    margin-bottom: 10px;
   }
 }

@@ -21,18 +21,22 @@ const Dashboard = () => {
   const largeLineGraphMax = 300;
   return (
     <div className="dashboard">
-      <LargeLineGraph
-        title={largeLineGraphTitle}
-        subtitle={largeLineGraphSubtitle}
-        labels={largeLineGraphLabels}
-        data={largeLineGraphData}
-        max={largeLineGraphMax}
-      />
-      <BarChart
-        dataset={dataset}
-        title={"Security Risk Breakdown"}
-        labels={["N/A", "Low", "Medium", "High"]}
-      />
+      <div className="dashboard__content">
+        <LargeLineGraph
+          title={largeLineGraphTitle}
+          subtitle={largeLineGraphSubtitle}
+          labels={largeLineGraphLabels}
+          data={largeLineGraphData}
+          max={largeLineGraphMax}
+        />
+        <BarChart
+          dataset={dataset}
+          title={"Security Risk Breakdown"}
+          labels={["N/A", "Low", "Medium", "High"]}
+        />
+        <div className="placeholder"></div>
+        <div className="placeholder"></div>
+      </div>
     </div>
   );
 };
