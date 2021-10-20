@@ -1,8 +1,7 @@
-@use '../../../assets/styles/variables' as *;
-@use '../../../assets/styles/mixins' as *;
+@use "../../../assets/styles/variables" as *;
+@use "../../../assets/styles/mixins" as *;
 
-.sidenav {
-
+.side-nav {
   height: 100%;
   min-width: 227px;
   position: fixed;
@@ -15,9 +14,9 @@
   gap: 20px 20px;
   font-size: 12px;
 
-   @include mobile {    
+  @include mobile {
     display: none;
- }
+  }
 
   &__logo {
     display: flex;
@@ -35,7 +34,7 @@
 
   &__items {
     grid-area: 3 / 1 / 5 / 2;
-    color: #AAB3BE;
+    color: #aab3be;
     font-weight: 500;
   }
 
@@ -50,7 +49,6 @@
     align-items: center;
 
     margin-bottom: 25px;
-    
   }
 
   &__item:hover {
@@ -59,14 +57,12 @@
     color: $primary-color;
 
     svg path {
-      fill: #2ABCA1;
+      fill: #2abca1;
     }
-
   }
 
-
   &__logout {
-    background: #2ABCA1;
+    background: #2abca1;
     border-radius: 18px;
     width: 133px;
     height: 36px;
@@ -84,24 +80,19 @@
     height: 20px;
     width: 18.5px;
     margin-right: 15px;
-
-
-
   }
 }
 
-
-.mobilenavheader {
+.mobile-nav-header {
   display: none;
 
-
-  @include mobile { 
+  @include mobile {
     z-index: 1;
     cursor: pointer;
     position: absolute;
     top: 73px;
     width: 100%;
-    height: 66px;   
+    height: 66px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -111,14 +102,12 @@
     box-shadow: 0px 2px 5.5px rgba(0, 0, 0, 0.02);
     backdrop-filter: blur(21px);
     border-radius: 15px;
-
-
   }
 
   &__items-left {
     display: none;
 
-    @include mobile {  
+    @include mobile {
       margin-left: 10px;
       width: 100px;
       display: flex;
@@ -126,30 +115,27 @@
       justify-content: space-between;
       align-items: center;
       color: $text-secondary;
-      
+
       svg path {
         fill: $primary-color;
       }
     }
-
-
   }
 
   &__item--image {
     display: none;
 
-    @include mobile {  
+    @include mobile {
       display: block;
       position: absolute;
       left: 34px;
     }
-
   }
 
   &__heading {
     display: none;
 
-    @include mobile {  
+    @include mobile {
       display: block;
       position: absolute;
       left: 72px;
@@ -157,28 +143,19 @@
       font-size: 16px;
       color: $text-secondary;
     }
-
   }
-
 }
 
-.mobilenavheader____image--arrow {
+.mobile-nav-header____image--arrow {
   display: none;
 
-  @include mobile {  
+  @include mobile {
     display: block;
     position: absolute;
     left: 90%;
-    
+
     svg path {
       fill: $text-secondary;
     }
-
   }
 }
-
-
-
-  
-
-
