@@ -2,13 +2,13 @@
 @use "../../assets/styles/variables";
 .dashboard {
   background-color: #e5e5e5;
-  height: 100vh;
+  height: 90vh;
   width: 80vw;
   // padding: 50px;
   display: flex;
   justify-content: space-evenly;
   flex-direction: row;
-  align-items: flex-start;
+  align-items: center;
   @include mobile {
     display: flex;
     flex-direction: column;

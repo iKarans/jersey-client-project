@@ -36,7 +36,7 @@ const Routes = () => {
           <div className="routes__sidenav">
             <SideNav selectedPage="Settings" />
           </div>
-          <div className="routes__container">
+          <div className="routes__container-security">
             <Header pageHeading="Security" />
             <Security />
           </div>
@@ -54,7 +54,7 @@ const Routes = () => {
           <div className="routes__sidenav">
             <SideNav selectedPage="Settings" />
           </div>
-          <div className="routes__container">
+          <div className="routes__container-dashboard">
             <Header pageHeading="Dashboard" />
             <Dashboard />
           </div>
