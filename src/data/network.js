@@ -57,6 +57,7 @@ export const networks = [
     importanceLevel: "High",
   },
   {
+    alertType: "Device Logged On",
     alertType: "New Device Connected",
     summary: "Unrecognised device connected for first time.",
     created: "15 minutes ago",
