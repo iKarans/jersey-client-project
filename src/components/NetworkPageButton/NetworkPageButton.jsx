@@ -4,12 +4,12 @@ import "./NetworkPageButton.scss"
 
 const NetworkPageButton = (props) => {
 
-    const index = "0";
-
+    const {index, setPages} = props;
+    
     const className = "network-alerts__pages-buttons-button"
 
     return (
-        <button className={className}>{index}</button>
+        <button className={className} onClick={() => setPages(index - 1)}>{index}</button>
     )
 }
 

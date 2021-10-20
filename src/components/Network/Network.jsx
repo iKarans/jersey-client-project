@@ -22,16 +22,12 @@ const Network = () => {
   const handleDecrement = () => {
     if(pages > 0) {
       setPages(pages - 1)
-      setFirstItem(firstItem - 9);
-      setlastItem(lastItem - 9);
     }
   }
 
   const handleIncrement = () => {
     if(pages >= 0 && pages < ((networks.length / 9) -1)) {
       setPages(pages + 1)
-      setFirstItem(firstItem + 9);
-      setlastItem(lastItem + 9);
     }
   }
 
@@ -49,8 +45,22 @@ const Network = () => {
       )
   })
   
-  // const buttonJSX = 
+
+  let buttonNumbers = [];
   
+  const generateButtonIndex = () => {
+    for(let i = 0; i < (networks.length / 9); i++) {
+      buttonNumbers.push(i)
+    }
+  }
+  
+  generateButtonIndex();
+
+  const buttonJSX = buttonNumbers.map((buttonNumber, index) => {
+    return (
+      <NetworkPageButton key={buttonNumber + index} index={index + 1} setPages={setPages}></NetworkPageButton>
+    )
+  })
        
   return (
     <>
@@ -98,7 +108,7 @@ const Network = () => {
         <div className="network-alerts__pages">
           {networks.length > 9 && <div className="network-alerts__pages-buttons">
             <button className="network-alerts__pages-buttons-button"  onClick={handleDecrement}><img src={NetworkArrow} alt="left-arrow" className="network__left-arrow"/></button>
-
+            {buttonJSX}
             <button className="network-alerts__pages-buttons-button"  onClick={handleIncrement}><img src={NetworkArrow} alt="right-arrow" className="network__right-arrow"/></button>
           </div>}
         </div>
