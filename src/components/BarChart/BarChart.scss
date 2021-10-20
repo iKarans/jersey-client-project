@@ -17,8 +17,9 @@
     margin-bottom: 10px;
   }
   &__chart-container {
-    height: 250px;
+    height: 400px;
     width: 520px;
+    padding-bottom: 20px;
     background-color: white;
     @include mobile {
       position: absolute;

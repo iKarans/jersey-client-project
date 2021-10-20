@@ -9,8 +9,8 @@
   }
   &__content {
     position: relative;
-    top: 120px;
-    left: 115px;
+    top: 160px;
+    left: 100px;
     max-height: 1200px;
     max-width: 1600px;
     padding: 50px;
@@ -27,7 +27,8 @@
       left: 0px;
       max-height: 1200px;
       max-width: 1600px;
-      padding: 50px;
+      padding: 0px;
+      padding-top: 50px;
       display: flex;
       flex-direction: column;
       justify-content: space-evenly;
