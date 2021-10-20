@@ -1,5 +1,15 @@
+@use "../../assets/styles/mixins" as *;
+@use "../../assets/styles/variables";
 .dashboard {
-    background-color: #E5E5E5;
-    height: 100vh;
-    padding: 50px;
+  background-color: #e5e5e5;
+  height: 120vh;
+  width: 120vw;
+  padding: 50px;
+  display: flex;
+  justify-content: space-evenly;
+  @include mobile {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
 }
