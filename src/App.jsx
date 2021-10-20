@@ -9,16 +9,8 @@ const App = () => {
     <div className="App">
       <Router>
         <Routes />
-<<<<<<< HEAD
-      </div>
-    </Router>
-  )
-}
-
-=======
       </Router>
     </div>
   );
 };
->>>>>>> 10ab97369addb10fd6339deb3d6121e78d692401
 export default App;
