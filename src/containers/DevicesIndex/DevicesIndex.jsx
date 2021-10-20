@@ -19,9 +19,13 @@ const DevicesIndex = () => {
   );
 
   return (
-    <div>
-      <h3>{device}</h3>
-      <h4>{filteredDevice.brand}</h4>
+    <div className="devices-index">
+
+        <DeviceRisk
+        toggleModal={toggleModal}
+        securityRisk={filteredDevice.securityRisk}
+      />
+      
       <DeviceInfo
         name={filteredDevice.name}
         type={filteredDevice.type}
@@ -30,10 +34,6 @@ const DevicesIndex = () => {
         OS={filteredDevice.OS}
         ipAddress={filteredDevice.ipAddress}
         lastActive={filteredDevice.lastActive}
-      />
-      <DeviceRisk
-        toggleModal={toggleModal}
-        securityRisk={filteredDevice.securityRisk}
       />
 
       {modal && (

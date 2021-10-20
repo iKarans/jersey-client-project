@@ -1,12 +1,12 @@
 @use "../../assets/styles/variables" as *;
 @use "../../assets/styles/mixins" as *;
 
-.devices-index-container {
+.devices-index {
   height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-left: 227px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+  margin-left: 250px;
 
   @include mobile {
     display: none;
@@ -20,7 +20,7 @@ body.active-modal {
 
 .btn-modal {
   padding: 10px 20px;
-  display: block;
+//   display: block;
   margin: 100px auto 0;
   font-size: 18px;
 }
@@ -41,6 +41,8 @@ body.active-modal {
 }
 .modal-content {
   position: absolute;
+  display: flex;
+  flex-direction: column;
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);

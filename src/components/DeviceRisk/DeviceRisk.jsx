@@ -31,7 +31,6 @@ const DeviceRisk = (props) => {
           up-to-date operating system or that it has anti-virus and malware
           installed.
         </p>
-        <Button toggleModal={toggleModal} text="Block Device" />
       </div>
     );
   }
