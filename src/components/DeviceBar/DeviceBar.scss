@@ -1,0 +1,42 @@
+@use "../../assets/styles/variables" as *;
+@use "../../assets/styles/mixins" as *;
+
+.device-bar {
+  border: 1px solid $text-primary;
+  border-radius: 50px;
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 5px;
+  padding: 10px 20px;
+  color: $text-secondary;
+
+  &__security-risk {
+    border-radius: 10px;
+    padding: 5px;
+    min-width: 100px;
+    &--low {
+      color: $low-color;
+      background-color: rgba($low-color, 0.17);
+    }
+    &--medium {
+      color: $medium-color;
+      background-color: rgba($medium-color, 0.17);
+    }
+    &--high {
+      color: $high-color;
+      background-color: rgba($high-color, 0.17);
+    }
+  }
+
+  @include mobile {
+    display: flex;
+    justify-content: space-around;
+    &__hidden-on-mobile {
+      display: none;
+    }
+  }
+}

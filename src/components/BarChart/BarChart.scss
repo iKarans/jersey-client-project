@@ -1,0 +1,44 @@
+@use "../../assets/styles/variables" as *;
+@use "../../assets/styles/mixins" as *;
+.bar-chart {
+  position: relative;
+  border: 1px solid white;
+  border-radius: 25px;
+  height: 385px;
+  width: 404px;
+  justify-items: center;
+  align-content: center;
+  font-family: "Inter", sans-serif;
+  background-color: white;
+  border-radius: 10px;
+  @include mobile {
+    height: 360px;
+    width: 320px;
+    margin-bottom: 10px;
+  }
+  &__chart-container {
+    height: 243px;
+    width: 300px;
+    background-color: white;
+    margin: 50px;
+    @include mobile {
+      margin: 0px;
+      position: absolute;
+      left: 20px;
+      top: 60px;
+      height: 30vh;
+      width: 60vw;
+    }
+  }
+  &__title {
+    width: 500px;
+    margin: 30px;
+    @include mobile {
+      position: relative;
+      margin: 10px;
+      top: 10px;
+      left: 10px;
+      font-size: medium;
+    }
+  }
+}
