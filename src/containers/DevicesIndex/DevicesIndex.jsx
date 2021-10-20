@@ -31,22 +31,27 @@ const DevicesIndex = () => {
         ipAddress={filteredDevice.ipAddress}
         lastActive={filteredDevice.lastActive}
       />
-      <DeviceRisk securityRisk={filteredDevice.securityRisk} />
+      <DeviceRisk
+        toggleModal={toggleModal}
+        securityRisk={filteredDevice.securityRisk}
+      />
 
-      <div className="modal">
-        <div className="overlay"> </div>
-        <div className="modal-content">
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
-            vero expedita, debitis rem quos minus eaque cum fugit impedit rerum,
-            aspernatur quam facere quasi nihil reprehenderit perferendis
-            molestiae officiis distinctio.
-          </p>
-          <button className="close-modal" onClick={toggleModal}>
-            Close
-          </button>
+      {modal && (
+        <div className="modal">
+          <div className="overlay"> </div>
+          <div className="modal-content">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
+              vero expedita, debitis rem quos minus eaque cum fugit impedit
+              rerum, aspernatur quam facere quasi nihil reprehenderit
+              perferendis molestiae officiis distinctio.
+            </p>
+            <button className="close-modal" onClick={toggleModal}>
+              Close
+            </button>
+          </div>
         </div>
-      </div>
+      )}
     </div>
   );
 };

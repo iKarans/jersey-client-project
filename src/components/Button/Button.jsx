@@ -1,10 +1,12 @@
-import React from 'react'
+import React from "react";
 
 const Button = (props) => {
-    const {text} = props
-    return (
-        <button className="button">{text}</button>
-    )
-}
+  const { text, toggleModal } = props;
+  return (
+    <button onClick={toggleModal} className="button">
+      {text}
+    </button>
+  );
+};
 
-export default Button
+export default Button;
