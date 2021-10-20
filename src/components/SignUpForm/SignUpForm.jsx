@@ -4,20 +4,24 @@ import { Link } from "react-router-dom";
 import ShowPassword from "../../assets/login/show-password.svg";
 import HidePassword from "../../assets/login/hide-password.svg";
 
-import { ReactComponent as ValidInputIcon } from "../../assets/login/green-tick.svg"
-import { ReactComponent as InvalidInputIcon } from "../../assets/login/red-cross.svg"
-
+import { ReactComponent as ValidInputIcon } from "../../assets/login/green-tick.svg";
+import { ReactComponent as InvalidInputIcon } from "../../assets/login/red-cross.svg";
 
 import "./SignUpForm.scss";
 
 const SignUpForm = () => {
-  const [buttonActive, setButtonActive] = useState(false);
+  const [buttonActive, setButtonActive] = useState({
+    checkLength: false,
+    checkUpperCase: false,
+    checkMatch: false,
+  });
+
   const [userDetails, setUserDetails] = useState({
     firstName: "",
     lastName: "",
     email: "",
     password: "",
-    confirmPassword: ""
+    confirmPassword: "",
   });
   const [userDetailsStage, setUserDetailsStage] = useState(false);
 
@@ -29,19 +33,17 @@ const SignUpForm = () => {
     setUserDetails(userInputsObj);
   };
 
-  console.log(userDetails);
+  // console.log(userDetails);
 
   const buttonClick = () => {
     setUserDetailsStage(false);
   };
 
-  
   const buttonJSX = () => {
     if (
       userDetails.firstName !== "" &&
       userDetails.lastName !== "" &&
       /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(userDetails.email)
-
     ) {
       return (
         <button className="signup-form__button--active" onClick={buttonClick}>
@@ -62,59 +64,75 @@ const SignUpForm = () => {
   };
 
   const twoButtonsJSX = () => {
-    return (
-      <div className="signup-form__button-wrapper">
-        <button
-          className="signup-form__button--back"
-          onClick={buttonGoBackClick}
-        >
-          Go Back
-        </button>
-        <button className="signup-form__button--signup" disabled>
-          Sign Up
-        </button>
-      </div>
-    );
+    // if () {
+      return (
+        <div className="signup-form__button-wrapper">
+          <button
+            className="signup-form__button--back"
+            onClick={buttonGoBackClick}
+          >
+            Go Back
+          </button>
+          <button className="signup-form__button--signup" enabled>
+            Sign Up
+          </button>
+        </div>
+      );
+    // } else {
+    //   return (
+    //     <div className="signup-form__button-wrapper">
+    //       <button
+    //         className="signup-form__button--back"
+    //         onClick={buttonGoBackClick}
+    //       >
+    //         Go Back
+    //       </button>
+    //       <button className="signup-form__button--signup" disabled>
+    //         Sign Up
+    //       </button>
+    //     </div>
+    //   );
+    // }
   };
 
   const checkPasswordLengthJSX = () => {
-    const passwordLength = userDetails.password.length
-    if (passwordLength >= 6 & passwordLength <= 8) {
+    const passwordLength = userDetails.password.length;
+    if ((passwordLength >= 6) & (passwordLength <= 8)) {
       return (
         <div className="valid-password">
           <ValidInputIcon />
           <p>Between 6 and 8 characters</p>
         </div>
-      )
+      );
     } else {
       return (
         <div className="invalid-password">
           <InvalidInputIcon />
           <p>Between 6 and 8 characters</p>
         </div>
-      )
+      );
     }
-  }
-
+  };
+  console.log(checkPasswordLengthJSX);
   const checkPasswordHasUppercaseJSX = () => {
-    const password = userDetails.password
-    const lowerCasePassword = userDetails.password.toLowerCase()
-    if (password != lowerCasePassword) {
+    const password = userDetails.password;
+    const lowerCasePassword = userDetails.password.toLowerCase();
+    if (password !== lowerCasePassword) {
       return (
         <div className="valid-password">
           <ValidInputIcon />
           <p>Contains at least 1 uppercase letter</p>
         </div>
-      )
+      );
     } else {
       return (
         <div className="invalid-password">
           <InvalidInputIcon />
           <p>Contains at least 1 uppercase letter</p>
         </div>
-      )
+      );
     }
-  }
+  };
 
   const checkPasswordsMatchJSX = () => {
     if (userDetails.password == userDetails.confirmPassword) {
@@ -123,16 +141,16 @@ const SignUpForm = () => {
           <ValidInputIcon />
           <p>Passwords match</p>
         </div>
-      )
+      );
     } else {
       return (
         <div className="invalid-password">
           <InvalidInputIcon />
           <p>Passwords match</p>
         </div>
-      )
+      );
     }
-  }
+  };
 
   const inputJSX = () => {
     if (userDetailsStage) {
@@ -148,6 +166,7 @@ const SignUpForm = () => {
             id="first-name"
             className="signup-form__input"
             name="firstName"
+            value={userDetails.firstName}
             onChange={handleInput}
             required
           />
@@ -159,6 +178,7 @@ const SignUpForm = () => {
             id="last-name"
             name="lastName"
             className="signup-form__input"
+            value={userDetails.lastName}
             onChange={handleInput}
             required
           />
@@ -170,6 +190,7 @@ const SignUpForm = () => {
             name="email"
             id="email"
             className="login-form__input"
+            value={userDetails.email}
             onChange={handleInput}
             required
           />
@@ -188,6 +209,7 @@ const SignUpForm = () => {
             id="password"
             name="password"
             className="signup-form__input"
+            value={userDetails.password}
             onChange={handleInput}
             required
           />
@@ -199,6 +221,7 @@ const SignUpForm = () => {
             id="password-confirm"
             name="confirmPassword"
             className="signup-form__input"
+            value={userDetails.confirmPassword}
             onChange={handleInput}
             required
           />
