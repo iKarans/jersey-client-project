@@ -20,12 +20,12 @@ const DevicesIndex = () => {
 
   return (
     <div className="devices-index">
-
-        <DeviceRisk
+      <h1>{device.name}</h1>
+      <DeviceRisk
         toggleModal={toggleModal}
         securityRisk={filteredDevice.securityRisk}
       />
-      
+
       <DeviceInfo
         name={filteredDevice.name}
         type={filteredDevice.type}

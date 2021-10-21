@@ -25,9 +25,9 @@ const Routes = () => {
           <Devices />
         </Route>
         <Route exact path="/device/:device">
-            <Header pageHeading="Devices"/>
-            <SideNav selectedPage="Devices"  />
-            <DevicesIndex />
+          <Header pageHeading="Devices" />
+          <SideNav selectedPage="Devices" />
+          <DevicesIndex />
         </Route>
         <Route exact path="/security">
           <Header pageHeading="Security" />

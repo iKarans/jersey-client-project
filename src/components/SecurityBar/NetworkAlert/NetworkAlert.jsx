@@ -2,7 +2,7 @@ import React from "react";
 import "./NetworkAlert.scss";
 
 const NetworkAlert = (props) => {
-  const { alertImg, alertText, atRisk } = props;
+  const { alertImg, alertText, atRisk, device } = props;
 
   let alertStyle = "network-alert";
 
