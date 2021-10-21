@@ -15,7 +15,9 @@ const SecurityBar = (props) => {
       <div>
         <h1 className="security-bar__heading">{pageHeading}</h1>
       </div>
-      <h4>{device}</h4>
+
+      <h4 className="security-bar__device-id"> &lt; {device}</h4>
+
       {showAlert && (
       <NetworkAlert
         alertImg={greenTick}

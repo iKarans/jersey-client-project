@@ -8,7 +8,7 @@
         border: 1px solid $warning-color;
         color: $warning-color;
         font-weight: bold;
-        background-color: none;
+        background-color: $background-color;
 
         &:hover {
             cursor: pointer;
