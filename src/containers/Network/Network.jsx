@@ -1,8 +1,8 @@
 import React, {useState} from "react";
 
-import NetworkItem from "../NetworkItem/NetworkItem";
-import ChatButton from "../ChatButton/ChatButton";
-import NetworkPageButton from "../NetworkPageButton/NetworkPageButton";
+import NetworkItem from "../../components/NetworkItem/NetworkItem";
+import ChatButton from "../../components/ChatButton/ChatButton";
+import NetworkPageButton from "../../components/NetworkPageButton/NetworkPageButton";
 import { networks } from "../../data/network.js";
 
 import SearchIcon from "../../assets/global/search-icon.svg";
@@ -15,7 +15,6 @@ import "./Network.scss";
 
 const Network = () => {
   const [pages, setPages] = useState(0);
-  const [currentNetworks] = useState(networks)
   const [splitNetworkArrays] = useState([]);
 
   const handleDecrement = () => {
@@ -30,7 +29,7 @@ const Network = () => {
     }
   }
 
-  const networksArray = [...currentNetworks];
+  const networksArray = [...networks];
 
   while(networksArray.length > 0) {
       splitNetworkArrays.push(networksArray.splice(0, 9))
