@@ -30,7 +30,7 @@ const Routes = () => {
           <DevicesIndex />
         </Route>
         <Route exact path="/security">
-          <Header pageHeading="Security" />
+          <Header pageHeading="Security" showAlert={true} />
           <SideNav selectedPage="Security" />
           <Security />
         </Route>

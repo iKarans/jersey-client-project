@@ -3,9 +3,10 @@
 
 .devices-index {
   height: 100vh;
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 40px;
+  display: grid;
+  grid-template-columns: 1fr;
+
+  gap: 40px;
   margin-left: 250px;
 
   @include mobile {
@@ -20,7 +21,7 @@ body.active-modal {
 
 .btn-modal {
   padding: 10px 20px;
-//   display: block;
+  //   display: block;
   margin: 100px auto 0;
   font-size: 18px;
 }
