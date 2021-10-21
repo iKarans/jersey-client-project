@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import "./NetworkFilter.scss";
 
 const NetworkFilter = () => {
@@ -13,31 +13,31 @@ const NetworkFilter = () => {
             <p className="network-filters__filter-text">Alert Type</p>
             <form action="" className="network-filters__filter--alert-form" />
               <input type="checkbox" name="New Device" value="New Device" />
-              <label for="vehicle1" className="network-filters__checkbox-text">New Device</label><br/>
+              <label htmlFor="vehicle1" className="network-filters__checkbox-text">New Device</label><br/>
               <input type="checkbox" />
-              <label for="vehicle2" className="network-filters__checkbox-text">Outage</label><br/>
+              <label htmlFor="vehicle2" className="network-filters__checkbox-text">Outage</label><br/>
               <input type="checkbox" />
-              <label for="vehicle3" className="network-filters__checkbox-text">High Device Risk</label><br/>
+              <label htmlFor="vehicle3" className="network-filters__checkbox-text">High Device Risk</label><br/>
               <input type="checkbox" />
-              <label for="vehicle3" className="network-filters__checkbox-text">Device Logon</label>
+              <label htmlFor="vehicle3" className="network-filters__checkbox-text">Device Logon</label>
             <form/>
           </div>
           <div className="network-filters__filter--created">
             <p className="network-filters__filter-text">Created</p>
             <form action="" className="network-filters__created--filters" />
               <input type="checkbox" />
-              <label for="vehicle1" className="network-filters__checkbox-text">Less than 1hr ago</label><br/>
+              <label htmlFor="vehicle1" className="network-filters__checkbox-text">Less than 1hr ago</label><br/>
               <input type="checkbox"  />
-              <label for="vehicle2" className="network-filters__checkbox-text">1 - 3hrs ago</label>
+              <label htmlFor="vehicle2" className="network-filters__checkbox-text">1 - 3hrs ago</label>
             <form/>
           </div>
           <div className="network-filters__filter--importance">
             <p className="network-filters__filter-text">Importance Level</p>
             <form action="" className="network-filters__importance--filters" />
               <input type="checkbox" />
-              <label for="vehicle1" className="network-filters__checkbox-text">Low</label><br/>
+              <label htmlFor="vehicle1" className="network-filters__checkbox-text">Low</label><br/>
               <input type="checkbox"  />
-              <label for="vehicle2" className="network-filters__checkbox-text">High</label>
+              <label htmlFor="vehicle2" className="network-filters__checkbox-text">High</label>
             <form/>
           </div>
           <div className="network-filters__apply">

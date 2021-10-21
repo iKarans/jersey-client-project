@@ -10,7 +10,17 @@
   margin: auto;
   margin-top: 3rem;
 
+  @include mobile {
+    width: 90%;
+  }
+
   &__search {
+
+    @include mobile {
+      display: none;
+    }
+
+
     width: 100%;
     display: flex;
     height: 1.25rem;
@@ -56,6 +66,7 @@
 
   &-alerts {
 
+    
     &__header {
       width: 100%;
       height: 39px;
@@ -63,6 +74,11 @@
       background-color: $primary-color;
       border-radius: 15px 15px 0 0;
       padding: 0 3.7rem;
+
+      @include mobile {
+        display: flex;
+        justify-content: space-between;
+      }
       
       &-alert,
       &-summary,
@@ -73,11 +89,13 @@
         justify-content: space-between;
         align-items: center;
 
+
         h5 {
           font-size: 0.62rem;
           font-weight: 700;
         }
       }
+      
 
       &-alert {
         width: 13%;
@@ -87,6 +105,11 @@
         width: 40%;
         text-align: start;
         padding:0 1rem;
+
+        @include mobile {
+          display: none;
+        }
+
       }
 
       &-created {
@@ -102,6 +125,7 @@
     &__alerts {
       height: 50vh;
       border-bottom:1px solid #CBF0ED;
+      
     }
 
     &__pages {

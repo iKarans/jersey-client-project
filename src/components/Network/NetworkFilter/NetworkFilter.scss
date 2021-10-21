@@ -1,4 +1,6 @@
-
+@use "../../../assets/styles/variables" as *;
+@use "../../../assets/styles/mixins" as *;
+@use "../../../assets/styles/typography" as *;
 
 
 .network-filters {
@@ -7,7 +9,10 @@
   width: 190px;
   display: flex;
   justify-content: center;
-  // align-items: center;
+
+  @include mobile {
+    display: none;
+  }
 
 
   &__header-text {
@@ -31,7 +36,7 @@
 
   &__apply {
     margin-top: 30px;
-    background-color: #2ABCA1;
+    background-color: $primary-color;
     width: 144px;
     height: 30px;
     border-radius: 7px;
@@ -42,7 +47,7 @@
     p {
       font-size: 10px;
       font-weight: 700;
-      color: white;
+      color: $text-tertiary;
     }
   }
 
