@@ -1,8 +1,9 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 
 import NetworkItem from "../NetworkItem/NetworkItem";
 import ChatButton from "../ChatButton/ChatButton";
 import NetworkFilter from "./NetworkFilter/NetworkFilter";
+import NetworkPageButton from "../NetworkPageButton/NetworkPageButton";
 import { networks } from "../../data/network.js";
 
 import SearchIcon from "../../assets/global/search-icon.svg";
@@ -15,27 +16,28 @@ import "./Network.scss";
 
 const Network = () => {
   const [pages, setPages] = useState(0);
-  const [firstItem, setFirstItem] = useState(0);
-  const [lastItem, setlastItem] = useState(9);
+  const [currentNetworks, setCurrentNetworks] = useState(networks)
+  const [splitNetworkArrays, setSplitNetworkArrays] = useState([]);
 
   const handleDecrement = () => {
     if(pages > 0) {
       setPages(pages - 1)
-      setFirstItem(firstItem - 9);
-      setlastItem(lastItem - 9);
     }
   }
 
   const handleIncrement = () => {
-    if(pages >= 0 || pages < (networks.length / 9)) {
+    if(pages >= 0 && pages < ((networks.length / 9) -1)) {
       setPages(pages + 1)
-      setFirstItem(firstItem + 9);
-      setlastItem(lastItem + 9);
     }
   }
 
-  const currentNetworkItems = networks.slice(firstItem, lastItem)
-  const networkItemJSX = currentNetworkItems.map((network, index) => {
+  const networksArray = [...currentNetworks];
+
+  while(networksArray.length > 0) {
+      splitNetworkArrays.push(networksArray.splice(0, 9))
+  }
+  
+  const networkItemJSX = splitNetworkArrays[pages].map((network, index) => {
       return (
         <NetworkItem
         key={network + index}
@@ -46,7 +48,25 @@ const Network = () => {
         index={index}
         />
       )
-    })
+  })
+
+  const buttonNumbers = [];
+  
+  const generateButtonIndex = () => {
+    for(let i = 0; i < (networks.length / 9); i++) {
+      buttonNumbers.push(i)
+    }
+  }
+  
+  generateButtonIndex();
+
+  const buttonJSX = buttonNumbers.map((buttonNumber, index) => {
+    return (
+      <NetworkPageButton key={buttonNumber + index} index={index + 1} setPages={setPages} pages={pages}></NetworkPageButton>
+    )
+  })
+  
+  
        
   return (
     <>
@@ -94,7 +114,7 @@ const Network = () => {
         <div className="network-alerts__pages">
           {networks.length > 9 && <div className="network-alerts__pages-buttons">
             <button className="network-alerts__pages-buttons-button"  onClick={handleDecrement}><img src={NetworkArrow} alt="left-arrow" className="network__left-arrow"/></button>
-
+            {buttonJSX}
             <button className="network-alerts__pages-buttons-button"  onClick={handleIncrement}><img src={NetworkArrow} alt="right-arrow" className="network__right-arrow"/></button>
           </div>}
         </div>
