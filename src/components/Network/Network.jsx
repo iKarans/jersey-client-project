@@ -65,7 +65,7 @@ const Network = () => {
 
   const buttonJSX = buttonNumbers.map((buttonNumber, index) => {
     return (
-      <NetworkPageButton key={buttonNumber + index} index={index + 1} setPages={setPages}></NetworkPageButton>
+      <NetworkPageButton key={buttonNumber + index} index={index + 1} setPages={setPages} pages={pages}></NetworkPageButton>
     )
   })
   

@@ -116,22 +116,6 @@
         padding-left: 3.7rem;
         height: 100%;
   
-        &-button {
-          width: 2rem;
-          height: 2rem;
-          border-radius: 4px;
-          border: 1px solid #E8E8E8;
-          background: none;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          cursor: pointer;
-  
-          .network__left-arrow{
-            transform: rotate(180deg);
-            padding-bottom: 0.08rem;
-          }
-        }
       }
       
     }
