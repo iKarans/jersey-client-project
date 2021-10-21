@@ -23,7 +23,8 @@ const SignUpForm = () => {
     password: "",
     confirmPassword: "",
   });
-  const [userDetailsStage, setUserDetailsStage] = useState(false);
+
+  const [userDetailsStage, setUserDetailsStage] = useState(true);
 
   // Gathering User Form Inputs
   const handleInput = (event) => {
@@ -63,6 +64,8 @@ const SignUpForm = () => {
     setUserDetailsStage(true);
   };
 
+  // if (buttonActive.checkLength && buttonActive.)
+  
   const twoButtonsJSX = () => {
     // if () {
       return (
@@ -98,6 +101,7 @@ const SignUpForm = () => {
   const checkPasswordLengthJSX = () => {
     const passwordLength = userDetails.password.length;
     if ((passwordLength >= 6) & (passwordLength <= 8)) {
+      buttonActive.checkLength = true;
       return (
         <div className="valid-password">
           <ValidInputIcon />
@@ -113,11 +117,13 @@ const SignUpForm = () => {
       );
     }
   };
-  console.log(checkPasswordLengthJSX);
+
+
   const checkPasswordHasUppercaseJSX = () => {
     const password = userDetails.password;
     const lowerCasePassword = userDetails.password.toLowerCase();
     if (password !== lowerCasePassword) {
+      buttonActive.checkUpperCase = true;
       return (
         <div className="valid-password">
           <ValidInputIcon />
@@ -134,8 +140,10 @@ const SignUpForm = () => {
     }
   };
 
+
   const checkPasswordsMatchJSX = () => {
-    if (userDetails.password == userDetails.confirmPassword) {
+    if (userDetails.password == userDetails.confirmPassword && userDetails.password !== "") {
+      buttonActive.checkMatch = true
       return (
         <div className="valid-password">
           <ValidInputIcon />
@@ -151,6 +159,8 @@ const SignUpForm = () => {
       );
     }
   };
+
+  console.log(buttonActive)
 
   const inputJSX = () => {
     if (userDetailsStage) {
@@ -240,6 +250,9 @@ const SignUpForm = () => {
       );
     }
   };
+
+
+
 
   return (
     <div className="signup">
