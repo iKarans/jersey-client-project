@@ -30,15 +30,12 @@ const Network = () => {
       setPages(pages + 1)
     }
   }
-  console.log(currentNetworks)
 
   const networksArray = [...currentNetworks];
 
   while(networksArray.length > 0) {
       splitNetworkArrays.push(networksArray.splice(0, 9))
   }
-  
-  console.log(splitNetworkArrays)
   
   const networkItemJSX = splitNetworkArrays[pages].map((network, index) => {
       return (
