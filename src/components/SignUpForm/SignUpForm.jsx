@@ -10,7 +10,11 @@ import { ReactComponent as InvalidInputIcon } from "../../assets/login/red-cross
 import "./SignUpForm.scss";
 
 const SignUpForm = () => {
+<<<<<<< HEAD
   const [validPassword, setvalidPassword] = useState({
+=======
+  const [validPassword, setValidPassword] = useState({
+>>>>>>> ff62b7e1ba8d035b77fc5f6eae46eb1089aaeaf8
     checkLength: false,
     checkUpperCase: false,
     checkMatch: false,
@@ -24,10 +28,14 @@ const SignUpForm = () => {
     confirmPassword: "",
   });
 
+<<<<<<< HEAD
+=======
+  // NEEDS TO BE TRUE
+>>>>>>> ff62b7e1ba8d035b77fc5f6eae46eb1089aaeaf8
   const [userDetailsStage, setUserDetailsStage] = useState(true);
 
   // Gathering User Form Inputs
-  const handleInput = (event) => {
+  const handleInput = event => {
     const userInput = event.target.value;
     const userInputName = event.target.name;
     const userInputsObj = { ...userDetails, [userInputName]: userInput };
@@ -64,6 +72,7 @@ const SignUpForm = () => {
     setUserDetailsStage(true);
   };
 
+<<<<<<< HEAD
   const signupButtonJSX = () => {
     if (validPassword.checkLength && validPassword.checkMatch && validPassword.checkUpperCase) {
       return (
@@ -94,6 +103,17 @@ const SignUpForm = () => {
           Go Back
         </button>
         <button className="signup-form__button--signup" disabled={!checksPass}>
+=======
+  const twoButtonsJSX = () => {
+    const checksPass = Object.values(validPassword).every(password => password);
+   
+    return (
+      <div className="signup-form__button-wrapper">
+        <button className="signup-form__button--back" onClick={buttonGoBackClick}>
+          Go Back
+        </button>
+        <button className="signup-form__button--signup" disabled={!checksPass} onClick={() => alert("Not disabled")}>
+>>>>>>> ff62b7e1ba8d035b77fc5f6eae46eb1089aaeaf8
           Sign Up
         </button>
       </div>
@@ -102,9 +122,17 @@ const SignUpForm = () => {
 
   const checkPasswordLengthJSX = () => {
     const passwordLength = userDetails.password.length;
+<<<<<<< HEAD
     if ((passwordLength >= 6) & (passwordLength <= 8)) {
       const currentState = { ...validPassword, checkLength: true }
       if (!validPassword.checkLength) { setvalidPassword(currentState) }
+=======
+    if (passwordLength >= 6 && passwordLength <= 8 && !validPassword.checkLength) {
+      setValidPassword({ ...validPassword, checkLength: true });
+    }
+
+    if (passwordLength >= 6 && passwordLength <= 8) {
+>>>>>>> ff62b7e1ba8d035b77fc5f6eae46eb1089aaeaf8
       return (
         <div className="valid-password">
           <ValidInputIcon />
@@ -123,10 +151,17 @@ const SignUpForm = () => {
     }
   };
 
+<<<<<<< HEAD
 
+=======
+  console.log(checkPasswordLengthJSX);
+>>>>>>> ff62b7e1ba8d035b77fc5f6eae46eb1089aaeaf8
   const checkPasswordHasUppercaseJSX = () => {
     const password = userDetails.password;
     const lowerCasePassword = userDetails.password.toLowerCase();
+    if (password !== lowerCasePassword && !validPassword.checkUpperCase) {
+      setValidPassword({ ...validPassword, checkUpperCase: true });
+    }
     if (password !== lowerCasePassword) {
       const currentState = { ...validPassword, checkUpperCase: true }
       if (!validPassword.checkUpperCase) { setvalidPassword(currentState) }
@@ -149,6 +184,12 @@ const SignUpForm = () => {
   };
 
   const checkPasswordsMatchJSX = () => {
+    if (userDetails.password == userDetails.confirmPassword && !validPassword.checkMatch) {
+      setValidPassword({ ...validPassword, checkMatch: true });
+    } else if (userDetails.password != userDetails.confirmPassword && validPassword.checkMatch) {
+      setValidPassword({ ...validPassword, checkMatch: false });
+    }
+
     if (userDetails.password == userDetails.confirmPassword) {
       const currentState = { ...validPassword, checkMatch: true }
       if (!validPassword.checkMatch) { setvalidPassword(currentState) }
@@ -244,15 +285,9 @@ const SignUpForm = () => {
             required
           />
           <div className="signup-form__validation">
-            <div className="signup-form__validation-item">
-              {checkPasswordLengthJSX()}
-            </div>
-            <div className="signup-form__validation-item">
-              {checkPasswordHasUppercaseJSX()}
-            </div>
-            <div className="signup-form__validation-item">
-              {checkPasswordsMatchJSX()}
-            </div>
+            <div className="signup-form__validation-item">{checkPasswordLengthJSX()}</div>
+            <div className="signup-form__validation-item">{checkPasswordHasUppercaseJSX()}</div>
+            <div className="signup-form__validation-item">{checkPasswordsMatchJSX()}</div>
           </div>
         </>
       );
