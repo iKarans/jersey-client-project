@@ -1,0 +1,54 @@
+@use "../../../assets/styles/variables" as *;
+@use "../../../assets/styles/mixins" as *;
+@use "../../../assets/styles/typography" as *;
+
+
+.network-filters {
+  border-radius: 7px;
+  height: 408px;
+  width: 190px;
+  display: flex;
+  justify-content: center;
+
+  @include mobile {
+    display: none;
+  }
+
+
+  &__header-text {
+    font-size: 14px;
+    font-weight: 600;
+    color: #454756;
+    margin: 30px 0 10px 0;
+  }
+
+  &__filter-text {
+    font-size: 10px;
+    color: #AAB3BE;
+    margin: 20px 0 10px 0;
+  }
+
+  &__checkbox-text {
+    margin: 10px;
+    color: #2D3748;
+    font-size: 10px;
+  }
+
+  &__apply {
+    margin-top: 30px;
+    background-color: $primary-color;
+    width: 144px;
+    height: 30px;
+    border-radius: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    p {
+      font-size: 10px;
+      font-weight: 700;
+      color: $text-tertiary;
+    }
+  }
+
+}

@@ -22,6 +22,9 @@ const Dashboard = () => {
   const largeLineGraphMax = 300;
   return (
     <div className="dashboard">
+      <div>
+        <SecurityScore />
+      </div>
       <div className="dashboard__large-line-graph">
       <LargeLineGraph
         title={largeLineGraphTitle}
