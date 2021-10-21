@@ -3,7 +3,8 @@
 .bar-chart {
   position: relative;
   height: 500px;
-  width: 600px;
+
+  width: 400px;
   display: grid;
   justify-items: center;
   align-content: center;
@@ -18,7 +19,7 @@
   }
   &__chart-container {
     height: 400px;
-    width: 520px;
+    width: 300px;
     padding-bottom: 20px;
     background-color: white;
     @include mobile {
@@ -30,7 +31,6 @@
     }
   }
   &__title {
-    width: 500px;
     margin: 30px;
     @include mobile {
       position: relative;

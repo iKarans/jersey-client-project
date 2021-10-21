@@ -2,7 +2,7 @@
 .network-devices {
   position: relative;
   height: 500px;
-  width: 600px;
+  width: 400px;
   display: grid;
   justify-items: center;
   align-content: center;
@@ -18,7 +18,7 @@
 
   &__chart-container {
     height: 400px;
-    width: 520px;
+    width: 300px;
     background-color: white;
     @include mobile {
       position: absolute;
