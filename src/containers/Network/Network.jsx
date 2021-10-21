@@ -71,7 +71,7 @@ const Network = () => {
     <section className="network">
       <div className="network__search">
         <div className="network__search-box">
-          <img src={SearchIcon} alt="search-icon" />
+          <img className="network__icons" src={SearchIcon} alt="search-icon" />
           <input
             type="text"
             placeholder="Search Alerts"
@@ -80,12 +80,12 @@ const Network = () => {
         </div>
         <div className="network__search-filter-sort">
           <div className="network-sort">
-            <img src={SortIcon} alt="sort-icon" />
-            <p>Sort</p>
+            <img className="network__icons" src={SortIcon} alt="sort-icon" />
+            <p className="network__text-paragraph">Sort</p>
           </div>
           <div className="network-filter">
-            <img src={FilterIcon} alt="filter-icon" />
-            <p>Filter</p>
+            <img className="network__icons" src={FilterIcon} alt="filter-icon" />
+            <p className="network__text-paragraph">Filter</p>
           </div>
         </div>
       </div>

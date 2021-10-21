@@ -47,14 +47,14 @@
         height: 100%;
         margin-left: 2rem;
 
-        p {
+        .network__text-paragraph {
           font-size: 0.875rem;
           margin-left: 0.7rem;
           color: rgba(115, 120, 134, 1);
           font-weight: 400;
         }
 
-        img {
+        .network__icons {
           height: 60%;
           cursor: pointer;
           margin-top: 0.2rem;
@@ -90,7 +90,7 @@
         align-items: center;
 
 
-        h5 {
+        .alert-header {
           font-size: 0.62rem;
           font-weight: 700;
         }
