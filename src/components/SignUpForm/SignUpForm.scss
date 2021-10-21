@@ -197,6 +197,12 @@
         cursor: pointer;
       }
 
+      &--signup:disabled {
+        cursor: not-allowed;
+        background-color: rgba(42, 188, 161, 0.4);
+        color: rgba(255, 255, 255, 0.5);
+      }
+
       &--disabled {
         display: block;
         width: 75%;
