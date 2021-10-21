@@ -22,8 +22,6 @@ const DeviceInfo = (props) => {
             </ul>               
         </div>
 
-        <div className="device-info__icon">ICON HERE</div>
-
         <div className="device-info__edit">
             <h4>Are these details correct?</h4>
             <Button text="Edit" buttonRisk={true}/>

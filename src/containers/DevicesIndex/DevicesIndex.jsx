@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useParams } from "react-router";
+import Button from "../../components/Button/Button";
 import DeviceInfo from "../../components/DeviceInfo/DeviceInfo";
 import DeviceRisk from "../../components/DeviceRisk/DeviceRisk";
 import { devices } from "../../data/devices";
@@ -40,15 +41,12 @@ const DevicesIndex = () => {
         <div className="modal">
           <div className="overlay"> </div>
           <div className="modal-content">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
-              vero expedita, debitis rem quos minus eaque cum fugit impedit
-              rerum, aspernatur quam facere quasi nihil reprehenderit
-              perferendis molestiae officiis distinctio.
-            </p>
-            <button className="close-modal" onClick={toggleModal}>
-              Close
-            </button>
+            <div className="modal-text">
+                <h4>Are you sure you want to block this device from the network?</h4>
+                <p>This action cannot be undone.</p>
+            </div>
+            <Button toggleModal={toggleModal} text="Cancel" buttonRisk={true} />
+            <Button toggleModal={toggleModal} text="Block Device" buttonRisk={false} />
           </div>
         </div>
       )}

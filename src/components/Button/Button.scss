@@ -1,20 +1,35 @@
 @use "../../assets/styles/variables" as *;
 
-.button {
+.button  {
 
-    &--danger {
-        padding: 10px;
+    &--danger, :focus, :active {
+        padding: 0.8rem 1.3rem;
         border-radius: 10px;
-        border: 1px solid $high-color;
-        color: $high-color;
-        background-color: white;
+        border: 1px solid $warning-color;
+        color: $warning-color;
+        font-weight: bold;
+        background-color: none;
+
+        &:hover {
+            cursor: pointer;
+            color: $text-tertiary;
+            background-color: $warning-color;
+        }
     }
 
     &--secondary {
-        padding: 10px;
+        font-weight: bold;
+        padding: 0.8rem 1.3rem;
         border-radius: 10px;
-        background-color: $primary-color;
-        color: white;
+        background-color: $primary-color-faded;
+        color: $primary-color;
         border: none;
+
+        &:hover {
+
+            cursor: pointer;
+            background-color: $primary-color;
+            color: $text-secondary;
+        }
     }
 }

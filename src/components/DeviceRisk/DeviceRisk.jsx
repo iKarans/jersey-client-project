@@ -34,8 +34,6 @@ const DeviceRisk = (props) => {
       </div>
     );
   }
-
-  //if securityrisk=="high" -> return button + classname ...
 };
 
 export default DeviceRisk;
