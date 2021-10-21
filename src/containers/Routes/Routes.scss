@@ -4,7 +4,7 @@
 .routes {
   position: absolute;
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   display: grid; 
   grid-template-columns: 20% 80%; 
   grid-template-rows: 1fr; 
@@ -15,7 +15,7 @@
   @include mobile {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: flex-start;
 
 
@@ -28,13 +28,15 @@
 }
 
 .routes__container-dashboard { 
-  position: relative;
-  top: 0px;
+  // position: relative;
+  // top: 0px;
   // display: flex;
   // flex-direction: column;
   // justify-content: flex-start;
   // align-items: flex-start;
   grid-area: 1 / 2 / 2 / 3;
+  background-color: $background-color;
+  
  
  }
 

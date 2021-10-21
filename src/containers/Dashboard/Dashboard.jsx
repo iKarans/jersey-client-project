@@ -3,6 +3,7 @@ import "./Dashboard.scss";
 import LargeLineGraph from "../../components/LargeLineGraph/LargeLineGraph.jsx";
 import BarChart from "../../components/BarChart/BarChart";
 import { dataset } from "../../data/securityRisk";
+import SecurityScore from "../../components/SecurityScore/SecurityScore";
 
 const Dashboard = () => {
   const largeLineGraphTitle = "Devices on Network";

@@ -4,8 +4,8 @@
   position: relative;
   border: 1px solid white;
   border-radius: 25px;
-  height:40vh;
-  width: 50vh;
+  height: 385px;
+  width:  100%;
   display: flex;
   flex-direction: column;
   justify-items: flex-start;
@@ -14,16 +14,19 @@
   background-color: white;
   border-radius: 10px;
   margin-bottom: 400px;
+
   @include mobile {
     height: 360px;
     width: 320px;
     margin-bottom: 10px;
   }
+
   &__chart-container {
-    height: 200px;
+    height: 250px;
     width: 24vw;
     background-color: white;
     margin-left: 15px;
+
     @include mobile {
       margin: 0px;
       position: absolute;
@@ -34,8 +37,9 @@
     }
   }
   &__title {
-    width: 500px;
+    width: 100%;
     margin: 30px;
+
     @include mobile {
       position: relative;
       margin: 10px;
