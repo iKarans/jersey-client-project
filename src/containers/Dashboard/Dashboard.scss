@@ -2,14 +2,28 @@
 @use "../../assets/styles/variables";
 .dashboard {
   background-color: #e5e5e5;
-  height: 120vh;
-  width: 120vw;
-  padding: 50px;
+  height: 100%;
+  width: 100%;
+  // padding: 50px;
   display: flex;
   justify-content: space-evenly;
+  flex-direction: row;
+  align-items: center;
   @include mobile {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  &__large-line-graph {
+    margin-top: 300px;  
+    @include mobile {
+    margin-top: 10%;
+    }
+
+  }
+  &__bar-chart {
+    margin-top: 300px;
   }
 }

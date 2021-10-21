@@ -2,8 +2,8 @@
 @use "../../../assets/styles/mixins" as *;
 
 .user-info {
+  
   &__img {
-    position: absolute;
     width: 39px;
     height: 39px;
     left: 972px;
@@ -20,7 +20,6 @@
   }
 
   &__dropdown {
-    position: absolute;
     width: auto;
     height: 15px;
     left: 1029px;
@@ -51,7 +50,8 @@
   }
 
   &__dropdown-arrow {
-    margin-left: 15px;
+
+    margin-left: 25px;
   }
 
   &__title {

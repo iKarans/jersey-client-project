@@ -1,4 +1,5 @@
 import React from "react";
+import "./Routes.scss";
 import Network from "../Network/Network";
 import { Route, Switch } from "react-router-dom";
 import Dashboard from "../Dashboard/Dashboard";
@@ -14,32 +15,54 @@ const Routes = () => {
     <div className="routes">
       <Switch>
         <Route exact path="/settings">
-          <Header pageHeading="Settings" />
-          <SideNav selectedPage="Settings" />
-          <Settings />
+          <div className="routes__sidenav">
+            <SideNav selectedPage="Settings" />
+          </div>
+          <div className="routes__container">
+            <Header pageHeading="Settings" />
+            <Settings />
+          </div>
         </Route>
         <Route exact path="/devices">
-          <Header pageHeading="Devices" />
-          <SideNav selectedPage="Devices" />
-          <Devices />
+          <div className="routes__sidenav">
+            <SideNav selectedPage="Settings" />
+          </div>
+          <div className="routes__container">
+            <Header pageHeading="Devices" />
+            <Devices />
+          </div>
         </Route>
         <Route exact path="/security">
-          <Header pageHeading="Security" />
-          <SideNav selectedPage="Security" />
-          <Security />
+          <div className="routes__sidenav">
+            <SideNav selectedPage="Settings" />
+          </div>
+          <div className="routes__container-security">
+            <Header pageHeading="Security" />
+            <Security />
+          </div>
         </Route>
         <Route exact path="/network">
-          <Header pageHeading="Network" />
-          <SideNav selectedPage="Network" />
-          <Network />
+          <div className="routes__sidenav">
+            <SideNav selectedPage="Settings" />
+          </div>
+          <div className="routes__container">
+            <Header pageHeading="Network" />
+            <Network />
+          </div>
         </Route>
         <Route path="/dashboard">
-          <Header pageHeading="Dashboard" />
-          <SideNav selectedPage="Dashboard" />
-          <Dashboard />
+          <div className="routes__sidenav">
+            <SideNav selectedPage="Settings" />
+          </div>
+          <div className="routes__container-dashboard">
+            <Header pageHeading="Dashboard" />
+            <Dashboard />
+          </div>
         </Route>
         <Route path="/">
+        <div className="routes__login">
           <Login />
+        </div>
         </Route>
       </Switch>
     </div>
