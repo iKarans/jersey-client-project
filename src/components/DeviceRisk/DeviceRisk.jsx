@@ -16,7 +16,7 @@ const DeviceRisk = (props) => {
           old, not having anti-virus software installed or is using an outdated
           operating system.{" "}
         </p>
-        <Button toggleModal={toggleModal} text="Block Device" />
+        <Button toggleModal={toggleModal} text="Block Device" buttonRisk={false} />
       </div>
     );
   } else {
@@ -34,8 +34,6 @@ const DeviceRisk = (props) => {
       </div>
     );
   }
-
-  //if securityrisk=="high" -> return button + classname ...
 };
 
 export default DeviceRisk;

@@ -12,19 +12,25 @@
   border-radius: 15px;
   box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.15);
 
-  &__list--ul {
-      list-style-type: none;
+  &__list {
+    grid-column: 1 / span 2;
 
-      li {
-          margin-top: 10px;
-          font-size: .8rem;
-      }
+    &--ul {
+        list-style-type: none;
+        
+        li {
+            margin-top: 10px;
+            font-size: .8rem;
+        }
+    }
   }
+ 
 
   &__edit {
     grid-column: 1 / span 2;
     border-top: 1px solid $text-primary;
     display: flex;
+    align-items: center;
     justify-content: space-between;
     padding-top: 20px;
 

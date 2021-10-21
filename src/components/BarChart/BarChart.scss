@@ -1,50 +1,44 @@
+@use "../../assets/styles/variables" as *;
 @use "../../assets/styles/mixins" as *;
-.network-devices {
+.bar-chart {
   position: relative;
-  max-height: 400px;
-  max-width: 600px;
-  height: 40vh;
-  width: 60vw;
-  display: grid;
+  border: 1px solid white;
+  border-radius: 25px;
+  height: 385px;
+  width: 404px;
   justify-items: center;
   align-content: center;
   font-family: "Inter", sans-serif;
   background-color: white;
   border-radius: 10px;
   @include mobile {
-    display: unset;
     height: 360px;
     width: 320px;
     margin-bottom: 10px;
   }
-
   &__chart-container {
-    height: 250px;
-    width: 520px;
+    height: 243px;
+    width: 300px;
     background-color: white;
+    margin: 50px;
     @include mobile {
+      margin: 0px;
       position: absolute;
-      top: 80px;
       left: 20px;
+      top: 60px;
       height: 30vh;
       width: 60vw;
     }
   }
   &__title {
-    margin-bottom: 15px;
+    width: 500px;
+    margin: 30px;
     @include mobile {
-      font-size: medium;
       position: relative;
+      margin: 10px;
       top: 10px;
       left: 10px;
-    }
-  }
-  &__subtitle {
-    font-weight: 400;
-    font-size: 12px;
-    margin: 10px;
-    @include mobile {
-      font-size: 10px;
+      font-size: medium;
     }
   }
 }
