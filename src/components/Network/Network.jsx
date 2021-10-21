@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React, {useState} from "react";
 
 import NetworkItem from "../NetworkItem/NetworkItem";
 import ChatButton from "../ChatButton/ChatButton";

@@ -78,7 +78,7 @@
       @include mobile {
         display: flex;
         justify-content: space-between;
-        padding: 0 0.5rem;
+        padding: 0 1rem;
       }
       
       &-alert,
@@ -121,8 +121,8 @@
       &-created {
         width: 13%;
         @include mobile {
-          width: 20%;
-          padding-left: 1rem;
+          width: 25%;
+          padding-left: 2.3rem;
         }
       }
 
@@ -152,7 +152,7 @@
         display: flex;
         justify-content: flex-start;
         align-items: center;
-        padding-left: 3.7rem;
+        padding-left: 1.5rem;
         height: 100%;
   
       }
