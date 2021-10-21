@@ -14,8 +14,12 @@ h1 {
   margin-left: 227px;
 
   @include mobile {   
-    display: none; 
+    // display: none; 
     height: 100vh;
+    width: 100%;
+    margin: 0;
+    flex-direction: column;
+    font-size: 0.5rem;
  }
 
 }
