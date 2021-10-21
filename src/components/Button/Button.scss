@@ -1,0 +1,20 @@
+@use "../../assets/styles/variables" as *;
+
+.button {
+
+    &--danger {
+        padding: 10px;
+        border-radius: 10px;
+        border: 1px solid $high-color;
+        color: $high-color;
+        background-color: white;
+    }
+
+    &--secondary {
+        padding: 10px;
+        border-radius: 10px;
+        background-color: $primary-color;
+        color: white;
+        border: none;
+    }
+}

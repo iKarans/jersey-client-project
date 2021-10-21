@@ -25,7 +25,7 @@ const Routes = () => {
           <Devices />
         </Route>
         <Route exact path="/device/:device">
-            <Header pageHeading="Devices" deviceIndex="> "/>
+            <Header pageHeading="Devices"/>
             <SideNav selectedPage="Devices"  />
             <DevicesIndex />
         </Route>
