@@ -15,8 +15,8 @@ import "./Network.scss";
 
 const Network = () => {
   const [pages, setPages] = useState(0);
-  const [currentNetworks, setCurrentNetworks] = useState(networks)
-  const [splitNetworkArrays, setSplitNetworkArrays] = useState([]);
+  const [currentNetworks] = useState(networks)
+  const [splitNetworkArrays] = useState([]);
 
   const handleDecrement = () => {
     if(pages > 0) {
