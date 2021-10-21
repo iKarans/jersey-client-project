@@ -7,6 +7,7 @@
   height: 100px;
   left: 0px;
   top: 0px;
+  z-index: 1;
 
   background-image: url("../../assets/header/background-image.png");
   background-position: center;
@@ -20,6 +21,7 @@
     justify-content: space-between;
     align-items: center;
     border-radius: 0;
+    
   }
 
   &__img {
