@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 
 import NetworkItem from "../NetworkItem/NetworkItem";
 import ChatButton from "../ChatButton/ChatButton";
@@ -16,8 +16,8 @@ import "./Network.scss";
 
 const Network = () => {
   const [pages, setPages] = useState(0);
-  const [firstItem, setFirstItem] = useState(0);
-  const [lastItem, setlastItem] = useState(9);
+  const [currentNetworks, setCurrentNetworks] = useState(networks)
+  const [splitNetworkArrays, setSplitNetworkArrays] = useState([]);
 
   const handleDecrement = () => {
     if(pages > 0) {
@@ -30,9 +30,17 @@ const Network = () => {
       setPages(pages + 1)
     }
   }
+  console.log(currentNetworks)
 
-  const currentNetworkItems = networks.slice(firstItem, lastItem)
-  const networkItemJSX = currentNetworkItems.map((network, index) => {
+  const networksArray = [...currentNetworks];
+
+  while(networksArray.length > 0) {
+      splitNetworkArrays.push(networksArray.splice(0, 9))
+  }
+  
+  console.log(splitNetworkArrays)
+  
+  const networkItemJSX = splitNetworkArrays[pages].map((network, index) => {
       return (
         <NetworkItem
         key={network + index}
@@ -44,7 +52,6 @@ const Network = () => {
         />
       )
   })
-  
 
   let buttonNumbers = [];
   
@@ -61,6 +68,8 @@ const Network = () => {
       <NetworkPageButton key={buttonNumber + index} index={index + 1} setPages={setPages}></NetworkPageButton>
     )
   })
+  
+  
        
   return (
     <>
