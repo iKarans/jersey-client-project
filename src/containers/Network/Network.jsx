@@ -1,8 +1,8 @@
 import React, {useState} from "react";
 
-import NetworkItem from "../NetworkItem/NetworkItem";
-import ChatButton from "../ChatButton/ChatButton";
-import NetworkPageButton from "../NetworkPageButton/NetworkPageButton";
+import NetworkItem from "../../components/NetworkItem/NetworkItem";
+import ChatButton from "../../components/ChatButton/ChatButton";
+import NetworkPageButton from "../../components/NetworkPageButton/NetworkPageButton";
 import { networks } from "../../data/network.js";
 
 import SearchIcon from "../../assets/global/search-icon.svg";
@@ -61,7 +61,7 @@ const Network = () => {
 
   const buttonJSX = buttonNumbers.map((buttonNumber, index) => {
     return (
-      <NetworkPageButton key={buttonNumber + index} index={index + 1} setPages={setPages} pages={pages}></NetworkPageButton>
+      <NetworkPageButton key={buttonNumber + index} index={index + 1} setPages={setPages} pages={pages} />
     )
   })
   
