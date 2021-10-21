@@ -2,8 +2,8 @@
 @use "../../assets/styles/variables";
 .dashboard {
   background-color: #e5e5e5;
-  height: 90vh;
-  width: 80vw;
+  height: 100%;
+  width: 100%;
   // padding: 50px;
   display: flex;
   justify-content: space-evenly;
@@ -12,11 +12,15 @@
   @include mobile {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: flex-start;
+    align-items: center;
   }
 
   &__large-line-graph {
-    margin-top: 300px;
+    margin-top: 300px;  
+    @include mobile {
+    margin-top: 10%;
+    }
 
   }
   &__bar-chart {

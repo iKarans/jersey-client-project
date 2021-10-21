@@ -11,9 +11,20 @@
   gap: 0px 0px;
   
   margin-right: 10px;
+
+  @include mobile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
+
+  }
 }
 .routes__sidenav { 
   grid-area: 1 / 1 / 2 / 2; 
+
+  
 }
 
 .routes__container-dashboard { 
