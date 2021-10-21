@@ -78,6 +78,7 @@
       @include mobile {
         display: flex;
         justify-content: space-between;
+        padding: 0 0.5rem;
       }
       
       &-alert,
@@ -99,6 +100,11 @@
 
       &-alert {
         width: 13%;
+        
+        @include mobile {
+          width: 20%;
+        }
+      
       }
 
       &-summary {
@@ -114,11 +120,20 @@
 
       &-created {
         width: 13%;
+        @include mobile {
+          width: 20%;
+          padding-left: 1rem;
+        }
       }
 
       &-importance {
         width: 15%;
         padding-left: 2rem;
+
+        @include mobile {
+          width: 35%;
+          padding-left: 2rem;
+        }
       }
     }
 

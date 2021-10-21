@@ -9,12 +9,22 @@
     display: flex;
     align-items: center;
 
+    @include mobile {
+        display: flex;
+        justify-content: space-between;
+        padding: 0;
+      }
+
 
     &__name {
         color: rgba(115, 120, 134, 1);
         font-weight: 700;
         font-size: 0.625rem;
         width: 13%;
+        @include mobile {
+            width: 35%;
+            margin-left: 0.6rem;
+        }
         
     }
 
@@ -37,6 +47,10 @@
 
     .created {
         width: 13%;
+
+        @include mobile {
+            width: 45%;
+          }
     }
 
     &__importance {
@@ -44,6 +58,12 @@
         padding-left: 2rem;
         font-size: 0.625rem;
         font-weight: 700;
+
+        @include mobile {
+            text-align: start;
+            padding: 0;
+            width: 20%;
+        }
     }
 
     &__option {
