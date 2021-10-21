@@ -25,7 +25,7 @@ const Routes = () => {
         </Route>
         <Route exact path="/devices">
           <div className="routes__sidenav">
-            <SideNav selectedPage="Settings" />
+            <SideNav selectedPage="Devices" />
           </div>
           <div className="routes__container">
             <Header pageHeading="Devices" />
@@ -34,7 +34,7 @@ const Routes = () => {
         </Route>
         <Route exact path="/security">
           <div className="routes__sidenav">
-            <SideNav selectedPage="Settings" />
+            <SideNav selectedPage="Security" />
           </div>
           <div className="routes__container-security">
             <Header pageHeading="Security" />
@@ -43,7 +43,7 @@ const Routes = () => {
         </Route>
         <Route exact path="/network">
           <div className="routes__sidenav">
-            <SideNav selectedPage="Settings" />
+            <SideNav selectedPage="Network" />
           </div>
           <div className="routes__container">
             <Header pageHeading="Network" />
@@ -52,7 +52,7 @@ const Routes = () => {
         </Route>
         <Route path="/dashboard">
           <div className="routes__sidenav">
-            <SideNav selectedPage="Settings" />
+            <SideNav selectedPage="Dashboard" />
           </div>
           <div className="routes__container-dashboard">
             <Header pageHeading="Dashboard" />

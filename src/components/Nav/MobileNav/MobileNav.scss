@@ -16,6 +16,7 @@
     grid-auto-flow: row;
     background: linear-gradient(180deg, #dfdfdf 0%, #f9f9f9 0.01%, #ffffff 52.65%);
     border-radius: 0px 0px 12px 12px;
+    z-index: 1;
   }
 
   &__item {
