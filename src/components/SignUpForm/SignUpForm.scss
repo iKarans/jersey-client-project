@@ -1,6 +1,6 @@
-@use "../../assets/styles/variables"as *;
-@use "../../assets/styles/mixins"as *;
-@use "../../assets/styles/typography"as *;
+@use "../../assets/styles/variables" as *;
+@use "../../assets/styles/mixins" as *;
+@use "../../assets/styles/typography" as *;
 
 .signup {
   display: flex;
@@ -173,8 +173,6 @@
         width: 45%;
         height: 2.8rem;
         background-color: rgba(4, 36, 30, 0.1);
-        ;
-
         border-radius: 7px;
         border: none;
         color: $text-tertiary;
@@ -188,13 +186,18 @@
         width: 45%;
         height: 2.8rem;
         background-color: $primary-color;
-
         border-radius: 7px;
         border: none;
         color: $text-tertiary;
         font-weight: 700;
         font-size: 0.75rem;
         cursor: pointer;
+      }
+
+      &--signup:disabled {
+        cursor: not-allowed;
+        background-color: rgba(42, 188, 161, 0.4);
+        color: rgba(255, 255, 255, 0.5);
       }
 
       &--disabled {
