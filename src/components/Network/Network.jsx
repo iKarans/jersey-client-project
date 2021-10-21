@@ -50,7 +50,7 @@ const Network = () => {
       )
   })
 
-  let buttonNumbers = [];
+  const buttonNumbers = [];
   
   const generateButtonIndex = () => {
     for(let i = 0; i < (networks.length / 9); i++) {
