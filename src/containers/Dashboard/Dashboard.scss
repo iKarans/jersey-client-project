@@ -2,30 +2,27 @@
 @use "../../assets/styles/variables";
 .dashboard {
   background-color: #e5e5e5;
-  height: 120vh;
+  height: 100vh;
   @include mobile {
     height: 200vh;
   }
   &__content {
     position: relative;
+    width: calc(100% - 280px);
     top: 200px;
-    // left: 55px;
-    
-
+    left: 255px;
+    // right: 55px;
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: 2fr 1fr;
     grid-template-rows: auto auto;
     gap: 50px;
-
-    justify-content: center;
-
+    justify-content: left;
     align-items: center;
     @include mobile {
       position: relative;
       top: 120px;
       left: 0px;
-      max-height: 1200px;
-      max-width: 1600px;
+      width: 100%;
       padding: 0px;
       padding-top: 50px;
       display: flex;
@@ -34,14 +31,14 @@
     }
   }
 
-  align-items: center;
+  // align-items: center;
 }
 .placeholder {
   position: relative;
   border: 1px solid white;
   border-radius: 25px;
-  height: 385px;
-  width: 404px;
+  height: 35vh;
+  width: 35vw;
   background-color: white;
   @include mobile {
     height: 360px;
@@ -49,3 +46,8 @@
     margin-bottom: 10px;
   }
 }
+
+    
+
+
+

@@ -12,25 +12,27 @@
   border-radius: 10px;
   @include mobile {
     display: unset;
-    height: 500px;
+    height: 300px;
     width: 320px;
     margin-bottom: 10px;
   }
   &__chart-container {
     height: 25vh;
-    width: 35vw;
+    width: 30vw;
     padding-bottom: 20px;
     background-color: white;
     @include mobile {
       position: absolute;
       top: 40px;
       left: 20px;
-      height: 250px;
+      height: 235px;
       width: 250px;
     }
   }
   &__title {
-    margin: 30px;
+    justify-self: start;
+    padding-left: 10px;
+    margin: 20px;
     @include mobile {
       position: relative;
       margin: 10px;
