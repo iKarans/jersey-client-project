@@ -50,6 +50,20 @@
   grid-area: 1 / 2 / 2 / 3;
  
  }
+ .routes__container-settings {
+  grid-area: 1 / 2 / 2 / 3;
+  background-color: $background-color;
+ }
+
+ .routes__container-devices {
+  grid-area: 1 / 2 / 2 / 3;
+  background-color: $background-color;
+ }
+
+ .routes__container-network {
+  grid-area: 1 / 2 / 2 / 3;
+  background-color: $background-color;
+ }
 
  .routes__login {
   grid-area: 1 / 1 / 2 / 3; 
