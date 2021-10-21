@@ -2,7 +2,6 @@ import React, {useState, useEffect} from "react";
 
 import NetworkItem from "../NetworkItem/NetworkItem";
 import ChatButton from "../ChatButton/ChatButton";
-import NetworkFilter from "./NetworkFilter/NetworkFilter";
 import NetworkPageButton from "../NetworkPageButton/NetworkPageButton";
 import { networks } from "../../data/network.js";
 
@@ -70,7 +69,6 @@ const Network = () => {
        
   return (
     <>
-    <NetworkFilter />
     <section className="network">
       <div className="network__search">
         <div className="network__search-box">

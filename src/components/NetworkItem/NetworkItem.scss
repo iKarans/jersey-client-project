@@ -79,7 +79,7 @@
             width: 0.28rem;
             height: 0.28rem;
             border-radius: 50%;
-            background-color: #82DDD5;
+            background-color: $network-item-option;
 
             @include mobile {
                 display: none;
@@ -100,5 +100,5 @@
 }
 
 .dark {
-    background-color: #F4FCFA;
+    background-color: $network-item-dark-color;
 }
