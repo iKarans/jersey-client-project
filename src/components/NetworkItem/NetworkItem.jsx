@@ -5,7 +5,6 @@ import "./NetworkItem.scss"
 const NetworkItem = (props) => {
   const { name, summary, created, importanceLevel, index } = props;
 
-  let importanceLevelStyle;
   let importanceClassName;
 
   if(importanceLevel === "High") {
