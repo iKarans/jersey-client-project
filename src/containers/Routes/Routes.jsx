@@ -59,9 +59,13 @@ const Routes = () => {
             <Header pageHeading="Dashboard" />
             <Dashboard />
           </div>
+          
         </Route>
+        
              <Route exact path="/signup">
+             <div className="routes__container-signup">
           <SignUp />
+          </div>
         </Route>
         <Route path="/">
         <div className="routes__login">
