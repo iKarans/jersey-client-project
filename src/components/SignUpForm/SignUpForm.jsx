@@ -10,7 +10,7 @@ import { ReactComponent as InvalidInputIcon } from "../../assets/login/red-cross
 import "./SignUpForm.scss";
 
 const SignUpForm = () => {
-  const [validPassword, setvalidPassword] = useState({
+  const [validPassword, setValidPassword] = useState({
     checkLength: false,
     checkUpperCase: false,
     checkMatch: false,
@@ -46,7 +46,7 @@ const SignUpForm = () => {
     if (
       userDetails.firstName !== "" &&
       userDetails.lastName !== "" &&
-      /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(userDetails.email)
+      /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(userDetails.email)
     ) {
       return (
         <button className="signup-form__button--active" onClick={buttonClick}>
@@ -91,7 +91,7 @@ const SignUpForm = () => {
     if ((passwordLength >= 6) & (passwordLength <= 8)) {
       const currentState = { ...validPassword, checkLength: true };
       if (!validPassword.checkLength) {
-        setvalidPassword(currentState);
+        setValidPassword(currentState);
       }
       return (
         <div className="valid-password">
@@ -102,7 +102,7 @@ const SignUpForm = () => {
     } else {
       const currentState = { ...validPassword, checkLength: false };
       if (validPassword.checkLength) {
-        setvalidPassword(currentState);
+        setValidPassword(currentState);
       }
       return (
         <div className="invalid-password">
@@ -119,7 +119,7 @@ const SignUpForm = () => {
     if (password !== lowerCasePassword) {
       const currentState = { ...validPassword, checkUpperCase: true };
       if (!validPassword.checkUpperCase) {
-        setvalidPassword(currentState);
+        setValidPassword(currentState);
       }
       return (
         <div className="valid-password">
@@ -130,7 +130,7 @@ const SignUpForm = () => {
     } else {
       const currentState = { ...validPassword, checkUpperCase: false };
       if (validPassword.checkUpperCase) {
-        setvalidPassword(currentState);
+        setValidPassword(currentState);
       }
       return (
         <div className="invalid-password">
@@ -148,7 +148,7 @@ const SignUpForm = () => {
     ) {
       const currentState = { ...validPassword, checkMatch: true };
       if (!validPassword.checkMatch) {
-        setvalidPassword(currentState);
+        setValidPassword(currentState);
       }
       return (
         <div className="valid-password">
@@ -159,7 +159,7 @@ const SignUpForm = () => {
     } else {
       const currentState = { ...validPassword, checkMatch: false };
       if (validPassword.checkMatch) {
-        setvalidPassword(currentState);
+        setValidPassword(currentState);
       }
       return (
         <div className="invalid-password">
@@ -236,7 +236,7 @@ const SignUpForm = () => {
             {!showPassword && (
               <img
                 src={HidePassword}
-                className="hidepassword"
+                className="hide-password"
                 alt="Hide password icon"
                 onClick={handleShowPassword}
               />
@@ -244,7 +244,7 @@ const SignUpForm = () => {
             {showPassword && (
               <img
                 src={ShowPassword}
-                className="showpassword"
+                className="show-password"
                 alt="Show password icon"
                 onClick={handleShowPassword}
               />
