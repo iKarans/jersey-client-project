@@ -3,11 +3,27 @@ $secondary-color: #0a7aa7;
 $high-color: #fc7f7f;
 $medium-color: #fbc07b;
 $low-color: #1ac96a;
-$text-primary: #a0aec0;
-$text-secondary: #454756;
+$text-primary: rgb(160, 174, 192);
+$text-secondary: rgb(69, 71, 86);
 $text-tertiary: #ffffff;
+$text-black: #2A2B34;
+$background-color: #f8f9fa;
 $background-gradient: linear-gradient(110.53deg, #2ABCA1 4.37%, #0A7AA7 98.99%);
 $background-gradient-mobile:linear-gradient(167.94deg, #2ABCA1 0%, #0A7AA7 100%);
 //breakpoint
 $breakpoint-mobile: 480px;
 $nav-hover-color: #daf0ed;
+
+
+// security graph
+$security-none: #f2f2f2;
+$security-very-poor: #F04A68;
+$security-poor: #F0B78E;
+$security-fair: #FFF9C0;
+$security-good: #2ABCA1;
+$security-excellent: #20837F;
+
+// Network Page
+$network-alerts-border: #CBF0ED;
+$network-item-dark-color: #F4FCFA;
+$network-item-option: #82DDD5;
