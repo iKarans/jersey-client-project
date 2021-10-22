@@ -15,7 +15,7 @@
     display: grid;
     grid-template-columns: 2fr 1fr;
     grid-template-rows: auto auto;
-    gap: 50px;
+    gap: 25px;
     justify-content: left;
     align-items: center;
     @include mobile {
