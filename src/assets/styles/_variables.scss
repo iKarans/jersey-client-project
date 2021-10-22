@@ -3,25 +3,44 @@ $secondary-color: #0a7aa7;
 $high-color: #fc7f7f;
 $medium-color: #fbc07b;
 $low-color: #1ac96a;
-$text-primary: #a0aec0;
-$text-secondary: #454756;
+$text-primary: rgb(160, 174, 192);
+$text-secondary: rgb(69, 71, 86);
 $text-tertiary: #ffffff;
 $text-black: #2a2b34;
 $background-color: #f8f9fa;
+<<<<<<< HEAD
 $background-gradient: linear-gradient(110.53deg, #2abca1 4.37%, #0a7aa7 98.99%);
 $background-gradient-mobile: linear-gradient(
   167.94deg,
   #2abca1 0%,
   #0a7aa7 100%
 );
+=======
+$background-gradient: linear-gradient(110.53deg, #2ABCA1 4.37%, #0A7AA7 98.99%);
+$background-gradient-mobile:linear-gradient(167.94deg, #2ABCA1 0%, #0A7AA7 100%);
+>>>>>>> bd2721468fd604458d841c794c330774fdc857b3
 //breakpoint
 $breakpoint-mobile: 480px;
 $nav-hover-color: #daf0ed;
 
+
 // security graph
 $security-none: #f2f2f2;
+<<<<<<< HEAD
 $security-very-poor: #f04a68;
 $security-poor: #f0b78e;
 $security-fair: #fff9c0;
 $security-good: #2abca1;
 $security-excellent: #20837f;
+=======
+$security-very-poor: #F04A68;
+$security-poor: #F0B78E;
+$security-fair: #FFF9C0;
+$security-good: #2ABCA1;
+$security-excellent: #20837F;
+
+// Network Page
+$network-alerts-border: #CBF0ED;
+$network-item-dark-color: #F4FCFA;
+$network-item-option: #82DDD5;
+>>>>>>> bd2721468fd604458d841c794c330774fdc857b3

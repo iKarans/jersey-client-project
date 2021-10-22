@@ -1,21 +1,161 @@
-@use '../../assets/styles/variables' as *;
-@use '../../assets/styles/mixins' as *;
+@use "../../assets/styles/variables" as *;
+@use "../../assets/styles/mixins" as *;
 
-h1 {
-  text-align: center;
-}
-
-.network__text { 
-
-  height: 100vh;
+.network {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-left: 227px;
+  flex-direction: column;
+  height: 70vh;
+  width: 70%;
+  margin: auto;
+  margin-top: 5rem;
 
-  @include mobile {   
-    display: none;
-    height: 100vh;
- }
+  @include mobile {
+    width: 90%;
+  }
 
+  &__search {
+
+    @include mobile {
+      display: none;
+    }
+
+
+    width: 100%;
+    display: flex;
+    height: 1.25rem;
+    margin-bottom: 1rem;
+
+    &-box {
+      display: flex;
+      width: 70%;
+      margin-left: 3%;
+
+      .search-input {
+        border: none;
+        margin-left: 2rem;
+      }
+    }
+
+    &-filter-sort {
+      width: 30%;
+      display: flex;
+      justify-content: flex-end;
+
+      .network-sort,
+      .network-filter {
+        display: flex;
+        height: 100%;
+        margin-left: 2rem;
+
+        .network__text-paragraph {
+          font-size: 0.875rem;
+          margin-left: 0.7rem;
+          color: rgba(115, 120, 134, 1);
+          font-weight: 400;
+        }
+
+        .network__icons {
+          height: 60%;
+          cursor: pointer;
+          margin-top: 0.2rem;
+        }
+      }
+    }
+  }
+
+  &-alerts {
+
+    
+    &__header {
+      width: 100%;
+      height: 39px;
+      display: flex;
+      background-color: $primary-color;
+      border-radius: 15px 15px 0 0;
+      padding: 0 3.7rem;
+
+      @include mobile {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 1rem;
+      }
+      
+      &-alert,
+      &-summary,
+      &-created,
+      &-importance {
+        color: $text-tertiary;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+
+        .alert-header {
+          font-size: 0.62rem;
+          font-weight: 700;
+        }
+      }
+      
+
+      &-alert {
+        width: 13%;
+        
+        @include mobile {
+          width: 20%;
+        }
+      
+      }
+
+      &-summary {
+        width: 40%;
+        text-align: start;
+        padding:0 1rem;
+
+        @include mobile {
+          display: none;
+        }
+
+      }
+
+      &-created {
+        width: 13%;
+        @include mobile {
+          width: 25%;
+          padding-left: 2.3rem;
+        }
+      }
+
+      &-importance {
+        width: 15%;
+        padding-left: 2rem;
+
+        @include mobile {
+          width: 35%;
+          padding-left: 2rem;
+        }
+      }
+    }
+
+    &__alerts {
+      height: 50vh;
+      border-bottom: 1px solid $network-alerts-border;
+      
+    }
+
+    &__pages {
+      height: 4.62rem;
+      border-radius: 0px 0px 15px 15px;
+      box-shadow: 0px 3.5px 5.5px rgba(0, 0, 0, 0.05);
+
+      &-buttons {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding-left: 1.5rem;
+        height: 100%;
+  
+      }
+      
+    }
+  }
 }
