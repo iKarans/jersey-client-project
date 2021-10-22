@@ -3,7 +3,7 @@ import "./Dashboard.scss";
 import LargeLineGraph from "../../components/LargeLineGraph/LargeLineGraph.jsx";
 import BarChart from "../../components/BarChart/BarChart";
 import { dataset } from "../../data/securityRisk";
-import SecurityScore from "../../components/SecurityScore/SecurityScore";
+
 
 const Dashboard = () => {
   const largeLineGraphTitle = "Devices on Network";
@@ -22,9 +22,7 @@ const Dashboard = () => {
   const largeLineGraphMax = 300;
   return (
     <div className="dashboard">
-      {/* <div>
-        <SecurityScore />
-      </div> */}
+      
       <div className="dashboard__large-line-graph">
       <LargeLineGraph
         title={largeLineGraphTitle}
