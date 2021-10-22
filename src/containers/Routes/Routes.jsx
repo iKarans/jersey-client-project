@@ -34,9 +34,13 @@ const Routes = () => {
           </div>
         </Route>
         <Route exact path="/device/:device">
-          <Header pageHeading="Devices" />
-          <SideNav selectedPage="Devices" />
-          <DevicesIndex />
+        <div className="routes__sidenav">
+            <SideNav selectedPage="Devices" />
+          </div>
+          <div className="routes__container-devices">
+            <Header pageHeading="Devices" />
+            <DevicesIndex />
+          </div>
         </Route>
         <Route exact path="/security">
           <div className="routes__sidenav">

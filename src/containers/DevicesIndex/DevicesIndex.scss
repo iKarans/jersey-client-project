@@ -2,11 +2,10 @@
 @use "../../assets/styles/mixins" as *;
 
 .devices-index {
-  height: 100vh;
   display: grid;
   grid-template-columns: 1fr;
   gap: 40px;
-  margin-left: 270px;
+  padding: 7vh 3vw;
 
   @include mobile {
     display: none;
