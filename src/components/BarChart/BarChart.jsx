@@ -14,6 +14,7 @@ const BarChart = (props) => {
   return (
     <div className="bar-chart">
       <h3 className="bar-chart__title">{title}</h3>
+
       <div className="bar-chart__chart-container">
         <Bar
           data={{
