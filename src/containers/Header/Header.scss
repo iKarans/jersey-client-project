@@ -3,10 +3,15 @@
 
 .header {
   position: relative;
-  left: 247px;
+  width: 100%;
+  padding: 20px 15px 15px 10px;
+  background-color: $background-color;
+
 
   @include mobile {
     position: unset;
     left: 0px;
+    padding: 0;
+    width: 100%;
   }
 }
