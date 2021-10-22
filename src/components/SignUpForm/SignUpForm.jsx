@@ -124,7 +124,7 @@ const SignUpForm = () => {
       return (
         <div className="valid-password">
           <ValidInputIcon />
-          <p>Contains at least 1 uppercase letter</p>
+          <p>Contains at least one uppercase letter</p>
         </div>
       );
     } else {
@@ -135,7 +135,7 @@ const SignUpForm = () => {
       return (
         <div className="invalid-password">
           <InvalidInputIcon />
-          <p>Contains at least 1 uppercase letter</p>
+          <p>Contains at least one uppercase letter</p>
         </div>
       );
     }
