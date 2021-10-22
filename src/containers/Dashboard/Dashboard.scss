@@ -12,9 +12,19 @@
   align-items: space-between;
 
   @include mobile {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+    height: 200vh;
+  }
+  &__content {
+    position: relative;
+    width: calc(100% - 280px);
+    top: 200px;
+    left: 255px;
+    // right: 55px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 25px;
+    justify-content: left;
     align-items: center;
   }
 
