@@ -1,23 +1,24 @@
-import React from 'react'
+import React from "react";
 
-import "./AlertPageButton.scss"
+import "./AlertPageButton.scss";
 
 const AlertPageButton = (props) => {
+  const { index, setPages, pages } = props;
 
-    const {index, setPages, pages} = props;
+  let className;
 
-    let className;
+  if (pages === index - 1) {
+    className =
+      "alerts-table__pages-buttons-button alerts-table__button-active";
+  } else {
+    className = "alerts-table__pages-buttons-button";
+  }
 
-    if(pages === index - 1) {
-        className = "network-alerts__pages-buttons-button network__button-active"
-    } else {
-        className = "network-alerts__pages-buttons-button"
-    }
-    
+  return (
+    <button className={className} onClick={() => setPages(index - 1)}>
+      {index}
+    </button>
+  );
+};
 
-    return (
-        <button className={className} onClick={() => setPages(index - 1)}>{index}</button>
-    )
-}
-
-export default AlertPageButton
+export default AlertPageButton;
