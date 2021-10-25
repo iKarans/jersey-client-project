@@ -46,7 +46,7 @@ const Routes = () => {
             <SideNav selectedPage="Network" />
           </div>
           <div className="routes__container-network">
-            <Header pageHeading="Network" />
+            <Header pageHeading="Alerts" />
             <Network />
           </div>
         </Route>
