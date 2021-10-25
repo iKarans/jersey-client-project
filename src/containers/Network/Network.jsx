@@ -4,6 +4,7 @@ import NetworkItem from "../../components/NetworkItem/NetworkItem";
 import ChatButton from "../../components/ChatButton/ChatButton";
 import NetworkPageButton from "../../components/NetworkPageButton/NetworkPageButton";
 import { networks } from "../../data/network.js";
+import { handleChangeDevice, handleChangeHighRisk, handleChangeLoggedOn, handleChangeOutage, checkListArray } from "./NetworkFunctions";
 
 import SearchIcon from "../../assets/global/search-icon.svg";
 import SortIcon from "../../assets/global/sort-icon.svg";
@@ -15,8 +16,12 @@ import "./Network.scss";
 import NetworkFilter from "../../components/NetworkFilter/NetworkFilter";
 
 const Network = () => {
+
+  
   const [pages, setPages] = useState(0);
   const [splitNetworkArrays] = useState([]);
+
+ 
 
   const handleDecrement = () => {
     if(pages > 0) {
@@ -121,7 +126,7 @@ const Network = () => {
           </div>}
         </div>
       </div>
-      <NetworkFilter />
+      <NetworkFilter handleChangeDevice={handleChangeDevice} handleChangeHighRisk={handleChangeHighRisk} handleChangeLoggedOn={handleChangeLoggedOn} handleChangeOutage={handleChangeOutage}/>
       <ChatButton />
     </section>
     </>
