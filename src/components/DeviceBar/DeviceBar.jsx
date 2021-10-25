@@ -8,6 +8,7 @@ import lenovoIcon from "../../assets/devices/lenovo.svg";
 import samsungIcon from "../../assets/devices/samsung.svg";
 import laptopIcon from "../../assets/devices/laptop.svg";
 import mobileIcon from "../../assets/devices/mobile.svg";
+import { Link } from "react-router-dom";
 
 export const DeviceBar = (props) => {
   const { name, type, brand, model, OS, ipAddress, lastActive, securityRisk } =
@@ -41,7 +42,7 @@ export const DeviceBar = (props) => {
 
   return (
     <div className="device-bar">
-      <h4>{name}</h4>
+        <Link to={`/device/${name}`}><h4 className="device-bar__device-name">{name}</h4></Link>
       <img
         src={typeIcon()}
         alt={type}

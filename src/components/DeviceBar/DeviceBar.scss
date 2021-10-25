@@ -8,11 +8,22 @@
   grid-template-columns: repeat(9, 1fr);
   gap: 10px;
   align-items: center;
-  justify-content: center;
+  justify-items: center;
   text-align: center;
   margin: 5px;
   padding: 10px 20px;
   color: $text-secondary;
+  background-color: $text-tertiary;
+
+  &__device-name a, :active, :any-link {
+    text-decoration: none;
+    color: $text-secondary;
+
+    &:hover {
+        cursor: pointer;
+        text-decoration: underline;
+    }
+  }
 
   &__security-risk {
     border-radius: 10px;
