@@ -16,7 +16,7 @@ const DevicesIndex = () => {
   };
 
   const filteredDevice = devices.find(
-    (singleDevice) => singleDevice.name == device
+    (singleDevice) => singleDevice.name === device
   );
 
   return (

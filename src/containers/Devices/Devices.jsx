@@ -1,5 +1,5 @@
 import React from "react";
-import DeviceRisk from "../../components/DeviceRisk/DeviceRisk";
+
 import DeviceList from "../DeviceList/DeviceList";
 import "./Devices.scss";
 

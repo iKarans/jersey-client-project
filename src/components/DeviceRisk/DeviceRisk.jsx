@@ -5,7 +5,7 @@ import "./DeviceRisk.scss";
 const DeviceRisk = (props) => {
   const { toggleModal, securityRisk } = props;
 
-  if (securityRisk == "high") {
+  if (securityRisk === "high") {
     return (
       <div className="device-risk-alert">
         <h4 className="device-risk-alert__title">
