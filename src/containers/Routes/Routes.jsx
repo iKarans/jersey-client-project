@@ -10,6 +10,7 @@ import Settings from "../../containers/Settings/Settings";
 import Header from "../Header/Header";
 import Login from "../Login/Login";
 import SignUp from "../SignUp/SignUp";
+import DevicesIndex from "../DevicesIndex/DevicesIndex"
 
 const Routes = () => {
   return (
