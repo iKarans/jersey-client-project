@@ -5,6 +5,8 @@ import BarChart from "../../components/BarChart/BarChart";
 import { dataset } from "../../data/securityRisk";
 import GoogleDriveChart from "../../components/GoogleDriveChart/GoogleDriveChart";
 import GoogleDriveIcon from "../../assets/dashboard/gmail.png";
+import DropboxChart from "../../components/DropboxChart/DropboxChart";
+import DropboxIcon from "../../assets/dashboard/dropbox.png"
 
 const Dashboard = () => {
   const largeLineGraphTitle = "Devices on Network";
@@ -39,6 +41,22 @@ const Dashboard = () => {
   const googleDriveChartMax = 14;
   const googleDriveChartHoverLabel = "Google Drive users";
 
+  const dropboxChartTitle = "Dropbox Usage";
+  const dropboxChartSubtitle =
+    "Number of devices that used Dropbox over the past week";
+  const dropboxChartData = [100 , 200, 250, 200 , 150 , 0      , 0];
+  const dropboxChartLabels = [
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+    "Sunday",
+  ];
+  const dropboxChartMax = 300;
+  const dropboxChartHoverLabel = "Dropbox usage";
+
   return (
     <div className="dashboard">
       <div className="dashboard__large-line-graph">
@@ -68,6 +86,15 @@ const Dashboard = () => {
         icon={GoogleDriveIcon}
         hoverLabel={googleDriveChartHoverLabel}
       />
+
+      <DropboxChart 
+        title={dropboxChartTitle}
+        subtitle={dropboxChartSubtitle}
+        data={dropboxChartData}
+        labels={dropboxChartLabels}
+        max={dropboxChartMax}
+        icon={DropboxIcon}
+        hoverLabel={dropboxChartHoverLabel}/>
     </div>
   );
 };

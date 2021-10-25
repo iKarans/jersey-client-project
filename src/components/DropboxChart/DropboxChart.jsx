@@ -1,10 +1,13 @@
 import React from 'react'
+import LargeLineGraph from '../LargeLineGraph/LargeLineGraph';
 
-const DropboxChart = () => {
+
+const DropboxChart = (props) => {
+    
     return (
-        <div>
-            
-        </div>
+        <>
+            <LargeLineGraph {...props}/>
+        </>
     )
 }
 
