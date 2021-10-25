@@ -6,7 +6,7 @@ import MobileNav from "../MobileNav/MobileNav";
 import { ReactComponent as HomeIcon } from "../../../assets/nav/home.svg";
 import { ReactComponent as SecurityIcon } from "../../../assets/nav/security.svg";
 import { ReactComponent as DevicesIcon } from "../../../assets/nav/device.svg";
-import { ReactComponent as NetworkIcon } from "../../../assets/nav/network.svg";
+import { ReactComponent as AlertIcon } from "../../../assets/nav/network.svg";
 import { ReactComponent as SettingsIcon } from "../../../assets/nav/settings.svg";
 import { ReactComponent as GreyDropdown } from "../../../assets/global/grey-dropdown.svg";
 
@@ -47,7 +47,7 @@ const SideNav = (props) => {
             </Link>
           </div>
           <div className="side-nav__network side-nav__item">
-            <NetworkIcon className="side-nav__item--image" />
+            <AlertIcon className="side-nav__item--image" />
             <Link to="/alerts" className="side-nav__text">
               Alerts
             </Link>

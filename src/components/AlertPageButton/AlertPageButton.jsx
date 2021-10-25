@@ -1,8 +1,8 @@
 import React from 'react'
 
-import "./NetworkPageButton.scss"
+import "./AlertPageButton.scss"
 
-const NetworkPageButton = (props) => {
+const AlertPageButton = (props) => {
 
     const {index, setPages, pages} = props;
 
@@ -20,4 +20,4 @@ const NetworkPageButton = (props) => {
     )
 }
 
-export default NetworkPageButton
+export default AlertPageButton

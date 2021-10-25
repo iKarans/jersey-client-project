@@ -1,20 +1,20 @@
 import React, {useState} from "react";
 
-import NetworkItem from "../../components/NetworkItem/NetworkItem";
+import AlertItem from "../../components/NetworkItem/NetworkItem";
 import ChatButton from "../../components/ChatButton/ChatButton";
-import NetworkPageButton from "../../components/NetworkPageButton/NetworkPageButton";
+import AlertPageButton from "../../components/NetworkPageButton/NetworkPageButton";
 import { networks } from "../../data/network.js";
 
 import SearchIcon from "../../assets/global/search-icon.svg";
 import SortIcon from "../../assets/global/sort-icon.svg";
 import FilterIcon from "../../assets/devices/filterIcon.png";
 import WhiteDropDown from "../../assets/global/white-dropdown.svg";
-import NetworkArrow from "../../assets/network/network-arrow.svg"
+import AlertArrow from "../../assets/network/network-arrow.svg"
 
 import "./Alerts.scss";
 
 // Renamed this component to 'Alerts' midway through development at client request, 'network' still referred to in code naming. 
-const Network = () => {
+const Alerts = () => {
   const [pages, setPages] = useState(0);
   const [splitNetworkArrays] = useState([]);
 
@@ -38,7 +38,7 @@ const Network = () => {
   
   const networkItemJSX = splitNetworkArrays[pages].map((network, index) => {
       return (
-        <NetworkItem
+        <AlertItem
         key={network + index}
         name={network.alertType}
         summary={network.summary}
@@ -61,7 +61,7 @@ const Network = () => {
 
   const buttonJSX = buttonNumbers.map((buttonNumber, index) => {
     return (
-      <NetworkPageButton key={buttonNumber + index} index={index + 1} setPages={setPages} pages={pages} />
+      <AlertPageButton key={buttonNumber + index} index={index + 1} setPages={setPages} pages={pages} />
     )
   })
   
@@ -123,4 +123,4 @@ const Network = () => {
   );
 };
 
-export default Network;
+export default Alerts;

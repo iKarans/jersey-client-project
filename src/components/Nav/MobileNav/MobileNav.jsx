@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import "./MobileNav.scss";
 import { ReactComponent as SecurityIcon } from "../../../assets/nav/securityGreen.svg";
 import { ReactComponent as DevicesIcon } from "../../../assets/nav/deviceGreen.svg";
-import { ReactComponent as NetworkIcon } from "../../../assets/nav/networkGreen.svg";
+import { ReactComponent as AlertIcon } from "../../../assets/nav/networkGreen.svg";
 import { ReactComponent as SettingsIcon } from "../../../assets/nav/settingsGreen.svg";
 import { ReactComponent as HomeIcon } from "../../../assets/nav/homeGreen.svg";
 
@@ -31,8 +31,8 @@ const MobileNav = props => {
         </Link>
       </div>
       <div className="mobile-nav__item">
-        <NetworkIcon className="mobile-nav__item--image" />
-        <Link to="/network" className="mobile-nav__item--text " onClick={handleClick}>
+        <AlertIcon className="mobile-nav__item--image" />
+        <Link to="/alert" className="mobile-nav__item--text " onClick={handleClick}>
           Network
         </Link>
       </div>
