@@ -28,7 +28,9 @@ const devicesResponse = [{
   "subType": "Pending",
   "device": "Pending",
   "gateway": 0,
-  "status": "ENABLED"
+  "status": "ENABLED",
+  "deviceType": "mobile",
+  "model": "iPhone X"
 }, {
   "hostName": "LuJamNetPicket",
   "subnet": 0,
@@ -59,7 +61,9 @@ const devicesResponse = [{
   "subType": "Router/LuJam",
   "device": "Networking",
   "gateway": 0,
-  "status": "ENABLED"
+  "status": "ENABLED",
+  "deviceType": "laptop",
+  "model": "XPS 15"
 }, {
   "hostName": "Richards-MBP",
   "subnet": 0,
@@ -92,7 +96,9 @@ const devicesResponse = [{
   "subType": "Apple/Mac",
   "device": "Mac",
   "gateway": 0,
-  "status": "ENABLED"
+  "status": "ENABLED",
+  "deviceType": "laptop",
+  "model": "iPhone X"
 }, {
   "hostName": "",
   "subnet": 0,
@@ -121,7 +127,9 @@ const devicesResponse = [{
   "subType": "Router",
   "device": "Networking",
   "gateway": 1,
-  "status": "ENABLED"
+  "status": "ENABLED",
+  "deviceType": "laptop",
+  "model": "iPhone X"
 }];
 
 export default devicesResponse;
