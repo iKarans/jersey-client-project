@@ -26,6 +26,7 @@ const LargeLineGraph = (props) => {
       ],
     };
   };
+  
   return (
     <div className="network-devices">
         <img src={icon} alt="" className="network-devices__icon" />
