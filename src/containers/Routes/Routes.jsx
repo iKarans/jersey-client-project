@@ -1,6 +1,6 @@
 import React from "react";
 import "./Routes.scss";
-import Alerts from "../Network/Alerts";
+import Alerts from "../Alerts/Alerts";
 import { Route, Switch } from "react-router-dom";
 import Dashboard from "../Dashboard/Dashboard";
 import Devices from "../Devices/Devices";
@@ -45,7 +45,7 @@ const Routes = () => {
           <div className="routes__sidenav">
             <SideNav selectedPage="Alerts" />
           </div>
-          <div className="routes__container-network">
+          <div className="routes__container-alerts">
             <Header pageHeading="Alerts" />
             <Alerts />
           </div>

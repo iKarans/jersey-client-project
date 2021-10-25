@@ -1,5 +1,5 @@
 import React from 'react'
-import Alerts from '../Network/Alerts'
+import Alerts from '../Alerts/Alerts'
 import { Route, Switch } from 'react-router-dom'
 import Dashboard from '../Dashboard/Dashboard'
 import Devices from '../Devices/Devices'
