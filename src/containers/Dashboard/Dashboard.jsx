@@ -4,6 +4,7 @@ import LargeLineGraph from "../../components/LargeLineGraph/LargeLineGraph.jsx";
 import BarChart from "../../components/BarChart/BarChart";
 import { dataset } from "../../data/securityRisk";
 
+
 const Dashboard = () => {
   const largeLineGraphTitle = "Devices on Network";
   const largeLineGraphSubtitle =
@@ -21,21 +22,22 @@ const Dashboard = () => {
   const largeLineGraphMax = 300;
   return (
     <div className="dashboard">
-      <div className="dashboard__content">
-        <LargeLineGraph
-          title={largeLineGraphTitle}
-          subtitle={largeLineGraphSubtitle}
-          labels={largeLineGraphLabels}
-          data={largeLineGraphData}
-          max={largeLineGraphMax}
-        />
-        <BarChart
-          dataset={dataset}
-          title={"Security Risk Breakdown"}
-          labels={["N/A", "Low", "Medium", "High"]}
-        />
-        <div className="placeholder"></div>
-        <div className="placeholder"></div>
+      
+      <div className="dashboard__large-line-graph">
+      <LargeLineGraph
+        title={largeLineGraphTitle}
+        subtitle={largeLineGraphSubtitle}
+        labels={largeLineGraphLabels}
+        data={largeLineGraphData}
+        max={largeLineGraphMax}
+      />
+      </div>
+      <div className="dashboard__bar-chart">
+      <BarChart
+        dataset={dataset}
+        title={"Security Risk Breakdown"}
+        labels={["N/A", "Low", "Medium", "High"]}
+      />
       </div>
     </div>
   );

@@ -1,14 +1,16 @@
 @use "../../assets/styles/mixins" as *;
 .network-devices {
   position: relative;
-  height: 500px;
-  width: 400px;
+  max-height: 40vh;
+  max-width: 50vw;
+  height: 385px;
   display: grid;
   justify-items: center;
   align-content: center;
   font-family: "Inter", sans-serif;
   background-color: white;
   border-radius: 10px;
+  margin-bottom: 400px;
   @include mobile {
     display: unset;
     height: 500px;
@@ -17,8 +19,8 @@
   }
 
   &__chart-container {
-    height: 400px;
-    width: 300px;
+    height: 200px;
+    width: 45vw;
     background-color: white;
     @include mobile {
       position: absolute;
@@ -29,6 +31,7 @@
     }
   }
   &__title {
+    font-size: 20px;
     margin-bottom: 15px;
     @include mobile {
       font-size: medium;
@@ -41,6 +44,7 @@
     font-weight: 400;
     font-size: 12px;
     margin: 10px;
+    text-align: center;
     @include mobile {
       font-size: 10px;
     }
