@@ -58,6 +58,8 @@
     }
   }
 
+
+
   &__logout {
     background: #2abca1;
     border-radius: 18px;
@@ -78,7 +80,14 @@
     width: 18.5px;
     margin-right: 15px;
   }
+
+  &__settings {
+    margin-top: 80px;
+  }
+
 }
+
+
 
 .mobile-nav-header {
   display: none;
