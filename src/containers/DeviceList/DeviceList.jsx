@@ -59,7 +59,7 @@ export const DeviceList = () => {
             type="text"
             name="deviceSearch"
             onInput={handleInput}
-            className="search-bar__input"
+            className="devices__search-options--input"
             placeholder="Search by Device name"
           />
           <label htmlFor="deviceSearch" className="search-bar__label"></label>

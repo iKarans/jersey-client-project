@@ -10,17 +10,22 @@ import greenTick from "../../assets/login/green-tick.svg";
 
 
 const SecurityBar = (props) => {
-  const {pageHeading} = props;
+  const { pageHeading, device, showAlert = false} = props;
   return (
     <div className="security-bar">
       <div>
         <h1 className="security-bar__heading">{pageHeading}</h1>
       </div>
+
+      <h4 className="security-bar__device-id"> {device}</h4>
+
+      {showAlert && (
       <NetworkAlert
         alertImg={greenTick}
         alertText="Your network is secure. Great work!"
         atRisk={false}
-      />
+        device={device}
+      />)}
       <div className="security-bar__buttons">
         <AlertButton
           buttonText="Active Devices"
