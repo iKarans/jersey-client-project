@@ -49,7 +49,7 @@ const SideNav = props => {
           <div className="side-nav__network side-nav__item">
             <NetworkIcon className="side-nav__item--image" />
             <Link to="/network" className="side-nav__text">
-              Network
+              Alerts
             </Link>
           </div>
           <div className="side-nav__settings side-nav__item">
