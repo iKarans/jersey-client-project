@@ -1,8 +1,9 @@
 import React from "react";
+import { handleChangeHighImportance, handleChangeLessThanHour, handleChangeLowImportance, handleChangeOnetoThreeHours } from "../../containers/Network/NetworkFunctions";
 import "./NetworkFilter.scss";
 
 const NetworkFilter = (props) => {
-  const {handleChangeDevice, handleChangeHighRisk, handleChangeLoggedOn, handleChangeOutage} = props
+  const {handleChangeDevice, handleChangeHighRisk, handleChangeLoggedOn, handleChangeOutage, handleChangeLessThanHour, handleChangeOneToThreeHours, handleChangeLowImportance, handleChangeHighImportance} = props
   
 
   
@@ -38,12 +39,12 @@ const NetworkFilter = (props) => {
         <div className="network-filters__filter--created">
           <p className="network-filters__filter-text">Created</p>
           <form action="" className="network-filters__created--filters" />
-          <input type="checkbox" />
+          <input type="checkbox" onChange={handleChangeLessThanHour}/>
           <label htmlFor="" className="network-filters__checkbox-text">
             Less than 1hr ago
           </label>
           <br />
-          <input type="checkbox" />
+          <input type="checkbox" onChange={handleChangeOneToThreeHours}/>
           <label htmlFor="" className="network-filters__checkbox-text">
             1 - 3hrs ago
           </label>
@@ -52,12 +53,12 @@ const NetworkFilter = (props) => {
         <div className="network-filters__filter--importance">
           <p className="network-filters__filter-text">Importance Level</p>
           <form action="" className="network-filters__importance--filters" />
-          <input type="checkbox" />
+          <input type="checkbox" onChange={handleChangeLowImportance}/>
           <label htmlFor="" className="network-filters__checkbox-text">
             Low
           </label>
           <br />
-          <input type="checkbox" />
+          <input type="checkbox" onChange={handleChangeHighImportance}/>
           <label htmlFor="" className="network-filters__checkbox-text">
             High
           </label>

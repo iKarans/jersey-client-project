@@ -29,3 +29,35 @@
       }else {checkListArray.push("LoggedOn");
       console.log(checkListArray)}
   };
+
+  export const handleChangeLessThanHour = () => {
+    if(checkListArray.includes("hour")){
+      checkListArray = checkListArray.filter(item => item !== "hour")
+      console.log(checkListArray)
+      }else {checkListArray.push("hour");
+      console.log(checkListArray)}
+  };
+  export const handleChangeOneToThreeHours = () => {
+    if(checkListArray.includes("oneToThreeHours")){
+      checkListArray = checkListArray.filter(item => item !== "oneToThreeHours")
+      console.log(checkListArray)
+      }else {checkListArray.push("oneToThreeHours");
+      console.log(checkListArray)}
+  };
+
+  export const handleChangeLowImportance = () => {
+    if(checkListArray.includes("lowImportance")){
+      checkListArray = checkListArray.filter(item => item !== "lowImportance")
+      console.log(checkListArray)
+      }else {checkListArray.push("lowImportance");
+      console.log(checkListArray)}
+  };
+  export const handleChangeHighImportance = () => {
+    if(checkListArray.includes("highImportance")){
+      checkListArray = checkListArray.filter(item => item !== "highImportance")
+      console.log(checkListArray)
+      }else {checkListArray.push("highImportance");
+      console.log(checkListArray)}
+  };
+
+ 

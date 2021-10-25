@@ -4,7 +4,7 @@ import NetworkItem from "../../components/NetworkItem/NetworkItem";
 import ChatButton from "../../components/ChatButton/ChatButton";
 import NetworkPageButton from "../../components/NetworkPageButton/NetworkPageButton";
 import { networks } from "../../data/network.js";
-import { handleChangeDevice, handleChangeHighRisk, handleChangeLoggedOn, handleChangeOutage, checkListArray } from "./NetworkFunctions";
+import { handleChangeDevice, handleChangeHighRisk, handleChangeLoggedOn, handleChangeOutage, handleChangeLessThanHour, handleChangeHighImportance, handleChangeLowImportance, handleChangeOneToThreeHours, checkListArray } from "./NetworkFunctions";
 
 import SearchIcon from "../../assets/global/search-icon.svg";
 import SortIcon from "../../assets/global/sort-icon.svg";
@@ -126,7 +126,7 @@ const Network = () => {
           </div>}
         </div>
       </div>
-      <NetworkFilter handleChangeDevice={handleChangeDevice} handleChangeHighRisk={handleChangeHighRisk} handleChangeLoggedOn={handleChangeLoggedOn} handleChangeOutage={handleChangeOutage}/>
+      <NetworkFilter handleChangeDevice={handleChangeDevice} handleChangeHighRisk={handleChangeHighRisk} handleChangeLoggedOn={handleChangeLoggedOn} handleChangeOutage={handleChangeOutage} handleChangeLessThanHour={handleChangeLessThanHour} handleChangeOnetoThreeHours={handleChangeOneToThreeHours} handleChangeLowImportance={handleChangeLowImportance} handleChangeHighImportance={handleChangeHighImportance}/>
       <ChatButton />
     </section>
     </>
