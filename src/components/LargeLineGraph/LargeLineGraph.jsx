@@ -4,7 +4,7 @@ import "./LargeLineGraph.scss";
 import { Line } from "react-chartjs-2";
 
 const LargeLineGraph = (props) => {
-  const { title, subtitle, labels, data, max } = props;
+  const { title, subtitle, labels, data, max, icon } = props;
   const generateGraphSettings = (canvas) => {
     const ctx = canvas.getContext("2d");
     let gradient = ctx.createLinearGradient(0, 0, 0, 250);
