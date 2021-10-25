@@ -50,18 +50,18 @@ body.active-modal {
   border-radius: 1rem;
   max-width: 400px;
   min-width: 300px;
-}
-
-.modal-text {
-  grid-column: 1 / span 2;
-  text-align: center;
-  color: $text-secondary;
-
-  h4 {
+  &__text {
+    grid-column: 1 / span 2;
+    text-align: center;
+    color: $text-secondary;
+  
+  }
+  &__title {
     line-height: 1.4rem;
     margin-bottom: 0.6rem;
   }
 }
+
 
 .close-modal {
   position: absolute;

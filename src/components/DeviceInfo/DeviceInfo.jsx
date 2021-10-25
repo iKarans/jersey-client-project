@@ -12,13 +12,13 @@ const DeviceInfo = (props) => {
             <h3>Device Information</h3>
 
             <ul className="device-info__list--ul">
-                <li><b>Device Type:</b> {type}</li>
-                <li><b>Device Name:</b> {name}</li>
-                <li><b>Brand:</b> {brand}</li>
-                <li><b>Model:</b> {model}</li>
-                <li><b>Operating System:</b> {OS}</li>
-                <li><b>IP Address:</b> {ipAddress}</li>
-                <li><b>Last Active:</b> {lastActive}</li>
+                <li className="device-info__list-item"><b>Device Type:</b> {type}</li>
+                <li className="device-info__list-item"><b>Device Name:</b> {name}</li>
+                <li className="device-info__list-item"><b>Brand:</b> {brand}</li>
+                <li className="device-info__list-item"><b>Model:</b> {model}</li>
+                <li className="device-info__list-item"><b>Operating System:</b> {OS}</li>
+                <li className="device-info__list-item"><b>IP Address:</b> {ipAddress}</li>
+                <li className="device-info__list-item"><b>Last Active:</b> {lastActive}</li>
             </ul>               
         </div>
 

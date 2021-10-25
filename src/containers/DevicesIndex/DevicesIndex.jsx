@@ -41,8 +41,8 @@ const DevicesIndex = () => {
         <div className="modal">
           <div className="overlay"> </div>
           <div className="modal-content">
-            <div className="modal-text">
-                <h4>Are you sure you want to block this device from the network?</h4>
+            <div className="modal-content__text">
+                <h4 className="modal__title">Are you sure you want to block this device from the network?</h4>
                 <p>This action cannot be undone.</p>
             </div>
             <Button toggleModal={toggleModal} text="Cancel" buttonRisk={true} />
