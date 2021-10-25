@@ -1,9 +1,13 @@
-@use "../../../assets/styles/variables" as *;
-@use "../../../assets/styles/mixins" as *;
-@use "../../../assets/styles/typography" as *;
+@use "../../assets/styles/variables" as *;
+@use "../../assets/styles/mixins" as *;
+@use "../../assets/styles/typography" as *;
 
 
 .network-filters {
+  position: absolute;
+  background: white;
+  top: 240px;
+  right: 10px;
   border-radius: 7px;
   height: 408px;
   width: 190px;

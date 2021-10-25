@@ -12,6 +12,7 @@ import WhiteDropDown from "../../assets/global/white-dropdown.svg";
 import NetworkArrow from "../../assets/network/network-arrow.svg"
 
 import "./Network.scss";
+import NetworkFilter from "../../components/NetworkFilter/NetworkFilter";
 
 const Network = () => {
   const [pages, setPages] = useState(0);
@@ -31,9 +32,13 @@ const Network = () => {
 
   const networksArray = [...networks];
 
+
+
   while(networksArray.length > 0) {
       splitNetworkArrays.push(networksArray.splice(0, 9))
+    
   }
+  
   
   const networkItemJSX = splitNetworkArrays[pages].map((network, index) => {
       return (
@@ -116,6 +121,7 @@ const Network = () => {
           </div>}
         </div>
       </div>
+      <NetworkFilter />
       <ChatButton />
     </section>
     </>

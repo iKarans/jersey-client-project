@@ -105,6 +105,9 @@ export const networks = [
     importanceLevel: "Low",
     createdTime: 15,
     importanceID: 1,
+    deviceNew: true,
+    isDeviceOut: false,
+    isDeviceHighRisk: true,
   },
   {
     alertType: "High risk device detected",
