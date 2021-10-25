@@ -9,6 +9,7 @@ import SideNav from "../../components/Nav/SideNav/SideNav";
 import Settings from "../../containers/Settings/Settings";
 import Header from "../Header/Header";
 import Login from "../Login/Login";
+import SignUp from "../SignUp/SignUp";
 
 const Routes = () => {
   return (
@@ -57,6 +58,13 @@ const Routes = () => {
           <div className="routes__container-dashboard">
             <Header pageHeading="Dashboard" />
             <Dashboard />
+          </div>
+          
+        </Route>
+        
+             <Route exact path="/signup">
+             <div className="routes__container-signup">
+          <SignUp />
           </div>
         </Route>
         <Route path="/">
