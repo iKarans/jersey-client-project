@@ -1,6 +1,8 @@
 @use "../../assets/styles/variables" as *;
 @use "../../assets/styles/mixins" as *;
 
+// Renamed this component to 'Alerts' midway through development at client request, 'network' still referred to in code naming. 
+
 .network {
   display: flex;
   flex-direction: column;

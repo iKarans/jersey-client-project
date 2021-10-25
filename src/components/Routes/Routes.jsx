@@ -1,5 +1,5 @@
 import React from 'react'
-import Network from '../Network/Network'
+import Alerts from '../Network/Alerts'
 import { Route, Switch } from 'react-router-dom'
 import Dashboard from '../Dashboard/Dashboard'
 import Devices from '../Devices/Devices'
@@ -34,10 +34,10 @@ const Routes = () => {
                <SideNav selectedPage= "Security"  />
                <Security />
             </Route>
-            <Route exact path="/network">
-               <Header pageHeading="Network"/>
-               <SideNav selectedPage= "Network"  />
-               <Network />
+            <Route exact path="/alerts">
+               <Header pageHeading="Alerts"/>
+               <SideNav selectedPage= "Alerts"  />
+               <Alerts />
             </Route>
                <SideNav selectedPage= "Settings"  />
                <Route exact path="/settings">

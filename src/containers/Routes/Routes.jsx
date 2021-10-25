@@ -1,6 +1,6 @@
 import React from "react";
 import "./Routes.scss";
-import Network from "../Network/Network";
+import Alerts from "../Network/Alerts";
 import { Route, Switch } from "react-router-dom";
 import Dashboard from "../Dashboard/Dashboard";
 import Devices from "../Devices/Devices";
@@ -41,13 +41,13 @@ const Routes = () => {
             <Security />
           </div>
         </Route>
-        <Route exact path="/network">
+        <Route exact path="/alerts">
           <div className="routes__sidenav">
-            <SideNav selectedPage="Network" />
+            <SideNav selectedPage="Alerts" />
           </div>
           <div className="routes__container-network">
             <Header pageHeading="Alerts" />
-            <Network />
+            <Alerts />
           </div>
         </Route>
         <Route path="/dashboard">

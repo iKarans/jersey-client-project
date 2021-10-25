@@ -10,7 +10,7 @@ import { ReactComponent as NetworkIcon } from "../../../assets/nav/network.svg";
 import { ReactComponent as SettingsIcon } from "../../../assets/nav/settings.svg";
 import { ReactComponent as GreyDropdown } from "../../../assets/global/grey-dropdown.svg";
 
-const SideNav = props => {
+const SideNav = (props) => {
   const { selectedPage } = props;
 
   const [showNav, setShowNav] = useState(false);
@@ -48,7 +48,7 @@ const SideNav = props => {
           </div>
           <div className="side-nav__network side-nav__item">
             <NetworkIcon className="side-nav__item--image" />
-            <Link to="/network" className="side-nav__text">
+            <Link to="/alerts" className="side-nav__text">
               Alerts
             </Link>
           </div>

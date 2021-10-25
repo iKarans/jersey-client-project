@@ -11,8 +11,9 @@ import FilterIcon from "../../assets/devices/filterIcon.png";
 import WhiteDropDown from "../../assets/global/white-dropdown.svg";
 import NetworkArrow from "../../assets/network/network-arrow.svg"
 
-import "./Network.scss";
+import "./Alerts.scss";
 
+// Renamed this component to 'Alerts' midway through development at client request, 'network' still referred to in code naming. 
 const Network = () => {
   const [pages, setPages] = useState(0);
   const [splitNetworkArrays] = useState([]);
