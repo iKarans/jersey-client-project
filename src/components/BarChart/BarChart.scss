@@ -2,44 +2,37 @@
 @use "../../assets/styles/mixins" as *;
 .bar-chart {
   position: relative;
-  border: 1px solid white;
-  border-radius: 25px;
-  height: 385px;
-  width:  100%;
-  display: flex;
-  flex-direction: column;
-  justify-items: flex-start;
+  height: 35vh;
+  width: 30vw;
+  display: grid;
+  justify-items: center;
   align-content: center;
   font-family: "Inter", sans-serif;
   background-color: white;
   border-radius: 10px;
-  margin-bottom: 400px;
-
   @include mobile {
-    height: 360px;
+    display: unset;
+    height: 300px;
     width: 320px;
     margin-bottom: 10px;
   }
-
   &__chart-container {
-    height: 250px;
-    width: 24vw;
+    height: 25vh;
+    width: 25vw;
+    padding-bottom: 20px;
     background-color: white;
-    margin-left: 15px;
-
     @include mobile {
-      margin: 0px;
       position: absolute;
+      top: 40px;
       left: 20px;
-      top: 60px;
-      height: 30vh;
-      width: 60vw;
+      height: 235px;
+      width: 250px;
     }
   }
   &__title {
-    width: 100%;
-    margin: 30px;
-
+    justify-self: start;
+    padding-left: 10px;
+    margin: 20px;
     @include mobile {
       position: relative;
       margin: 10px;
