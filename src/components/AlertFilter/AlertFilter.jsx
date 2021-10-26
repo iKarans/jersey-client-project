@@ -1,7 +1,7 @@
 import React from 'react';
-import "./alertFilter.scss";
+import "./AlertFilter.scss";
 
-const AlertFilter = () => {
+const AlertFilter = (props) => {
   const {handleFilterCheckbox, handleIsLowImportance, handleIsHighImportance, handleIsLessHour, handleIsLessThreeHour} = props
 
   return (

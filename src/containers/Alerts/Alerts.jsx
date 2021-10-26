@@ -1,5 +1,13 @@
 import React, { useState } from "react";
-import { isDeviceChecked } from "./AlertFunctions";
+import { isDeviceChecked } from "./AlertFunctions.js";
+import { 
+  handleChangeLoggedOn,
+  handleChangeOutage,
+  handleChangeHighRisk,
+  handleChangeDevice,
+ } from "./AlertFunctions.js";
+ 
+ import AlertFilter from "../../components/AlertFilter/AlertFilter.jsx";
 import AlertItem from "../../components/AlertItem/AlertItem";
 import ChatButton from "../../components/ChatButton/ChatButton";
 import AlertPageButton from "../../components/AlertPageButton/AlertPageButton";
@@ -30,6 +38,59 @@ const Alerts = () => {
   };
 
   const alertsArray = [...alerts];
+
+  /// Karans Messing around
+  const [filtersArray, setFiltersArray] = useState([])
+  const handleFilterCheckbox = (event) => {
+    let tempArr = [...filtersArray];
+    if(tempArr.includes(event.target.id)) {
+      tempArr.splice(tempArr.indexOf(event.target.id), 1);
+    } else {
+      tempArr.push(event.target.id);
+    }
+    setFiltersArray(tempArr);
+  }
+  // importance Level
+  const [isLowImportance, setLowImportanceLevel] = useState(false);
+  const [isHighImportance, setHighImportanceLevel] = useState(false);
+  const handleIsLowImportance = () => {
+    setLowImportanceLevel(!isLowImportance);
+  }
+  const handleIsHighImportance = () => {
+    setHighImportanceLevel(!isHighImportance);
+  }
+
+  const [isLessHour, setIsLessHour] = useState(false);
+  const [isLessThreeHour, setIsLessThreeHour] = useState(false);
+  const handleIsLessHour = () => {
+    setIsLessHour(!isLessHour);
+  }
+  const handleIsLessThreeHour = () => {
+    setIsLessThreeHour(!isLessThreeHour);
+  }
+
+const shouldReturn = (network) => {
+  // currentFilters.forEach(filter => {
+  //   if(network.alertType.includes(filter)) {
+  //     console.log("check");
+  //     return true;
+  //   }
+  // })
+  for (let i = 0; i < filtersArray.length; i++) {
+    if (network.alertType.includes(filtersArray[i])) {
+      return true;
+    }
+  }
+  return false;
+};
+
+const networksArrayFilteredBySubHour = alertsArray
+  .filter((network) => {
+    return shouldReturn(network) && (isLowImportance ? network.importanceID == 1 : true) && (isHighImportance ? network.importanceID == 2 : true) && (isLessHour ? network.createdTime <= 60 : true) && (isLessThreeHour ? network.createdTime > 60 : true)
+  })
+  .sort((a, b) => a.createdTime - b.createdTime);
+
+  console.log(networksArrayFilteredBySubHour);
 
   while (alertsArray.length > 0) {
     splitAlertsArrays.push(alertsArray.splice(0, 9));
@@ -72,6 +133,13 @@ const Alerts = () => {
   return (
     <>
       <section className="alerts">
+      <AlertFilter
+          handleFilterCheckbox={handleFilterCheckbox}
+          handleIsLowImportance={handleIsLowImportance}
+          handleIsHighImportance={handleIsHighImportance}
+          handleIsLessHour={handleIsLessHour}
+          handleIsLessThreeHour={handleIsLessThreeHour}
+        />
         <div className="alerts__search">
           <div className="alerts__search-box">
             <img className="alerts__icons" src={SearchIcon} alt="search-icon" />
