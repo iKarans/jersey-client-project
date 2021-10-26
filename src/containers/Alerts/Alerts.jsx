@@ -1,5 +1,12 @@
 import React, { useState } from "react";
-import { isDeviceChecked } from "./AlertFunctions";
+import { isDeviceChecked } from "./AlertFunctions.js";
+import { 
+  handleChangeLoggedOn,
+  handleChangeOutage,
+  handleChangeHighRisk,
+  handleChangeDevice,
+ } from "./AlertFunctions.js";
+ import AlertFilter from "../../components/AlertFilter/AlertFilter.jsx";
 import AlertItem from "../../components/AlertItem/AlertItem";
 import ChatButton from "../../components/ChatButton/ChatButton";
 import AlertPageButton from "../../components/AlertPageButton/AlertPageButton";

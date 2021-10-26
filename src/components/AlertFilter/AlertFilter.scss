@@ -2,16 +2,12 @@
 @use "../../assets/styles/mixins" as *;
 @use "../../assets/styles/typography" as *;
 
-
-<<<<<<< HEAD:src/components/NetworkFilter/NetworkFilter.scss
-.network-filters {
+ 
+.alert-filters {
   position: absolute;
   background: white;
   top: 30px;
   right: 0px;
-=======
-.alert-filters {
->>>>>>> 4524774d9a73fedd6d791e93f45c43f4fab9de87:src/components/AlertFilter/AlertFilter.scss
   border-radius: 7px;
   height: 408px;
   width: 190px;
