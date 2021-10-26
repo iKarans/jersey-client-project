@@ -62,8 +62,8 @@ export const DeviceList = () => {
       </div>
       <div className="devices__list">
         {deviceList && deviceList.length !== 0 ? (
-          deviceList.map((device) => (
-            <DeviceBar key={device.name} device={device} />
+          deviceList.map((device, index) => (
+            <DeviceBar key={device.name + index} device={device} />
           ))
         ) : (
           <p>no devices found</p>
