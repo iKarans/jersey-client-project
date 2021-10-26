@@ -66,6 +66,7 @@ const Dashboard = () => {
           labels={largeLineGraphLabels}
           data={largeLineGraphData}
           max={largeLineGraphMax}
+          hoverLabel={largeLineGraphHoverLabel}
         />
         <BarChart
           dataset={dataset}

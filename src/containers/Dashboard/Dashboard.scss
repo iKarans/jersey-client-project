@@ -2,17 +2,22 @@
 @use "../../assets/styles/variables" as *;
 
 .dashboard__content {
-    padding: 15vh 2vw;
+    padding: 10vh 5vw;
     max-width: 100%;
-
+    height: 90vh;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(2, 1fr);
     column-gap: 1.5vh;
     row-gap: 3vw;
     justify-items: stretch;
 
+
     @include mobile {
     grid-template-columns: 1fr;
     }
-}
 
+    
+
+  }
+  

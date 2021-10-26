@@ -32,6 +32,9 @@ const LargeLineGraph = (props) => {
             <img src={icon} alt="" className="network-devices__icon" />
       <h2 className="network-devices__title">{title}</h2>
       <p className="network-devices__subtitle">{subtitle}</p>
+      <div className="network-devices__chart">
+
+      
       <div className="network-devices__chart-container">
         <Line
           data={generateGraphSettings}
@@ -75,6 +78,7 @@ const LargeLineGraph = (props) => {
             },
           }}
         />
+      </div>
       </div>
     </div>
   );
