@@ -2,6 +2,7 @@ import React from 'react'
 import "./CalculationSummary.scss";
 import Tick from "../../assets/login/green-tick.svg";
 import Cross from "../../assets/login/red-cross.svg";
+import RightArrow from "../../assets/global/right-arrow.svg";
 
 const CalulationSummary = () => {
     return (
@@ -27,11 +28,12 @@ const CalulationSummary = () => {
 
                 <div className="calculation__button">
                     <button className="calculation__button--refresh">Refresh</button>
-                    <button className="calculation__button--more">Find out more</button>
+                    <button className="calculation__button--more">Find out more 
+                    <img src={RightArrow} alt="" /></button>
                 </div>
             </div>
         </div>
     )
 }
 
-export default CalulationSummary
+export default CalulationSummary;
