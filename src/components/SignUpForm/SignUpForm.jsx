@@ -1,15 +1,26 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 
 import ShowPassword from "../../assets/login/show-password.svg";
 import HidePassword from "../../assets/login/hide-password.svg";
 
 import { ReactComponent as ValidInputIcon } from "../../assets/login/green-tick.svg";
 import { ReactComponent as InvalidInputIcon } from "../../assets/login/red-cross.svg";
-
+import { createUserWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../../firebase";
 import "./SignUpForm.scss";
 
 const SignUpForm = () => {
+  let history = useHistory();
+  const handleSignUp = (event) => {
+    event.preventDefault();
+    createUserWithEmailAndPassword(
+      auth,
+      userDetails.email,
+      userDetails.password
+    );
+    history.push("/");
+  };
   const [validPassword, setValidPassword] = useState({
     checkLength: false,
     checkUpperCase: false,
@@ -79,7 +90,11 @@ const SignUpForm = () => {
         >
           Go Back
         </button>
-        <button className="signup-form__button--signup" disabled={!checksPass}>
+        <button
+          className="signup-form__button--signup"
+          disabled={!checksPass}
+          onClick={handleSignUp}
+        >
           Sign Up
         </button>
       </div>
@@ -285,7 +300,7 @@ const SignUpForm = () => {
 
   return (
     <div className="signup">
-      <form action="submit" className="signup-form">
+      <form action="submit" className="signup-form" onSubmit={handleSignUp}>
         {inputJSX()}
         {userDetailsStage ? buttonJSX() : twoButtonsJSX()}
       </form>

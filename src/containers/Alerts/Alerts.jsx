@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { isDeviceChecked } from "./NetworkFunctions";
+// import { isDeviceChecked } from "./NetworkFunctions";
 import NetworkItem from "../../components/NetworkItem/NetworkItem";
 import ChatButton from "../../components/ChatButton/ChatButton";
 import NetworkPageButton from "../../components/NetworkPageButton/NetworkPageButton";
