@@ -8,10 +8,11 @@ import { auth } from "../../firebase";
 import "./LoginForm.scss";
 
 const LoginForm = () => {
+  const handleLogin = (event) => {
+    event.preventDefault();
+    signInWithEmailAndPassword(auth, userDetails.email, userDetails.password);
+  };
 
-
-
-  
   const [userDetails, setUserDetails] = useState({
     email: "",
     password: "",
@@ -25,7 +26,6 @@ const LoginForm = () => {
   };
 
   console.log(userDetails);
-
 
   const [showPassword, setShowPassword] = useState(false);
   const handleShowPassword = () => {
@@ -46,7 +46,7 @@ const LoginForm = () => {
           name="email"
           className="login-form__input"
           onChange={handleInput}
-          // value={userDetails.email}
+          value={userDetails.email}
         />
         <label htmlFor="password" className="login-form__label">
           Password
@@ -58,7 +58,7 @@ const LoginForm = () => {
             name="password"
             className="login-form__input"
             onChange={handleInput}
-            // value={userDetails.password}
+            value={userDetails.password}
           />
           {!showPassword && (
             <img
@@ -87,7 +87,7 @@ const LoginForm = () => {
             Remember Me
           </label>
         </div>
-        <button className="login-form__button">Login</button>
+        <button className="login-form__button" onClick={handleLogin}>Login</button>
       </form>
 
       <p className="login-signup">
