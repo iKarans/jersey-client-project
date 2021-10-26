@@ -1,44 +1,16 @@
 @use "../../assets/styles/variables" as *;
 @use "../../assets/styles/mixins" as *;
 .bar-chart {
-  position: relative;
-  height: 35vh;
-  width: 30vw;
   display: grid;
-  justify-items: center;
-  align-content: center;
-  font-family: "Inter", sans-serif;
-  background-color: white;
-  border-radius: 10px;
-  @include mobile {
-    display: unset;
-    height: 300px;
-    width: 320px;
-    margin-bottom: 10px;
-  }
+  background-color: $text-tertiary;
+  padding: 20px;
+
   &__chart-container {
-    height: 25vh;
-    width: 25vw;
-    padding-bottom: 20px;
-    background-color: white;
-    @include mobile {
-      position: absolute;
-      top: 40px;
-      left: 20px;
-      height: 235px;
-      width: 250px;
-    }
+      width: 50%;
   }
-  &__title {
-    justify-self: start;
-    padding-left: 10px;
-    margin: 20px;
-    @include mobile {
-      position: relative;
-      margin: 10px;
-      top: 10px;
-      left: 10px;
-      font-size: medium;
-    }
-  }
+
+//   &__chart-container {
+//       max-height: 70%;
+//     width: 25vw;
+//   }
 }

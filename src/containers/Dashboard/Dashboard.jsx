@@ -58,8 +58,8 @@ const Dashboard = () => {
   const dropboxChartHoverLabel = "Dropbox usage";
 
   return (
-    <div className="dashboard">
-      <div className="dashboard__content">
+
+    <div className="dashboard__content">
         <LargeLineGraph
           title={largeLineGraphTitle}
           subtitle={largeLineGraphSubtitle}
@@ -72,11 +72,8 @@ const Dashboard = () => {
           title={"Security Risk Breakdown"}
           labels={["N/A", "Low", "Medium", "High"]}
         />
-        <div className="placeholder"></div>
-        <div className="placeholder"></div>
-      </div>
-
-      <GoogleDriveChart
+       
+       <GoogleDriveChart
         title={googleDriveChartTitle}
         subtitle={googleDriveChartSubtitle}
         data={googleDriveChartData}
@@ -94,7 +91,7 @@ const Dashboard = () => {
         max={dropboxChartMax}
         icon={DropboxIcon}
         hoverLabel={dropboxChartHoverLabel}/>
-    </div>
+      </div>
   );
 };
 
