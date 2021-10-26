@@ -29,7 +29,7 @@ const LargeLineGraph = (props) => {
   
   return (
     <div className="network-devices">
-        <img src={icon} alt="" className="network-devices__icon" />
+            <img src={icon} alt="" className="network-devices__icon" />
       <h2 className="network-devices__title">{title}</h2>
       <p className="network-devices__subtitle">{subtitle}</p>
       <div className="network-devices__chart-container">

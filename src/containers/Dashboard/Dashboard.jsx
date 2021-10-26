@@ -4,7 +4,7 @@ import LargeLineGraph from "../../components/LargeLineGraph/LargeLineGraph.jsx";
 import BarChart from "../../components/BarChart/BarChart";
 import { dataset } from "../../data/securityRisk";
 import GoogleDriveChart from "../../components/GoogleDriveChart/GoogleDriveChart";
-import GoogleDriveIcon from "../../assets/dashboard/gmail.png";
+import GoogleDriveIcon from "../../assets/dashboard/gmail1.png";
 import DropboxChart from "../../components/DropboxChart/DropboxChart";
 import DropboxIcon from "../../assets/dashboard/dropbox.png"
 
