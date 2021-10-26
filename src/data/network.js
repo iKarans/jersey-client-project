@@ -116,7 +116,7 @@ export const networks = [
     created: "47 minutes ago",
     importanceLevel: "High",
     createdTime: 47,
-    importanceID: 3,
+    importanceID: 2,
   },
   {
     alertType: "Device Logged On",
@@ -183,6 +183,6 @@ export const networks = [
     created: "123 minutes ago",
     importanceLevel: "High",
     createdTime: 123,
-    importanceID: 3,
+    importanceID: 1,
   },
 ];

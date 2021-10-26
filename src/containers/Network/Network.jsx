@@ -36,8 +36,37 @@ const Network = () => {
       setPages(pages + 1);
     }
   };
-
   const networksArray = [...networks];
+
+    /// Karans Messing around
+    const [filtersArray, setFiltersArray] = useState([])
+    const handleFilterCheckbox = (event) => {
+      let tempArr = [...filtersArray];
+      if(tempArr.includes(event.target.id)) {
+        tempArr.splice(tempArr.indexOf(event.target.id), 1);
+      } else {
+        tempArr.push(event.target.id);
+      }
+      setFiltersArray(tempArr);
+    }
+    // importance Level
+    const [isLowImportance, setLowImportanceLevel] = useState(false);
+    const [isHighImportance, setHighImportanceLevel] = useState(false);
+    const handleIsLowImportance = () => {
+      setLowImportanceLevel(!isLowImportance);
+    }
+    const handleIsHighImportance = () => {
+      setHighImportanceLevel(!isHighImportance);
+    }
+
+    const [isLessHour, setIsLessHour] = useState(false);
+    const [isLessThreeHour, setIsLessThreeHour] = useState(false);
+    const handleIsLessHour = () => {
+      setIsLessHour(!isLessHour);
+    }
+    const handleIsLessThreeHour = () => {
+      setIsLessThreeHour(!isLessThreeHour);
+    }
 
   const shouldReturn = (network) => {
     // currentFilters.forEach(filter => {
@@ -46,8 +75,8 @@ const Network = () => {
     //     return true;
     //   }
     // })
-    for (let i = 0; i < checkListArray.length; i++) {
-      if (network.alertType.includes(checkListArray[i])) {
+    for (let i = 0; i < filtersArray.length; i++) {
+      if (network.alertType.includes(filtersArray[i])) {
         return true;
       }
     }
@@ -55,22 +84,17 @@ const Network = () => {
   };
 
 
-  const callThis = () => {
   const networksArrayFilteredBySubHour = networksArray
     .filter((network) => {
-      return shouldReturn(network);
+      return shouldReturn(network) && (isLowImportance ? network.importanceID == 1 : true) && (isHighImportance ? network.importanceID == 2 : true) && (isLessHour ? network.createdTime <= 60 : true) && (isLessThreeHour ? network.createdTime > 60 : true)
     })
     .sort((a, b) => a.createdTime - b.createdTime);
+  
+    console.log(networksArrayFilteredBySubHour);
 
   while (networksArray.length > 0) {
     splitNetworkArrays.push(networksArray.splice(0, 9));
   }
-  console.log(networksArrayFilteredBySubHour);
-}
-
-
-
-
 
   const networkItemJSX = splitNetworkArrays[pages].map((network, index) => {
     return (
@@ -111,11 +135,16 @@ const Network = () => {
     <>
       <section className="network">
         <NetworkFilter
-          onclick={toggleFilterBox}
-          handleChangeDevice={handleChangeDevice}
-          handleChangeHighRisk={handleChangeHighRisk}
-          handleChangeLoggedOn={handleChangeLoggedOn}
-          handleChangeOutage={handleChangeOutage}
+          // onclick={toggleFilterBox}
+          // handleChangeDevice={handleChangeDevice}
+          // handleChangeHighRisk={handleChangeHighRisk}
+          // handleChangeLoggedOn={handleChangeLoggedOn}
+          // handleChangeOutage={handleChangeOutage}
+          handleFilterCheckbox={handleFilterCheckbox}
+          handleIsLowImportance={handleIsLowImportance}
+          handleIsHighImportance={handleIsHighImportance}
+          handleIsLessHour={handleIsLessHour}
+          handleIsLessThreeHour={handleIsLessThreeHour}
         />
         <div className="network__search">
           <div className="network__search-box">
