@@ -21,4 +21,6 @@ const firebaseConfig = {
 /* eslint-disable no-unused-vars */
 const app = initializeApp(firebaseConfig);
 
+
 export const auth = getAuth();
+

@@ -2,10 +2,31 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import ShowPassword from "../../assets/login/show-password.svg";
 import HidePassword from "../../assets/login/hide-password.svg";
+import { signInWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../../firebase";
 
 import "./LoginForm.scss";
 
 const LoginForm = () => {
+
+
+
+  
+  const [userDetails, setUserDetails] = useState({
+    email: "",
+    password: "",
+  });
+
+  const handleInput = (event) => {
+    const userInput = event.target.value;
+    const userInputName = event.target.name;
+    const userInputsObj = { ...userDetails, [userInputName]: userInput };
+    setUserDetails(userInputsObj);
+  };
+
+  console.log(userDetails);
+
+
   const [showPassword, setShowPassword] = useState(false);
   const handleShowPassword = () => {
     setShowPassword(!showPassword);
@@ -19,7 +40,14 @@ const LoginForm = () => {
         <label htmlFor="email" className="login-form__label">
           Email Address
         </label>
-        <input type="text" id="email" className="login-form__input" />
+        <input
+          type="text"
+          id="email"
+          name="email"
+          className="login-form__input"
+          onChange={handleInput}
+          // value={userDetails.email}
+        />
         <label htmlFor="password" className="login-form__label">
           Password
         </label>
@@ -27,7 +55,10 @@ const LoginForm = () => {
           <input
             type={!showPassword ? "password" : "text"}
             id="password"
+            name="password"
             className="login-form__input"
+            onChange={handleInput}
+            // value={userDetails.password}
           />
           {!showPassword && (
             <img
