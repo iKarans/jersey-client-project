@@ -1,7 +1,9 @@
 @use "../../assets/styles/variables" as *;
 @use "../../assets/styles/mixins" as *;
 
-.network {
+
+
+.alerts {
   display: flex;
   flex-direction: column;
   height: 70vh;
@@ -42,20 +44,20 @@
       display: flex;
       justify-content: flex-end;
 
-      .network-sort,
-      .network-filter {
+      .alerts-sort,
+      .alerts-filter {
         display: flex;
         height: 100%;
         margin-left: 2rem;
 
-        .network__text-paragraph {
+        .alerts__text-paragraph {
           font-size: 0.875rem;
           margin-left: 0.7rem;
           color: rgba(115, 120, 134, 1);
           font-weight: 400;
         }
 
-        .network__icons {
+        .alerts__icons {
           height: 60%;
           cursor: pointer;
           margin-top: 0.2rem;
@@ -64,7 +66,7 @@
     }
   }
 
-  &-alerts {
+  &-table {
 
     
     &__header {

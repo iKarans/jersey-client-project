@@ -59,22 +59,21 @@ const Dashboard = () => {
 
   return (
     <div className="dashboard">
-      <div className="dashboard__large-line-graph">
+      <div className="dashboard__content">
         <LargeLineGraph
           title={largeLineGraphTitle}
           subtitle={largeLineGraphSubtitle}
           labels={largeLineGraphLabels}
           data={largeLineGraphData}
           max={largeLineGraphMax}
-          hoverLabel={largeLineGraphHoverLabel}
         />
-      </div>
-      <div className="dashboard__bar-chart">
         <BarChart
           dataset={dataset}
           title={"Security Risk Breakdown"}
           labels={["N/A", "Low", "Medium", "High"]}
         />
+        <div className="placeholder"></div>
+        <div className="placeholder"></div>
       </div>
 
       <GoogleDriveChart
