@@ -12,7 +12,7 @@ import { Link } from "react-router-dom";
 import lujamIcon from '../../assets/devices/lujam-logo-green.svg'
 
 export const DeviceBar = (props) => {
-  const { name, deviceType, brand, manufacturer, model, opSystem, lastIP, lastActive, lastSeen, securityRisk } =
+  const { name, deviceType, brand, manufacturer, model, opSystem, lastIP, lastSeen, securityRisk } =
     props.device;
 
   const typeIcon = () => {
