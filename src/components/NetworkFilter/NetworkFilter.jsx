@@ -2,7 +2,7 @@ import React from "react";
 import "./NetworkFilter.scss";
 
 const NetworkFilter = (props) => {
-  const {handleChangeDevice, handleChangeHighRisk, handleChangeLoggedOn, handleChangeOutage, handleChangeLessThanHour, handleChangeOneToThreeHours, handleChangeLowImportance, handleChangeHighImportance} = props
+  const {handleChangeDevice, handleChangeHighRisk, handleChangeLoggedOn, handleChangeOutage, handleChangeLessThanHour, handleChangeOneToThreeHours, handleChangeLowImportance, handleChangeHighImportance, toggleFilterBox} = props
   
 
   
@@ -63,7 +63,7 @@ const NetworkFilter = (props) => {
           </label>
           <form />
         </div>
-        <div className="network-filters__apply">
+        <div className="network-filters__apply" onClick={toggleFilterBox}>
           <p>Apply</p>
         </div>
       </div>

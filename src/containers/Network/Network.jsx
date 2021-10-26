@@ -24,6 +24,7 @@ import NetworkFilter from "../../components/NetworkFilter/NetworkFilter";
 const Network = () => {
   const [pages, setPages] = useState(0);
   const [splitNetworkArrays] = useState([]);
+  const [filterStatus, setFilterStatus] = useState(false);
 
   const handleDecrement = () => {
     if (pages > 0) {
@@ -54,8 +55,6 @@ const Network = () => {
     return false;
   };
 
-
-  const callThis = () => {
   const networksArrayFilteredBySubHour = networksArray
     .filter((network) => {
       return shouldReturn(network);
@@ -66,11 +65,6 @@ const Network = () => {
     splitNetworkArrays.push(networksArray.splice(0, 9));
   }
   console.log(networksArrayFilteredBySubHour);
-}
-
-
-
-
 
   const networkItemJSX = splitNetworkArrays[pages].map((network, index) => {
     return (
@@ -92,7 +86,9 @@ const Network = () => {
       buttonNumbers.push(i);
     }
   };
-  const toggleFilterBox = () => {};
+  const toggleFilterBox = () => {
+    setFilterStatus(!filterStatus);
+  };
 
   generateButtonIndex();
 
@@ -110,13 +106,17 @@ const Network = () => {
   return (
     <>
       <section className="network">
-        <NetworkFilter
-          onclick={toggleFilterBox}
-          handleChangeDevice={handleChangeDevice}
-          handleChangeHighRisk={handleChangeHighRisk}
-          handleChangeLoggedOn={handleChangeLoggedOn}
-          handleChangeOutage={handleChangeOutage}
-        />
+        <div
+          className={`${filterStatus ? "network__filter-active" : "network__filter-inactive"}`}
+        >
+          <NetworkFilter
+            toggleFilterBox={toggleFilterBox}
+            handleChangeDevice={handleChangeDevice}
+            handleChangeHighRisk={handleChangeHighRisk}
+            handleChangeLoggedOn={handleChangeLoggedOn}
+            handleChangeOutage={handleChangeOutage}
+          />
+        </div>
         <div className="network__search">
           <div className="network__search-box">
             <img
@@ -141,7 +141,9 @@ const Network = () => {
                 src={FilterIcon}
                 alt="filter-icon"
               />
-              <p className="network__text-paragraph">Filter</p>
+              <p className="network__text-paragraph" onClick={toggleFilterBox}>
+                Filter
+              </p>
             </div>
           </div>
         </div>
