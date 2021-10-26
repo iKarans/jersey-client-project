@@ -74,11 +74,7 @@ const Alerts = () => {
       <section className="alerts">
         <div className="alerts__search">
           <div className="alerts__search-box">
-            <img
-              className="alerts__icons"
-              src={SearchIcon}
-              alt="search-icon"
-            />
+            <img className="alerts__icons" src={SearchIcon} alt="search-icon" />
             <input
               type="text"
               placeholder="Search Alerts"
