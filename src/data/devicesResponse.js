@@ -9,6 +9,7 @@ const devicesResponse = [{
   "deviceId": 34840,
   "network": "Winsford-test",
   "cidr": "81.XXX.XXX.137",
+  "manufacturer": "Apple",
   "networkId": 966,
   "macHash": "5a6322f2d7aeb9d8735fcabbf5bdd634",
   "bonjourLastSeen": "Oct 18, 2021 7:31:15 PM",
@@ -30,7 +31,9 @@ const devicesResponse = [{
   "gateway": 0,
   "status": "ENABLED",
   "deviceType": "mobile",
-  "model": "iPhone X"
+  "model": "iPhone X",
+  "opSystem": "OSX",
+  "securityRisk": "low"
 }, {
   "hostName": "LuJamNetPicket",
   "subnet": 0,
@@ -63,7 +66,9 @@ const devicesResponse = [{
   "gateway": 0,
   "status": "ENABLED",
   "deviceType": "laptop",
-  "model": "XPS 15"
+  "model": "XPS 15",
+  "opSystem": "Linux",
+  "securityRisk": "medium"
 }, {
   "hostName": "Richards-MBP",
   "subnet": 0,
@@ -98,7 +103,9 @@ const devicesResponse = [{
   "gateway": 0,
   "status": "ENABLED",
   "deviceType": "laptop",
-  "model": "iPhone X"
+  "model": "iPhone X",
+  "opSystem": "Windows 11",
+  "securityRisk": "high"
 }, {
   "hostName": "",
   "subnet": 0,
@@ -129,7 +136,9 @@ const devicesResponse = [{
   "gateway": 1,
   "status": "ENABLED",
   "deviceType": "laptop",
-  "model": "iPhone X"
+  "model": "iPhone X",
+  "opSystem": "Windows 10",
+  "securityRisk": "low"
 }];
 
 export default devicesResponse;

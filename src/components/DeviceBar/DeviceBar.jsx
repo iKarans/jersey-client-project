@@ -9,43 +9,50 @@ import samsungIcon from "../../assets/devices/samsung.svg";
 import laptopIcon from "../../assets/devices/laptop.svg";
 import mobileIcon from "../../assets/devices/mobile.svg";
 import { Link } from "react-router-dom";
+import lujamIcon from '../../assets/devices/lujam-logo-green.svg'
 
 export const DeviceBar = (props) => {
-  const { name, type, brand, model, OS, ipAddress, lastActive, securityRisk } =
+  const { name, deviceType, brand, manufacturer, model, opSystem, lastIP, lastActive, securityRisk } =
     props.device;
 
   const typeIcon = () => {
     let typeText = "";
-    type === "laptop" ? (typeText = laptopIcon) : (typeText = mobileIcon);
+    deviceType === "laptop" ? (typeText = laptopIcon) : (typeText = mobileIcon);
     return typeText;
   };
 
+
+
   const brandIcon = () => {
     let brandText = "";
-    if (brand === "dell") {
+    let manufacturerToLower = manufacturer.toLowerCase()
+    if (manufacturerToLower.includes("dell")) {
       brandText = dellIcon;
       return brandText;
-    } else if (brand === "apple") {
+    } else if (manufacturerToLower.includes("apple")) {
       brandText = appleIcon;
       return brandText;
-    } else if (brand === "huawei") {
+    } else if (manufacturerToLower.includes("huaewi")) {
       brandText = huaweiIcon;
       return brandText;
-    } else if (brand === "lenovo") {
+    } else if (manufacturerToLower.includes("lenovo")) {
       brandText = lenovoIcon;
       return brandText;
-    } else if (brand === "samsung") {
+    } else if (manufacturerToLower.includes("samsung")) {
       brandText = samsungIcon;
+      return brandText;
+    } else {
+      brandText = lujamIcon;
       return brandText;
     }
   };
 
   return (
     <div className="device-bar">
-        <Link to={`/device/${name}`}><h4 className="device-bar__device-name">{name}</h4></Link>
+      <Link to={`/device/${name}`}><h4 className="device-bar__device-name">{name}</h4></Link>
       <img
         src={typeIcon()}
-        alt={type}
+        alt={deviceType}
         className="device-bar__hidden-on-mobile"
       />
       <img
@@ -54,8 +61,8 @@ export const DeviceBar = (props) => {
         className="device-bar__hidden-on-mobile"
       />
       <p className="device-bar__hidden-on-mobile">{model}</p>
-      <p className="device-bar__hidden-on-mobile"> {OS}</p>
-      <p className="device-bar__hidden-on-mobile">{ipAddress}</p>
+      <p className="device-bar__hidden-on-mobile"> {opSystem}</p>
+      <p className="device-bar__hidden-on-mobile">{lastIP}</p>
       <p className="device-bar__hidden-on-mobile">{lastActive}</p>
 
       <span
