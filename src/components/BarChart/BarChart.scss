@@ -7,21 +7,26 @@
   border-radius: 10px;
   box-shadow: 0px 3.5px 5.5px rgba(0, 0, 0, 0.02);
   color: $text-secondary;
-
-  &:nth-child(2) {
-    grid-column: 8 / 13;
-  }
+  grid-column: 8 / 13;
+  width: 100%;
+  min-width: 100%;
+  height: 100%;
+  min-height: 100%;
 
   &__chart {
-    width: 100%;
     display: flex;
     justify-content: flex-start;
     grid-column: 1 / 3;
+    width: 100%;
     min-width: 100%;
+    height: 100%;
+    min-height: 100%;
 
       &-container {
         width: 100%;
         min-width: 100%;
+        height: 100%;
+        min-height: 100%;
       }
 
   }
