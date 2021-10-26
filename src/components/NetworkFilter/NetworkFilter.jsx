@@ -1,5 +1,4 @@
 import React from "react";
-import { handleChangeHighImportance, handleChangeLessThanHour, handleChangeLowImportance, handleChangeOnetoThreeHours } from "../../containers/Network/NetworkFunctions";
 import "./NetworkFilter.scss";
 
 const NetworkFilter = (props) => {

@@ -2,6 +2,7 @@
 @use "../../assets/styles/mixins" as *;
 
 .network {
+  position: relative;
   display: flex;
   flex-direction: column;
   height: 70vh;
