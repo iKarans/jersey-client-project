@@ -6,7 +6,7 @@ import HidePassword from "../../assets/login/hide-password.svg";
 
 import { ReactComponent as ValidInputIcon } from "../../assets/login/green-tick.svg";
 import { ReactComponent as InvalidInputIcon } from "../../assets/login/red-cross.svg";
-import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
+import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../../firebase";
 import "./SignUpForm.scss";
 
@@ -18,18 +18,7 @@ const SignUpForm = () => {
       auth,
       userDetails.email,
       userDetails.password
-    )
-      .then((userCredential) => {
-        // Signed in
-        console.log(userCredential);
-        const user = userCredential.user;
-        // ...
-      })
-      .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
-        // ..
-      });
+    );
     history.push("/");
   };
   const [validPassword, setValidPassword] = useState({
