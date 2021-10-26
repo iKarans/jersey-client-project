@@ -21,16 +21,16 @@
     
     flex-direction: column;
 
-    &__header {
+    &__title {
         margin-bottom: 15px;
         display: flex;
-        justify-content: flex-start;
+        justify-content: start;
         font-size: 20px;
         font-weight: 500;
         color: #676980;
     }
 
-    &__text {
+    &__paragraph {
         margin-bottom: 30px;
         color: #A0AEC0;
     }
@@ -58,7 +58,7 @@
     padding-left: 25px;
 }
 
-.calculation__container--text{
+.calculation__container--paragraph{
     margin: 5px;
     color: $primary-color;
     
@@ -73,6 +73,7 @@ hr {
     margin-top: 30px;
 
     &--refresh {
+        cursor: pointer;
         height: 35px;
         width: 110px;
         border-radius: 5px;
@@ -82,6 +83,7 @@ hr {
     }
 
     &--more {
+        cursor: pointer;
         background: none;
         border: none;
         margin-left: 20px;
