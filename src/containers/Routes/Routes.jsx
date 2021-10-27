@@ -15,11 +15,12 @@ import { UserContext } from "../Context/UserContext/UserContext";
 
 const Routes = () => {
   const { user } = useContext(UserContext);
-  const privateRoute = () => {
-    if (!user) {
-      <Redirect to="/" />;
-    }
-  };
+
+
+  const privateRoute = user ? "" : <Redirect to="/" />;
+  
+  
+
 
   return (
     <div className="routes">

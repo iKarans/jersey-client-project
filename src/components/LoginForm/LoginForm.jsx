@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import ShowPassword from "../../assets/login/show-password.svg";
 import HidePassword from "../../assets/login/hide-password.svg";
 import { signInWithEmailAndPassword } from "firebase/auth";
@@ -8,9 +8,11 @@ import { auth } from "../../firebase";
 import "./LoginForm.scss";
 
 const LoginForm = () => {
+  let history = useHistory();
   const handleLogin = (event) => {
     event.preventDefault();
     signInWithEmailAndPassword(auth, userDetails.email, userDetails.password);
+    history.replace("/security");
   };
 
   const [userDetails, setUserDetails] = useState({
@@ -32,7 +34,7 @@ const LoginForm = () => {
 
   return (
     <div className="login">
-      <form action="submit" className="login-form">
+      <form action="submit" className="login-form" onSubmit={handleLogin}>
         <div className="login-form__rectangle"></div>
         <h3 className="login-form__header">Login</h3>
         <label htmlFor="email" className="login-form__label">
@@ -45,6 +47,7 @@ const LoginForm = () => {
           className="login-form__input"
           onChange={handleInput}
           value={userDetails.email}
+          required
         />
         <label htmlFor="password" className="login-form__label">
           Password
@@ -57,6 +60,7 @@ const LoginForm = () => {
             className="login-form__input"
             onChange={handleInput}
             value={userDetails.password}
+            required
           />
           {!showPassword && (
             <img
@@ -86,9 +90,7 @@ const LoginForm = () => {
           </label>
         </div>
 
-        <button className="login-form__button" onClick={handleLogin}>
-          <Link to="/dashboard"> Login </Link>
-        </button>
+        <button className="login-form__button">Login</button>
       </form>
 
       <p className="login-signup">

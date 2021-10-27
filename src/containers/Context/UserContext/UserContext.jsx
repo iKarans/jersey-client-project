@@ -4,7 +4,7 @@ import { onAuthStateChanged, signOut } from "firebase/auth";
 
 export const UserContext = createContext({});
 
-const UserProvider = (props) => {
+const UserProvider = props => {
   const [user, setUser] = useState(null);
 
 
