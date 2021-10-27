@@ -40,24 +40,19 @@ export const DeviceBar = (props) => {
   const brandIcon = () => {
     let brandText = "";
     let manufacturerToLower = manufacturer.toLowerCase()
-    if (manufacturerToLower.includes("dell")) {
-      brandText = dellIcon;
-      return brandText;
-    } else if (manufacturerToLower.includes("apple")) {
-      brandText = appleIcon;
-      return brandText;
-    } else if (manufacturerToLower.includes("huaewi")) {
-      brandText = huaweiIcon;
-      return brandText;
-    } else if (manufacturerToLower.includes("lenovo")) {
-      brandText = lenovoIcon;
-      return brandText;
-    } else if (manufacturerToLower.includes("samsung")) {
-      brandText = samsungIcon;
-      return brandText;
-    } else {
-      brandText = lujamIcon;
-      return brandText;
+    switch (true) {
+      case manufacturerToLower.includes("dell"):
+        return brandText = dellIcon
+      case manufacturerToLower.includes("apple"):
+        return brandText = appleIcon
+      case manufacturerToLower.includes("huawei"):
+        return brandText = huaweiIcon
+      case manufacturerToLower.includes("lenovo"):
+        return brandText = lenovoIcon
+      case manufacturerToLower.includes("samsung"):
+        return brandText = samsungIcon
+      default:
+        return brandText = lujamIcon
     }
   };
 
