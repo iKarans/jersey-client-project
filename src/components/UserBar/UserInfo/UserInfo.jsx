@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import { Link } from "react-router-dom";
 import "./UserInfo.scss";
 import whiteDropdown from "./../../../assets/global/white-dropdown.svg";
 import { UserContext } from "../../../containers/Context/UserContext/UserContext";
@@ -22,12 +23,15 @@ const UserInfo = (props) => {
         <p className="user-info__title">Admin</p>
         <div className="user-info__dropdown-content">
           <p className="user-info__dropdown-content--link">View Profile</p>
-          <p className="user-info__dropdown-content--link">Settings</p>
-          <button className="user-info__dropdown-content--link" onClick = {handleLogout}>Logout</button>
+          <Link to="/settings" className="user-info__dropdown-content--link">Settings</Link>
+          <span className="user-info__dropdown-content--link" onClick = {handleLogout}>Logout</span>
         </div>
       </div>
     </div>
   );
 };
+
+
+<Link to="/login">Login</Link>
 
 export default UserInfo;
