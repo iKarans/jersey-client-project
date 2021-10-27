@@ -3,8 +3,8 @@ import "./CalculationSummary.scss";
 import Tick from "../../assets/login/green-tick.svg";
 import Cross from "../../assets/login/red-cross.svg";
 import RightArrow from "../../assets/global/right-arrow.svg";
-import { useState } from 'react';
-import CalculationInfo from '../CalculationInfo/CalculationInfo';
+
+
 
 const CalulationSummary = (props) => {
 

@@ -19,6 +19,7 @@ const Security = () => {
       <SecurityScore />
       <CalulationSummary showMoreInfo={showMoreInfo}/>
       {moreInfo && <CalculationInfo  showMoreInfo={showMoreInfo}/>}
+      
 
     </div>
   )

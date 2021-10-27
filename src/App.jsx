@@ -8,9 +8,7 @@ import Routes from "./containers/Routes/Routes";
 
 const App = () => {
   return (
-    <div className="App">
-      <Security />
-      
+    <div className="App">   
       <Router>
         <Routes />
       </Router>
