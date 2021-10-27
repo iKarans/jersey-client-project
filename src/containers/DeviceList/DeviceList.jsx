@@ -1,39 +1,20 @@
 import React, { useState, useEffect } from "react";
-import { devices, order } from "../../data/devices";
 import DeviceBar from "../../components/DeviceBar/DeviceBar";
 import searchIcon from "../../assets/devices/searchIcon.png";
 import filterIcon from "../../assets/devices/filterIcon.png";
 import sortIcon from "../../assets/devices/sortIcon.png";
+
+import devicesResponse from '../../data/devicesResponse'
+
 import "./DeviceList.scss";
 
 export const DeviceList = () => {
   const [searchTerm, setSearchTerm] = useState("");
-  const [deviceList, setDeviceList] = useState([]);
-  const [sorted, setSorted] = useState(false);
-  const [filtered, setFiltered] = useState(false);
-  const sortDevices = () => {
-    if (!sorted) {
-      setDeviceList(
-        [...devices].sort((a, b) => {
-          return order[a.securityRisk] - order[b.securityRisk];
-        })
-      );
-    } else {
-      setDeviceList(devices);
-    }
-    setSorted(!sorted);
-  };
-  const filterDevices = () => {
-    if (!filtered) {
-      const highRisk = devices.filter(
-        (device) => device.securityRisk === "high"
-      );
-      setDeviceList(highRisk);
-    } else if (filtered) {
-      setDeviceList(devices);
-    }
-    setFiltered(!filtered);
-  };
+  const [deviceList, setDeviceList] = useState(devicesResponse);
+
+
+
+
   const handleInput = (event) => {
     const input = event.target.value.toLowerCase();
     setSearchTerm(input);
@@ -41,12 +22,12 @@ export const DeviceList = () => {
 
   useEffect(() => {
     if (searchTerm.length !== 0) {
-      const search = devices.filter((device) =>
+      const search = devicesResponse.filter((device) =>
         device.name.toLowerCase().includes(searchTerm)
       );
       setDeviceList(search);
     } else {
-      setDeviceList(devices);
+      setDeviceList(devicesResponse);
     }
   }, [searchTerm]);
 
@@ -65,8 +46,8 @@ export const DeviceList = () => {
           <label htmlFor="deviceSearch" className="search-bar__label"></label>
         </form>
         <div className="devices__search-options--filter-and-sort">
-          <img src={sortIcon} alt="sort icon" onClick={sortDevices} />
-          <img src={filterIcon} alt="filter icon" onClick={filterDevices} />
+          <img src={sortIcon} alt="sort icon" />
+          <img src={filterIcon} alt="filter icon" />
         </div>
       </div>
       <div className="devices__list--labels">
@@ -81,8 +62,8 @@ export const DeviceList = () => {
       </div>
       <div className="devices__list">
         {deviceList && deviceList.length !== 0 ? (
-          deviceList.map((device) => (
-            <DeviceBar key={device.name} device={device} />
+          deviceList.map((device, index) => (
+            <DeviceBar key={device.name + index} device={device} />
           ))
         ) : (
           <p>no devices found</p>
