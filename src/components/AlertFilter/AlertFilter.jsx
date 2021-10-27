@@ -1,5 +1,5 @@
 import React from 'react';
-import "./alertFilter.scss";
+import "./AlertFilter.scss";
 
 const AlertFilter = () => {
 

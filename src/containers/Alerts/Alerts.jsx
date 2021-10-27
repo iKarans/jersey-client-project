@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 
 import AlertItem from "../../components/AlertItem/AlertItem";
+import AlertFilter from "../../components/AlertFilter/AlertFilter";
 import ChatButton from "../../components/ChatButton/ChatButton";
 import AlertPageButton from "../../components/AlertPageButton/AlertPageButton";
 import { alerts } from "../../data/alerts.js";
-
 import SearchIcon from "../../assets/global/search-icon.svg";
 import SortIcon from "../../assets/global/sort-icon.svg";
 import FilterIcon from "../../assets/devices/filterIcon.png";
@@ -21,6 +21,10 @@ const Alerts = () => {
     if (pages > 0) {
       setPages(pages - 1);
     }
+  };
+
+  const toggleFilterBox = () => {
+    setFilterStatus(!filterStatus);
   };
 
   const handleIncrement = () => {
@@ -56,6 +60,8 @@ const Alerts = () => {
     }
   };
 
+
+
   generateButtonIndex();
 
   const buttonJSX = buttonNumbers.map((buttonNumber, index) => {
@@ -72,6 +78,9 @@ const Alerts = () => {
   return (
     <>
       <section className="alerts">
+        <div className={`${filterStatus ? "alert__filter-active" : "alert__filter-inactive"}`}>
+          <AlertFilter />
+        </div>
         <div className="alerts__search">
           <div className="alerts__search-box">
             <img className="alerts__icons" src={SearchIcon} alt="search-icon" />
@@ -92,7 +101,7 @@ const Alerts = () => {
                 src={FilterIcon}
                 alt="filter-icon"
               />
-              <p className="alerts__text-paragraph">Filter</p>
+              <p className="alerts__text-paragraph" onClick={toggleFilterBox}>Filter</p>
             </div>
           </div>
         </div>
