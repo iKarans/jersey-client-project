@@ -1,7 +1,7 @@
 @use "../../assets/styles/variables" as *;
 @use "../../assets/styles/mixins" as *;
 
-.network-alerts__pages-buttons-button{
+.alerts-table__pages-buttons-button{
     width: 2rem;
     height: 2rem;
     border-radius: 4px;
@@ -13,13 +13,14 @@
     cursor: pointer;
     margin: 0 0.1rem;
 
-    .network__left-arrow{
+    
+}
+.alerts__left-arrow{
     transform: rotate(180deg);
     padding-bottom: 0.08rem;
     }
-}
 
-.network__button-active {
+.alert__button-active {
     background-color: $primary-color;
     color: $text-tertiary;
 }
