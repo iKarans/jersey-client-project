@@ -17,6 +17,14 @@ const Alerts = () => {
   const [pages, setPages] = useState(0);
   // const [splitAlertsArrays] = useState([]);
   const [filterStatus, setFilterStatus] = useState(false);
+  const [sortTime, setSortTime] = useState(false);
+  const [sortImportance, setSortImportance] = useState(false);
+  const handleSortImportance = () => {
+    setSortImportance(!sortImportance);
+  }
+  const handleSortTime = () => {
+    setSortTime(!sortTime);
+  }
 
   const handleDecrement = () => {
     if (pages > 0) {
@@ -91,10 +99,14 @@ const Alerts = () => {
          (isLessHour ? alert.createdTime <= 60 : true) &&
          (isLessThreeHour ? alert.createdTime > 60 : true)
        );
-     })
-     .sort((a, b) => a.createdTime - b.createdTime);
+     });
  
    console.log(alertsArrayFiltered);
+   if(sortTime) {
+     alertsArrayFiltered.sort((a,b) => a.createdTime - b.createdTime);
+   } else if(sortImportance) {
+    alertsArrayFiltered.sort((a,b) => b.importanceID - a.importanceID);
+   }
  
   let alertsArrayFilteredSpliced = [];
   if(alertsArrayFiltered.length < 9) {
@@ -104,10 +116,8 @@ const Alerts = () => {
       alertsArrayFilteredSpliced.push(alertsArrayFiltered.splice(0, 9));
     }
   }
-  console.log(alertsArrayFilteredSpliced);
-  console.log(alertsArrayFilteredSpliced[0]);
-
-  const alertsItemJSX = alertsArrayFilteredSpliced[0].map((alert, index) => {
+  
+  const alertsItemJSX = alertsArrayFilteredSpliced[pages].map((alert, index) => {
     return (
       <AlertItem
         key={alert + index}
@@ -149,7 +159,7 @@ const Alerts = () => {
         <div className={`${filterStatus ? "alert__filter-active" : "alert__filter-inactive"}`}>
           <AlertFilter 
           toggleFilterBox={toggleFilterBox}
-                    handleFilterCheckbox = {handleFilterCheckbox}
+          handleFilterCheckbox = {handleFilterCheckbox}
           handleIsLowImportance = {handleIsLowImportance}
           handleIsHighImportance = {handleIsHighImportance}
           handleIsLessHour = {handleIsLessHour}
@@ -191,11 +201,11 @@ const Alerts = () => {
             </div>
             <div className="alerts-table__header-created">
               <h5 className="alert-header">Created</h5>
-              <img src={WhiteDropDown} alt="dropdown" />
+              <img src={WhiteDropDown} alt="dropdown" onClick={handleSortTime}/>
             </div>
             <div className="alerts-table__header-importance">
               <h5 className="alert-header">Importance Level</h5>
-              <img src={WhiteDropDown} alt="dropdown" />
+              <img src={WhiteDropDown} alt="dropdown" onClick={handleSortImportance}/>
             </div>
           </div>
           <div className="alerts-table__alerts">{alertsItemJSX}</div>
