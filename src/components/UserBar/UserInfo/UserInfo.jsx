@@ -1,6 +1,8 @@
 import React from "react";
 import "./UserInfo.scss";
 import whiteDropdown from "./../../../assets/global/white-dropdown.svg";
+import { UserContext } from "../Context/UserContext/UserContext";
+
 
 const UserInfo = (props) => {
   const {userName} = props;
@@ -20,7 +22,7 @@ const UserInfo = (props) => {
         <div className="user-info__dropdown-content">
           <p className="user-info__dropdown-content--link">View Profile</p>
           <p className="user-info__dropdown-content--link">Settings</p>
-          <p className="user-info__dropdown-content--link">Logout</p>
+          <button className="user-info__dropdown-content--link" onClick = {handleLogOut}>Logout</button>
         </div>
       </div>
     </div>

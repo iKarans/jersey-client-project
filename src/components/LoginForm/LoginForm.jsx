@@ -25,8 +25,6 @@ const LoginForm = () => {
     setUserDetails(userInputsObj);
   };
 
-  console.log(userDetails);
-
   const [showPassword, setShowPassword] = useState(false);
   const handleShowPassword = () => {
     setShowPassword(!showPassword);
@@ -87,7 +85,10 @@ const LoginForm = () => {
             Remember Me
           </label>
         </div>
-        <button className="login-form__button" onClick={handleLogin}>Login</button>
+
+        <button className="login-form__button" onClick={handleLogin}>
+          <Link to="/dashboard"> Login </Link>
+        </button>
       </form>
 
       <p className="login-signup">
