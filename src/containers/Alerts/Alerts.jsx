@@ -80,7 +80,7 @@ const Alerts = () => {
     <>
       <section className="alerts">
         <div className={`${filterStatus ? "alert__filter-active" : "alert__filter-inactive"}`}>
-          <AlertFilter />
+          <AlertFilter toggleFilterBox={toggleFilterBox}/>
         </div>
         <div className="alerts__search">
           <div className="alerts__search-box">
