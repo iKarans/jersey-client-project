@@ -2,8 +2,7 @@ import React from 'react';
 import "./AlertFilter.scss";
 
 const AlertFilter = (props) => {
-  const {handleFilterCheckbox, handleIsLowImportance, handleIsHighImportance, handleIsLessHour,handleIsLessThreeHour} = props
-
+  const {handleFilterCheckbox, handleIsLowImportance, handleIsHighImportance, handleIsLessHour,handleIsLessThreeHour, toggleFilterBox} = props;
 
   return (
     
@@ -41,7 +40,7 @@ const AlertFilter = (props) => {
               <label htmlFor="" className="alert-filters__checkbox-text">High</label>
             <form/>
           </div>
-          <div className="alert-filters__apply">
+          <div className="alert-filters__apply" onClick={toggleFilterBox}>
             <p>Apply</p>
           </div>
         </div>

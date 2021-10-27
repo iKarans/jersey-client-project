@@ -142,6 +142,7 @@ const Alerts = () => {
       <section className="alerts">
         <div className={`${filterStatus ? "alert__filter-active" : "alert__filter-inactive"}`}>
           <AlertFilter 
+          toggleFilterBox={toggleFilterBox}
           handleFilterCheckbox = {handleFilterCheckbox}
           handleIsLowImportance = {handleIsLowImportance}
           handleIsHighImportance = {handleIsHighImportance}
