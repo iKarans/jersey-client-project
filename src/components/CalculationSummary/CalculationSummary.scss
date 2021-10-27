@@ -10,7 +10,7 @@
     align-items: center;
     background-color: white;
     box-shadow: 0px 3.5px 5.5px rgba(0, 0, 0, 0.05);
-    margin: 100px 0 0 40px; // to change
+    margin: 100px 0 0 15px; // to change
 
     &__container {
         height: 315px;
@@ -39,19 +39,20 @@
 
     &__box {
         height: 125px;
-        width: 90%;
+        width: 100%;
         display: flex;
-        justify-content: left;
+        justify-content: flex-start;
         align-items: center;
         background-color: #F8F9FA;
         border-radius: 15px;
-        // padding: 20px 0 0 10px;
     }
 
     &__items{
         display: grid;
         grid-template-columns: 0.25fr 1fr;
         grid-template-rows: repeat(4, 1fr);
+        margin-left: 10px;
+
     
         &--image {
             margin: 5px;
@@ -59,8 +60,7 @@
         }
         
         &--text{
-            margin: 5px;
-            margin-left: 10px;
+            margin: 3px 0 0 15px;
             color: $primary-color;
             
         }
@@ -89,7 +89,7 @@
         }
 
         &--more:hover {
-            color: rgba(42, 188, 161, 0.8);
+            color: $primary-color;
         }
 
         &--arrow {
