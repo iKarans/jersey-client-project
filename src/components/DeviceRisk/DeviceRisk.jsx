@@ -16,7 +16,11 @@ const DeviceRisk = (props) => {
           old, not having anti-virus software installed or is using an outdated
           operating system.{" "}
         </p>
-        <Button toggleModal={toggleModal} text="Block Device" buttonRisk={false} />
+        <Button
+          toggleModal={toggleModal}
+          text="Block Device"
+          buttonRisk={false}
+        />
       </div>
     );
   } else {
@@ -31,6 +35,11 @@ const DeviceRisk = (props) => {
           up-to-date operating system or that it has anti-virus and malware
           installed.
         </p>
+        <Button
+          toggleModal={toggleModal}
+          text="Block Device"
+          buttonRisk={false}
+        />
       </div>
     );
   }
