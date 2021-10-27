@@ -3,9 +3,15 @@ import "./CalculationSummary.scss";
 import Tick from "../../assets/login/green-tick.svg";
 import Cross from "../../assets/login/red-cross.svg";
 import RightArrow from "../../assets/global/right-arrow.svg";
+import { useState } from 'react';
+import CalculationInfo from '../CalculationInfo/CalculationInfo';
 
-const CalulationSummary = () => {
+const CalulationSummary = (props) => {
+
+    const { showMoreInfo } = props;
+
     return (
+        
         <div className="calculation">
             <div className="calculation__container">
                 <h1 className="calculation__container--header">Calculation Summary</h1>
@@ -28,11 +34,12 @@ const CalulationSummary = () => {
 
                 <div className="calculation__button">
                     <button className="calculation__button--refresh">Refresh</button>
-                    <button className="calculation__button--more">Find out more 
+                    <button className="calculation__button--more"onClick={showMoreInfo}>Find out more 
                     <img src={RightArrow} alt="" /></button>
                 </div>
             </div>
         </div>
+        
     )
 }
 

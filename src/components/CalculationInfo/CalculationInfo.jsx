@@ -2,12 +2,16 @@ import React from 'react'
 import "./CalculationInfo.scss";
 import Cross from "../../assets/global/black-cross.svg";
 
-const CalculationInfo = () => {
+const CalculationInfo = (props) => {
+
+const { showMoreInfo } = props;
+    
+
     return (
         <div className="background">
         <div className="holder">
             <div className="content">
-                <img className="content__image" src={Cross} alt="Cross"></img>
+                <img className="content__image" src={Cross} alt="Cross" onClick={showMoreInfo}></img>
                 <p className="content__sub" style={{color: '#2abca1'}}>Calculation Summary</p>
                 
                 <h1 className="content__title">How it works?</h1>
@@ -21,7 +25,7 @@ const CalculationInfo = () => {
 
                 <hr/>
 
-                <button className="content__button">Go Back</button>
+                <button className="content__button" onClick={showMoreInfo}>Go Back</button>
             </div>
         </div>
         </div>
