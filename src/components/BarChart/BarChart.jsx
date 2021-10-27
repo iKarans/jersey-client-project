@@ -2,7 +2,7 @@ import React from "react";
 import { Bar } from "react-chartjs-2";
 import "./BarChart.scss";
 const BarChart = (props) => {
-  const { title, labels, dataset } = props;
+  const { title, subtitle, labels, dataset } = props;
   const suggestedMax = () => {
     const max = Math.max(...dataset);
     if (max <= 200) {
@@ -13,7 +13,10 @@ const BarChart = (props) => {
   };
   return (
     <div className="bar-chart">
-      <h3 className="bar-chart__title">{title}</h3>
+     <div className="bar-chart__headlines">
+        <h3 className="bar-chart__title">{title}</h3>
+        <p className="bar-chart__subtitle">{subtitle}</p>
+     </div>
       <div className="bar-chart__chart">
         <div className="bar-chart__chart-container">
           <Bar

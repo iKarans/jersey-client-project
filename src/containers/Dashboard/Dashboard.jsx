@@ -71,6 +71,7 @@ const Dashboard = () => {
         <BarChart
           dataset={dataset}
           title={"Security Risk Breakdown"}
+          subtitle="Breakdown of the number of devices and their level of security risk."
           labels={["N/A", "Low", "Medium", "High"]}
         />
        
