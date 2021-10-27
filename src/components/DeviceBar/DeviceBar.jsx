@@ -29,16 +29,16 @@ export const DeviceBar = (props) => {
     const minutes = (timeSinceOnline / (1000 * 60)).toFixed(1);
     const hours = (timeSinceOnline / (1000 * 60 * 60)).toFixed(0);
     const days = (timeSinceOnline / (1000 * 60 * 60 * 24)).toFixed(0);
-    if (seconds < 60) return "less than 1 min ago";
-    else if (minutes < 60) return minutes + " min ago";
-    else if (hours < 24) return hours + " hrs ago";
-    else return days + " days ago"
+    if (seconds < 60) { return "less than 1 min ago" }
+    else if (minutes < 60) { return minutes + " min ago" }
+    else if (hours < 24) { return hours + " hrs ago" }
+    else { return days + " days ago" }
   }
 
 
 
   const brandIcon = () => {
-    let brandText = "";
+    let brandText = lujamIcon;
     let manufacturerToLower = manufacturer.toLowerCase()
     switch (true) {
       case manufacturerToLower.includes("dell"):
@@ -52,7 +52,7 @@ export const DeviceBar = (props) => {
       case manufacturerToLower.includes("samsung"):
         return brandText = samsungIcon
       default:
-        return brandText = lujamIcon
+        return brandText
     }
   };
 
