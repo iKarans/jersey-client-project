@@ -4,9 +4,8 @@ import { onAuthStateChanged, signOut } from "firebase/auth";
 
 export const UserContext = createContext({});
 
-const UserProvider = props => {
+const UserProvider = (props) => {
   const [user, setUser] = useState(null);
-
 
   const handleLogout = () => {
     signOut(auth);
@@ -15,7 +14,7 @@ const UserProvider = props => {
   useEffect(() => {
     onAuthStateChanged(auth, (authenticatedUser) => {
       if (authenticatedUser) {
-        setUser(null);
+        setUser(authenticatedUser);
         console.log("authenticated", authenticatedUser);
       } else {
         setUser(null);
@@ -24,14 +23,11 @@ const UserProvider = props => {
     });
   }, []);
 
-
-
   const userContext = {
     user,
     // handleLogin,
     handleLogout,
   };
-
 
   return (
     <UserContext.Provider value={userContext}>
