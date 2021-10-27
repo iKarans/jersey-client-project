@@ -4,6 +4,12 @@ import { onAuthStateChanged, signOut } from "firebase/auth";
 
 export const UserContext = createContext({});
 
+
+
+
+
+
+
 const UserProvider = (props) => {
   const [user, setUser] = useState(null);
 
@@ -21,13 +27,20 @@ const UserProvider = (props) => {
         console.log("signed out");
       }
     });
+
+
+
+
   }, []);
+
 
   const userContext = {
     user,
     // handleLogin,
     handleLogout,
   };
+
+
 
   return (
     <UserContext.Provider value={userContext}>

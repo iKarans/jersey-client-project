@@ -5,7 +5,11 @@ import whiteDropdown from "./../../../assets/global/white-dropdown.svg";
 import { UserContext } from "../../../containers/Context/UserContext/UserContext";
 
 
+
 const UserInfo = (props) => {
+
+
+
   const { handleLogout } = useContext(UserContext);
   const {userName} = props;
   return (

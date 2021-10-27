@@ -12,7 +12,7 @@ const LoginForm = () => {
   const handleLogin = (event) => {
     event.preventDefault();
     signInWithEmailAndPassword(auth, userDetails.email, userDetails.password);
-    history.replace("/security");
+    history.push("/security");
   };
 
   const [userDetails, setUserDetails] = useState({
@@ -46,7 +46,6 @@ const LoginForm = () => {
           name="email"
           className="login-form__input"
           onChange={handleInput}
-          value={userDetails.email}
           required
         />
         <label htmlFor="password" className="login-form__label">
@@ -59,7 +58,6 @@ const LoginForm = () => {
             name="password"
             className="login-form__input"
             onChange={handleInput}
-            value={userDetails.password}
             required
           />
           {!showPassword && (
