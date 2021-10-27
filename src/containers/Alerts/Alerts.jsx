@@ -35,6 +35,67 @@ const Alerts = () => {
   };
 
   const alertsArray = [...alerts];
+   /// Karans Messing around
+   const [filtersArray, setFiltersArray] = useState([]);
+   const handleFilterCheckbox = (event) => {
+     let tempArr = [...filtersArray];
+     if (tempArr.includes(event.target.id)) {
+       tempArr.splice(tempArr.indexOf(event.target.id), 1);
+     } else {
+       tempArr.push(event.target.id);
+     }
+     setFiltersArray(tempArr);
+   };
+   // importance Level
+   const [isLowImportance, setLowImportanceLevel] = useState(false);
+   const [isHighImportance, setHighImportanceLevel] = useState(false);
+   const handleIsLowImportance = () => {
+     let temp = isLowImportance;
+     setLowImportanceLevel(!isLowImportance);
+     setHighImportanceLevel(temp);
+   };
+   const handleIsHighImportance = () => {
+     let temp = isHighImportance;
+     setHighImportanceLevel(!isHighImportance);
+     setLowImportanceLevel(temp);
+   };
+ 
+   const [isLessHour, setIsLessHour] = useState(false);
+   const [isLessThreeHour, setIsLessThreeHour] = useState(false);
+   const handleIsLessHour = () => {
+     let temp = isLessHour;
+     setIsLessHour(!isLessHour);
+     setIsLessThreeHour(temp);
+   };
+   const handleIsLessThreeHour = () => {
+     let temp = isLessThreeHour;
+     setIsLessThreeHour(!isLessThreeHour);
+     setIsLessHour(temp);
+   };
+ 
+   const shouldReturn = (alert) => {
+     for (let i = 0; i < filtersArray.length; i++) {
+       if (alert.alertType.includes(filtersArray[i])) {
+         return true;
+       }
+     }
+     return false;
+   };
+ 
+   const networksArrayFilteredBySubHour = alertsArray
+     .filter((alert) => {
+       return (
+         shouldReturn(alert) &&
+         (isLowImportance ? alert.importanceID == 1 : true) &&
+         (isHighImportance ? alert.importanceID == 2 : true) &&
+         (isLessHour ? alert.createdTime <= 60 : true) &&
+         (isLessThreeHour ? alert.createdTime > 60 : true)
+       );
+     })
+     .sort((a, b) => a.createdTime - b.createdTime);
+ 
+   console.log(networksArrayFilteredBySubHour);
+ 
 
   while (alertsArray.length > 0) {
     splitAlertsArrays.push(alertsArray.splice(0, 9));
@@ -80,7 +141,13 @@ const Alerts = () => {
     <>
       <section className="alerts">
         <div className={`${filterStatus ? "alert__filter-active" : "alert__filter-inactive"}`}>
-          <AlertFilter />
+          <AlertFilter 
+          handleFilterCheckbox = {handleFilterCheckbox}
+          handleIsLowImportance = {handleIsLowImportance}
+          handleIsHighImportance = {handleIsHighImportance}
+          handleIsLessHour = {handleIsLessHour}
+          handleIsLessThreeHour = {handleIsLessThreeHour}
+          />
         </div>
         <div className="alerts__search">
           <div className="alerts__search-box">
