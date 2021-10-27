@@ -15,7 +15,7 @@ import "./Alerts.scss";
 
 const Alerts = () => {
   const [pages, setPages] = useState(0);
-  const [splitAlertsArrays] = useState([]);
+  // const [splitAlertsArrays] = useState([]);
   const [filterStatus, setFilterStatus] = useState(false);
 
   const handleDecrement = () => {
@@ -82,10 +82,10 @@ const Alerts = () => {
      return false;
    };
  
-   const networksArrayFilteredBySubHour = alertsArray
+   const alertsArrayFiltered = alertsArray
      .filter((alert) => {
        return (
-         shouldReturn(alert) &&
+         (filtersArray.length ? shouldReturn(alert) : true) &&
          (isLowImportance ? alert.importanceID == 1 : true) &&
          (isHighImportance ? alert.importanceID == 2 : true) &&
          (isLessHour ? alert.createdTime <= 60 : true) &&
@@ -94,14 +94,20 @@ const Alerts = () => {
      })
      .sort((a, b) => a.createdTime - b.createdTime);
  
-   console.log(networksArrayFilteredBySubHour);
+   console.log(alertsArrayFiltered);
  
-
-  while (alertsArray.length > 0) {
-    splitAlertsArrays.push(alertsArray.splice(0, 9));
+  let alertsArrayFilteredSpliced = [];
+  if(alertsArrayFiltered.length < 9) {
+    alertsArrayFilteredSpliced = [[...alertsArrayFiltered]];
+  } else {
+    while (alertsArrayFiltered.length  > 0) {
+      alertsArrayFilteredSpliced.push(alertsArrayFiltered.splice(0, 9));
+    }
   }
+  console.log(alertsArrayFilteredSpliced);
+  console.log(alertsArrayFilteredSpliced[0]);
 
-  const alertsItemJSX = splitAlertsArrays[pages].map((alert, index) => {
+  const alertsItemJSX = alertsArrayFilteredSpliced[0].map((alert, index) => {
     return (
       <AlertItem
         key={alert + index}
@@ -143,7 +149,7 @@ const Alerts = () => {
         <div className={`${filterStatus ? "alert__filter-active" : "alert__filter-inactive"}`}>
           <AlertFilter 
           toggleFilterBox={toggleFilterBox}
-          handleFilterCheckbox = {handleFilterCheckbox}
+                    handleFilterCheckbox = {handleFilterCheckbox}
           handleIsLowImportance = {handleIsLowImportance}
           handleIsHighImportance = {handleIsHighImportance}
           handleIsLessHour = {handleIsLessHour}
