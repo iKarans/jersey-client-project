@@ -3,11 +3,10 @@
 
 
 .settings__text {
-  height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: center;
-  margin-left: 227px;
+  height: 100%;
+ 
   
     @include mobile {  
       flex-direction: column;
