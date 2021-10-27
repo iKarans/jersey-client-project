@@ -16,6 +16,7 @@ import "./Alerts.scss";
 const Alerts = () => {
   const [pages, setPages] = useState(0);
   const [splitAlertsArrays] = useState([]);
+  const [filterStatus, setFilterStatus] = useState(false);
 
   const handleDecrement = () => {
     if (pages > 0) {
@@ -95,13 +96,13 @@ const Alerts = () => {
               <img className="alerts__icons" src={SortIcon} alt="sort-icon" />
               <p className="alerts__text-paragraph">Sort</p>
             </div>
-            <div className="alerts-filter">
+            <div className="alerts-filter"onClick={toggleFilterBox}>
               <img
                 className="alerts__icons"
                 src={FilterIcon}
                 alt="filter-icon"
               />
-              <p className="alerts__text-paragraph" onClick={toggleFilterBox}>Filter</p>
+              <p className="alerts__text-paragraph">Filter</p>
             </div>
           </div>
         </div>

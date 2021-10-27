@@ -47,11 +47,13 @@
 
       .alerts-sort,
       .alerts-filter {
+        cursor: pointer;
         display: flex;
         height: 100%;
         margin-left: 2rem;
 
         .alerts__text-paragraph {
+          cursor: pointer;
           font-size: 0.875rem;
           margin-left: 0.7rem;
           color: rgba(115, 120, 134, 1);
