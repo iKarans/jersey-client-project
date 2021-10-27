@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./UserInfo.scss";
 import whiteDropdown from "./../../../assets/global/white-dropdown.svg";
-import { UserContext } from "../Context/UserContext/UserContext";
+import { UserContext } from "../../../containers/Context/UserContext/UserContext";
 
 
 const UserInfo = (props) => {
+  const { handleLogout } = useContext(UserContext);
   const {userName} = props;
   return (
     <div className="user-info">
@@ -22,7 +23,7 @@ const UserInfo = (props) => {
         <div className="user-info__dropdown-content">
           <p className="user-info__dropdown-content--link">View Profile</p>
           <p className="user-info__dropdown-content--link">Settings</p>
-          <button className="user-info__dropdown-content--link" onClick = {handleLogOut}>Logout</button>
+          <button className="user-info__dropdown-content--link" onClick = {handleLogout}>Logout</button>
         </div>
       </div>
     </div>

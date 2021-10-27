@@ -8,8 +8,6 @@ const UserProvider = (props) => {
   const [user, setUser] = useState(null);
 
 
-
-
   const handleLogout = () => {
     signOut(auth);
   };
@@ -20,7 +18,7 @@ const UserProvider = (props) => {
         setUser(null);
         console.log("authenticated", authenticatedUser);
       } else {
-        setUser(authenticatedUser);
+        setUser(null);
         console.log("signed out");
       }
     });
