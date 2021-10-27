@@ -38,7 +38,7 @@ const CalulationSummary = (props) => {
                 <div className="calculation__button">
                     <button className="calculation__button--refresh">Refresh</button>
                     <button className="calculation__button--more"onClick={showMoreInfo}>Find out more 
-                    <img src={RightArrow} alt="" /></button>
+                    <img className="calculation__button--arrow" src={RightArrow} alt="" /></button>
                 </div>
             </div>
         </div>

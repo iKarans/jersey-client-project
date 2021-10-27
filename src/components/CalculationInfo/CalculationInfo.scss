@@ -36,6 +36,11 @@
         left: 300px;
         background: rgba(196, 196, 196, 0.1);
         border-radius: 50px;
+        cursor: pointer;
+    }
+
+    &__image:hover {
+        background: rgba(196, 196, 196, 0.5);
     }
 
     &__sub {
@@ -68,7 +73,13 @@
         border-radius: 5px;
         color: #73D3C1;
         margin-top: 50px;
+        cursor: pointer;
 
+    }
+
+    &__button:hover {
+        background: rgba(42, 188, 161, 0.6);
+        color: white;
     }
 }
 
