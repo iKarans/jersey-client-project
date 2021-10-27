@@ -96,6 +96,8 @@ const Alerts = () => {
  
    console.log(alertsArrayFiltered);
  
+
+   
   let alertsArrayFilteredSpliced = [];
   if(alertsArrayFiltered.length < 9) {
     alertsArrayFilteredSpliced = [[...alertsArrayFiltered]];
@@ -104,8 +106,7 @@ const Alerts = () => {
       alertsArrayFilteredSpliced.push(alertsArrayFiltered.splice(0, 9));
     }
   }
-  console.log(alertsArrayFilteredSpliced);
-  console.log(alertsArrayFilteredSpliced[0]);
+
 
   const alertsItemJSX = alertsArrayFilteredSpliced[0].map((alert, index) => {
     return (
@@ -187,7 +188,7 @@ const Alerts = () => {
               <img src={WhiteDropDown} alt="dropdown" />
             </div>
             <div className="alerts-table__header-summary">
-              <h5 className="alert-header">Sumary</h5>
+              <h5 className="alert-header">Summary</h5>
             </div>
             <div className="alerts-table__header-created">
               <h5 className="alert-header">Created</h5>
