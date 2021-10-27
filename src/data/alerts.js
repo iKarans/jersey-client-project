@@ -38,8 +38,8 @@ export const alerts = [
     summary: "Network outage occured at 18:23.34 on 05/10/2021.",
     created: "Over 3 hours ago",
     importanceLevel: "High",
-    createdTime: 15,
-    importanceID: 1,
+    createdTime: 180,
+    importanceID: 2,
   },
   {
     alertType: "Connection Restored",
