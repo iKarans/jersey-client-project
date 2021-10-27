@@ -3,18 +3,23 @@ import React from 'react'
 import "./EditDeviceForm.scss"
 
 const EditDeviceForm = () => {
+
+
     return (
         <form className="edit-device">
             <h2 className="edit-device__header">Edit Device Details</h2>
             <label htmlFor="device-type" className="edit-device__label">Device Type</label>
-            <select name="device-type" id="device-type" className="edit-device__select">
-                <option value="desktop">Desktop</option>
-                <option value="tablet">Tablet</option>
-                <option value="laptop">Laptop</option>
-                <option value="mobile">Mobile</option>
-            </select>
-            <label htmlFor="device-name" className="edit-device__label">Device Name</label>    
-            <input type="text" name="device-name" className="edit-device__input"/>
+            <div className="edit-device__select">
+                <div className="edit-device__select-current" value="desktop">Desktop</div>
+                <div className="edit-device__select-dropdown">
+                    <div className="edit-device__select-dropdown-content" value="laptop">Laptop</div>
+                    <div className="edit-device__select-dropdown-content" value="tablet">Tablet</div>
+                    <div className="edit-device__select-dropdown-content" value="mobile">Mobile</div>
+                </div>
+
+            </div>
+            <label htmlFor="device-name" className="edit-device__label">Device Name</label>
+            <input type="text" name="device-name" className="edit-device__input" />
             <label htmlFor="brand" className="edit-device__label">Brand</label>
             <select name="brand" id="brand" className="edit-device__select">
                 <option value="apple">Apple</option>
@@ -24,7 +29,7 @@ const EditDeviceForm = () => {
                 <option value="samsung">Samsung</option>
             </select>
             <label htmlFor="model" className="edit-device__label">Model</label>
-            <input type="text" name="model" className="edit-device__input"/>
+            <input type="text" name="model" className="edit-device__input" />
             <label htmlFor="operating-system" className="edit-device__label">Operating System</label>
             <select name="operating-system" id="operating-system" className="edit-device__select">
                 <option value="mac OS">Mac OS</option>
