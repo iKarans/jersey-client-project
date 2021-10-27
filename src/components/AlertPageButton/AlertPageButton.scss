@@ -1,7 +1,7 @@
 @use "../../assets/styles/variables" as *;
 @use "../../assets/styles/mixins" as *;
 
-.alerts-table__pages-buttons-button{
+.alerts-table__pages-buttons-button {
     width: 2rem;
     height: 2rem;
     border-radius: 4px;
@@ -18,7 +18,7 @@
 .alerts__left-arrow{
     transform: rotate(180deg);
     padding-bottom: 0.08rem;
-    }
+}
 
 .alert__button-active {
     background-color: $primary-color;
