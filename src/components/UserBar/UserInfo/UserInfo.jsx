@@ -9,13 +9,18 @@ const UserInfo = (props) => {
   const auth = getAuth();
   const user = auth.currentUser;
   const { handleLogout } = useContext(UserContext);
+  const userName = ""
+  
+  if (user.displayName != null){
+    userName = user.displayName
+  }
 
   return (
     <div className="user-info">
       <div className="user-info__img"></div>
       <div className="user-info__dropdown">
         <button className="user-info__name">
-          {user.displayName}
+          {userName}
           <img
             className="user-info__dropdown-arrow"
             src={whiteDropdown}
