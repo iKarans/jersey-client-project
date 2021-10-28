@@ -11,7 +11,12 @@ const LoginForm = () => {
   let history = useHistory();
   const handleLogin = (event) => {
     event.preventDefault();
-    signInWithEmailAndPassword(auth, userDetails.email, userDetails.password);
+
+    signInWithEmailAndPassword(auth, userDetails.email, userDetails.password)
+      .catch(() => {
+        alert("You have entered an invalid username or password");
+
+      });
     history.push("/security");
   };
 
