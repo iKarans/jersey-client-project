@@ -144,26 +144,33 @@
     &__alert-arrow-active {
       transform: rotate(180deg);
       cursor: pointer;
+      padding: 12px;
+
     }
     &__alert-arrow-inactive {
+      padding: 12px;
       display: block;
       cursor: pointer;
     }
     &__time-arrow-active {
       transform: rotate(180deg);
       cursor: pointer;
+      padding: 12px;
     }
     &__time-arrow-inactive {
       display: block;
       cursor: pointer;
+      padding: 12px;
     }
     &__importance-arrow-active {
       transform: rotate(180deg);
       cursor: pointer;
+      padding: 12px;
     }
     &__importance-arrow-inactive {
       display: block;
       cursor: pointer;
+      padding: 12px;
     }
 
     &__alerts {
