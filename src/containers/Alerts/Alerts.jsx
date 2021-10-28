@@ -117,6 +117,7 @@ const Alerts = () => {
     );
   });
 
+
   if(filterNumber === 1) {
     alertsArrayFiltered.sort((a, b) =>
       (sortAlert ? (a.alertType > b.alertType ? 1 : b.alertType > a.alertType ? -1 : 0) : (a.alertType > b.alertType ? -1 : b.alertType > a.alertType ? 1 : 0))
@@ -124,9 +125,7 @@ const Alerts = () => {
   } else if (filterNumber === 2) {
     (alertsArrayFiltered.sort((a, b) => (sortTime ? a.createdTime - b.createdTime : b.createdTime - a.createdTime)));
   } else if (filterNumber === 3) {
-    alertsArrayFiltered.sort((a, b) =>
-      (sortAlert ? (a.alertType > b.alertType ? 1 : b.alertType > a.alertType ? -1 : 0) : (a.alertType > b.alertType ? -1 : b.alertType > a.alertType ? 1 : 0))
-    );
+      (alertsArrayFiltered.sort((a, b) => (sortImportance ? a.importanceID - b.importanceID : b.importanceID - a.importanceID)));
   }
 
   let alertsArrayFilteredSpliced = [];
