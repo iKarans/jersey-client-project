@@ -8,6 +8,7 @@ import { ReactComponent as ValidInputIcon } from "../../assets/login/green-tick.
 import { ReactComponent as InvalidInputIcon } from "../../assets/login/red-cross.svg";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../../firebase";
+import { getAuth, updateProfile } from "firebase/auth";
 
 import "./SignUpForm.scss";
 
@@ -19,6 +20,10 @@ const SignUpForm = () => {
       auth,
       userDetails.email,
       userDetails.password
+    ).then(() =>
+      updateProfile(auth.currentUser, {
+        displayName: userDetails.firstName + " " + userDetails.lastName,
+      })
     );
     history.push("/");
   };
@@ -49,8 +54,6 @@ const SignUpForm = () => {
     const userInputsObj = { ...userDetails, [userInputName]: userInput };
     setUserDetails(userInputsObj);
   };
-
-
 
   const buttonClick = () => {
     setUserDetailsStage(false);

@@ -19,9 +19,7 @@ const LoginForm = () => {
       .catch(() => {
         alert("You have entered an invalid username or password");
       });
-
     history.push("/security");
-    console.log(userDetails);
   };
 
   const [userDetails, setUserDetails] = useState({
