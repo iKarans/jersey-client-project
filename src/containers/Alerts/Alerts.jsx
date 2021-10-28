@@ -20,7 +20,6 @@ const Alerts = () => {
   const [sortTime, setSortTime] = useState(false);
   const [sortImportance, setSortImportance] = useState(false);
   const [sortAlert, setSortAlert] = useState(false);
-
   const handleSortAlert = () => {
     setSortAlert(!sortAlert);
     setSortImportance(false);
@@ -112,44 +111,41 @@ const Alerts = () => {
          (isLessThreeHour ? alert.createdTime > 60 : true)
        );
      });
+     console.log(alertsArrayFiltered);
  
-   console.log(alertsArrayFiltered);
-   if(sortTime) {
-     alertsArrayFiltered.sort((a,b) => a.createdTime - b.createdTime);
-   } else if(sortImportance) {
-    alertsArrayFiltered.sort((a,b) => b.importanceID - a.importanceID);
-   } else if (sortAlert) {
-    alertsArrayFiltered.sort((a,b) => (a.alertType > b.alertType ) ? 1 : ((b.alertType  > a.alertType ) ? -1 : 0));
-   }
+  //  console.log(alertsArrayFiltered);
+  //  if(sortTime) {
+  //    alertsArrayFiltered.sort((a,b) => a.createdTime - b.createdTime);
+  //  } else if(sortImportance) {
+  //   alertsArrayFiltered.sort((a,b) => b.importanceID - a.importanceID);
+  //  } else if (sortAlert) {
+  //   alertsArrayFiltered.sort((a,b) => (a.alertType > b.alertType ) ? 1 : ((b.alertType  > a.alertType ) ? -1 : 0));
+  //  }
 
-   let sortByTime = false;
    const handleClickSort = (event) => {
+     console.log(alertsArrayFiltered);
      if(event.target.id == "Alert") {
-       handleSortAlert();
+      //  handleSortAlert();
        alertsArrayFiltered.sort((a,b) => (a.alertType > b.alertType ) ? 1 : ((b.alertType  > a.alertType ) ? -1 : 0))
      } else if (event.target.id == "Importance") {
-       handleSortImportance();
+      //  handleSortImportance();
        if(sortImportance) {
         alertsArrayFiltered.sort((a,b) => b.importanceID - a.importanceID);
        } else {
         alertsArrayFiltered.sort((a,b) => a.importanceID - b.importanceID);
        }
      } else if (event.target.id == "Time") {
-       handleSortTime();
+      //  handleSortTime();
        if(sortTime) {
         alertsArrayFiltered.sort((a,b) => (b.createdTime - a.createdTime));
         console.log(alertsArrayFiltered)
         console.log(1)
        }  else {     
         alertsArrayFiltered.sort((a,b) => (a.createdTime - b.createdTime));
-        console.log(alertsArrayFiltered)
-        console.log(2)
        }
      }
    }
-   
-   console.log(1)
-
+   console.log(alertsArrayFiltered);
    
   let alertsArrayFilteredSpliced = [];
   if(alertsArrayFiltered.length < 9) {
