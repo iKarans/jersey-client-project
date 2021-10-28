@@ -1,6 +1,6 @@
 import React from "react";
 import "./Routes.scss";
-import Network from "../Network/Network";
+import Alerts from "../Alerts/Alerts";
 import { Route, Switch } from "react-router-dom";
 import Dashboard from "../Dashboard/Dashboard";
 import Devices from "../Devices/Devices";
@@ -10,6 +10,7 @@ import Settings from "../../containers/Settings/Settings";
 import Header from "../Header/Header";
 import Login from "../Login/Login";
 import SignUp from "../SignUp/SignUp";
+import DevicesIndex from "../DevicesIndex/DevicesIndex"
 
 const Routes = () => {
   return (
@@ -33,6 +34,15 @@ const Routes = () => {
             <Devices />
           </div>
         </Route>
+        <Route exact path="/device/:device">
+        <div className="routes__sidenav">
+            <SideNav selectedPage="Devices" />
+          </div>
+          <div className="routes__container-devices">
+            <Header pageHeading="Devices" />
+            <DevicesIndex />
+          </div>
+        </Route>
         <Route exact path="/security">
           <div className="routes__sidenav">
             <SideNav selectedPage="Security" />
@@ -42,13 +52,13 @@ const Routes = () => {
             <Security />
           </div>
         </Route>
-        <Route exact path="/network">
+        <Route exact path="/alerts">
           <div className="routes__sidenav">
-            <SideNav selectedPage="Network" />
+            <SideNav selectedPage="Alerts" />
           </div>
-          <div className="routes__container-network">
-            <Header pageHeading="Network" />
-            <Network />
+          <div className="routes__container-alerts">
+            <Header pageHeading="Alerts" />
+            <Alerts />
           </div>
         </Route>
         <Route path="/dashboard">

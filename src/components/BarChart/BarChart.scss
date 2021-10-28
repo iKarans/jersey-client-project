@@ -2,6 +2,7 @@
 @use "../../assets/styles/mixins" as *;
 .bar-chart {
   position: relative;
+<<<<<<< HEAD
   border: 1px solid white;
   border-radius: 25px;
   height: 385px;
@@ -9,37 +10,53 @@
   display: flex;
   flex-direction: column;
   justify-items: flex-start;
+=======
+  height: 35vh;
+  width: 30vw;
+  display: grid;
+  justify-items: center;
+>>>>>>> d249b17c23241fa6acd420295adf67eb0702fdf0
   align-content: center;
   font-family: "Inter", sans-serif;
   background-color: white;
   border-radius: 10px;
-  margin-bottom: 400px;
-
   @include mobile {
     display: unset;
-    height: 500px;
+    height: 300px;
     width: 320px;
     margin-bottom: 10px;
   }
-
   &__chart-container {
+<<<<<<< HEAD
     height: 250px;
     width: 24vw;
     background-color: white;
     margin-left: 15px;
 
+=======
+    height: 25vh;
+    width: 25vw;
+    padding-bottom: 20px;
+    background-color: white;
+>>>>>>> d249b17c23241fa6acd420295adf67eb0702fdf0
     @include mobile {
       position: absolute;
       top: 40px;
       left: 20px;
-      height: 250px;
+      height: 235px;
       width: 250px;
     }
   }
   &__title {
+<<<<<<< HEAD
     width: 100%;
     margin: 30px;
 
+=======
+    justify-self: start;
+    padding-left: 10px;
+    margin: 20px;
+>>>>>>> d249b17c23241fa6acd420295adf67eb0702fdf0
     @include mobile {
       position: relative;
       margin: 10px;

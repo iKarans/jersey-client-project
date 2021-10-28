@@ -1,6 +1,8 @@
-$primary-color: #2abca1;
+$primary-color: rgb(42, 188, 161);
+$primary-color-faded: rgb(42, 188, 161, 0.15);
 $secondary-color: #0a7aa7;
 $high-color: #fc7f7f;
+$warning-color: #FF4E4E;
 $medium-color: #fbc07b;
 $low-color: #1ac96a;
 $text-primary: rgb(160, 174, 192);
@@ -8,15 +10,24 @@ $text-secondary: rgb(69, 71, 86);
 $text-tertiary: #ffffff;
 $text-black: #2a2b34;
 $background-color: #f8f9fa;
+<<<<<<< HEAD
 $background-gradient: linear-gradient(110.53deg, #2ABCA1 4.37%, #0A7AA7 98.99%);
 $background-gradient-mobile:linear-gradient(167.94deg, #2ABCA1 0%, #0A7AA7 100%);
+=======
+$background-gradient: linear-gradient(110.53deg, #2abca1 4.37%, #0a7aa7 98.99%);
+$background-gradient-mobile: linear-gradient(
+  167.94deg,
+  #2abca1 0%,
+  #0a7aa7 100%
+);
+>>>>>>> d249b17c23241fa6acd420295adf67eb0702fdf0
 //breakpoint
 $breakpoint-mobile: 480px;
 $nav-hover-color: #daf0ed;
 
-
 // security graph
 $security-none: #f2f2f2;
+<<<<<<< HEAD
 $security-very-poor: #F04A68;
 $security-poor: #F0B78E;
 $security-fair: #FFF9C0;
@@ -30,3 +41,15 @@ $security-calc-info-button: #73D3C1;
 $network-alerts-border: #CBF0ED;
 $network-item-dark-color: #F4FCFA;
 $network-item-option: #82DDD5;
+=======
+$security-very-poor: #f04a68;
+$security-poor: #f0b78e;
+$security-fair: #fff9c0;
+$security-good: #2abca1;
+$security-excellent: #20837f;
+
+// Network Page
+$network-alerts-border: #cbf0ed;
+$network-item-dark-color: #f4fcfa;
+$network-item-option: #82ddd5;
+>>>>>>> d249b17c23241fa6acd420295adf67eb0702fdf0

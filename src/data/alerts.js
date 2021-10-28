@@ -1,4 +1,4 @@
-export const networks = [
+export const alerts = [
   {
     alertType: "New Device Connected",
     summary: "Unrecognised device connected for first time.",
