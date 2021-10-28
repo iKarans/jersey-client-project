@@ -12,7 +12,7 @@ const EditDeviceForm = () => {
             <h2 className="edit-device__header">Edit Device Details</h2>
             <label htmlFor="device-type" className="edit-device__label">Device Type</label>
             <div className="edit-device__select">
-                <div className="edit-device__select-current" value="desktop">Desktop <img src={DownArrow} alt="down arrow" className="edit-device__select-arrow" /></div>
+                <div className="edit-device__select-current" value="desktop">Desktop <img src={DownArrow} alt="down arrow" className="edit-device__select-current-arrow" /></div>
                 <div className="edit-device__select-dropdown">
                     <div className="edit-device__select-dropdown-content" value="laptop">Laptop</div>
                     <div className="edit-device__select-dropdown-content" value="tablet">Tablet</div>
@@ -37,7 +37,7 @@ const EditDeviceForm = () => {
             <input type="text" name="model" className="edit-device__input" />
             <label htmlFor="operating-system" className="edit-device__label">Operating System</label>
             <div className="edit-device__select">
-                <div className="edit-device__select-current" value="desktop">Mac OS Catalina <img src={DownArrow} alt="down arrow" className="edit-device__select-arrow" /></div>
+                <div className="edit-device__select-current" value="desktop">Mac OS Catalina <img src={DownArrow} alt="down arrow" className="edit-device__select-current-arrow" /></div>
                 <div className="edit-device__select-dropdown">
                     <div className="edit-device__select-dropdown-content" value="mac OS">Mac OS</div>
                     <div className="edit-device__select-dropdown-content" value="windows10">Windows 10</div>
