@@ -16,11 +16,7 @@ import { UserContext } from "../Context/UserContext/UserContext";
 const Routes = () => {
   const { user } = useContext(UserContext);
 
-
   const privateRoute = user ? "" : <Redirect to="/" />;
-  
-  
-
 
   return (
     <div className="routes">
@@ -85,7 +81,6 @@ const Routes = () => {
             <Dashboard />
           </div>
         </Route>
-
         <Route exact path="/signup">
           <div className="routes__container-signup">
             <SignUp />

@@ -9,10 +9,6 @@ import Settings from "../../components/Routes/Routes.jsx";
 import Header from "../../containers/Header/Header";
 
 const Routes = () => {
-  const handleClick = () => {
-    console.log("working");
-  };
-
   return (
     <div className="routes">
       <Switch>
