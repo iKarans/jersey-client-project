@@ -15,17 +15,14 @@ const UserProvider = (props) => {
     onAuthStateChanged(auth, (authenticatedUser) => {
       if (authenticatedUser) {
         setUser(authenticatedUser);
-        console.log("authenticated", authenticatedUser);
       } else {
         setUser(null);
-        console.log("signed out");
       }
     });
   }, []);
 
   const userContext = {
     user,
-    // handleLogin,
     handleLogout,
   };
 

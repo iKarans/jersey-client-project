@@ -9,15 +9,19 @@ import "./LoginForm.scss";
 
 const LoginForm = () => {
   let history = useHistory();
+
   const handleLogin = (event) => {
     event.preventDefault();
-
     signInWithEmailAndPassword(auth, userDetails.email, userDetails.password)
+      .then(() => {
+        history.push("/security");
+      })
       .catch(() => {
         alert("You have entered an invalid username or password");
-
       });
+
     history.push("/security");
+    console.log(userDetails);
   };
 
   const [userDetails, setUserDetails] = useState({
@@ -49,6 +53,7 @@ const LoginForm = () => {
           type="text"
           id="email"
           name="email"
+          value={userDetails.email}
           className="login-form__input"
           onChange={handleInput}
           required
@@ -61,6 +66,7 @@ const LoginForm = () => {
             type={!showPassword ? "password" : "text"}
             id="password"
             name="password"
+            value={userDetails.password}
             className="login-form__input"
             onChange={handleInput}
             required

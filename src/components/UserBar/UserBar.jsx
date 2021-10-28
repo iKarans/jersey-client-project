@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import "./UserBar.scss";
 import NetworkID from "./NetworkID/NetworkID";
 import UserInfo from "./UserInfo/UserInfo";
