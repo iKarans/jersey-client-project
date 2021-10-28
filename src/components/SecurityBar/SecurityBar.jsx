@@ -8,9 +8,9 @@ import alertIcon from "../../assets/header/alert-icon.svg";
 import highRiskWhite from "../../assets/header/high-risk-white.svg";
 import greenTick from "../../assets/login/green-tick.svg";
 
-
 const SecurityBar = (props) => {
-  const { pageHeading, device, showAlert = false} = props;
+  const { pageHeading, device, showAlert = true } = props;
+  const atRisk = true;
   return (
     <div className="security-bar">
       <div>
@@ -19,13 +19,23 @@ const SecurityBar = (props) => {
 
       <h4 className="security-bar__device-id"> {device}</h4>
 
-      {showAlert && (
-      <NetworkAlert
-        alertImg={greenTick}
-        alertText="Your network is secure. Great work!"
-        atRisk={false}
-        device={device}
-      />)}
+      {showAlert && atRisk && (
+        <NetworkAlert
+          alertImg={highRiskWhite}
+          alertText="Your network is at risk!"
+          atRisk={true}
+          device={device}
+        />
+      )}
+
+      {showAlert && !atRisk && (
+        <NetworkAlert
+          alertImg={greenTick}
+          alertText="Your network is secure. Great work!"
+          atRisk={false}
+          device={device}
+        />
+      )}
       <div className="security-bar__buttons">
         <AlertButton
           buttonText="Active Devices"

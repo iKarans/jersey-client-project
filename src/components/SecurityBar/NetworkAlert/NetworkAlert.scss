@@ -9,10 +9,11 @@
   padding: 0 20px;
   border: none;
   border-radius: 12px;
+  width: 206px;
 
   &--risk {
-    background-color: rgba($high-color, 0.1);
-    color: $high-color;
+    background-color: $high-color;
+    color: white;
     height: 47%;
     display: flex;
     align-items: center;
@@ -24,13 +25,13 @@
 
   &--secure {
     background-color: rgba($primary-color, 0.1);
-    color: $primary-color;
+    color: #1ac96a;
     height: 47%;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 20px;
-    border: none;
+    border: 1px solid #1ac96a;
     border-radius: 12px;
   }
 
@@ -42,5 +43,3 @@
     padding-left: 10px;
   }
 }
-
-
