@@ -19,11 +19,24 @@ const Alerts = () => {
   const [filterStatus, setFilterStatus] = useState(false);
   const [sortTime, setSortTime] = useState(false);
   const [sortImportance, setSortImportance] = useState(false);
+  const [sortAlert, setSortAlert] = useState(false);
+
+  const handleSortAlert = () => {
+    setSortAlert(!sortAlert);
+    setSortImportance(false);
+    setSortTime(false);
+    
+    
+  }
   const handleSortImportance = () => {
     setSortImportance(!sortImportance);
+    setSortAlert(false);
+    setSortTime(false);
   }
   const handleSortTime = () => {
     setSortTime(!sortTime);
+    setSortAlert(false);
+    setSortImportance(false);
   }
 
   const handleDecrement = () => {
@@ -106,6 +119,8 @@ const Alerts = () => {
      alertsArrayFiltered.sort((a,b) => a.createdTime - b.createdTime);
    } else if(sortImportance) {
     alertsArrayFiltered.sort((a,b) => b.importanceID - a.importanceID);
+   } else if (sortAlert) {
+    alertsArrayFiltered.sort((a,b) => (a.alertType > b.alertType ) ? 1 : ((b.alertType  > a.alertType ) ? -1 : 0));
    }
  
 
@@ -196,7 +211,7 @@ const Alerts = () => {
           <div className="alerts-table__header">
             <div className="alerts-table__header-alert">
               <h5 className="alert-header">Alert Type</h5>
-              <img src={WhiteDropDown} alt="dropdown" />
+              <img src={WhiteDropDown} alt="dropdown" onClick={handleSortAlert}/>
             </div>
             <div className="alerts-table__header-summary">
               <h5 className="alert-header">Summary</h5>
