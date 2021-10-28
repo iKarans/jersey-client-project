@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import "./UserInfo.scss";
 import whiteDropdown from "./../../../assets/global/white-dropdown.svg";
-import { UserContext } from "../../../containers/Context/UserContext/UserContext";
+import { UserContext } from "../../../context/UserContext/UserContext";
 import { auth } from "../../../firebase";
 
 const UserInfo = () => {
