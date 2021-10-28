@@ -33,7 +33,7 @@ const CalulationSummary = (props) => {
                     </div>
                 </div>
 
-                <hr/>
+                <hr className="calculation__line"/>
 
                 <div className="calculation__button">
                     <button className="calculation__button--refresh">Refresh</button>

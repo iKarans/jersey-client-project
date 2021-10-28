@@ -8,9 +8,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: white;
+    background-color: $text-tertiary;
     box-shadow: 0px 3.5px 5.5px rgba(0, 0, 0, 0.05);
-    margin: 100px 0 0 15px; // to change
+    margin: 100px 0 0 95px; // to change
 
     &__container {
         height: 315px;
@@ -25,7 +25,7 @@
             justify-content: flex-start;
             font-size: 20px;
             font-weight: 500;
-            color: #676980;
+            color: $security-calc-header-text;
         }
     
         &--text {
@@ -43,7 +43,7 @@
         display: flex;
         justify-content: flex-start;
         align-items: center;
-        background-color: #F8F9FA;
+        background-color: $background-color;
         border-radius: 15px;
     }
 
@@ -84,7 +84,7 @@
             background: none;
             border: none;
             margin-left: 30px;
-            color: #676980;
+            color: $security-calc-header-text;
 
         }
 
@@ -96,14 +96,13 @@
             margin-left: 5px;
         }
     }
-    
 
+    &__line {
+        margin-top: 25px;
+        border: 0;
+        height: 1px;
+        background-image: linear-gradient(to right, rgba(224, 225, 226, 0), rgba(224, 225, 226, 1), rgba(224, 225, 226, 0.15625));
+    }
 }
 
-hr {
-    margin-top: 25px;
-    border: 0;
-    height: 1px;
-    background-image: linear-gradient(to right, rgba(224, 225, 226, 0), rgba(224, 225, 226, 1), rgba(224, 225, 226, 0.15625));
-}
 
