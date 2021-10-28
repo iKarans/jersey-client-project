@@ -3,19 +3,22 @@ import { Link } from "react-router-dom";
 import "./UserInfo.scss";
 import whiteDropdown from "./../../../assets/global/white-dropdown.svg";
 import { UserContext } from "../../../containers/Context/UserContext/UserContext";
-import { getAuth } from "firebase/auth";
+import { auth } from "../../../firebase";
 
-const UserInfo = (props) => {
-  const auth = getAuth();
-  const user = auth.currentUser;
+const UserInfo = () => {
+
+  const userInfo = auth.currentUser;
   const { handleLogout } = useContext(UserContext);
+
+  const userName = auth.currentUser ? userInfo.displayName : "";
+
 
   return (
     <div className="user-info">
       <div className="user-info__img"></div>
       <div className="user-info__dropdown">
         <button className="user-info__name">
-          {user.displayName}
+          {userName}
           <img
             className="user-info__dropdown-arrow"
             src={whiteDropdown}
