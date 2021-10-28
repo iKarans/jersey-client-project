@@ -27,6 +27,7 @@ const Alerts = () => {
     setSortTime(false);
     
     
+    
   }
   const handleSortImportance = () => {
     setSortImportance(!sortImportance);
@@ -116,6 +117,7 @@ const Alerts = () => {
      });
  
    console.log(alertsArrayFiltered);
+   
    if(sortTime) {
      alertsArrayFiltered.sort((a,b) => a.createdTime - b.createdTime);
    } else if(sortImportance) {
