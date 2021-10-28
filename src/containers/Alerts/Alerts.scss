@@ -141,6 +141,30 @@
         }
       }
     }
+    &__alert-arrow-active {
+      transform: rotate(180deg);
+      cursor: pointer;
+    }
+    &__alert-arrow-inactive {
+      display: block;
+      cursor: pointer;
+    }
+    &__time-arrow-active {
+      transform: rotate(180deg);
+      cursor: pointer;
+    }
+    &__time-arrow-inactive {
+      display: block;
+      cursor: pointer;
+    }
+    &__importance-arrow-active {
+      transform: rotate(180deg);
+      cursor: pointer;
+    }
+    &__importance-arrow-inactive {
+      display: block;
+      cursor: pointer;
+    }
 
     &__alerts {
       height: 50vh;
@@ -188,6 +212,7 @@
       
     }
   }
+  
   
 }
 

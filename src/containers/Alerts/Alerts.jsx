@@ -37,6 +37,7 @@ const Alerts = () => {
     setSortTime(!sortTime);
     setSortAlert(false);
     setSortImportance(false);
+
   }
 
   const handleDecrement = () => {
@@ -211,18 +212,18 @@ const Alerts = () => {
           <div className="alerts-table__header">
             <div className="alerts-table__header-alert">
               <h5 className="alert-header">Alert Type</h5>
-              <img src={WhiteDropDown} alt="dropdown" onClick={handleSortAlert}/>
+              <img src={WhiteDropDown} alt="dropdown" onClick={handleSortAlert} className={`${sortAlert ? "alerts-table__alert-arrow-active" : "alerts-table__alert-arrow-inactive"}`}/>
             </div>
             <div className="alerts-table__header-summary">
               <h5 className="alert-header">Summary</h5>
             </div>
             <div className="alerts-table__header-created">
               <h5 className="alert-header">Created</h5>
-              <img src={WhiteDropDown} alt="dropdown" onClick={handleSortTime}/>
+              <img src={WhiteDropDown} alt="dropdown" onClick={handleSortTime} className={`${sortTime ? "alerts-table__time-arrow-active" : "alerts-table__time-arrow-inactive"}`}/>
             </div>
             <div className="alerts-table__header-importance">
               <h5 className="alert-header">Importance Level</h5>
-              <img src={WhiteDropDown} alt="dropdown" onClick={handleSortImportance}/>
+              <img src={WhiteDropDown} alt="dropdown" onClick={handleSortImportance} className={`${sortImportance? "alerts-table__importance-arrow-active" : "alerts-table__importance-arrow-inactive"}`}/>
             </div>
           </div>
           <div className="alerts-table__alerts">{alertsItemJSX}</div>
