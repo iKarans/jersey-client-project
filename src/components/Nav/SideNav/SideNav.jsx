@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import "./SideNav.scss";
 import { Link } from "react-router-dom";
 import logo from "../../../assets/global/lujam-logo-green.svg";
@@ -9,9 +9,11 @@ import { ReactComponent as DevicesIcon } from "../../../assets/nav/device.svg";
 import { ReactComponent as AlertIcon } from "../../../assets/nav/alerts.svg";
 import { ReactComponent as SettingsIcon } from "../../../assets/nav/settings.svg";
 import { ReactComponent as GreyDropdown } from "../../../assets/global/grey-dropdown.svg";
+import { UserContext } from "../../../containers/Context/UserContext/UserContext";
 
 const SideNav = (props) => {
   const { selectedPage } = props;
+  const { handleLogout } = useContext(UserContext);
 
   const [showNav, setShowNav] = useState(false);
 
@@ -60,7 +62,7 @@ const SideNav = (props) => {
           </div>
         </div>
         <div className="side-nav__logout">
-          <p>Logout</p>
+          <span onClick={handleLogout}>Logout</span>
         </div>
       </div>
 
