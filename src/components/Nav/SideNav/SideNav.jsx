@@ -62,7 +62,7 @@ const SideNav = (props) => {
           </div>
         </div>
         <div className="side-nav__logout">
-          <span onClick={handleLogout}>Logout</span>
+          <p onClick={handleLogout}>Logout</p>
         </div>
       </div>
 

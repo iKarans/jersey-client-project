@@ -24,12 +24,12 @@ const UserInfo = (props) => {
           <Link to="/settings" className="user-info__dropdown-content--link">
             Settings
           </Link>
-          <span
+          <p
             className="user-info__dropdown-content--link"
             onClick={handleLogout}
           >
             Logout
-          </span>
+          </p>
         </div>
       </div>
     </div>
