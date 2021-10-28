@@ -3,9 +3,7 @@ import "./Dashboard.scss";
 import LargeLineGraph from "../../components/LargeLineGraph/LargeLineGraph.jsx";
 import BarChart from "../../components/BarChart/BarChart";
 import { dataset } from "../../data/securityRisk";
-import GoogleDriveChart from "../../components/GoogleDriveChart/GoogleDriveChart";
 import GoogleDriveIcon from "../../assets/dashboard/gmail1.png";
-import DropboxChart from "../../components/DropboxChart/DropboxChart";
 import DropboxIcon from "../../assets/dashboard/dropbox.png"
 
 const Dashboard = () => {
@@ -44,7 +42,7 @@ const Dashboard = () => {
   const dropboxChartTitle = "Dropbox Usage";
   const dropboxChartSubtitle =
     "Number of devices that used Dropbox over the past week";
-  const dropboxChartData = [100 , 200, 250, 200 , 150 , 0      , 0];
+  const dropboxChartData = [100 , 200, 250, 200 , 150 , 0 , 0];
   const dropboxChartLabels = [
     "Monday",
     "Tuesday",
@@ -75,7 +73,7 @@ const Dashboard = () => {
           labels={["N/A", "Low", "Medium", "High"]}
         />
        
-       <GoogleDriveChart
+       <LargeLineGraph
         title={googleDriveChartTitle}
         subtitle={googleDriveChartSubtitle}
         data={googleDriveChartData}
@@ -85,7 +83,7 @@ const Dashboard = () => {
         hoverLabel={googleDriveChartHoverLabel}
       />
 
-      <DropboxChart 
+      <LargeLineGraph
         title={dropboxChartTitle}
         subtitle={dropboxChartSubtitle}
         data={dropboxChartData}

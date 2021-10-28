@@ -28,14 +28,16 @@ const LargeLineGraph = (props) => {
   };
   
   return (
-    <div className="network-devices">
-            <img src={icon} alt="" className="network-devices__icon" />
-      <h2 className="network-devices__title">{title}</h2>
-      <p className="network-devices__subtitle">{subtitle}</p>
-      <div className="network-devices__chart">
+    <div className="line-graph">
+          {icon && <img src={icon} alt="" className="line-graph__icon" />}
+      <div className ="line-graph__header">
+        <h2 className="line-graph__header--title">{title}</h2>
+        <p className="line-graph__header--subtitle">{subtitle}</p>
+        </div>    
+      <div className="line-graph__chart">
 
       
-      <div className="network-devices__chart-container">
+      <div className="line-graph__chart-container">
         <Line
           data={generateGraphSettings}
           height={250}

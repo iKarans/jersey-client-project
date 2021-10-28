@@ -1,7 +1,7 @@
 @use "../../assets/styles/mixins" as *;
 @use "../../assets/styles/variables" as *;
 
-.network-devices {
+.line-graph {
   display: grid;
   justify-items: center;
   box-shadow: 0px 3.5px 5.5px rgba(0, 0, 0, 0.02);
@@ -41,6 +41,31 @@
     }
   }
 
+  &__header {
+
+    text-align: left;
+    justify-self: start;
+
+    &--title {
+      color: $text-secondary;
+      padding-left: 8px;
+    }
+
+    &--subtitle {
+      font-weight: 400;
+      font-size: 12px;
+      color: $text-primary;
+      padding: 10px 0 0 8px;
+  
+      @include mobile {
+        font-size: 12px;
+      }
+    }
+
+
+    
+  }
+
   &__chart {
     display: flex;
     justify-content: flex-start;
@@ -59,23 +84,9 @@
   }
   
 
-  &__title {
-    justify-self: start;
-    color: $text-secondary;
-    padding-left: 8px;
-  }
+  
 
-  &__subtitle {
-    justify-self: start;
-    font-weight: 400;
-    font-size: 12px;
-    color: $text-primary;
-    padding-left: 8px;
-
-    @include mobile {
-      font-size: 12px;
-    }
-  }
+  
 
   &__icon {
       width: 100%;
