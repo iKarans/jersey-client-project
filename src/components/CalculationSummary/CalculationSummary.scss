@@ -10,15 +10,16 @@
     align-items: center;
     background-color: $text-tertiary;
     box-shadow: 0px 3.5px 5.5px rgba(0, 0, 0, 0.05);
-    margin: 100px 0 0 95px; // to change
+    margin: 100px 0 0 95px;
 
     @include mobile {
-        height: 65%;
-        margin-top: 10px;
-        margin-left: 15px;
-        display: flex;
-        justify-content: center;
+        position: relative;
+        height: 40vh;
+        width: 90%;
+        top: 50px;
         flex-direction: column;
+        align-items: center;
+        margin: 10px 20px 40px 25px;
     }
 
     &__container {
@@ -35,6 +36,11 @@
             font-size: 20px;
             font-weight: 500;
             color: $security-calc-header-text;
+            
+            @include mobile {
+                display: flex;
+                justify-content: center;
+            }
         }
     
         &--text {
@@ -42,6 +48,10 @@
             font-size: 12px;
             font-weight: 400;
             color: $security-calc-text;
+
+            @include mobile {
+                text-align: center;
+            }
         }
     }
 
@@ -86,6 +96,12 @@
             background-color: $primary-color;
             border: none;
             color: $text-tertiary;
+
+            @include mobile {
+                height: 40px;
+                width: 150px;
+                margin-left: 30px;
+            }
         }
     
         &--more {
@@ -94,6 +110,10 @@
             border: none;
             margin-left: 30px;
             color: $security-calc-header-text;
+
+            @include mobile {
+                margin-left: 40px;
+            }
 
         }
 
@@ -111,6 +131,7 @@
         border: 0;
         height: 1px;
         background-image: $security-calc-line-gradient;
+
     }
 }
 

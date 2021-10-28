@@ -1,4 +1,6 @@
 @use "../../assets/styles/mixins" as *;
+@use "../../assets/styles/variables" as *;
+
 .network-devices {
   position: relative;
   max-height: 40vh;
