@@ -24,7 +24,7 @@
     align-items: center;
     background-color: $text-tertiary;
     box-shadow: 0px 3.5px 5.5px rgba(0, 0, 0, 0.05);
-    margin: 100px 0 0 40px; // to change
+    margin: 100px 0 0 40px;
 }
 
 .content {
@@ -54,7 +54,7 @@
         display: flex;
         justify-content: flex-start;
         align-items: center;
-        color: #454756;
+        color: $security-calc-header-text;
         font-size: 20px;
         font-weight: 600;
         margin-bottom: 30px;
@@ -63,16 +63,16 @@
     &__text {
         margin-top: 15px;
         margin-bottom: 25px;
-        color: #A0AEC0;
+        color: $security-calc-text;
     }
 
     &__button {
         height: 34px;
         width: 108px;
-        background: rgba(42, 188, 161, 0.1);
+        background: $security-calc-info-button;
         border: none;
         border-radius: 5px;
-        color: $security-calc-info-button;
+        color: $primary-color;
         margin-top: 40px;
         cursor: pointer;
 
@@ -87,6 +87,6 @@
         margin-top: 40px;
         border: 0;
         height: 1px;
-        background-image: linear-gradient(to right, rgba(224, 225, 226, 0), rgba(224, 225, 226, 1), rgba(224, 225, 226, 0.15625));
+        background-image: $security-calc-line-gradient;
     }
 }
