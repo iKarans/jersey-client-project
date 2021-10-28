@@ -116,7 +116,7 @@ const Alerts = () => {
       (isLessThreeHour ? alert.createdTime > 60 : true)
     );
   });
-
+  const alertsArrayFilteredLength = alertsArrayFiltered.length;
 
   if(filterNumber === 1) {
     alertsArrayFiltered.sort((a, b) =>
@@ -136,6 +136,7 @@ const Alerts = () => {
       alertsArrayFilteredSpliced.push(alertsArrayFiltered.splice(0, 9));
     }
   }
+  console.log(alertsArrayFilteredSpliced);
 
   const alertsItemJSX = alertsArrayFilteredSpliced[pages].map(
     (alert, index) => {
@@ -155,7 +156,7 @@ const Alerts = () => {
   const buttonNumbers = [];
 
   const generateButtonIndex = () => {
-    for (let i = 0; i < alerts.length / 9; i++) {
+    for (let i = 0; i < alertsArrayFilteredLength  / 9; i++) {
       buttonNumbers.push(i);
     }
   };
