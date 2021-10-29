@@ -14,12 +14,12 @@
 
     @include mobile {
         position: relative;
-        height: 40vh;
+        height: 45vh;
         width: 90%;
         top: 50px;
         flex-direction: column;
         align-items: center;
-        margin: 10px 20px 40px 25px;
+        margin: 10px 25px 90px 25px;
     }
 
     &__container {
