@@ -1,44 +1,26 @@
 @use "../../assets/styles/mixins" as *;
 @use "../../assets/styles/variables" as *;
-.dashboard {
-  background-color: $background-color;
-  height: 100%;
-  width: 100%;
-  padding: 0 15px 0 15px;
-  display: flex;
-  justify-content: space-between;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: space-between;
 
-  &__content {
-    position: relative;
-    width: calc(100% - 280px);
-    top: 50px;
-    // right: 55px;
+.dashboard__content {
+    padding: 10vh 3vw;
+    max-width: 100%;
+    height: 90vh;
+    max-height: 90vh;
     display: grid;
-    grid-template-columns: 2fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: 25px;
-    justify-content: left;
-    align-items: center;
-    @include mobile {
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-    }
-  }
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    column-gap: 1.5vh;
+    row-gap: 3vw;
+    justify-items: stretch;
 
-  &__large-line-graph {
-    margin-top: 100px;
 
     @include mobile {
-      margin-top: 10%;
-      height: 300px;
-      width: 320px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    row-gap: 10vw;
+    max-height: none;
+    height: auto;
     }
-  }
-  &__bar-chart {
-    margin-top: 100px;
-  }
+
 }
+  

@@ -4,7 +4,7 @@ import "./LargeLineGraph.scss";
 import { Line } from "react-chartjs-2";
 
 const LargeLineGraph = (props) => {
-  const { title, subtitle, labels, data, max } = props;
+  const { title, subtitle, labels, data, max, icon, hoverLabel } = props;
   const generateGraphSettings = (canvas) => {
     const ctx = canvas.getContext("2d");
     let gradient = ctx.createLinearGradient(0, 0, 0, 250);
@@ -14,7 +14,7 @@ const LargeLineGraph = (props) => {
       labels: labels.length === data.length ? labels : ["Monday"],
       datasets: [
         {
-          label: "Devices on Network",
+          label: hoverLabel,
           data: labels.length === data.length ? data : [0],
           fill: true,
           backgroundColor: gradient,
@@ -26,11 +26,18 @@ const LargeLineGraph = (props) => {
       ],
     };
   };
+  
   return (
-    <div className="network-devices">
-      <h2 className="network-devices__title">{title}</h2>
-      <p className="network-devices__subtitle">{subtitle}</p>
-      <div className="network-devices__chart-container">
+    <div className="line-graph">
+          {icon && <img src={icon} alt="" className="line-graph__icon" />}
+      <div className ="line-graph__header">
+        <h2 className="line-graph__header--title">{title}</h2>
+        <p className="line-graph__header--subtitle">{subtitle}</p>
+        </div>    
+      <div className="line-graph__chart">
+
+      
+      <div className="line-graph__chart-container">
         <Line
           data={generateGraphSettings}
           height={250}
@@ -73,6 +80,7 @@ const LargeLineGraph = (props) => {
             },
           }}
         />
+      </div>
       </div>
     </div>
   );
