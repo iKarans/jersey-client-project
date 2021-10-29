@@ -9,11 +9,20 @@ import samsungIcon from "../../assets/devices/samsung.svg";
 import laptopIcon from "../../assets/devices/laptop.svg";
 import mobileIcon from "../../assets/devices/mobile.svg";
 import { Link } from "react-router-dom";
-import lujamIcon from '../../assets/devices/lujam-logo-green.svg'
+import lujamIcon from "../../assets/devices/lujam-logo-green.svg";
 
 export const DeviceBar = (props) => {
-  const { name, deviceType, brand, manufacturer, model, opSystem, lastIP, lastActive, lastSeen, securityRisk } =
-    props.device;
+  const {
+    name,
+    deviceType,
+    brand,
+    manufacturer,
+    model,
+    opSystem,
+    lastIP,
+    lastSeen,
+    securityRisk,
+  } = props.device;
 
   const typeIcon = () => {
     let typeText = "";
@@ -22,9 +31,9 @@ export const DeviceBar = (props) => {
   };
 
   const getDate = () => {
-    const lastOnline = Date.parse(lastSeen)
-    const currentTime = new Date()
-    const timeSinceOnline = currentTime - lastOnline
+    const lastOnline = Date.parse(lastSeen);
+    const currentTime = new Date();
+    const timeSinceOnline = currentTime - lastOnline;
     const seconds = (timeSinceOnline / 1000).toFixed(1);
     const minutes = (timeSinceOnline / (1000 * 60)).toFixed(1);
     const hours = (timeSinceOnline / (1000 * 60 * 60)).toFixed(0);
@@ -32,14 +41,12 @@ export const DeviceBar = (props) => {
     if (seconds < 60) return "less than 1 min ago";
     else if (minutes < 60) return minutes + " min ago";
     else if (hours < 24) return hours + " hrs ago";
-    else return days + " days ago"
-  }
-
-
+    else return days + " days ago";
+  };
 
   const brandIcon = () => {
     let brandText = "";
-    let manufacturerToLower = manufacturer.toLowerCase()
+    let manufacturerToLower = manufacturer.toLowerCase();
     if (manufacturerToLower.includes("dell")) {
       brandText = dellIcon;
       return brandText;
@@ -63,7 +70,9 @@ export const DeviceBar = (props) => {
 
   return (
     <div className="device-bar">
-      <Link to={`/device/${name}`}><h4 className="device-bar__device-name">{name}</h4></Link>
+      <Link to={`/device/${name}`}>
+        <h4 className="device-bar__device-name">{name}</h4>
+      </Link>
       <img
         src={typeIcon()}
         alt={deviceType}
