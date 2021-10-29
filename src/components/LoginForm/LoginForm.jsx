@@ -1,11 +1,39 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import ShowPassword from "../../assets/login/show-password.svg";
 import HidePassword from "../../assets/login/hide-password.svg";
+import { signInWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../../firebase";
 
 import "./LoginForm.scss";
 
 const LoginForm = () => {
+  let history = useHistory();
+
+  const handleLogin = (event) => {
+    event.preventDefault();
+    signInWithEmailAndPassword(auth, userDetails.email, userDetails.password)
+      .then(() => {
+        history.push("/security");
+      })
+      .catch(() => {
+        alert("You have entered an invalid username or password");
+      });
+    history.push("/security");
+  };
+
+  const [userDetails, setUserDetails] = useState({
+    email: "",
+    password: "",
+  });
+
+  const handleInput = (event) => {
+    const userInput = event.target.value;
+    const userInputName = event.target.name;
+    const userInputsObj = { ...userDetails, [userInputName]: userInput };
+    setUserDetails(userInputsObj);
+  };
+
   const [showPassword, setShowPassword] = useState(false);
   const handleShowPassword = () => {
     setShowPassword(!showPassword);
@@ -13,13 +41,21 @@ const LoginForm = () => {
 
   return (
     <div className="login">
-      <form action="submit" className="login-form">
+      <form action="submit" className="login-form" onSubmit={handleLogin}>
         <div className="login-form__rectangle"></div>
         <h3 className="login-form__header">Login</h3>
         <label htmlFor="email" className="login-form__label">
           Email Address
         </label>
-        <input type="text" id="email" className="login-form__input" />
+        <input
+          type="text"
+          id="email"
+          name="email"
+          value={userDetails.email}
+          className="login-form__input"
+          onChange={handleInput}
+          required
+        />
         <label htmlFor="password" className="login-form__label">
           Password
         </label>
@@ -27,7 +63,11 @@ const LoginForm = () => {
           <input
             type={!showPassword ? "password" : "text"}
             id="password"
+            name="password"
+            value={userDetails.password}
             className="login-form__input"
+            onChange={handleInput}
+            required
           />
           {!showPassword && (
             <img
@@ -56,6 +96,7 @@ const LoginForm = () => {
             Remember Me
           </label>
         </div>
+
         <button className="login-form__button">Login</button>
       </form>
 

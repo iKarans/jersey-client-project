@@ -28,14 +28,11 @@
 }
 
 .routes__container-dashboard { 
-  // position: relative;
-  // top: 0px;
-  // display: flex;
-  // flex-direction: column;
-  // justify-content: flex-start;
-  // align-items: flex-start;
+  
   grid-area: 1 / 2 / 2 / 3;
   background-color: $background-color;
+  
+  
   
   @include mobile {
     width: 100%;

@@ -3,7 +3,7 @@ import { useParams } from "react-router";
 import Button from "../../components/Button/Button";
 import DeviceInfo from "../../components/DeviceInfo/DeviceInfo";
 import DeviceRisk from "../../components/DeviceRisk/DeviceRisk";
-import { devices } from "../../data/devices";
+import devicesResponse from '../../data/devicesResponse'
 import "./DevicesIndex.scss";
 
 const DevicesIndex = () => {
@@ -15,7 +15,7 @@ const DevicesIndex = () => {
     setModal(!modal);
   };
 
-  const filteredDevice = devices.find(
+  const filteredDevice = devicesResponse.find(
     (singleDevice) => singleDevice.name === device
   );
 
@@ -29,12 +29,12 @@ const DevicesIndex = () => {
 
       <DeviceInfo
         name={filteredDevice.name}
-        type={filteredDevice.type}
-        brand={filteredDevice.brand}
+        deviceType={filteredDevice.deviceType}
+        manufacturer={filteredDevice.manufacturer}
         model={filteredDevice.model}
-        OS={filteredDevice.OS}
-        ipAddress={filteredDevice.ipAddress}
-        lastActive={filteredDevice.lastActive}
+        opSystem={filteredDevice.opSystem}
+        lastIP={filteredDevice.lastIP}
+        lastSeen={filteredDevice.lastSeen}
       />
 
       {modal && (
@@ -42,8 +42,8 @@ const DevicesIndex = () => {
           <div className="overlay"> </div>
           <div className="modal-content">
             <div className="modal-content__text">
-                <h4 className="modal__title">Are you sure you want to block this device from the network?</h4>
-                <p>This action cannot be undone.</p>
+              <h4 className="modal__title">Are you sure you want to block this device from the network?</h4>
+              <p>This action cannot be undone.</p>
             </div>
             <Button toggleModal={toggleModal} text="Cancel" buttonRisk={true} />
             <Button toggleModal={toggleModal} text="Block Device" buttonRisk={false} />
