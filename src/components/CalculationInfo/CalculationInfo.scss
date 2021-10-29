@@ -1,7 +1,7 @@
 @use "../../assets/styles/mixins" as *;
 @use "../../assets/styles/variables" as *;
 
-.background {
+.calculation-info {
     position: fixed;
     top: 0;
     left: 0;
@@ -14,57 +14,64 @@
     height: 100vh;
     width: 100%;
     z-index: 1;
-}
 
-.holder {
-    height: 526px;
-    width: 385px;
-    border-radius: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: $text-tertiary;
-    box-shadow: 0px 3.5px 5.5px rgba(0, 0, 0, 0.05);
-
-}
-
-.content {
-    position: relative;
-    height: 500px;
-    width: 356px;
-    margin: 40px;
-
-    &__image {
-        position: absolute;
-        top: 15px;
-        left: 290px;
-        background: rgba(196, 196, 196, 0.1);
-        border-radius: 50px;
-        cursor: pointer;
-    }
-
-    &__image:hover {
-        background: rgba(196, 196, 196, 0.5);
-    }
-
-    &__sub {
-        margin-top: 20px;
-    }
-
-    &__title {
+    &__holder {
+        height: 526px;
+        width: 385px;
+        border-radius: 15px;
         display: flex;
-        justify-content: flex-start;
+        justify-content: center;
         align-items: center;
-        color: $security-calc-header-text;
-        font-size: 20px;
-        font-weight: 600;
-        margin-bottom: 30px;
+        background-color: $text-tertiary;
+        box-shadow: 0px 3.5px 5.5px rgba(0, 0, 0, 0.05);
     }
 
-    &__text {
-        margin-top: 15px;
-        margin-bottom: 25px;
-        color: $security-calc-text;
+    &__content {
+        position: relative;
+        height: 500px;
+        width: 356px;
+        margin: 40px;
+    
+        &--image {
+            position: absolute;
+            top: 15px;
+            left: 290px;
+            background: rgba(196, 196, 196, 0.1);
+            border-radius: 50px;
+            cursor: pointer;
+        }
+    
+        &--image:hover {
+            background: rgba(196, 196, 196, 0.5);
+        }
+    
+        &--sub-title {
+            margin-top: 20px;
+        }
+    
+        &--title {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            color: $security-calc-header-text;
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 30px;
+        }
+    
+        &--text {
+            margin-top: 15px;
+            margin-bottom: 25px;
+            color: $security-calc-text;
+        }
+    
+        
+        &--line {
+            margin-top: 40px;
+            border: 0;
+            height: 1px;
+            background-image: $security-calc-line-gradient;
+        }
     }
 
     &__button {
@@ -83,11 +90,6 @@
         background: $primary-color;
         color: $text-tertiary;
     }
-
-    &__line {
-        margin-top: 40px;
-        border: 0;
-        height: 1px;
-        background-image: $security-calc-line-gradient;
-    }
 }
+
+
