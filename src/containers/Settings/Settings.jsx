@@ -1,12 +1,10 @@
 import React from 'react'
 import "./Settings.scss"
 
-import EditDeviceForm from '../../components/EditDeviceForm/EditDeviceForm'
-
 const Settings = () => {
   return (
     <div className="settings__text">
-      <EditDeviceForm />
+      <h1>Settings Page</h1>
     </div>
   )
 }

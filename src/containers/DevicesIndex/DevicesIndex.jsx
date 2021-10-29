@@ -4,6 +4,7 @@ import Button from "../../components/Button/Button";
 import DeviceInfo from "../../components/DeviceInfo/DeviceInfo";
 import DeviceRisk from "../../components/DeviceRisk/DeviceRisk";
 import devicesResponse from '../../data/devicesResponse'
+import EditDeviceForm from '../../components/EditDeviceForm/EditDeviceForm'
 import "./DevicesIndex.scss";
 
 const DevicesIndex = () => {
@@ -36,6 +37,8 @@ const DevicesIndex = () => {
         lastIP={filteredDevice.lastIP}
         lastSeen={filteredDevice.lastSeen}
       />
+
+      <EditDeviceForm />
 
       {modal && (
         <div className="modal">
