@@ -1,12 +1,18 @@
 # Lujam-Jersey Project
 
-This project was created with react and firebase by the Jersey intake of the \_nology software developer course. The project demonstrated possible design changes for Lujams dashboard redesign.
+This project was created with react and firebase by the Jersey intake of the \_nology software developer course. The project demonstrated possible design changes for Lujams dashboard [redesign](https://lujam-jersey.web.app/).
 
 ## Overview
 
-The project ran for four weeks, with each week taking the form of a sprint, with a new product owner. We used Trello to manage our tickets, and Github to allow us to work on multiple features, and merge them when they were completed. Each sprint ended with a demo to the clients, and feedback which informed the next weeks tickets. The team wrote the tickets, estimated time for each one, and assigned them at the start of the new sprint.
-The application was built from wireframes created by Jake Wood, a coach for the course.
-The project was built in react, and used firebase for the hosting and authorisation.
+The project is built in React and uses Firebase for hosting and authorization.
+
+The project ran for four weeks, with each week taking the form of a sprint with a new product owner assigned. Each sprint ended with a demo to the clients. The feedback informed the next sprint's tickets.
+
+The product owner planned the tickets and wrote the acceptance criteria for completion.
+
+Trello was used to manage workflow. A git branching strategy was used to work on multiple features. Once a pull request was completed the feature would be added to the codebase.
+
+The application was built from [wireframes](https://www.figma.com/file/RV6ZK8nzvqFlTZoG37TwUU/Lujam-Portal-V2?node-id=82%3A5204) created by [Jake Wood](https://github.com/jakealistairwood).
 
 ## Project Links
 
@@ -40,24 +46,24 @@ to locally run the app at http://localhost:3000
 
 The following students contributed to the program:
 
-[Ali Abdellatif](https://github.com/aliabdellatif0)
+-[Ali Abdellatif](https://github.com/aliabdellatif0)
 
-[Gabor Agardi](https://github.com/gabagardi)
+-[Gabor Agardi](https://github.com/gabagardi)
 
-[Istvan Agardi](https://github.com/iagardi)
+-[Istvan Agardi](https://github.com/iagardi)
 
-[Adam D'Costa](https://github.com/AdamDCosta)
+-[Adam D'Costa](https://github.com/AdamDCosta)
 
-[Rob Hooper](https://github.com/hoopercode)
+-[Rob Hooper](https://github.com/hoopercode)
 
-[Matt Hutt](https://github.com/matthutt85)
+-[Matt Hutt](https://github.com/matthutt85)
 
-[Ian Mason](https://github.com/ism90)
+-[Ian Mason](https://github.com/ism90)
 
-[Yasir Siddig](https://github.com/ymasn96)
+-[Yasir Siddig](https://github.com/ymasn96)
 
-[Karan Sivalingam](https://github.com/iKarans)
+-[Karan Sivalingam](https://github.com/iKarans)
 
-[Alessandro Spiridigliozzi](https://github.com/alessandrothedev)
+-[Alessandro Spiridigliozzi](https://github.com/alessandrothedev)
 
-[Morris Willis](https://github.com/Halfiies)
+-[Morris Willis](https://github.com/Halfiies)
