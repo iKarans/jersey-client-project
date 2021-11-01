@@ -20,7 +20,11 @@ const Alerts = () => {
   const [sortAlert, setSortAlert] = useState(false);
   const [sortTime, setSortTime] = useState(false);
   const [sortImportance, setSortImportance] = useState(false);
+  const [filtersArray, setFiltersArray] = useState([]);
+  const [importanceArray, setImportanceArray] = useState([]);
+  const [createdArray, setCreatedArray] = useState([]);
   const [searchWord, setSearchWord] = useState("");
+
   const handleSearchWord = (event) => {
     setSearchWord(event.target.value);
   }
@@ -70,8 +74,7 @@ const Alerts = () => {
   };
 
   const alertsArray = [...alerts];
-  /// Karans Messing around
-  const [filtersArray, setFiltersArray] = useState([]);
+
   const handleFilterCheckbox = (event) => {
     let tempArr = [...filtersArray];
     if (tempArr.includes(event.target.id)) {
@@ -92,7 +95,7 @@ const Alerts = () => {
     return false;
   };
 
-  const [importanceArray, setImportanceArray] = useState([]);
+  
   const filterByImportance = (alert) => {
     for (let i = 0; i < importanceArray.length; i++) {
       if (alert.importanceLevel.includes(importanceArray[i])) {
@@ -113,7 +116,7 @@ const Alerts = () => {
     setPages(0);
   };
 
-  const [createdArray, setCreatedArray] = useState([]);
+
   const filterByCreated = (alert) => {
     for (let i = 0; i < createdArray.length; i++) {
       if (alert.createdID.includes(createdArray[i])) {
@@ -142,8 +145,7 @@ const Alerts = () => {
       (searchWord ? alert.summary.toLowerCase().includes(searchWord) : true)
     );
   });
-  const alertsArrayFilteredLength = alertsArrayFiltered.length;
-
+  
   if (filterNumber === 1) {
     alertsArrayFiltered.sort((a, b) =>
       sortAlert
@@ -178,7 +180,6 @@ const Alerts = () => {
       alertsArrayFilteredSpliced.push(alertsArrayFiltered.splice(0, 9));
     }
   }
-  console.log(alertsArrayFilteredSpliced);
 
   const alertsItemJSX = alertsArrayFilteredSpliced[pages].map(
     (alert, index) => {
@@ -198,7 +199,7 @@ const Alerts = () => {
   const buttonNumbers = [];
 
   const generateButtonIndex = () => {
-    for (let i = 0; i < alertsArrayFilteredLength / 9; i++) {
+    for (let i = 0; i < alertsArrayFiltered.length / 9; i++) {
       buttonNumbers.push(i);
     }
   };
