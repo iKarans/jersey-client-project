@@ -10,13 +10,13 @@
     align-items: center;
     background-color: $text-tertiary;
     box-shadow: 0px 3.5px 5.5px rgba(0, 0, 0, 0.05);
-    margin: 100px 0 0 95px;
+    margin-top: 95px;
+    margin-left: 20px;
 
     @include mobile {
-        position: relative;
-        height: 45vh;
+        // position: relative;
+        height: 350px;
         width: 90%;
-        top: 50px;
         flex-direction: column;
         align-items: center;
         margin: 10px 25px 90px 25px;
