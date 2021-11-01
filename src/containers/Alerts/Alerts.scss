@@ -40,6 +40,7 @@
       width: 30%;
       display: flex;
       justify-content: flex-end;
+      margin-right: 3%;
 
       .alerts-sort,
       .alerts-filter {
@@ -217,8 +218,6 @@
       }
     }
   }
-
-
 }
 
 .alert__filter-inactive {
