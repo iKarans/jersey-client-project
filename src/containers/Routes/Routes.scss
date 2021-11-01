@@ -31,14 +31,12 @@
   
   grid-area: 1 / 2 / 2 / 3;
   background-color: $background-color;
-  
-  
-  
+ 
   @include mobile {
     width: 100%;
   }
  
- }
+}
 
  .routes__container-security { 
   position: relative;
@@ -66,7 +64,6 @@
  .routes__container-devices {
   grid-area: 1 / 2 / 2 / 3;
   background-color: $background-color;
-  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;

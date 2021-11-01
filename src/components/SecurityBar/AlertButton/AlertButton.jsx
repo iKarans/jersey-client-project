@@ -10,13 +10,15 @@ const AlertButton = (props) => {
 
   return (
     <button className="button">
-      <div className={buttonStyle}>
-        <img className="button__icon--svg" src={iconImage} alt="alerts" />
+      <div className="button-icon-container">
+        <div className={buttonStyle}>
+            <img className="button__icon--svg" src={iconImage} alt="alerts" />
+        </div>
       </div>
-      <div className="button__info">
+     <div className="button__info">
         <p className="button__info--heading">{buttonText}</p>
         <p className="button__info--number">{buttonNumber}</p>
-      </div>
+     </div>
     </button>
   );
 };
