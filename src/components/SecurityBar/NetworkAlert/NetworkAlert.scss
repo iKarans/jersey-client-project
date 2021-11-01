@@ -24,7 +24,7 @@
   }
 
   &--secure {
-    background-color: rgba($secure-device-alert-icon 0.08);
+    background-color: rgba($secure-device-alert-icon, 0.08);
     color: $low-color;
     height: 47%;
     display: flex;
