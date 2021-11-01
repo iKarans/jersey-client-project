@@ -56,6 +56,7 @@ const Alerts = () => {
     setFiltersArray([]);
     setImportanceArray([]);
     setCreatedArray([]);
+    document.querySelectorAll('input[type=checkbox]').forEach( el => el.checked = false );
   };
 
   const handleIncrement = () => {

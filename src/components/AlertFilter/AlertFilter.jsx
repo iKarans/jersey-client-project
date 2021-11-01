@@ -13,6 +13,7 @@ const AlertFilter = (props) => {
           <div className="alert-filters__filter--alert" >
             <p className="alert-filters__filter-text">Alert Type</p>
             <form action="" className="alert-filters__filter--alert-form" />
+            
               <input type="checkbox" id="New Device" onInput={handleFilterCheckbox}/>
               <label htmlFor="New Device" className="alert-filters__checkbox-text">New Device</label><br/>
               <input type="checkbox" id="Outage" onInput={handleFilterCheckbox}/>
