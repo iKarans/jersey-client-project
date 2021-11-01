@@ -18,33 +18,35 @@ const SecurityBar = (props) => {
 
       <h4 className="security-bar__device-id"> {device}</h4>
 
-      {showAlert && (
-        <NetworkAlert
-          alertImg={greenTick}
-          alertText="Your network is secure. Great work!"
-          atRisk={false}
-          device={device}
-        />
-      )}
-      <div className="security-bar__buttons">
-        <AlertButton
-          buttonText="Active Devices"
-          buttonNumber="36"
-          isHigh={false}
-          iconImage={deviceIcon}
-        />
-        <AlertButton
-          buttonText="Alerts"
-          isHigh={false}
-          iconImage={alertIcon}
-          buttonNumber="63"
-        />
-        <AlertButton
-          buttonText="High Risk Devices"
-          isHigh={true}
-          iconImage={highRiskWhite}
-          buttonNumber="4"
-        />
+      <div className="alerts-container">
+        {showAlert && (
+            <NetworkAlert
+            alertImg={greenTick}
+            alertText="Your network is secure. Great work!"
+            atRisk={false}
+            device={device}
+            />
+        )}
+        <div className="security-bar__buttons">
+            <AlertButton
+            buttonText="Active Devices"
+            buttonNumber="36"
+            isHigh={false}
+            iconImage={deviceIcon}
+            />
+            <AlertButton
+            buttonText="Alerts"
+            isHigh={false}
+            iconImage={alertIcon}
+            buttonNumber="63"
+            />
+            <AlertButton
+            buttonText="High Risk Devices"
+            isHigh={true}
+            iconImage={highRiskWhite}
+            buttonNumber="4"
+            />
+        </div>
       </div>
     </div>
   );

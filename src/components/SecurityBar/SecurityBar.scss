@@ -24,14 +24,8 @@ padding: 10px;
 
   &__heading {
     margin-left: 15%;
-    font-style: normal;
     font-weight: 600;
     font-size: 32px;
-    line-height: 39px;
-    /* identical to box height */
-
-    display: flex;
-    align-items: center;
 
     color: #454756;
   }
@@ -43,8 +37,13 @@ padding: 10px;
   }
 
   &__device-id {
-      margin-right: 230px;
       font-size: 1.4rem;
       color: $text-secondary;
+  }
+
+  .alerts-container {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
   }
 }
