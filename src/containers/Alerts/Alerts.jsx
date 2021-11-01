@@ -20,6 +20,10 @@ const Alerts = () => {
   const [sortAlert, setSortAlert] = useState(false);
   const [sortTime, setSortTime] = useState(false);
   const [sortImportance, setSortImportance] = useState(false);
+  const [searchWord, setSearchWord] = useState("");
+  const handleSearchWord = (event) => {
+    setSearchWord(event.target.value);
+  }
 
   const handleSortAlert = () => {
     setSortAlert(!sortAlert);
@@ -134,7 +138,8 @@ const Alerts = () => {
     return (
       (filtersArray.length ? filterByAlertType(alert) : true) &&
       (importanceArray.length ? filterByImportance(alert) : true) &&
-      (createdArray.length ? filterByCreated(alert) : true)
+      (createdArray.length ? filterByCreated(alert) : true) &&
+      (searchWord ? alert.summary.toLowerCase().includes(searchWord) : true)
     );
   });
   const alertsArrayFilteredLength = alertsArrayFiltered.length;
@@ -235,6 +240,7 @@ const Alerts = () => {
               type="text"
               placeholder="Search Alerts"
               className="search-input"
+              onInput={handleSearchWord}
             />
           </div>
           <div className="alerts__search-filter-sort">
@@ -334,7 +340,7 @@ const Alerts = () => {
             )}
           </div>
         </div>
-        <ChatButton />
+        {/* <ChatButton /> */}
       </section>
     </>
   );
