@@ -2,11 +2,9 @@ import React, { useState } from "react";
 
 import AlertItem from "../../components/AlertItem/AlertItem";
 import AlertFilter from "../../components/AlertFilter/AlertFilter";
-import ChatButton from "../../components/ChatButton/ChatButton";
 import AlertPageButton from "../../components/AlertPageButton/AlertPageButton";
 import { alerts } from "../../data/alerts.js";
 import SearchIcon from "../../assets/global/search-icon.svg";
-import SortIcon from "../../assets/global/sort-icon.svg";
 import FilterIcon from "../../assets/devices/filterIcon.png";
 import WhiteDropDown from "../../assets/global/white-dropdown.svg";
 import AlertsArrow from "../../assets/alerts/alerts-arrow.svg";
@@ -70,7 +68,7 @@ const Alerts = () => {
   };
 
   const alertsArray = [...alerts];
-  
+
   const [filtersArray, setFiltersArray] = useState([]);
   const handleFilterCheckbox = (event) => {
     let tempArr = [...filtersArray];
@@ -178,7 +176,6 @@ const Alerts = () => {
       alertsArrayFilteredSpliced.push(alertsArrayFiltered.splice(0, 9));
     }
   }
-  console.log(alertsArrayFilteredSpliced);
 
   const alertsItemJSX = alertsArrayFilteredSpliced[pages].map(
     (alert, index) => {
