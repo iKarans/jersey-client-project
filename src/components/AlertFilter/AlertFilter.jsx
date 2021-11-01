@@ -8,7 +8,8 @@ const AlertFilter = (props) => {
     
       <section className="alert-filters" >
         <div className="alert-filters-container">
-          <h4 className="alert-filters__header-text">Filter</h4>
+          <h4 className="alert-filters__header-text">Filter </h4>
+          
           <div className="alert-filters__filter--alert" >
             <p className="alert-filters__filter-text">Alert Type</p>
             <form action="" className="alert-filters__filter--alert-form" />
@@ -40,9 +41,14 @@ const AlertFilter = (props) => {
               <label htmlFor="" className="alert-filters__checkbox-text">High</label>
             <form/>
           </div>
+          <div className="alert-filters__buttons-wrapper">
+          <div className="alert-filters__reset" onClick={toggleFilterBox}>
+            <p>Reset</p>
+          </div>
           <div className="alert-filters__apply" onClick={toggleFilterBox}>
             <p>Apply</p>
           </div>
+        </div>
         </div>
       </section>
 
