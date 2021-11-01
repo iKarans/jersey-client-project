@@ -72,7 +72,11 @@
     margin-top: -7px;
     margin-left: 55px;
     background: $primary-color;
+    color: $text-tertiary;
     border-radius: 50%;
+    text-align: center;
+    font-size: 0.6em;
+    font-weight: 500;
   }
 
   &-table {
