@@ -13,7 +13,7 @@ const Security = () => {
         setMoreInfo(!moreInfo);
       };
 
-  const pillarsArray = [{
+  const calculationSummaryStatus = [{
 
     name: "Boundary Firewalls",
     status: true
@@ -43,7 +43,7 @@ const Security = () => {
   return (
     <div className="security">
       <SecurityScore />
-      <CalulationSummary pillarsArray={pillarsArray} showMoreInfo={showMoreInfo}/>
+      <CalulationSummary calculationSummaryStatus={calculationSummaryStatus} showMoreInfo={showMoreInfo}/>
       {moreInfo && <CalculationInfo  showMoreInfo={showMoreInfo}/>}
       
 

@@ -8,10 +8,10 @@ import RightArrow from "../../assets/global/right-arrow.svg";
 
 const CalulationSummary = (props) => {
 
-    const { showMoreInfo, pillarsArray } = props;
+    const { showMoreInfo, calculationSummaryStatus } = props;
 
-    const itemsJsx = pillarsArray.map(item => {
-        if (item.status === true) {
+    const itemsJsx = calculationSummaryStatus.map(item => {
+        if (item.status) {
             return (
             <>
             <img className="calculation__items--image" src={Tick} alt="Green tick"/>
