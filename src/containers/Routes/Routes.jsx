@@ -23,7 +23,7 @@ const Routes = () => {
   const [showEdit, setShowEdit] = useState(false);
 
   const handleShowEdit = (event) => {
-    console.log(event)
+    setShowEdit(!showEdit)
   }
 
   return (

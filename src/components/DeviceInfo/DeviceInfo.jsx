@@ -4,7 +4,7 @@ import Button from "../Button/Button";
 import "./DeviceInfo.scss"
 
 const DeviceInfo = (props) => {
-  const { name, deviceType, manufacturer, model, opSystem, lastIP, lastSeen, setShowEdit } = props;
+  const { name, deviceType, manufacturer, model, opSystem, lastIP, lastSeen, handleShowEdit } = props;
 
   return (
     <div className="device-info">
@@ -25,8 +25,8 @@ const DeviceInfo = (props) => {
 
       <div className="device-info__edit">
         <h4>Are these details correct?</h4>
-        <Link to={`/devices/${name}/edit`} >
-          <Button text="Edit" buttonRisk={true} onClick={setShowEdit} />
+        <Link to={`/devices/${name}/edit`} onClick={handleShowEdit}>
+          <Button text="Edit" buttonRisk={true}  />
         </Link>
       </div>
 

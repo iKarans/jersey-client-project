@@ -23,7 +23,7 @@ const SecurityBar = (props) => {
         <h1 className="security-bar__heading">{pageHeading}</h1>
       </div>
 
-      <h4 className="security-bar__device-id"> {device}    {editText()}</h4>
+      <h4 className="security-bar__device-id"> {device} </h4><span className="security-bar__device-edit">{editText()}</span>
 
       {showAlert && (
         <NetworkAlert
