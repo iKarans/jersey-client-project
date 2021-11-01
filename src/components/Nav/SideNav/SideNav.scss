@@ -58,6 +58,8 @@
     }
   }
 
+
+
   &__logout {
     background: #2abca1;
     border-radius: 18px;
@@ -71,6 +73,7 @@
     color: white;
     font-weight: 700;
     grid-area: 9 / 1 / 10 / 2;
+    cursor: pointer;
   }
 
   &__item--image {
@@ -78,7 +81,14 @@
     width: 18.5px;
     margin-right: 15px;
   }
+
+  &__settings {
+    margin-top: 80px;
+  }
+
 }
+
+
 
 .mobile-nav-header {
   display: none;

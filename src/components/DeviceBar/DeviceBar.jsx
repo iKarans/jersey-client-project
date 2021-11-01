@@ -8,43 +8,74 @@ import lenovoIcon from "../../assets/devices/lenovo.svg";
 import samsungIcon from "../../assets/devices/samsung.svg";
 import laptopIcon from "../../assets/devices/laptop.svg";
 import mobileIcon from "../../assets/devices/mobile.svg";
+import { Link } from "react-router-dom";
+import lujamIcon from "../../assets/devices/lujam-logo-green.svg";
 
 export const DeviceBar = (props) => {
-  const { name, type, brand, model, OS, ipAddress, lastActive, securityRisk } =
-    props.device;
+  const {
+    name,
+    deviceType,
+    brand,
+    manufacturer,
+    model,
+    opSystem,
+    lastIP,
+    lastSeen,
+    securityRisk,
+  } = props.device;
 
   const typeIcon = () => {
     let typeText = "";
-    type === "laptop" ? (typeText = laptopIcon) : (typeText = mobileIcon);
+    deviceType === "laptop" ? (typeText = laptopIcon) : (typeText = mobileIcon);
     return typeText;
   };
 
+  const getDate = () => {
+    const lastOnline = Date.parse(lastSeen);
+    const currentTime = new Date();
+    const timeSinceOnline = currentTime - lastOnline;
+    const seconds = (timeSinceOnline / 1000).toFixed(1);
+    const minutes = (timeSinceOnline / (1000 * 60)).toFixed(1);
+    const hours = (timeSinceOnline / (1000 * 60 * 60)).toFixed(0);
+    const days = (timeSinceOnline / (1000 * 60 * 60 * 24)).toFixed(0);
+    if (seconds < 60) {
+      return "less than 1 min ago";
+    } else if (minutes < 60) {
+      return minutes + " min ago";
+    } else if (hours < 24) {
+      return hours + " hrs ago";
+    } else {
+      return days + " days ago";
+    }
+  };
+
   const brandIcon = () => {
-    let brandText = "";
-    if (brand === "dell") {
-      brandText = dellIcon;
-      return brandText;
-    } else if (brand === "apple") {
-      brandText = appleIcon;
-      return brandText;
-    } else if (brand === "huawei") {
-      brandText = huaweiIcon;
-      return brandText;
-    } else if (brand === "lenovo") {
-      brandText = lenovoIcon;
-      return brandText;
-    } else if (brand === "samsung") {
-      brandText = samsungIcon;
-      return brandText;
+    let brandText = lujamIcon;
+    let manufacturerToLower = manufacturer.toLowerCase();
+    switch (true) {
+      case manufacturerToLower.includes("dell"):
+        return (brandText = dellIcon);
+      case manufacturerToLower.includes("apple"):
+        return (brandText = appleIcon);
+      case manufacturerToLower.includes("huawei"):
+        return (brandText = huaweiIcon);
+      case manufacturerToLower.includes("lenovo"):
+        return (brandText = lenovoIcon);
+      case manufacturerToLower.includes("samsung"):
+        return (brandText = samsungIcon);
+      default:
+        return brandText;
     }
   };
 
   return (
     <div className="device-bar">
-      <h4>{name}</h4>
+      <Link to={`/device/${name}`}>
+        <h4 className="device-bar__device-name">{name}</h4>
+      </Link>
       <img
         src={typeIcon()}
-        alt={type}
+        alt={deviceType}
         className="device-bar__hidden-on-mobile"
       />
       <img
@@ -53,9 +84,9 @@ export const DeviceBar = (props) => {
         className="device-bar__hidden-on-mobile"
       />
       <p className="device-bar__hidden-on-mobile">{model}</p>
-      <p className="device-bar__hidden-on-mobile"> {OS}</p>
-      <p className="device-bar__hidden-on-mobile">{ipAddress}</p>
-      <p className="device-bar__hidden-on-mobile">{lastActive}</p>
+      <p className="device-bar__hidden-on-mobile"> {opSystem}</p>
+      <p className="device-bar__hidden-on-mobile">{lastIP}</p>
+      <p className="device-bar__hidden-on-mobile">{getDate()}</p>
 
       <span
         className={`device-bar__security-risk device-bar__security-risk--${securityRisk}`}

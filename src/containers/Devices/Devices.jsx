@@ -1,14 +1,15 @@
-import React from 'react';
+import React from "react";
+
+import DeviceList from "../DeviceList/DeviceList";
 import "./Devices.scss";
 
 const Devices = () => {
   return (
+      <div className="devices-page">
+          <DeviceList />
+      </div>
+        
+  );
+};
 
-    
-    <div className="devices__text">
-     <h1>devices</h1>
-    </div>
-  )
-}
-
-export default Devices
+export default Devices;

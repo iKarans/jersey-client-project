@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import "./SideNav.scss";
 import { Link } from "react-router-dom";
 import logo from "../../../assets/global/lujam-logo-green.svg";
@@ -6,12 +6,14 @@ import MobileNav from "../MobileNav/MobileNav";
 import { ReactComponent as HomeIcon } from "../../../assets/nav/home.svg";
 import { ReactComponent as SecurityIcon } from "../../../assets/nav/security.svg";
 import { ReactComponent as DevicesIcon } from "../../../assets/nav/device.svg";
-import { ReactComponent as NetworkIcon } from "../../../assets/nav/network.svg";
+import { ReactComponent as AlertIcon } from "../../../assets/nav/alerts.svg";
 import { ReactComponent as SettingsIcon } from "../../../assets/nav/settings.svg";
 import { ReactComponent as GreyDropdown } from "../../../assets/global/grey-dropdown.svg";
+import { UserContext } from "../../../context/UserContext/UserContext";
 
-const SideNav = props => {
+const SideNav = (props) => {
   const { selectedPage } = props;
+  const { handleLogout } = useContext(UserContext);
 
   const [showNav, setShowNav] = useState(false);
 
@@ -46,10 +48,10 @@ const SideNav = props => {
               Devices
             </Link>
           </div>
-          <div className="side-nav__network side-nav__item">
-            <NetworkIcon className="side-nav__item--image" />
-            <Link to="/network" className="side-nav__text">
-              Network
+          <div className="side-nav__alerts side-nav__item">
+            <AlertIcon className="side-nav__item--image" />
+            <Link to="/alerts" className="side-nav__text">
+              Alerts
             </Link>
           </div>
           <div className="side-nav__settings side-nav__item">
@@ -60,7 +62,7 @@ const SideNav = props => {
           </div>
         </div>
         <div className="side-nav__logout">
-          <p>Logout</p>
+          <p onClick={handleLogout}>Logout</p>
         </div>
       </div>
 
