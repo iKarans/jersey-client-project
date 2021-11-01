@@ -25,7 +25,7 @@ const DeviceInfo = (props) => {
 
       <div className="device-info__edit">
         <h4>Are these details correct?</h4>
-        <Link to={`/settings/editdevice/${name}`} >
+        <Link to={`/settings/${name}`} >
           <Button text="Edit" buttonRisk={true} />
         </Link>
       </div>
