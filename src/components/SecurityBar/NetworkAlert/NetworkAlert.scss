@@ -24,14 +24,14 @@
   }
 
   &--secure {
-    background-color: rgba(111, 221, 162, 0.08);
+    background-color: rgba($secure-device-alert-icon 0.08);
     color: $low-color;
     height: 47%;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 20px;
-    border: 1px solid rgba(26, 201, 106, 0.19);
+    border: 1px solid rgba($secure-device-alert-border, 0.19);
     border-radius: 12px;
   }
 
