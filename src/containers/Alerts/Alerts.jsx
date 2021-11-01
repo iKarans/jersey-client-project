@@ -72,38 +72,8 @@ const Alerts = () => {
     setFiltersArray(tempArr);
     setPages(0);
   };
-  // importance Level
-  const [isLowImportance, setLowImportanceLevel] = useState(false);
-  const [isHighImportance, setHighImportanceLevel] = useState(false);
-  const handleIsLowImportance = () => {
-    let temp = isLowImportance;
-    setLowImportanceLevel(!isLowImportance);
-    setHighImportanceLevel(temp);
-    setPages(0);
-  };
-  const handleIsHighImportance = () => {
-    let temp = isHighImportance;
-    setHighImportanceLevel(!isHighImportance);
-    setLowImportanceLevel(temp);
-    setPages(0);
-  };
 
-  const [isLessHour, setIsLessHour] = useState(false);
-  const [isLessThreeHour, setIsLessThreeHour] = useState(false);
-  const handleIsLessHour = () => {
-    let temp = isLessHour;
-    setIsLessHour(!isLessHour);
-    setIsLessThreeHour(temp);
-    setPages(0);
-  };
-  const handleIsLessThreeHour = () => {
-    let temp = isLessThreeHour;
-    setIsLessThreeHour(!isLessThreeHour);
-    setIsLessHour(temp);
-    setPages(0);
-  };
-
-  const shouldReturn = (alert) => {
+  const filterByAlertType = (alert) => {
     for (let i = 0; i < filtersArray.length; i++) {
       if (alert.alertType.includes(filtersArray[i])) {
         return true;
@@ -112,13 +82,63 @@ const Alerts = () => {
     return false;
   };
 
+  const [importanceArray, setImportanceArray] = useState([]);
+  const filterByImportance = (alert) => {
+    for (let i = 0; i < importanceArray.length; i++) {
+      if (alert.importanceLevel.includes(importanceArray[i])) {
+        return true;
+      }
+    }
+    return false;
+  };
+
+  const handleImportanceArray = (event) => {
+    let tempArr = [...importanceArray];
+    if (tempArr.includes(event.target.id)) {
+      tempArr.splice(tempArr.indexOf(event.target.id), 1);
+    } else {
+      tempArr.push(event.target.id);
+    }
+    setImportanceArray(tempArr);
+    setPages(0);
+  }
+
+  // const [isLessHour, setIsLessHour] = useState(false);
+  // const [isLessThreeHour, setIsLessThreeHour] = useState(false);
+  // const handleIsLessHour = () => {
+  //   setIsLessHour(!isLessHour);
+  //   setPages(0);
+  // };
+  // const handleIsLessThreeHour = () => {
+  //   setIsLessThreeHour(!isLessThreeHour);
+  //   setPages(0);
+  // };
+  const [createdArray, setCreatedArray] = useState([]);
+  const filterByCreated = (alert) => {
+    for (let i = 0; i < createdArray.length; i++) {
+      if (alert.createdTime.includes(createdArray[i])) {
+        return true;
+      }
+    }
+    return false;
+  };
+
+  const handleCreatedArray = (event) => {
+    let tempArr = [...createdArray];
+    if (tempArr.includes(event.target.id)) {
+      tempArr.splice(tempArr.indexOf(event.target.id), 1);
+    } else {
+      tempArr.push(event.target.id);
+    }
+    setCreatedArray(tempArr);
+    setPages(0);
+  }
+
   const alertsArrayFiltered = alertsArray.filter((alert) => {
     return (
-      (filtersArray.length ? shouldReturn(alert) : true) &&
-      (isLowImportance ? alert.importanceID === 1 : true) &&
-      (isHighImportance ? alert.importanceID === 2 : true) &&
-      (isLessHour ? alert.createdTime <= 60 : true) &&
-      (isLessThreeHour ? alert.createdTime > 60 : true)
+      (filtersArray.length ? filterByAlertType(alert) : true) &&
+      (importanceArray.length ? filterByImportance(alert) : true) &&
+      (createdArray.length ? filterByCreated(alert) : true)
     );
   });
   const alertsArrayFilteredLength = alertsArrayFiltered.length;
@@ -190,10 +210,8 @@ const Alerts = () => {
           <AlertFilter
             toggleFilterBox={toggleFilterBox}
             handleFilterCheckbox={handleFilterCheckbox}
-            handleIsLowImportance={handleIsLowImportance}
-            handleIsHighImportance={handleIsHighImportance}
-            handleIsLessHour={handleIsLessHour}
-            handleIsLessThreeHour={handleIsLessThreeHour}
+            handleImportanceArray={handleImportanceArray}
+            handleCreatedArray={handleCreatedArray}
           />
         </div>
         <div className="alerts__search">
