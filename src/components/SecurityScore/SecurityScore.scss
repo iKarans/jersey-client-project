@@ -10,7 +10,7 @@
   padding: 20px;
   margin-top: 150px;
   margin-left: 50px;
-  // overflow: hidden;
+  overflow: hidden;
 
   @include mobile {
     flex-direction: column;
