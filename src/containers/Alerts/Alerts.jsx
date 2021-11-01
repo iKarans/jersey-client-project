@@ -2,7 +2,6 @@ import React, { useState } from "react";
 
 import AlertItem from "../../components/AlertItem/AlertItem";
 import AlertFilter from "../../components/AlertFilter/AlertFilter";
-import ChatButton from "../../components/ChatButton/ChatButton";
 import AlertPageButton from "../../components/AlertPageButton/AlertPageButton";
 import { alerts } from "../../data/alerts.js";
 import SearchIcon from "../../assets/global/search-icon.svg";
@@ -231,7 +230,6 @@ const Alerts = () => {
             handleImportanceArray={handleImportanceArray}
             handleCreatedArray={handleCreatedArray}
             resetFilterBox={resetFilterBox}
-            filtersArray={filtersArray}
           />
         </div>
         <div className="alerts__search">

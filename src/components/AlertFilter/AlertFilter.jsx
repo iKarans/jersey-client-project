@@ -2,7 +2,7 @@ import React from 'react';
 import "./AlertFilter.scss";
 
 const AlertFilter = (props) => {
-  const {handleFilterCheckbox, handleImportanceArray, handleCreatedArray, toggleFilterBox, resetFilterBox, filterArray} = props;
+  const {handleFilterCheckbox, handleImportanceArray, handleCreatedArray, toggleFilterBox, resetFilterBox} = props;
 
   return (
     
