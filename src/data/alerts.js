@@ -4,7 +4,7 @@ export const alerts = [
     summary: "Unrecognised device connected for first time.",
     created: "15 minutes ago",
     importanceLevel: "Low",
-    createdTime: 15,
+    createdTime: "Low",
     importanceID: 1,
   },
   {
@@ -13,7 +13,7 @@ export const alerts = [
       "Device with name Dave’s-macbook-pro poses significant risk to network. Action Needed.",
     created: "47 minutes ago",
     importanceLevel: "High",
-    createdTime: 47,
+    createdTime: "Low",
     importanceID: 2,
   },
   {
@@ -21,7 +21,7 @@ export const alerts = [
     summary: "Previous device logged on with IP address 198.68.0.1",
     created: "3 minutes ago",
     importanceLevel: "Low",
-    createdTime: 3,
+    createdTime: "Low",
     importanceID: 1,
   },
   {
@@ -30,7 +30,7 @@ export const alerts = [
       "Security score calculated as 540. View security tab for more information.",
     created: "75 minutes ago",
     importanceLevel: "Low",
-    createdTime: 75,
+    createdTime: "High",
     importanceID: 1,
   },
   {
@@ -38,7 +38,7 @@ export const alerts = [
     summary: "Network outage occured at 18:23.34 on 05/10/2021.",
     created: "Over 3 hours ago",
     importanceLevel: "High",
-    createdTime: 180,
+    createdTime: "High",
     importanceID: 2,
   },
   {
@@ -46,7 +46,7 @@ export const alerts = [
     summary: "Connection restored following outage at 18:23.34.",
     created: "18 minutes ago",
     importanceLevel: "High",
-    createdTime: 18,
+    createdTime: "Low",
     importanceID: 2,
   },
   {
@@ -54,7 +54,7 @@ export const alerts = [
     summary: "Connection restored following outage at 18:23.34.",
     created: "18 minutes ago",
     importanceLevel: "High",
-    createdTime: 18,
+    createdTime: "Low",
     importanceID: 2,
   },
   {
@@ -62,7 +62,7 @@ export const alerts = [
     summary: "Previous device logged on with IP address 195.111.190.115",
     created: "under a minute ago",
     importanceLevel: "Low",
-    createdTime: 1,
+    createdTime: "Low",
     importanceID: 1,
   },
   {
@@ -70,7 +70,7 @@ export const alerts = [
     summary: "Previous device logged on with IP address 192.78.0.115",
     created: "under a minute ago",
     importanceLevel: "Low",
-    createdTime: 1,
+    createdTime: "Low",
     importanceID: 1,
   },
   {
@@ -78,7 +78,7 @@ export const alerts = [
     summary: "Previous device logged on with IP address 195.111.190.115",
     created: "under a minute ago",
     importanceLevel: "Low",
-    createdTime: 1,
+    createdTime: "Low",
     importanceID: 1,
   },
   {
@@ -87,7 +87,7 @@ export const alerts = [
       "Device with name Dave’s-macbook-pro poses significant risk to network. Action Needed.",
     created: "123 minutes ago",
     importanceLevel: "High",
-    createdTime: 123,
+    createdTime: "High",
     importanceID: 2,
   },
   {
@@ -95,7 +95,7 @@ export const alerts = [
     summary: "Previous device logged on with IP address 195.111.190.115",
     created: "under a minute ago",
     importanceLevel: "Low",
-    createdTime: 1,
+    createdTime: "Low",
     importanceID: 1,
   },
   {
@@ -103,7 +103,7 @@ export const alerts = [
     summary: "Unrecognised device connected for first time.",
     created: "15 minutes ago",
     importanceLevel: "Low",
-    createdTime: 15,
+    createdTime: "Low",
     importanceID: 1,
   },
   {
@@ -112,7 +112,7 @@ export const alerts = [
       "Device with name Dave’s-macbook-pro poses significant risk to network. Action Needed.",
     created: "47 minutes ago",
     importanceLevel: "High",
-    createdTime: 47,
+    createdTime: "High",
     importanceID: 2,
   },
   {
@@ -120,7 +120,7 @@ export const alerts = [
     summary: "Previous device logged on with IP address 198.68.0.1",
     created: "3 minutes ago",
     importanceLevel: "Low",
-    createdTime: 3,
+    createdTime: "High",
     importanceID: 1,
   },
   {
@@ -129,7 +129,7 @@ export const alerts = [
       "Device with name Dave’s-macbook-pro poses significant risk to network. Action Needed.",
     created: "47 minutes ago",
     importanceLevel: "High",
-    createdTime: 47,
+    createdTime: "Low",
     importanceID: 2,
   },
   {
@@ -138,7 +138,7 @@ export const alerts = [
       "Security score calculated as 540. View security tab for more information.",
     created: "75 minutes ago",
     importanceLevel: "Low",
-    createdTime: 75,
+    createdTime: "High",
     importanceID: 1,
   },
   {
@@ -146,7 +146,7 @@ export const alerts = [
     summary: "Network outage occured at 18:23.34 on 05/10/2021.",
     created: "Over 3 hours ago",
     importanceLevel: "High",
-    createdTime: 180,
+    createdTime: "High",
     importanceID: 2,
   },
   {
@@ -154,7 +154,7 @@ export const alerts = [
     summary: "Connection restored following outage at 18:23.34.",
     created: "18 minutes ago",
     importanceLevel: "High",
-    createdTime: 18,
+    createdTime: "Low",
     importanceID: 2,
   },
   {
@@ -162,7 +162,7 @@ export const alerts = [
     summary: "Previous device logged on with IP address 195.111.190.115",
     created: "under a minute ago",
     importanceLevel: "Low",
-    createdTime: 1,
+    createdTime: "Low",
     importanceID: 1,
   },
   {
@@ -170,7 +170,7 @@ export const alerts = [
     summary: "Previous device logged on with IP address 192.78.0.115",
     created: "under a minute ago",
     importanceLevel: "Low",
-    createdTime: 1,
+    createdTime: "Low",
     importanceID: 1,
   },
   {
@@ -179,7 +179,7 @@ export const alerts = [
       "Device with name Dave’s-macbook-pro poses significant risk to network. Action Needed.",
     created: "123 minutes ago",
     importanceLevel: "High",
-    createdTime: 123,
+    createdTime: "High",
     importanceID: 2,
   },
 ];

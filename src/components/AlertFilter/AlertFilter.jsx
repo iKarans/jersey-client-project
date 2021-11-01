@@ -2,7 +2,7 @@ import React from 'react';
 import "./AlertFilter.scss";
 
 const AlertFilter = (props) => {
-  const {handleFilterCheckbox, handleIsLowImportance, handleIsHighImportance, handleIsLessHour,handleIsLessThreeHour, toggleFilterBox} = props;
+  const {handleFilterCheckbox, handleImportanceArray, handleCreatedArray, toggleFilterBox} = props;
 
   return (
     
@@ -25,18 +25,18 @@ const AlertFilter = (props) => {
           <div className="alert-filters__filter--created">
             <p className="alert-filters__filter-text">Created</p>
             <form action="" className="alert-filters__created--filters" />
-              <input type="radio" name="time" onInput={handleIsLessHour}/>
+              <input type="checkbox" name="time" id="Low" onInput={handleCreatedArray}/>
               <label htmlFor="" className="alert-filters__checkbox-text">Less than 1hr ago</label><br/>
-              <input type="radio" name="time" onInput={handleIsLessThreeHour}  />
+              <input type="checkbox" name="time" id="High" onInput={handleCreatedArray}  />
               <label htmlFor="" className="alert-filters__checkbox-text">1 - 3hrs ago</label>
             <form/>
           </div>
           <div className="alert-filters__filter--importance">
             <p className="alert-filters__filter-text">Importance Level</p>
             <form action="" className="alert-filters__importance--filters" />
-              <input type="radio" name="importance" onInput={handleIsLowImportance} />
+              <input type="checkbox" name="importance" id="Low" onInput={handleImportanceArray} />
               <label htmlFor="" className="alert-filters__checkbox-text">Low</label><br/>
-              <input type="radio" name="importance" onInput={handleIsHighImportance}   />
+              <input type="checkbox" name="importance" id="High" onInput={handleImportanceArray}   />
               <label htmlFor="" className="alert-filters__checkbox-text">High</label>
             <form/>
           </div>
