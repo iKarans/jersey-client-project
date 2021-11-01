@@ -2,7 +2,7 @@ import React from 'react';
 import "./AlertFilter.scss";
 
 const AlertFilter = (props) => {
-  const {handleFilterCheckbox, handleImportanceArray, handleCreatedArray, toggleFilterBox, resetFilterBox} = props;
+  const {handleFilterCheckbox, handleImportanceArray, handleCreatedArray, toggleFilterBox, resetFilterBox, filterArray} = props;
 
   return (
     
@@ -14,7 +14,7 @@ const AlertFilter = (props) => {
             <p className="alert-filters__filter-text">Alert Type</p>
             <form action="" className="alert-filters__filter--alert-form" />
               <input type="checkbox" id="New Device" onInput={handleFilterCheckbox}/>
-              <label htmlFor="" className="alert-filters__checkbox-text">New Device</label><br/>
+              <label htmlFor="New Device" className="alert-filters__checkbox-text">New Device</label><br/>
               <input type="checkbox" id="Outage" onInput={handleFilterCheckbox}/>
               <label htmlFor="" className="alert-filters__checkbox-text">Outage</label><br/>
               <input type="checkbox" id="High risk" onInput={handleFilterCheckbox}/>

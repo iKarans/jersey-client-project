@@ -224,6 +224,7 @@ const Alerts = () => {
             handleImportanceArray={handleImportanceArray}
             handleCreatedArray={handleCreatedArray}
             resetFilterBox={resetFilterBox}
+            filtersArray={filtersArray}
           />
         </div>
         <div className="alerts__search">
