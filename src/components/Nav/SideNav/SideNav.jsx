@@ -9,7 +9,7 @@ import { ReactComponent as DevicesIcon } from "../../../assets/nav/device.svg";
 import { ReactComponent as AlertIcon } from "../../../assets/nav/alerts.svg";
 import { ReactComponent as SettingsIcon } from "../../../assets/nav/settings.svg";
 import { ReactComponent as GreyDropdown } from "../../../assets/global/grey-dropdown.svg";
-import { UserContext } from "../../../containers/Context/UserContext/UserContext";
+import { UserContext } from "../../../context/UserContext/UserContext";
 
 const SideNav = (props) => {
   const { selectedPage } = props;

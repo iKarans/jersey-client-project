@@ -11,16 +11,12 @@ import Header from "../Header/Header";
 import Login from "../Login/Login";
 import SignUp from "../SignUp/SignUp";
 import DevicesIndex from "../DevicesIndex/DevicesIndex";
-import { UserContext } from "../Context/UserContext/UserContext";
+import { UserContext } from "../../context/UserContext/UserContext";
 
 const Routes = () => {
   const { user } = useContext(UserContext);
 
-
   const privateRoute = user ? "" : <Redirect to="/" />;
-  
-  
-
 
   return (
     <div className="routes">
@@ -85,7 +81,6 @@ const Routes = () => {
             <Dashboard />
           </div>
         </Route>
-
         <Route exact path="/signup">
           <div className="routes__container-signup">
             <SignUp />
