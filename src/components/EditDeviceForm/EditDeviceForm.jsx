@@ -8,12 +8,13 @@ import "./EditDeviceForm.scss"
 
 const EditDeviceForm = (props) => {
     const { device } = useParams();
+    const { handleShowEdit } = props
 
     const filteredDevice = devicesResponse.find(
         (singleDevice) => singleDevice.name === device
-        
+
     );
-  
+
 
     const brand = () => {
         let brandText = "Unknown";

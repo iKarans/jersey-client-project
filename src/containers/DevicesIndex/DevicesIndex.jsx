@@ -7,7 +7,7 @@ import devicesResponse from '../../data/devicesResponse'
 import "./DevicesIndex.scss";
 
 const DevicesIndex = (props) => {
-  const {setShowEdit} = props;
+  const { handleShowEdit } = props;
   const { device } = useParams();
 
   const [modal, setModal] = useState(false);
@@ -36,7 +36,7 @@ const DevicesIndex = (props) => {
         opSystem={filteredDevice.opSystem}
         lastIP={filteredDevice.lastIP}
         lastSeen={filteredDevice.lastSeen}
-        setShowEdit={setShowEdit}
+        handleShowEdit={handleShowEdit}
       />
 
 

@@ -22,6 +22,10 @@ const Routes = () => {
 
   const [showEdit, setShowEdit] = useState(false);
 
+  const handleShowEdit = (event) => {
+    console.log(event)
+  }
+
   return (
     <div className="routes">
       <Switch>
@@ -41,7 +45,7 @@ const Routes = () => {
             <SideNav selectedPage="Devices" />
           </div>
           <div className="routes__container-settings">
-            <Header pageHeading="Devices" showEdit={showEdit}/>
+            <Header pageHeading="Devices" showEdit={showEdit} />
             <EditDeviceForm />
           </div>
         </Route>
@@ -62,7 +66,7 @@ const Routes = () => {
           </div>
           <div className="routes__container-devices">
             <Header pageHeading="Devices" />
-            <DevicesIndex setShowEdit={setShowEdit}/>
+            <DevicesIndex handleShowEdit={handleShowEdit} />
           </div>
         </Route>
         <Route exact path="/security">
