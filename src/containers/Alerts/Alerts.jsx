@@ -144,6 +144,7 @@ const Alerts = () => {
       (searchWord ? alert.summary.toLowerCase().includes(searchWord) : true)
     );
   });
+  const alertsArrayFilteredLength = alertsArrayFiltered.length;
 
   if (filterNumber === 1) {
     alertsArrayFiltered.sort((a, b) =>
@@ -198,7 +199,7 @@ const Alerts = () => {
   const buttonNumbers = [];
 
   const generateButtonIndex = () => {
-    for (let i = 0; i < alertsArrayFiltered.length / 9; i++) {
+    for (let i = 0; i < alertsArrayFilteredLength / 9; i++) {
       buttonNumbers.push(i);
     }
   };
@@ -230,6 +231,7 @@ const Alerts = () => {
             handleImportanceArray={handleImportanceArray}
             handleCreatedArray={handleCreatedArray}
             resetFilterBox={resetFilterBox}
+            filtersArray={filtersArray}
           />
         </div>
         <div className="alerts__search">
