@@ -2,7 +2,7 @@ import React from 'react';
 import "./AlertFilter.scss";
 
 const AlertFilter = (props) => {
-  const {handleFilterCheckbox, handleImportanceArray, handleCreatedArray, toggleFilterBox} = props;
+  const {handleFilterCheckbox, handleImportanceArray, handleCreatedArray, toggleFilterBox, resetFilterBox} = props;
 
   return (
     
@@ -42,7 +42,7 @@ const AlertFilter = (props) => {
             <form/>
           </div>
           <div className="alert-filters__buttons-wrapper">
-          <div className="alert-filters__reset" onClick={toggleFilterBox}>
+          <div className="alert-filters__reset" onClick={resetFilterBox}>
             <p>Reset</p>
           </div>
           <div className="alert-filters__apply" onClick={toggleFilterBox}>

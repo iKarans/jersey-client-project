@@ -52,6 +52,12 @@ const Alerts = () => {
     setFilterStatus(!filterStatus);
   };
 
+  const resetFilterBox = () => {
+    setFiltersArray([]);
+    setImportanceArray([]);
+    setCreatedArray([]);
+  };
+
   const handleIncrement = () => {
     if (pages >= 0 && pages < alertsArrayFiltered.length / 9 - 1) {
       setPages(pages + 1);
@@ -217,6 +223,7 @@ const Alerts = () => {
             handleFilterCheckbox={handleFilterCheckbox}
             handleImportanceArray={handleImportanceArray}
             handleCreatedArray={handleCreatedArray}
+            resetFilterBox={resetFilterBox}
           />
         </div>
         <div className="alerts__search">
@@ -240,7 +247,11 @@ const Alerts = () => {
                 alt="filter-icon"
               />
               <p className="alerts__text-paragraph">Filter</p>
-              <div className="alerts__active-filters">{filtersArray.length + createdArray.length + importanceArray.length}</div>
+              <div className="alerts__active-filters">
+                {filtersArray.length +
+                  createdArray.length +
+                  importanceArray.length}
+              </div>
             </div>
           </div>
         </div>
