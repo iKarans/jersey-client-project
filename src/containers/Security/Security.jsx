@@ -11,7 +11,6 @@ const Security = () => {
 
     const showMoreInfo = () => {
         setMoreInfo(!moreInfo);
-        console.log("working")
       };
 
   return (
