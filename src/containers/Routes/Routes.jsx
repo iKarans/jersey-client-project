@@ -12,6 +12,7 @@ import Login from "../Login/Login";
 import SignUp from "../SignUp/SignUp";
 import DevicesIndex from "../DevicesIndex/DevicesIndex";
 import { UserContext } from "../../context/UserContext/UserContext";
+import EditDeviceForm from '../../components/EditDeviceForm/EditDeviceForm'
 
 
 const Routes = () => {
@@ -32,14 +33,14 @@ const Routes = () => {
             <Settings />
           </div>
         </Route>
-        <Route exact path="/settings/:name">
+        <Route exact path="/devices/:device/edit">
           {privateRoute}
           <div className="routes__sidenav">
             <SideNav selectedPage="Settings" />
           </div>
           <div className="routes__container-settings">
-            <Header pageHeading="Settings"/>
-            <Settings />
+            <Header pageHeading="Settings" />
+            <EditDeviceForm />
           </div>
         </Route>
         <Route exact path="/devices">

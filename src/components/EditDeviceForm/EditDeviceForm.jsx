@@ -1,18 +1,44 @@
 import React, { useState } from 'react'
-
+import { useParams } from 'react-router-dom'
 import DownArrow from "../../assets/devices/dropdown-downarrow.svg";
 
+
+import devicesResponse from '../../data/devicesResponse'
 import "./EditDeviceForm.scss"
 
 const EditDeviceForm = () => {
-    const [deviceType, setDeviceType] = useState("Desktop")
-    const [deviceBrand, setDeviceBrand] = useState("Apple")
-    const [deviceOS, setDeviceOS] = useState("Mac OS Catalina")
+    const { device } = useParams();
+
+    const filteredDevice = devicesResponse.find(
+        (singleDevice) => singleDevice.name === device
+    );
+
+    const brand = () => {
+        let brandText = "Unknown";
+        let manufacturerToLower = filteredDevice.manufacturer.toLowerCase()
+        switch (true) {
+            case manufacturerToLower.includes("dell"):
+                return brandText = "Dell"
+            case manufacturerToLower.includes("apple"):
+                return brandText = "Apple"
+            case manufacturerToLower.includes("huawei"):
+                return brandText = "Huawei"
+            case manufacturerToLower.includes("lenovo"):
+                return brandText = "Lenovo"
+            case manufacturerToLower.includes("samsung"):
+                return brandText = "Samsung"
+            default:
+                return brandText
+        }
+    };
+
+    const [deviceType, setDeviceType] = useState(filteredDevice.deviceType)
+    const [deviceBrand, setDeviceBrand] = useState(brand())
+    const [deviceOS, setDeviceOS] = useState(filteredDevice.opSystem)
 
     const [showDeviceTypes, setShowDeviceTypes] = useState(false)
     const [showDeviceBrands, setShowDeviceBrands] = useState(false)
     const [showDeviceOS, setShowDeviceOS] = useState(false)
-
 
     const handleDeviceType = (event) => {
         setDeviceType(event.target.textContent)
@@ -40,9 +66,6 @@ const EditDeviceForm = () => {
     const showDeviceOSJSX = (event) => {
         setShowDeviceOS(!showDeviceOS)
     }
-
-
-
 
     return (
         <form className="edit-device">
