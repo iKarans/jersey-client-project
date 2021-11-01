@@ -244,10 +244,6 @@ const Alerts = () => {
             />
           </div>
           <div className="alerts__search-filter-sort">
-            <div className="alerts-sort">
-              <img className="alerts__icons" src={SortIcon} alt="sort-icon" />
-              <p className="alerts__text-paragraph">Sort</p>
-            </div>
             <div className="alerts-filter" onClick={toggleFilterBox}>
               <img
                 className="alerts__icons"
