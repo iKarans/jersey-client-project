@@ -22,7 +22,6 @@ const Alerts = () => {
   const [sortImportance, setSortImportance] = useState(false);
 
   const handleSortAlert = () => {
-    
     setSortAlert(!sortAlert);
     setSortImportance(false);
     setSortTime(false);
@@ -101,7 +100,7 @@ const Alerts = () => {
     }
     setImportanceArray(tempArr);
     setPages(0);
-  }
+  };
 
   const [createdArray, setCreatedArray] = useState([]);
   const filterByCreated = (alert) => {
@@ -122,7 +121,7 @@ const Alerts = () => {
     }
     setCreatedArray(tempArr);
     setPages(0);
-  }
+  };
 
   const alertsArrayFiltered = alertsArray.filter((alert) => {
     return (
@@ -133,14 +132,30 @@ const Alerts = () => {
   });
   const alertsArrayFilteredLength = alertsArrayFiltered.length;
 
-  if(filterNumber === 1) {
+  if (filterNumber === 1) {
     alertsArrayFiltered.sort((a, b) =>
-      (sortAlert ? (a.alertType > b.alertType ? 1 : b.alertType > a.alertType ? -1 : 0) : (a.alertType > b.alertType ? -1 : b.alertType > a.alertType ? 1 : 0))
+      sortAlert
+        ? a.alertType > b.alertType
+          ? 1
+          : b.alertType > a.alertType
+          ? -1
+          : 0
+        : a.alertType > b.alertType
+        ? -1
+        : b.alertType > a.alertType
+        ? 1
+        : 0
     );
   } else if (filterNumber === 2) {
-    (alertsArrayFiltered.sort((a, b) => (sortTime ? a.createdTime - b.createdTime : b.createdTime - a.createdTime)));
+    alertsArrayFiltered.sort((a, b) =>
+      sortTime ? a.createdTime - b.createdTime : b.createdTime - a.createdTime
+    );
   } else if (filterNumber === 3) {
-      (alertsArrayFiltered.sort((a, b) => (sortImportance ? a.importanceID - b.importanceID : b.importanceID - a.importanceID)));
+    alertsArrayFiltered.sort((a, b) =>
+      sortImportance
+        ? a.importanceID - b.importanceID
+        : b.importanceID - a.importanceID
+    );
   }
 
   let alertsArrayFilteredSpliced = [];
@@ -171,7 +186,7 @@ const Alerts = () => {
   const buttonNumbers = [];
 
   const generateButtonIndex = () => {
-    for (let i = 0; i < alertsArrayFilteredLength  / 9; i++) {
+    for (let i = 0; i < alertsArrayFilteredLength / 9; i++) {
       buttonNumbers.push(i);
     }
   };
@@ -225,8 +240,7 @@ const Alerts = () => {
                 alt="filter-icon"
               />
               <p className="alerts__text-paragraph">Filter</p>
-              <div className="alerts__active-filters"></div>
-              
+              <div className="alerts__active-filters">1</div>
             </div>
           </div>
         </div>
