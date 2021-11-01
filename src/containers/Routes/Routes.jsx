@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import "./Routes.scss";
 import Alerts from "../Alerts/Alerts";
 import { Route, Switch, Redirect } from "react-router-dom";
@@ -20,6 +20,8 @@ const Routes = () => {
 
   const privateRoute = user ? "" : <Redirect to="/" />;
 
+  const [showEdit, setShowEdit] = useState(false);
+
   return (
     <div className="routes">
       <Switch>
@@ -36,10 +38,10 @@ const Routes = () => {
         <Route exact path="/devices/:device/edit">
           {privateRoute}
           <div className="routes__sidenav">
-            <SideNav selectedPage="Settings" />
+            <SideNav selectedPage="Devices" />
           </div>
           <div className="routes__container-settings">
-            <Header pageHeading="Settings" />
+            <Header pageHeading="Devices" showEdit={showEdit}/>
             <EditDeviceForm />
           </div>
         </Route>
@@ -60,7 +62,7 @@ const Routes = () => {
           </div>
           <div className="routes__container-devices">
             <Header pageHeading="Devices" />
-            <DevicesIndex />
+            <DevicesIndex setShowEdit={setShowEdit}/>
           </div>
         </Route>
         <Route exact path="/security">

@@ -5,7 +5,7 @@ import SecurityBar from "../../components/SecurityBar/SecurityBar";
 import { useParams } from "react-router";
 
 const Header = (props) => {
-  const { pageHeading, deviceIndex, showAlert } = props;
+  const { pageHeading, deviceIndex, showAlert, showEdit } = props;
   const { device } = useParams();
 
   return (
@@ -16,6 +16,7 @@ const Header = (props) => {
         pageHeading={pageHeading}
         deviceIndex={deviceIndex}
         device={device}
+        showEdit={showEdit}
       />
     </header>
   );

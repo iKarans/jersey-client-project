@@ -6,7 +6,8 @@ import DeviceRisk from "../../components/DeviceRisk/DeviceRisk";
 import devicesResponse from '../../data/devicesResponse'
 import "./DevicesIndex.scss";
 
-const DevicesIndex = () => {
+const DevicesIndex = (props) => {
+  const {setShowEdit} = props;
   const { device } = useParams();
 
   const [modal, setModal] = useState(false);
@@ -35,6 +36,7 @@ const DevicesIndex = () => {
         opSystem={filteredDevice.opSystem}
         lastIP={filteredDevice.lastIP}
         lastSeen={filteredDevice.lastSeen}
+        setShowEdit={setShowEdit}
       />
 
 
