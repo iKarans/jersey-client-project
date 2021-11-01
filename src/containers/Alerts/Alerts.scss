@@ -69,8 +69,10 @@
     position: absolute;
     width: 11px;
     height: 11px;
-    background: #2abca1;
-    border-radius: 47px;
+    margin-top: -7px;
+    margin-left: 55px;
+    background: $primary-color;
+    border-radius: 50%;
   }
 
   &-table {
