@@ -8,7 +8,27 @@ import RightArrow from "../../assets/global/right-arrow.svg";
 
 const CalulationSummary = (props) => {
 
-    const { showMoreInfo } = props;
+    const { showMoreInfo, pillarsArray } = props;
+
+    const itemsJsx = pillarsArray.map(item => {
+        if (item.status == true) {
+            return (
+            <>
+            <img className="calculation__items--image" src={Tick} alt="Green tick"/>
+            <p className="calculation__items--text">{item.name}</p>
+           </>
+        )} else {
+            return (
+            <>
+            <img className="calculation__items--image" src={Cross} alt="Red-Cross"/>
+            <p className="calculation__items--text" style={{color: '#F08E8E'}}>{item.name}</p>
+            </>
+        )}
+    })
+            
+            
+
+    
 
     return (
         
@@ -19,17 +39,7 @@ const CalulationSummary = (props) => {
 
                 <div className="calculation__box">
                     <div className="calculation__items">
-                        
-                        <img className="calculation__items--image" src={Tick} alt="Green tick"/>
-                        <p className="calculation__items--text">Boundary Firewalls</p>
-                        <img className="calculation__items--image" src={Tick} alt="Green tick"/>
-                        <p className="calculation__items--text">Anti-Virus</p>
-                        <img className="calculation__items--image" src={Cross} alt="Red-Cross"/>
-                        <p className="calculation__items--text" style={{color: '#F08E8E'}}>Software Updates</p>
-                        <img className="calculation__items--image" src={Tick} alt="Green tick"/>
-                        <p className="calculation__items--text">Secure Configuration</p>
-                        <img className="calculation__items--image" src={Cross} alt="Red-Cross"/>
-                        <p className="calculation__items--text" style={{color: '#F08E8E'}}>Access Control</p>
+                        {itemsJsx}
                     </div>
                 </div>
 

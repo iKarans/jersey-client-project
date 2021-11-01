@@ -13,10 +13,37 @@ const Security = () => {
         setMoreInfo(!moreInfo);
       };
 
+  const pillarsArray = [{
+
+    name: "Boundary Firewalls",
+    status: true
+  },
+  
+  {
+    name: "Software Updates",
+    status: false
+  },
+  
+  {
+    name: "Anti virus",
+    status: true
+  },
+
+  {
+    name: "Secure Configuration",
+    status: true
+  },
+
+  {
+    name: "Access Control",
+    status: false
+  }
+]    
+
   return (
     <div className="security">
       <SecurityScore />
-      <CalulationSummary showMoreInfo={showMoreInfo}/>
+      <CalulationSummary pillarsArray={pillarsArray} showMoreInfo={showMoreInfo}/>
       {moreInfo && <CalculationInfo  showMoreInfo={showMoreInfo}/>}
       
 
