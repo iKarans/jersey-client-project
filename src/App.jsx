@@ -1,6 +1,5 @@
 import React from "react";
 
-import Security from "./containers/Security/Security";
 
 import "./App.css";
 import { BrowserRouter as Router } from "react-router-dom";

@@ -22,19 +22,18 @@
   }
 }
 .routes__sidenav { 
-  position: relative;
   grid-area: 1 / 1 / 2 / 2; 
 
-  
+
 }
 
 .routes__container-dashboard { 
-  
+
   grid-area: 1 / 2 / 2 / 3;
   background-color: $background-color;
   
-  
-  
+
+
   @include mobile {
     width: 100%;
   }
@@ -42,7 +41,7 @@
  }
 
  .routes__container-security { 
-  // position: relative;
+  position: relative;
 
   display: flex;
   flex-direction: column;
