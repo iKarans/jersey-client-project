@@ -103,20 +103,10 @@ const Alerts = () => {
     setPages(0);
   }
 
-  // const [isLessHour, setIsLessHour] = useState(false);
-  // const [isLessThreeHour, setIsLessThreeHour] = useState(false);
-  // const handleIsLessHour = () => {
-  //   setIsLessHour(!isLessHour);
-  //   setPages(0);
-  // };
-  // const handleIsLessThreeHour = () => {
-  //   setIsLessThreeHour(!isLessThreeHour);
-  //   setPages(0);
-  // };
   const [createdArray, setCreatedArray] = useState([]);
   const filterByCreated = (alert) => {
     for (let i = 0; i < createdArray.length; i++) {
-      if (alert.createdTime.includes(createdArray[i])) {
+      if (alert.createdID.includes(createdArray[i])) {
         return true;
       }
     }
