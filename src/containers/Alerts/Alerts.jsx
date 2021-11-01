@@ -145,7 +145,7 @@ const Alerts = () => {
       (searchWord ? alert.summary.toLowerCase().includes(searchWord) : true)
     );
   });
-  
+
   if (filterNumber === 1) {
     alertsArrayFiltered.sort((a, b) =>
       sortAlert
@@ -341,7 +341,6 @@ const Alerts = () => {
             )}
           </div>
         </div>
-        {/* <ChatButton /> */}
       </section>
     </>
   );
