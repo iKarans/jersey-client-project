@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import { useParams } from 'react-router-dom'
 import DownArrow from "../../assets/devices/dropdown-downarrow.svg";
 
@@ -8,7 +8,6 @@ import "./EditDeviceForm.scss"
 
 const EditDeviceForm = (props) => {
     const { device } = useParams();
-    const { handleShowEdit } = props
 
     const filteredDevice = devicesResponse.find(
         (singleDevice) => singleDevice.name === device
