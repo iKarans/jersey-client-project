@@ -8,7 +8,7 @@ import { ReactComponent as ValidInputIcon } from "../../assets/login/green-tick.
 import { ReactComponent as InvalidInputIcon } from "../../assets/login/red-cross.svg";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../../firebase";
-import { getAuth, updateProfile } from "firebase/auth";
+import { updateProfile } from "firebase/auth";
 
 import "./SignUpForm.scss";
 
