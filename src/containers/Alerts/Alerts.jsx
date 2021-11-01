@@ -70,7 +70,7 @@ const Alerts = () => {
   };
 
   const alertsArray = [...alerts];
-  /// Karans Messing around
+  
   const [filtersArray, setFiltersArray] = useState([]);
   const handleFilterCheckbox = (event) => {
     let tempArr = [...filtersArray];
