@@ -14,7 +14,6 @@ import AlertsArrow from "../../assets/alerts/alerts-arrow.svg";
 import "./Alerts.scss";
 
 const Alerts = () => {
-  const [filteredArray, setFilteredArray] = useState([]);
   const [pages, setPages] = useState(0);
   const [filterNumber, setFilterNumber] = useState(null);
   const [filterStatus, setFilterStatus] = useState(false);
@@ -55,7 +54,7 @@ const Alerts = () => {
   };
 
   const handleIncrement = () => {
-    if (pages >= 0 && pages < alerts.length / 9 - 1) {
+    if (pages >= 0 && pages < alertsArrayFiltered.length / 9 - 1) {
       setPages(pages + 1);
     }
   };
@@ -71,6 +70,7 @@ const Alerts = () => {
       tempArr.push(event.target.id);
     }
     setFiltersArray(tempArr);
+    setPages(0);
   };
   // importance Level
   const [isLowImportance, setLowImportanceLevel] = useState(false);
@@ -79,11 +79,13 @@ const Alerts = () => {
     let temp = isLowImportance;
     setLowImportanceLevel(!isLowImportance);
     setHighImportanceLevel(temp);
+    setPages(0);
   };
   const handleIsHighImportance = () => {
     let temp = isHighImportance;
     setHighImportanceLevel(!isHighImportance);
     setLowImportanceLevel(temp);
+    setPages(0);
   };
 
   const [isLessHour, setIsLessHour] = useState(false);
@@ -92,11 +94,13 @@ const Alerts = () => {
     let temp = isLessHour;
     setIsLessHour(!isLessHour);
     setIsLessThreeHour(temp);
+    setPages(0);
   };
   const handleIsLessThreeHour = () => {
     let temp = isLessThreeHour;
     setIsLessThreeHour(!isLessThreeHour);
     setIsLessHour(temp);
+    setPages(0);
   };
 
   const shouldReturn = (alert) => {
