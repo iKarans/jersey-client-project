@@ -11,7 +11,7 @@ const CalulationSummary = (props) => {
     const { showMoreInfo, pillarsArray } = props;
 
     const itemsJsx = pillarsArray.map(item => {
-        if (item.status == true) {
+        if (item.status === true) {
             return (
             <>
             <img className="calculation__items--image" src={Tick} alt="Green tick"/>
