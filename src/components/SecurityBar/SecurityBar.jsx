@@ -10,10 +10,10 @@ import greenTick from "../../assets/login/green-tick.svg";
 
 
 const SecurityBar = (props) => {
-  const { pageHeading, device, showEdit, showAlert = false } = props;
+  const { pageHeading, device, edit, showAlert = false } = props;
 
   const editText = () => {
-    if(showEdit) {
+    if(edit) {
     return "Edit"
   } 
 }
