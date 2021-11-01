@@ -16,13 +16,13 @@ The application was built from [wireframes](https://www.figma.com/file/RV6ZK8nzv
 
 ## Project Links
 
-[Live Site](https://lujam-jersey.web.app/)
+- [Live Site](https://lujam-jersey.web.app/)
 
-[Trello board](https://trello.com/b/i8XdG2dy/lujam)
+- [Trello board](https://trello.com/b/i8XdG2dy/lujam)
 
-[Wireframes](https://www.figma.com/file/RV6ZK8nzvqFlTZoG37TwUU/Lujam-Portal-V2?node-id=82%3A5204)
+- [Wireframes](https://www.figma.com/file/RV6ZK8nzvqFlTZoG37TwUU/Lujam-Portal-V2?node-id=82%3A5204)
 
-[Component Tree](https://app.mural.co/t/nology9400/m/nology9400/1633956427717/269b5197e35226c963e0b12c400b3d4e320d472a?sender=7c279945-50d0-47df-836c-0152f8cf5bad)
+- [Component Tree](https://app.mural.co/t/nology9400/m/nology9400/1633956427717/269b5197e35226c963e0b12c400b3d4e320d472a?sender=7c279945-50d0-47df-836c-0152f8cf5bad)
 
 ## Installation
 
@@ -46,24 +46,24 @@ to locally run the app at http://localhost:3000
 
 The following students contributed to the program:
 
--[Ali Abdellatif](https://github.com/aliabdellatif0)
+- [Ali Abdellatif](https://github.com/aliabdellatif0)
 
--[Gabor Agardi](https://github.com/gabagardi)
+- [Gabor Agardi](https://github.com/gabagardi)
 
--[Istvan Agardi](https://github.com/iagardi)
+- [Istvan Agardi](https://github.com/iagardi)
 
--[Adam D'Costa](https://github.com/AdamDCosta)
+- [Adam D'Costa](https://github.com/AdamDCosta)
 
--[Rob Hooper](https://github.com/hoopercode)
+- [Rob Hooper](https://github.com/hoopercode)
 
--[Matt Hutt](https://github.com/matthutt85)
+- [Matt Hutt](https://github.com/matthutt85)
 
--[Ian Mason](https://github.com/ism90)
+- [Ian Mason](https://github.com/ism90)
 
--[Yasir Siddig](https://github.com/ymasn96)
+- [Yasir Siddig](https://github.com/ymasn96)
 
--[Karan Sivalingam](https://github.com/iKarans)
+- [Karan Sivalingam](https://github.com/iKarans)
 
--[Alessandro Spiridigliozzi](https://github.com/alessandrothedev)
+- [Alessandro Spiridigliozzi](https://github.com/alessandrothedev)
 
--[Morris Willis](https://github.com/Halfiies)
+- [Morris Willis](https://github.com/Halfiies)
