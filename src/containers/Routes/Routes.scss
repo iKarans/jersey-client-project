@@ -23,16 +23,22 @@
 }
 .routes__sidenav { 
   grid-area: 1 / 1 / 2 / 2; 
+
+  
 }
 
 .routes__container-dashboard { 
+  
   grid-area: 1 / 2 / 2 / 3;
   background-color: $background-color;
   
-    @include mobile {
-        width: 100%;
-    }
-}
+  
+  
+  @include mobile {
+    width: 100%;
+  }
+ 
+ }
 
  .routes__container-security { 
   position: relative;
