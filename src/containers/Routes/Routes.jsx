@@ -11,7 +11,9 @@ import Header from "../Header/Header";
 import Login from "../Login/Login";
 import SignUp from "../SignUp/SignUp";
 import DevicesIndex from "../DevicesIndex/DevicesIndex";
+import ForgottenPassword from "../ForgottenPassword/ForgottenPassword"
 import { UserContext } from "../../context/UserContext/UserContext";
+
 
 const Routes = () => {
   const { user } = useContext(UserContext);
@@ -86,6 +88,11 @@ const Routes = () => {
             <SignUp />
           </div>
         </Route>
+        <Route path="/forgotten-password">
+          <div className="routes__container-forgotten">
+            <ForgottenPassword/>
+          </div>
+          </Route>
         <Route path="/">
           <div className="routes__login">
             <Login />
