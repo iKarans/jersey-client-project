@@ -225,8 +225,7 @@ const Alerts = () => {
                 alt="filter-icon"
               />
               <p className="alerts__text-paragraph">Filter</p>
-              <div className="alerts__active-filters"></div>
-              
+              <div className="alerts__active-filters">{filtersArray.length + createdArray.length + importanceArray.length}</div>
             </div>
           </div>
         </div>
