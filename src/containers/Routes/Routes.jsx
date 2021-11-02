@@ -11,17 +11,15 @@ import Header from "../Header/Header";
 import Login from "../Login/Login";
 import SignUp from "../SignUp/SignUp";
 import DevicesIndex from "../DevicesIndex/DevicesIndex";
-import ForgottenPassword from "../ForgottenPassword/ForgottenPassword"
+import ForgottenPassword from "../ForgottenPassword/ForgottenPassword";
 import { UserContext } from "../../context/UserContext/UserContext";
-import EditDeviceForm from '../../components/EditDeviceForm/EditDeviceForm'
-
-
+import EditDeviceForm from "../../components/EditDeviceForm/EditDeviceForm";
+import PasswordResetForm from "../../components/PasswordResetForm/PasswordResetForm";
 
 const Routes = () => {
   const { user } = useContext(UserContext);
 
   const privateRoute = user ? "" : <Redirect to="/" />;
-
 
   return (
     <div className="routes">
@@ -42,7 +40,7 @@ const Routes = () => {
             <SideNav selectedPage="Devices" />
           </div>
           <div className="routes__container-settings">
-            <Header pageHeading="Devices"  />
+            <Header pageHeading="Devices" />
             <EditDeviceForm />
           </div>
         </Route>
@@ -102,10 +100,15 @@ const Routes = () => {
           </div>
         </Route>
         <Route path="/forgotten-password">
-          <div className="routes__container-forgotten">
-            <ForgottenPassword/>
+          <div className="routes__container-forgotten-password">
+            <ForgottenPassword />
           </div>
-          </Route>
+        </Route>
+        <Route path="/reset-password">
+          <div className="routes__container-reset-password">
+            <PasswordResetForm />
+          </div>
+        </Route>
         <Route path="/">
           <div className="routes__login">
             <Login />
