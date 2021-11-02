@@ -10,6 +10,7 @@ import greenTick from "../../assets/login/green-tick.svg";
 
 
 const SecurityBar = (props) => {
+<<<<<<< HEAD
   const { pageHeading, device, edit, showAlert = false } = props;
 
   const editText = () => {
@@ -17,6 +18,9 @@ const SecurityBar = (props) => {
     return "Edit"
   } 
 }
+=======
+  const { pageHeading, device, showAlert = false} = props;
+>>>>>>> 984fb339f1b33383de8d693007dfa46071b26fb0
   return (
     <div className="security-bar">
       <div>
@@ -26,12 +30,21 @@ const SecurityBar = (props) => {
       <h4 className="security-bar__device-id"> {device} </h4><span className="security-bar__device-edit">{editText()}</span>
 
       {showAlert && (
+<<<<<<< HEAD
         <NetworkAlert
           alertImg={greenTick}
           alertText="Your network is secure. Great work!"
           atRisk={false}
           device={device}
         />)}
+=======
+      <NetworkAlert
+        alertImg={greenTick}
+        alertText="Your network is secure. Great work!"
+        atRisk={false}
+        device={device}
+      />)}
+>>>>>>> 984fb339f1b33383de8d693007dfa46071b26fb0
       <div className="security-bar__buttons">
         <AlertButton
           buttonText="Active Devices"
