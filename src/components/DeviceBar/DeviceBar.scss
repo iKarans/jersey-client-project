@@ -24,8 +24,12 @@
     font-size: 0.75rem;
     font-weight: 700;
     width: 15%;
-    text-align: center;
+    text-align: start;
     padding-left: 5px;
+
+    @include mobile {
+      width: 40%;
+    }
   }
 
   &__type {
@@ -101,11 +105,11 @@
   }
 
   &__name a,
-  :active,
   :any-link {
     text-decoration: none;
     color: rgba(115, 120, 134, 1);
     width: 8%;
+    
 
     &:hover {
       cursor: pointer;

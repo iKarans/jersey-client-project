@@ -60,7 +60,7 @@ export const DeviceBar = (props) => {
 
   return (
     <div className="device-bar">
-      <Link to={`/device/${name}`}><h4 className="device-bar__name">{name}</h4></Link>
+      <Link to={`/device/${name}`} className="device-bar__name"><h4 >{name}</h4></Link>
       <div className="device-bar__type">
       <img
         src={typeIcon()}
