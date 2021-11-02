@@ -9,17 +9,61 @@
     margin: 0 auto;
   }
   &__list--labels {
-    display: grid;
-    justify-content: center;
-    grid-template-columns: repeat(9, 1fr);
-    grid-gap: 20px;
-    color: $text-secondary;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 6rem 0 2rem;
     font-weight: bold;
-    align-items: center;
-    justify-content: center;
     text-align: center;
-    width: 90%;
+    width: 100%;
     margin: 10px auto;
+
+    &-name {
+      width: 10%;
+      color: rgba(103, 103, 103, 1);
+      font-size: 0.7rem;
+    }
+
+    &-type {
+      width: 6%;
+      color: rgba(103, 103, 103, 1);
+      font-size: 0.7rem;
+    }
+
+    &-brand {
+      width: 6%;
+      color: rgba(103, 103, 103, 1);
+      font-size: 0.7rem;
+    }
+
+    &-model {
+      width: 14%;
+      color: rgba(103, 103, 103, 1);
+      font-size: 0.7rem;
+    }
+
+    &-os {
+      width: 10%;
+      color: rgba(103, 103, 103, 1);
+      font-size: 0.7rem;
+    }
+
+    &-ip {
+      width: 10%;
+      color: rgba(103, 103, 103, 1);
+      font-size: 0.7rem;
+    }
+
+    &-last-active {
+      width: 10%;
+      color: rgba(103, 103, 103, 1);
+      font-size: 0.7rem;
+    }
+
+    &-risk {
+      width: 10%;
+      color: rgba(103, 103, 103, 1);
+      font-size: 0.7rem;
+    }
 
     @include mobile {
       width: 95%;

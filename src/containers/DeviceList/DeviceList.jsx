@@ -48,14 +48,14 @@ export const DeviceList = () => {
         </div>
       </div>
       <div className="devices__list--labels">
-        <p>Device Name</p>
-        <p>Device Type</p>
-        <p>Brand</p>
-        <p>Model</p>
-        <p>Operating System</p>
-        <p>IP Address</p>
-        <p>Last Active</p>
-        <p>Security Risk</p>
+        <p className="devices__list--labels-name">Device Name</p>
+        <p className="devices__list--labels-type">Device Type</p>
+        <p className="devices__list--labels-brand">Brand</p>
+        <p className="devices__list--labels-model">Model</p>
+        <p className="devices__list--labels-os">Operating System</p>
+        <p className="devices__list--labels-ip">IP Address</p>
+        <p className="devices__list--labels-last-active">Last Active</p>
+        <p className="devices__list--labels-risk">Security Risk</p>
       </div>
       <div className="devices__list">
         {deviceList && deviceList.length !== 0 ? (

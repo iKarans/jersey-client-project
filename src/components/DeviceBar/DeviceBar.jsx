@@ -58,32 +58,38 @@ export const DeviceBar = (props) => {
 
   return (
     <div className="device-bar">
-      <Link to={`/device/${name}`}><h4 className="device-bar__device-name">{name}</h4></Link>
+      <Link to={`/device/${name}`}><h4 className="device-bar__name">{name}</h4></Link>
+      <div className="device-bar__type">
       <img
         src={typeIcon()}
         alt={deviceType}
-        className="device-bar__hidden-on-mobile"
+        className="device-bar__type-img"
       />
+      </div>
+      <div className="device-bar__brand">
       <img
         src={brandIcon()}
         alt={brand}
-        className="device-bar__hidden-on-mobile"
+        className="device-bar__brand-image"
       />
-      <p className="device-bar__hidden-on-mobile">{model}</p>
-      <p className="device-bar__hidden-on-mobile"> {opSystem}</p>
-      <p className="device-bar__hidden-on-mobile">{lastIP}</p>
-      <p className="device-bar__hidden-on-mobile">{getDate()}</p>
+      </div>
+      <p className="device-bar__model">{model}</p>
+      <p className="device-bar__os"> {opSystem}</p>
+      <p className="device-bar__ip">{lastIP}</p>
+      <p className="device-bar__last-active">{getDate()}</p>
 
       <span
         className={`device-bar__security-risk device-bar__security-risk--${securityRisk}`}
       >
         <h4>{securityRisk}</h4>
       </span>
+      <div className="device-bar__options">
       <img
         src={optionsIcon}
         alt="options"
-        className="device-bar__hidden-on-mobile"
+        className="device-bar__options-img"
       ></img>
+      </div>
     </div>
   );
 };
