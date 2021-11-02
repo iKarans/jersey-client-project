@@ -2,12 +2,9 @@ $primary-color: rgb(42, 188, 161);
 $primary-color-faded: rgb(42, 188, 161, 0.15);
 $secondary-color: #0a7aa7;
 $high-color: #fc7f7f;
-$warning-color: #ff4e4e;
+$warning-color: #FF4E4E;
 $medium-color: #fbc07b;
 $low-color: #1ac96a;
-$high-color-alert-icon: #f35672;
-$secure-device-alert-icon: rgba(111, 221, 162);
-$secure-device-alert-border: rgba(26, 201, 106);
 $text-primary: rgb(160, 174, 192);
 $text-secondary: rgb(69, 71, 86);
 $text-tertiary: #ffffff;
@@ -30,10 +27,10 @@ $security-poor: #f0b78e;
 $security-fair: #fff9c0;
 $security-good: #2abca1;
 $security-excellent: #20837f;
+$security-calc-line-gradient: rgba(224, 225, 226, 0), rgba(224, 225, 226, 1), rgba(224, 225, 226, 0.1563);
 $security-calc-header-text: #676980;
 $security-calc-text: #A0AEC0;
 $security-calc-info-button: rgba(42, 188, 161, 0.1);
-$security-calc-line-gradient: linear-gradient(to right, rgba(224, 225, 226, 0), rgba(224, 225, 226, 1), rgba(224, 225, 226, 0.15625));
 
 // Network Page
 $network-alerts-border: #cbf0ed;
