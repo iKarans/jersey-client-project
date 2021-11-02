@@ -10,7 +10,7 @@ const AlertButton = (props) => {
 
   return (
     <button className="alert-button">
-      <div className="alert-button-icon-container">
+      <div className="alert-button__icon-container">
         <div className={buttonStyle}>
             <img className="alert-button__icon--svg" src={iconImage} alt="alerts" />
         </div>
