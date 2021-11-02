@@ -1,70 +1,69 @@
-# Getting Started with Create React App
+# Lujam-Jersey Project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was created with react and firebase by the Jersey intake of the \_nology software developer course. The project demonstrated possible design changes for Lujams dashboard [redesign](https://lujam-jersey.web.app/).
 
-## Available Scripts
+## Overview
 
-In the project directory, you can run:
+The project is built in React and uses Firebase for hosting and authorization.
 
-### `yarn start`
+The project ran for four weeks, with each week taking the form of a sprint with a new product owner assigned. Each sprint ended with a demo to the clients. The feedback informed the next sprint's tickets.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+The product owner planned the tickets and wrote the acceptance criteria for completion.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Trello was used to manage workflow. A git branching strategy was used to work on multiple features. Once a pull request was completed the feature would be added to the codebase.
 
-### `yarn test`
+The application was built from [wireframes](https://www.figma.com/file/RV6ZK8nzvqFlTZoG37TwUU/Lujam-Portal-V2?node-id=82%3A5204) created by [Jake Wood](https://github.com/jakealistairwood).
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Project Links
 
-### `yarn build`
+- [Live Site](https://lujam-jersey.web.app/)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- [Trello board](https://trello.com/b/i8XdG2dy/lujam)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- [Wireframes](https://www.figma.com/file/RV6ZK8nzvqFlTZoG37TwUU/Lujam-Portal-V2?node-id=82%3A5204)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- [Component Tree](https://app.mural.co/t/nology9400/m/nology9400/1633956427717/269b5197e35226c963e0b12c400b3d4e320d472a?sender=7c279945-50d0-47df-836c-0152f8cf5bad)
 
-### `yarn eject`
+## Installation
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+To copy the project to your computer, run the following code:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+git clone https://github.com/nology-tech/jersey-client-project.git
+cd jersey-client-project
+npm install
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+and then run
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```bash
+npm start
+```
 
-## Learn More
+to locally run the app at http://localhost:3000
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Contributors
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+The following students contributed to the program:
 
-### Code Splitting
+- [Ali Abdellatif](https://github.com/aliabdellatif0)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- [Gabor Agardi](https://github.com/gabagardi)
 
-### Analyzing the Bundle Size
+- [Istvan Agardi](https://github.com/iagardi)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- [Adam D'Costa](https://github.com/AdamDCosta)
 
-### Making a Progressive Web App
+- [Rob Hooper](https://github.com/hoopercode)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- [Matt Hutt](https://github.com/matthutt85)
 
-### Advanced Configuration
+- [Ian Mason](https://github.com/ism90)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- [Yasir Siddig](https://github.com/ymasn96)
 
-### Deployment
+- [Karan Sivalingam](https://github.com/iKarans)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- [Alessandro Spiridigliozzi](https://github.com/alessandrothedev)
 
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- [Morris Willis](https://github.com/Halfiies)
