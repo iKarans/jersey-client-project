@@ -18,11 +18,12 @@
     &--ul {
       list-style-type: none;
     }
-    
-    &__list-item {
-      margin-top: 10px;
-      font-size: 0.8rem;
-    }
+  }
+
+  &__list-item {
+    margin-top: 10px;
+    font-size: 0.8rem;
+    padding: 10px;
   }
 
   &__edit {
