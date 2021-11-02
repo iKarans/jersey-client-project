@@ -10,6 +10,7 @@ import laptopIcon from "../../assets/devices/laptop.svg";
 import mobileIcon from "../../assets/devices/mobile.svg";
 import { Link } from "react-router-dom";
 import lujamIcon from "../../assets/devices/lujam-logo-green.svg";
+import unknownManufacturer from "../../assets/devices/questionMarkIcon.svg"
 
 export const DeviceBar = (props) => {
   const {
@@ -50,7 +51,7 @@ export const DeviceBar = (props) => {
   };
 
   const brandIcon = () => {
-    let brandText = lujamIcon;
+    let brandText = unknownManufacturer;
     let manufacturerToLower = manufacturer.toLowerCase();
     switch (true) {
       case manufacturerToLower.includes("dell"):
@@ -63,6 +64,8 @@ export const DeviceBar = (props) => {
         return (brandText = lenovoIcon);
       case manufacturerToLower.includes("samsung"):
         return (brandText = samsungIcon);
+      case manufacturerToLower.includes("lujam"):
+        return (brandText = lujamIcon);
       default:
         return brandText;
     }
