@@ -26,7 +26,6 @@ padding: 10px;
     margin-left: 15%;
     font-weight: 600;
     font-size: 32px;
-
     color: #454756;
   }
 
@@ -46,7 +45,8 @@ padding: 10px;
   .alerts-container {
       display: flex;
       flex-direction: row;
-      align-items: center;
+      align-items: center; 
+}
 
     &__device-edit {
         font-size: 1.4rem;
