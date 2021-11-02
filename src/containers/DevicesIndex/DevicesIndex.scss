@@ -35,13 +35,13 @@
 .device-info {
   grid-area: info;
   width: 100%;
-  height: 80%;
+  height: 100%;
 }
 
-.map {
+.map-card {
   grid-area: map;
   width: 100%;
-  margin-bottom: 30%;
+  margin: auto;
 }
 
 body.active-modal {
