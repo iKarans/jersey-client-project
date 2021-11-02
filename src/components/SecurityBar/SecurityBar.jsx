@@ -9,7 +9,7 @@ import highRiskWhite from "../../assets/header/high-risk-white.svg";
 import greenTick from "../../assets/login/green-tick.svg";
 
 const SecurityBar = (props) => {
-  const { pageHeading, device, showAlert = true } = props;
+  const { pageHeading, device, showAlert = false } = props;
   return (
     <div className="security-bar">
       <div>
