@@ -2,11 +2,11 @@
 @use "../../../assets/styles/mixins" as *;
 
 .network-alert {
-  height: 47%;
+  
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 20px;
+  padding: 20px;
   border: none;
   border-radius: 12px;
   width: 206px;
@@ -14,11 +14,11 @@
   &--risk {
     background-color: $high-color-alert-icon;
     color: white;
-    height: 47%;
+  
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 20px;
+    padding: 20px;
     border: none;
     border-radius: 12px;
   }
@@ -26,11 +26,11 @@
   &--secure {
     background-color: rgba($secure-device-alert-icon, 0.08);
     color: $low-color;
-    height: 47%;
+  
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 20px;
+    padding: 20px;
     border: 1px solid rgba($secure-device-alert-border, 0.19);
     border-radius: 12px;
   }

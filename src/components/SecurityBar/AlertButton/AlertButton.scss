@@ -5,12 +5,13 @@
 display: flex;
 flex-direction: row;
 align-items: center;
-justify-content: center;
+justify-content: space-around;
   padding: 10px;
   border-radius: 7px;
   border: none;
   background-color: $text-tertiary;
   box-shadow: 0px 3.5px 5.5px rgba(0, 0, 0, 0.05);
+
 
   &__icon {
     height: 38px;
@@ -44,23 +45,24 @@ justify-content: center;
     }
   }
 
-  &____info {
+  &__info {
     width: 70%;
-    margin-left: 5px;
+    margin-left: 10px;
 
   }
 
   &__info--heading {
-    text-align: left;
+    text-align: center;
     color: $text-primary;
+    
     
   }
 
   &__info--number {
     color: $text-secondary;
-    text-align: left;
     font-weight: bold;
     font-size: 1.2rem;
+    text-align: center;
   }
 }
 
