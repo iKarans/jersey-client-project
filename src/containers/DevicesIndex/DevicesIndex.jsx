@@ -40,6 +40,7 @@ const DevicesIndex = (props) => {
         handleShowEdit={handleShowEdit}
       />
 
+      <DeviceMap />
 
 
       {modal && (
