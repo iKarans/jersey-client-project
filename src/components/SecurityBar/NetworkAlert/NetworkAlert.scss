@@ -9,11 +9,10 @@
   padding: 0 20px;
   border: none;
   border-radius: 12px;
-  width: 206px;
 
   &--risk {
-    background-color: $high-color-alert-icon;
-    color: white;
+    background-color: rgba($high-color, 0.1);
+    color: $high-color;
     height: 47%;
     display: flex;
     align-items: center;
@@ -24,14 +23,14 @@
   }
 
   &--secure {
-    background-color: rgba($secure-device-alert-icon, 0.08);
-    color: $low-color;
+    background-color: rgba($primary-color, 0.1);
+    color: $primary-color;
     height: 47%;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 20px;
-    border: 1px solid rgba($secure-device-alert-border, 0.19);
+    border: none;
     border-radius: 12px;
   }
 

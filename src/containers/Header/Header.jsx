@@ -6,7 +6,7 @@ import { useParams } from "react-router";
 
 const Header = (props) => {
   const { pageHeading, deviceIndex, showAlert } = props;
-  const { device } = useParams();
+  const { device, edit } = useParams();
 
   return (
     <header className="header">
@@ -16,6 +16,7 @@ const Header = (props) => {
         pageHeading={pageHeading}
         deviceIndex={deviceIndex}
         device={device}
+        edit={edit}
       />
     </header>
   );
