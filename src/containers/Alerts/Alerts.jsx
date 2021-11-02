@@ -218,7 +218,7 @@ const Alerts = () => {
       <section className="alerts">
         <div
           className={`${
-            filterStatus ? "alert__filter-active" : "alert__filter-inactive"
+            filterStatus ? "alert__filter-active" : "alert__filter--inactive"
           }`}
         >
           <AlertFilter
@@ -266,8 +266,8 @@ const Alerts = () => {
                 onClick={handleSortAlert}
                 className={`${
                   sortAlert
-                    ? "alerts-table__alert-arrow-active"
-                    : "alerts-table__alert-arrow-inactive"
+                    ? "alerts-table__alert-arrow--active"
+                    : "alerts-table__alert-arrow--inactive"
                 }`}
                 id="Alert"
               />
@@ -283,8 +283,8 @@ const Alerts = () => {
                 onClick={handleSortTime}
                 className={`${
                   sortTime
-                    ? "alerts-table__time-arrow-active"
-                    : "alerts-table__time-arrow-inactive"
+                    ? "alerts-table__time-arrow--active"
+                    : "alerts-table__time-arrow--inactive"
                 }`}
                 id="Time"
               />
@@ -297,8 +297,8 @@ const Alerts = () => {
                 onClick={handleSortImportance}
                 className={`${
                   sortImportance
-                    ? "alerts-table__importance-arrow-active"
-                    : "alerts-table__importance-arrow-inactive"
+                    ? "alerts-table__importance-arrow--active"
+                    : "alerts-table__importance-arrow--inactive"
                 }`}
                 id="Importance"
               />
