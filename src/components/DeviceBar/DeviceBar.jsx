@@ -13,17 +13,8 @@ import lujamIcon from "../../assets/devices/lujam-logo-green.svg";
 import unknownManufacturer from "../../assets/devices/questionMarkIcon.svg"
 
 export const DeviceBar = (props) => {
-  const {
-    name,
-    deviceType,
-    brand,
-    manufacturer,
-    model,
-    opSystem,
-    lastIP,
-    lastSeen,
-    securityRisk,
-  } = props.device;
+  const { name, deviceType, brand, manufacturer, model, opSystem, lastIP, lastSeen, securityRisk } =
+    props.device;
 
   const typeIcon = () => {
     let typeText = "";
@@ -32,50 +23,45 @@ export const DeviceBar = (props) => {
   };
 
   const getDate = () => {
-    const lastOnline = Date.parse(lastSeen);
-    const currentTime = new Date();
-    const timeSinceOnline = currentTime - lastOnline;
+    const lastOnline = Date.parse(lastSeen)
+    const currentTime = new Date()
+    const timeSinceOnline = currentTime - lastOnline
     const seconds = (timeSinceOnline / 1000).toFixed(1);
     const minutes = (timeSinceOnline / (1000 * 60)).toFixed(1);
     const hours = (timeSinceOnline / (1000 * 60 * 60)).toFixed(0);
     const days = (timeSinceOnline / (1000 * 60 * 60 * 24)).toFixed(0);
-    if (seconds < 60) {
-      return "less than 1 min ago";
-    } else if (minutes < 60) {
-      return minutes + " min ago";
-    } else if (hours < 24) {
-      return hours + " hrs ago";
-    } else {
-      return days + " days ago";
-    }
-  };
+    if (seconds < 60) { return "less than 1 min ago" }
+    else if (minutes < 60) { return minutes + " min ago" }
+    else if (hours < 24) { return hours + " hrs ago" }
+    else { return days + " days ago" }
+  }
+
+
 
   const brandIcon = () => {
     let brandText = unknownManufacturer;
     let manufacturerToLower = manufacturer.toLowerCase();
     switch (true) {
       case manufacturerToLower.includes("dell"):
-        return (brandText = dellIcon);
+        return brandText = dellIcon
       case manufacturerToLower.includes("apple"):
-        return (brandText = appleIcon);
+        return brandText = appleIcon
       case manufacturerToLower.includes("huawei"):
-        return (brandText = huaweiIcon);
+        return brandText = huaweiIcon
       case manufacturerToLower.includes("lenovo"):
-        return (brandText = lenovoIcon);
+        return brandText = lenovoIcon
       case manufacturerToLower.includes("samsung"):
         return (brandText = samsungIcon);
       case manufacturerToLower.includes("lujam"):
         return (brandText = lujamIcon);
       default:
-        return brandText;
+        return brandText
     }
   };
 
   return (
     <div className="device-bar">
-      <Link to={`/device/${name}`}>
-        <h4 className="device-bar__device-name">{name}</h4>
-      </Link>
+      <Link to={`/device/${name}`}><h4 className="device-bar__device-name">{name}</h4></Link>
       <img
         src={typeIcon()}
         alt={deviceType}
