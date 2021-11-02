@@ -39,6 +39,7 @@
     color: #454756;
   }
 
+
   &__buttons {
     width: 45%;
     height: 52%;
@@ -48,8 +49,13 @@
   }
 
   &__device-id {
-      margin-right: 230px;
       font-size: 1.4rem;
       color: $text-secondary;
+  }
+
+  &__device-edit {
+    font-size: 1.4rem;
+    color: $text-secondary;
+    font-weight: 600;
   }
 }
