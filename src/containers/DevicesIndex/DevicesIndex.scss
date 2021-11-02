@@ -12,28 +12,28 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  gap: 0px 0px;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+  justify-items: stretch;
+  align-items: stretch;
   height: 80%;
   margin: 80px 40px 0px 40px;
 
-  grid-template-areas:
-    "alert map"
-    "info map";
-
   &__risk-alert {
-    grid-area: "alert";
+    grid-column: 1;
+    grid-row: 1;
   }
 
   &__info {
-    grid-area: "info";
+    grid-column: 1;
+    grid-row: 2;
   }
 
   &__map {
-    grid-area: "map";
+    grid-column: 2;
+    grid-row: 1 / 2;
   }
 }
-
-
 
 body.active-modal {
   overflow-y: hidden;
