@@ -23,23 +23,28 @@ const DevicesIndex = () => {
   return (
     <div className="devices-index">
       <h1>{device.name}</h1>
-      <DeviceRisk
-        toggleModal={toggleModal}
-        securityRisk={filteredDevice.securityRisk}
-      />
-
-      <DeviceInfo
-        name={filteredDevice.name}
-        deviceType={filteredDevice.deviceType}
-        manufacturer={filteredDevice.manufacturer}
-        model={filteredDevice.model}
-        opSystem={filteredDevice.opSystem}
-        lastIP={filteredDevice.lastIP}
-        lastSeen={filteredDevice.lastSeen}
-      />
-
-      <DeviceMap />
-
+      <div className="devices-grid">
+      <div className="devices-grid__risk-alert">
+        <DeviceRisk
+          toggleModal={toggleModal}
+          securityRisk={filteredDevice.securityRisk}
+        />
+      </div>
+      <div className="devices-grid__info">
+        <DeviceInfo
+          name={filteredDevice.name}
+          deviceType={filteredDevice.deviceType}
+          manufacturer={filteredDevice.manufacturer}
+          model={filteredDevice.model}
+          opSystem={filteredDevice.opSystem}
+          lastIP={filteredDevice.lastIP}
+          lastSeen={filteredDevice.lastSeen}
+        />
+      </div>
+      <div className="devices-grid__map">
+        <DeviceMap />
+      </div>
+      </div>
       {modal && (
         <div className="modal">
           <div className="overlay"> </div>

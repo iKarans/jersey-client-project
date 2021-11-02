@@ -2,16 +2,38 @@
 @use "../../assets/styles/mixins" as *;
 
 .devices-index {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 40px;
-  padding: 7vh 3vw;
-
   @include mobile {
     display: none;
     height: 100vh;
   }
 }
+
+.devices-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0px 0px;
+  height: 80%;
+  margin: 80px 40px 0px 40px;
+
+  grid-template-areas:
+    "alert map"
+    "info map";
+
+  &__risk-alert {
+    grid-area: "alert";
+  }
+
+  &__info {
+    grid-area: "info";
+  }
+
+  &__map {
+    grid-area: "map";
+  }
+}
+
+
 
 body.active-modal {
   overflow-y: hidden;
@@ -54,14 +76,12 @@ body.active-modal {
     grid-column: 1 / span 2;
     text-align: center;
     color: $text-secondary;
-  
   }
   &__title {
     line-height: 1.4rem;
     margin-bottom: 0.6rem;
   }
 }
-
 
 .close-modal {
   position: absolute;
