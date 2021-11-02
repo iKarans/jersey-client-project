@@ -12,9 +12,6 @@ export const DeviceList = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [deviceList, setDeviceList] = useState(devicesResponse);
 
-
-
-
   const handleInput = (event) => {
     const input = event.target.value.toLowerCase();
     setSearchTerm(input);
