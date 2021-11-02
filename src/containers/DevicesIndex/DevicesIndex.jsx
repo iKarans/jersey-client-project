@@ -7,7 +7,8 @@ import devicesResponse from "../../data/devicesResponse";
 import DeviceMap from "../../components/DeviceMap/DeviceMap";
 import "./DevicesIndex.scss";
 
-const DevicesIndex = () => {
+const DevicesIndex = (props) => {
+  const { handleShowEdit } = props;
   const { device } = useParams();
 
   const [modal, setModal] = useState(false);
@@ -22,23 +23,25 @@ const DevicesIndex = () => {
 
   return (
     <div className="devices-index">
-    <h1>{device.name}</h1>
-    <DeviceRisk
-      toggleModal={toggleModal}
-      securityRisk={filteredDevice.securityRisk}
-    />
+      <h1>{device.name}</h1>
+      <DeviceRisk
+        toggleModal={toggleModal}
+        securityRisk={filteredDevice.securityRisk}
+      />
 
-    <DeviceInfo
-      name={filteredDevice.name}
-      deviceType={filteredDevice.deviceType}
-      manufacturer={filteredDevice.manufacturer}
-      model={filteredDevice.model}
-      opSystem={filteredDevice.opSystem}
-      lastIP={filteredDevice.lastIP}
-      lastSeen={filteredDevice.lastSeen}
-    />
+      <DeviceInfo
+        name={filteredDevice.name}
+        deviceType={filteredDevice.deviceType}
+        manufacturer={filteredDevice.manufacturer}
+        model={filteredDevice.model}
+        opSystem={filteredDevice.opSystem}
+        lastIP={filteredDevice.lastIP}
+        lastSeen={filteredDevice.lastSeen}
+        handleShowEdit={handleShowEdit}
+      />
 
-    <DeviceMap />
+
+
       {modal && (
         <div className="modal">
           <div className="overlay"> </div>
