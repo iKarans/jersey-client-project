@@ -3,7 +3,7 @@
 
 .devices-index {
   padding: 7vh 3vw;
-  height: 85vh;
+  height: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 0.5fr 1fr 1fr;
@@ -42,6 +42,7 @@
   grid-area: map;
   width: 100%;
   margin: auto;
+  height: 100%
 }
 
 body.active-modal {
