@@ -1,0 +1,138 @@
+@use "../../assets/styles/mixins" as *;
+@use "../../assets/styles/variables" as *;
+
+.calculation {
+    height: 350px;
+    width: 450px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $text-tertiary;
+    box-shadow: 0px 3.5px 5.5px rgba(0, 0, 0, 0.05);
+    margin-top: 95px;
+    margin-left: 20px;
+
+    @include mobile {
+        position: relative;
+        height: 350px;
+        width: 90%;
+        flex-direction: column;
+        align-items: center;
+        margin: 10px 25px 90px 25px;
+    }
+
+    &__container {
+        height: 315px;
+        width: 375px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    
+        &--header {
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: flex-start;
+            font-size: 20px;
+            font-weight: 500;
+            color: $security-calc-header-text;
+            
+            @include mobile {
+                display: flex;
+                justify-content: center;
+            }
+        }
+    
+        &--text {
+            margin-bottom: 25px;
+            font-size: 12px;
+            font-weight: 400;
+            color: $security-calc-text;
+
+            @include mobile {
+                text-align: center;
+            }
+        }
+    }
+
+
+    &__box {
+        height: 125px;
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        background-color: $background-color;
+        border-radius: 15px;
+    }
+
+    &__items{
+        display: grid;
+        grid-template-columns: 0.25fr 1fr;
+        grid-template-rows: repeat(4, 1fr);
+        margin-left: 10px;
+
+    
+        &--image {
+            margin: 5px;
+            padding-left: 25px;
+        }
+        
+        &--text{
+            margin: 3px 0 0 15px;
+            color: $primary-color;
+            
+        }
+    }
+
+    &__button {
+        margin-top: 25px;
+    
+        &--refresh {
+            cursor: pointer;
+            height: 35px;
+            width: 110px;
+            border-radius: 5px;
+            background-color: $primary-color;
+            border: none;
+            color: $text-tertiary;
+
+            @include mobile {
+                height: 40px;
+                width: 150px;
+                margin-left: 30px;
+            }
+        }
+    
+        &--more {
+            cursor: pointer;
+            background: none;
+            border: none;
+            margin-left: 30px;
+            color: $security-calc-header-text;
+
+            @include mobile {
+                margin-left: 40px;
+            }
+
+        }
+
+        &--more:hover {
+            color: $primary-color;
+        }
+
+        &--arrow {
+            margin-left: 5px;
+        }
+    }
+
+    &__line {
+        margin-top: 25px;
+        border: 0;
+        height: 1px;
+        background-image: $security-calc-line-gradient;
+
+    }
+}
+
+
