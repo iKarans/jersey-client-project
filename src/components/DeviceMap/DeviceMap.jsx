@@ -16,7 +16,7 @@ const DeviceMap = () => {
   console.log(details);
   return (
     <>
-    <button onClick={getUserGeolocationDetails}>Click</button>
+    {/* <button onClick={getUserGeolocationDetails}>Click</button> */}
     <div>
       <MapContainer center={[51.505, -0.09]} zoom={13} scrollWheelZoom={false} className="map">
         <TileLayer
