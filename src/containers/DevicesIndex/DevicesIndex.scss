@@ -2,10 +2,23 @@
 @use "../../assets/styles/mixins" as *;
 
 .devices-index {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 40px;
   padding: 7vh 3vw;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 0px 40px;
+  grid-template-areas:
+    "alert map"
+    "info map"
+    "info map";
+  // justify-content: stretch;
+  // justify-items: stretch;
+  // align-items: stretch;
+
+  // .alert { grid-area: alert; }
+  // .Map { grid-area: Map; }
+  // .Info { grid-area: Info; }
 
   @include mobile {
     display: none;
@@ -13,6 +26,20 @@
   }
 }
 
+.device-risk-alert {
+  grid-area: alert;
+  width: 100%;
+  height: 40%;
+}
+
+.device-info {
+  grid-area: info;
+  width: 100%;
+}
+
+.map {
+  grid-area: map;
+}
 // .devices-grid {
 //   display: grid;
 //   grid-template-columns: 1fr 1fr;
