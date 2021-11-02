@@ -1,9 +1,10 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Button from "../Button/Button";
 import "./DeviceInfo.scss"
 
 const DeviceInfo = (props) => {
-  const { name, deviceType, manufacturer, model, opSystem, lastIP, lastSeen } = props;
+  const { name, deviceType, manufacturer, model, opSystem, lastIP, lastSeen, handleShowEdit } = props;
 
   return (
     <div className="device-info">
@@ -24,7 +25,9 @@ const DeviceInfo = (props) => {
 
       <div className="device-info__edit">
         <h4>Are these details correct?</h4>
-        <Button text="Edit" buttonRisk={true} />
+        <Link to={`/devices/${name}/edit`} onClick={handleShowEdit}>
+          <Button text="Edit" buttonRisk={true}  />
+        </Link>
       </div>
 
     </div>

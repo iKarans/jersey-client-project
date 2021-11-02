@@ -30,6 +30,7 @@ padding: 10px;
     color: #454756;
   }
 
+
   &__buttons {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -46,5 +47,10 @@ padding: 10px;
       display: flex;
       flex-direction: row;
       align-items: center;
-  }
+
+    &__device-edit {
+        font-size: 1.4rem;
+        color: $text-secondary;
+        font-weight: 600;
+    }
 }
