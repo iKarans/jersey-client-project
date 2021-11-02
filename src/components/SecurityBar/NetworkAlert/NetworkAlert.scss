@@ -9,10 +9,11 @@
   padding: 0 20px;
   border: none;
   border-radius: 12px;
+  width: 206px;
 
   &--risk {
-    background-color: rgba($high-color, 0.1);
-    color: $high-color;
+    background-color: $high-color-alert-icon;
+    color: white;
     height: 47%;
     display: flex;
     align-items: center;
@@ -23,14 +24,14 @@
   }
 
   &--secure {
-    background-color: rgba($primary-color, 0.1);
-    color: $primary-color;
+    background-color: rgba($secure-device-alert-icon, 0.08);
+    color: $low-color;
     height: 47%;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 20px;
-    border: none;
+    border: 1px solid rgba($secure-device-alert-border, 0.19);
     border-radius: 12px;
   }
 
@@ -42,5 +43,3 @@
     padding-left: 10px;
   }
 }
-
-
