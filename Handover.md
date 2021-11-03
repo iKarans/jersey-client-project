@@ -60,4 +60,18 @@
 
 
 
-**Alerts**: a table of all the alerts on the network. The information displayed renders from a mock data file(alerts.js). The filter icon provides options to filter by alert type, when the alert was created and importance level. The user can reset any selected filters and once the filter box is closed there will be a small number above the filter icon to let the user know that filters have been applied and how many. The user can also search the alerts by summary.    
+**Alerts**: a table of all the alerts on the network. The information displayed renders from a mock data file(alerts.js). The filter icon provides options to filter by alert type, when the alert was created and importance level. The user can reset any selected filters and once the filter box is closed there will be a small number above the filter icon to let the user know that filters have been applied and how many. The user can also search the alerts by summary.  
+
+****
+
+## Resources
+
+- [Live Site](https://lujam-jersey.web.app/)
+
+- [Github]()
+
+- [Trello board](https://trello.com/b/i8XdG2dy/lujam)
+
+- [Wireframes](https://www.figma.com/file/RV6ZK8nzvqFlTZoG37TwUU/Lujam-Portal-V2?node-id=82%3A5204)
+
+- [Component Tree](https://app.mural.co/t/nology9400/m/nology9400/1633956427717/269b5197e35226c963e0b12c400b3d4e320d472a?sender=7c279945-50d0-47df-836c-0152f8cf5bad)
