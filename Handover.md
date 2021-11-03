@@ -1,0 +1,63 @@
+# Lujam-Jersey Project Handover Notes
+
+## Folder Structure
+
+**Assets**: each page of the website has a folder with the relevant images, there is a global folder for images used all over the site. Variables, mixins and typography scss files are kept in the Styles folder.  
+
+**Components**: all of the website’s reusable UI components.  
+
+**Containers**: the files are either pages containing the business logic, or files that link together multiple components.   
+
+**Context**: contains the authenticated user state which is passed to the rest of the website.  
+
+**Data**: has the data file Richard sent over plus mock data created to show how various components would work – eg user data to show the security score, alert data to fill up the alerts page.   
+
+****
+
+## Features & Pages  
+
+**Sign up & login**: a user is able to sign up, create a password and use this to login in to the website. The website is inaccessible without logging in.   
+
+**Security Page**: once logged in the user will land on the security page. This displays a security score chart with a key, the calculation summary and the devices can be accessed from the bottom of the page. The security score has been hooked up to a mock data file of users with different scores. Different users can then be passed in to the chart and it will display their score. This can be done from the ‘SecurityScore.jsx’ file in the components folder.   
+
+1. Open the SecurityScore.jsx file in the components folder.  
+2. Find the following code block on line 10:
+
+        const userScore = users[0].score;
+
+3. Passing an index between 0 and 4 will give the chart a different score to display. The mock data currently has five users to represent the five score ranges.
+4. The mock user data can be found in the users.js file in the data folder.  
+
+**Header**: The page header will have the user’s name in the top right corner and a dropdown menu will give the option to logout.   
+
+**Navigation**: each link will take the user through to the correct page. User can logout using the logout out button at the bottom of the nav bar.   
+
+**Dashboard**: this contains four graphs built using the chart package Chart.js.  The three line graphs are built using a reusable component which we have given mock data. The data is in the ‘Dashboard.jsx’ file in the containers folder. Datapoints, labels, icons, titles can be changed and the y-axis will respond dynamically to the inputs. 
+
+1. Open Dashboard.jsx in the containers folder.
+2. On line 9 you'll find the following code block:
+
+        const largeLineGraphTitle = "Devices on Network";
+        const largeLineGraphSubtitle =
+        "Provides an overview of the number of devices on the network over the past week";
+        const largeLineGraphData = [60, 125, 190, 160, 100, 140, 50];
+        const largeLineGraphLabels = [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday",
+        ];
+        const largeLineGraphMax = 300;
+        const largeLineGraphHoverLabel = "Devices on Network";
+
+3. Here you can change the inputs and the graph will re-render with the new information. This code block is for the 'Devices on Network' graph. Below in Dashboard.jsx you'' find the data for the other graphs on the dashboard page that can also be changed if required.
+
+
+**Devices**: this page contains a list of devices on the network, supplied with a data file sent over by Lujam (devicesResponse.js). The user can search for device by name using the search bar above the table. Clicking on a device name will take the user to a new page with further information – including the ability to block the device and go through to an edit device form. 
+
+
+
+**Alerts**: a table of all the alerts on the network. The information displayed renders from a mock data file(alerts.js). The filter icon provides options to filter by alert type, when the alert was created and importance level. The user can reset any selected filters and once the filter box is closed there will be a small number above the filter icon to let the user know that filters have been applied and how many. The user can also search the alerts by summary.    
