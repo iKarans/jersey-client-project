@@ -2,7 +2,6 @@
 @use '../../assets/styles/mixins' as *;
 
 .security {
-  position: unset;
   height: 100vh;
   width: 100%;
   display: flex;
@@ -11,8 +10,18 @@
   background-color: $background-color;
 
 
-  @include mobile {    
+  @include mobile {  
+    margin-top: 12vh;  
     flex-direction: column;
     margin-left: 0;
+    align-items: center;
+ }
+
+ .network-alert-show {
+     display: none;
+
+    @include mobile {
+        display: block;
+    }
  }
 }
