@@ -50,7 +50,6 @@ const Security = () => {
         {moreInfo && <CalculationInfo  showMoreInfo={showMoreInfo}/>}
       </div>
 
-      
       <div className="security__devices--list">
         <h3 className="security__devices--list-header">Device List</h3>
         <p className="security__devices--list-text">Please use the device list below to quickly find devices that are posing a high risk to the network. You can then select the device and block it to boost up your security score and minimise the risk of cyber attacks to the network. </p>
