@@ -30,36 +30,36 @@ const SideNav = (props) => {
         </div>
 
         <div className="side-nav__items">
-          <div className="side-nav__dashboard side-nav__item">
-            <HomeIcon className="side-nav__item--image" />
-            <Link to="/dashboard" className="side-nav__text">
-              Dashboard
+            <Link to="/dashboard" className="side-nav__text"> 
+              <div className="side-nav__dashboard side-nav__item">
+                <HomeIcon className="side-nav__item--image" />
+                <p>Dashboard</p>
+              </div>
             </Link>
-          </div>
-          <div className="side-nav__security side-nav__item">
-            <SecurityIcon className="side-nav__item--image" />
             <Link to="/security" className="side-nav__text">
-              Security{" "}
+              <div className="side-nav__security side-nav__item">
+                <SecurityIcon className="side-nav__item--image" />
+              < p>Security</p> 
+              </div>
             </Link>
-          </div>
-          <div className="side-nav__devices side-nav__item">
-            <DevicesIcon className="side-nav__item--image" />
             <Link to="/devices" className="side-nav__text">
-              Devices
+              <div className="side-nav__devices side-nav__item">
+                <DevicesIcon className="side-nav__item--image" />
+                <p>Devices</p> 
+              </div>
             </Link>
-          </div>
-          <div className="side-nav__alerts side-nav__item">
-            <AlertIcon className="side-nav__item--image" />
             <Link to="/alerts" className="side-nav__text">
-              Alerts
+              <div className="side-nav__alerts side-nav__item">
+                <AlertIcon className="side-nav__item--image" />
+                <p>Alerts</p> 
+              </div>
             </Link>
-          </div>
-          <div className="side-nav__settings side-nav__item">
-            <SettingsIcon className="side-nav__item--image" />
             <Link to="/settings" className="side-nav__text">
-              Settings
+               <div className="side-nav__settings side-nav__item">
+                <SettingsIcon className="side-nav__item--image" />
+                <p>Settings</p> 
+               </div>
             </Link>
-          </div>
         </div>
         <div className="side-nav__logout">
           <p onClick={handleLogout}>Logout</p>

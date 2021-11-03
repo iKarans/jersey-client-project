@@ -4,12 +4,13 @@
 .side-nav {
   height: 100vh;
   width: 20vw;
-  background: rgba(42, 188, 161, 0.05);
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  gap: 20px 20px;
-  font-size: 12px;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  background: rgba(42, 188, 161, 0.05);  
+  font-size: 0.75rem;
 
   @include mobile {
     display: none;
@@ -19,9 +20,9 @@
     display: flex;
     align-self: center;
     justify-self: center;
-    grid-area: 1 / 1 / 3 / 2;
-    height: 71.8px;
-    width: 73px;
+    height: 4.48rem;
+    width: 4.56rem;
+    margin: 5.4rem 0 6.3rem;
   }
 
   &__text {
@@ -30,22 +31,17 @@
   }
 
   &__items {
-    grid-area: 3 / 1 / 5 / 2;
     color: #aab3be;
     font-weight: 500;
   }
 
   &__item {
-    width: 177px;
-    height: 44px;
+    width: 11rem;
+    height: 2.75rem;
     display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    margin-left: 20px;
-    padding-left: 40px;
+    padding-left: 2.5rem;
     align-items: center;
-
-    margin-bottom: 25px;
+    margin-bottom: 2rem;
   }
 
   &__item:hover {
@@ -58,34 +54,29 @@
     }
   }
 
-
-
   &__logout {
     background: #2abca1;
     border-radius: 18px;
-    width: 133px;
-    height: 36px;
+    margin-top: 25.5rem;
+    width: 8.31rem;
+    height: 2.2rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    justify-self: center;
-    align-self: center;
     color: white;
     font-weight: 700;
-    grid-area: 9 / 1 / 10 / 2;
     cursor: pointer;
   }
 
   &__item--image {
-    height: 20px;
-    width: 18.5px;
-    margin-right: 15px;
+    height: 1.25rem;
+    width: 1.15rem;
+    margin-right: 1rem;
   }
 
   &__settings {
-    margin-top: 80px;
+    margin-top: 5rem;
   }
-
 }
 
 
