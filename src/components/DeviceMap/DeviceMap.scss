@@ -46,30 +46,9 @@
     margin-bottom: 7%;
     font-weight: 600;
   }
+
   &__details-content {
     font-size: 1em;
     color: $text-primary;
-  }
-
-  &__pin {
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    margin-left: 115px;
-    border-radius: 50%;
-    border: 8px solid #fff;
-    width: 8px;
-    height: 8px;
-  }
-
-  &__pin::after {
-    position: absolute;
-    content: "";
-    width: 0px;
-    height: 0px;
-    bottom: -30px;
-    left: -6px;
-    border: 10px solid transparent;
-    border-top: 17px solid #fff;
   }
 }

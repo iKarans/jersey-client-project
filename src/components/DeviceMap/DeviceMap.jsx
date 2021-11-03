@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from "react";
 import "./DeviceMap.scss";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import L from "leaflet";
 import "leaflet/dist/leaflet.css";
+import icon from "leaflet/dist/images/marker-icon.png";
+import iconShadow from "leaflet/dist/images/marker-shadow.png";
 
 const DeviceMap = (props) => {
   const { lastIP } = props;
@@ -23,10 +26,19 @@ const DeviceMap = (props) => {
 
   const deviceLatitude = details ? details.latitude : "";
   const deviceLongitude = details ? details.longitude : "";
+  const cityDetails = details.city != null ? `${details.city},` : "";
+  const countryDetails = details ? details.country_code : "";
 
   const mapPosition = [deviceLatitude, deviceLongitude];
 
   console.log(mapPosition);
+
+  let DefaultIcon = L.icon({
+    iconUrl: icon,
+    shadowUrl: iconShadow,
+  });
+
+  L.Marker.prototype.options.icon = DefaultIcon;
 
   return (
     <>
@@ -46,9 +58,7 @@ const DeviceMap = (props) => {
               url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             />
             <Marker position={mapPosition} className="map-card__pin">
-              <Popup>
-
-              </Popup>
+              <Popup></Popup>
             </Marker>
           </MapContainer>
         </div>
@@ -64,8 +74,7 @@ const DeviceMap = (props) => {
           <div className="map-card__location">
             <p className="map-card__details-title">Location</p>
             <p className="map-card__details-content">
-              {" "}
-              {details ? `${details.city}, ${details.country_code}` : ""}
+              {`${cityDetails} ${countryDetails}`}
             </p>
           </div>
         </div>
