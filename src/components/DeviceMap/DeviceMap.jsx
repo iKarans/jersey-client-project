@@ -8,7 +8,7 @@ const DeviceMap = () => {
 
   const getUserGeolocationDetails = () => {
     fetch(
-      "https://geolocation-db.com/json/d802faa0-10bd-11ec-b2fe-47a0872c6708/2.101.181.112"
+      "https://geolocation-db.com/json/d802faa0-10bd-11ec-b2fe-47a0872c6708/152.15.152.50"
     )
       .then((response) => response.json())
       .then((data) => setDetails(data));
