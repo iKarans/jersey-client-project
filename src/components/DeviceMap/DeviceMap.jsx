@@ -45,9 +45,9 @@ const DeviceMap = (props) => {
               attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
               url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             />
-            <Marker position={[51.505, -0.09]}>
+            <Marker position={mapPosition} className="map-card__pin">
               <Popup>
-                A pretty CSS3 popup. <br /> Easily customizable.
+
               </Popup>
             </Marker>
           </MapContainer>
