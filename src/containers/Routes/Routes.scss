@@ -42,38 +42,36 @@
 
  .routes__container-security { 
   position: relative;
-
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
   grid-area: 1 / 2 / 2 / 3;
 
-  @include mobile {
-    width: 100%;
-  }
- 
+    @include mobile {
+        width: 100%;
+    }
  }
+
  .routes__container-settings {
   grid-area: 1 / 2 / 2 / 3;
   background-color: $background-color;
 
-  @include mobile {
-    width: 100%;
-  }
+    @include mobile {
+        width: 100%;
+    }
  }
 
  .routes__container-devices {
   grid-area: 1 / 2 / 2 / 3;
   background-color: $background-color;
-  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
 
-  @include mobile {
-    width: 100%;
-  }
+    @include mobile {
+        width: 100%;
+    }
  }
 
  .routes__container-alerts {
@@ -83,16 +81,14 @@
   @include mobile {
     width: 100%;
   }
-
  }
 
  .routes__login {
   grid-area: 1 / 1 / 2 / 3; 
  }
 
- 
  .routes__container-signup {
   grid-area: 1 / 1 / 2 / 3;
   background-color: $background-color;
 
-  }
+}

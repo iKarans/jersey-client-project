@@ -1,7 +1,7 @@
 import React from 'react'
 import "./Security.scss"
 import SecurityScore from '../../components/SecurityScore/SecurityScore'
-import CalulationSummary from '../../components/CalculationSummary/CalulationSummary'
+import CalculationSummary from '../../components/CalculationSummary/CalulationSummary'
 import CalculationInfo from '../../components/CalculationInfo/CalculationInfo'
 import DeviceList from "../DeviceList/DeviceList";
 
