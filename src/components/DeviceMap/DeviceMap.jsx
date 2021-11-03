@@ -35,10 +35,11 @@ const DeviceMap = (props) => {
 
         <div>
           <MapContainer
-            center={[mapPosition]}
+            center={mapPosition}
             zoom={13}
             scrollWheelZoom={true}
             className="map-card__map"
+            key={mapPosition}
           >
             <TileLayer
               attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
