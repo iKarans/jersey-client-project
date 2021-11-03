@@ -42,8 +42,21 @@ const ForgottenPasswordForm = () => {
 
   return (
     <div className="forgotten-password">
-      <form className="forgotten-password forgotten-password--form ">
-        <input type="email" name="username" onInput={handleInput}></input>
+      <form className="forgotten-password forgotten-password-form ">
+        <h3 className="forgotten-password-form__header">
+          Forgotten your Password?
+        </h3>
+        <p className="forgotten-password-form__text">
+          {" "}
+          Not to worry! It happens to the best of us. Enter your email addresss
+          below and we’ll send you a link to reset your password.{" "}
+        </p>
+        <input
+          type="email"
+          name="username"
+          className="forgotten-password-form__input"
+          onInput={handleInput}
+        ></input>
         {buttonJSX()}
         <p className="forgotten-password__login">
           Already have an account? <Link to="/login">Login</Link>
