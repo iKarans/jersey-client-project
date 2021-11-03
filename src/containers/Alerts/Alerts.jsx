@@ -21,7 +21,7 @@ const Alerts = () => {
   const [searchWord, setSearchWord] = useState("");
   const handleSearchWord = (event) => {
     setSearchWord(event.target.value);
-  }
+  };
 
   const handleSortAlert = () => {
     setSortAlert(!sortAlert);
@@ -58,7 +58,9 @@ const Alerts = () => {
     setFiltersArray([]);
     setImportanceArray([]);
     setCreatedArray([]);
-    document.querySelectorAll('input[type=checkbox]').forEach( el => el.checked = false );
+    document
+      .querySelectorAll("input[type=checkbox]")
+      .forEach((el) => (el.checked = false));
   };
 
   const handleIncrement = () => {
@@ -143,19 +145,15 @@ const Alerts = () => {
   const alertsArrayFilteredLength = alertsArrayFiltered.length;
 
   if (filterNumber === 1) {
-    alertsArrayFiltered.sort((a, b) =>
+    {
       sortAlert
-        ? a.alertType > b.alertType
-          ? 1
-          : b.alertType > a.alertType
-          ? -1
-          : 0
-        : a.alertType > b.alertType
-        ? -1
-        : b.alertType > a.alertType
-        ? 1
-        : 0
-    );
+        ? alertsArrayFiltered.sort((a, b) =>
+            a.alertType.localeCompare(b.alertType)
+          )
+        : alertsArrayFiltered.sort((a, b) =>
+            b.alertType.localeCompare(a.alertType)
+          );
+    }
   } else if (filterNumber === 2) {
     alertsArrayFiltered.sort((a, b) =>
       sortTime ? a.createdTime - b.createdTime : b.createdTime - a.createdTime
@@ -333,7 +331,6 @@ const Alerts = () => {
             )}
           </div>
         </div>
-        {/* <ChatButton /> */}
       </section>
     </>
   );
