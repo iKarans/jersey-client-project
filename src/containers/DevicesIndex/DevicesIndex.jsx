@@ -40,7 +40,7 @@ const DevicesIndex = (props) => {
         handleShowEdit={handleShowEdit}
       />
 
-      <DeviceMap />
+      <DeviceMap lastIP={filteredDevice.lastIP} />
 
 
       {modal && (

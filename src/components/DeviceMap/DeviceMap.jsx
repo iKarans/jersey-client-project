@@ -1,22 +1,24 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./DeviceMap.scss";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 
-const DeviceMap = () => {
+const DeviceMap = (props) => {
+  const { lastIP } = props;
   const [details, setDetails] = useState(null);
 
   const getUserGeolocationDetails = () => {
     fetch(
-      "https://geolocation-db.com/json/d802faa0-10bd-11ec-b2fe-47a0872c6708/2.101.181.112"
+      `https://geolocation-db.com/json/d802faa0-10bd-11ec-b2fe-47a0872c6708/${lastIP}`
     )
       .then((response) => response.json())
       .then((data) => setDetails(data));
   };
-  console.log(details);
+  useEffect(() => {
+    getUserGeolocationDetails();
+  }, [])
   return (
     <>
-      <button onClick={getUserGeolocationDetails}>Click</button>
       <div className="map-card">
         <h4 className="map-card__title">Last Known Location</h4>
 
