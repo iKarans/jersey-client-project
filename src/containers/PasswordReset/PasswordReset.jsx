@@ -1,16 +1,18 @@
 import ChatButton from "../../components/ChatButton/ChatButton.jsx";
-
+import LoginPageNav from "../../components/LoginPageNav/LoginPageNav.jsx";
 import Logo from "../../assets/global/lujam-logo-white.svg";
+import PasswordResetForm from "../../components/PasswordResetForm/PasswordResetForm"
 
 import "./PasswordReset.scss";
 
 const PasswordReset = () => {
     return (
         <div>
-            <section className="forgotten-password-page">
+            <section className="password-reset-page">
             <LoginPageNav />
-             <div className="forgotten-password-page__container">
+             <div className="password-reset-page__container">
              <img src={Logo} alt="lujam logo" />
+             <PasswordResetForm/>
              
             </div>
             <ChatButton />

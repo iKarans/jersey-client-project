@@ -14,7 +14,7 @@ import DevicesIndex from "../DevicesIndex/DevicesIndex";
 import ForgottenPassword from "../ForgottenPassword/ForgottenPassword";
 import { UserContext } from "../../context/UserContext/UserContext";
 import EditDeviceForm from "../../components/EditDeviceForm/EditDeviceForm";
-import PasswordResetForm from "../../components/PasswordResetForm/PasswordResetForm";
+import PasswordReset from "../PasswordReset/PasswordReset";
 
 const Routes = () => {
   const { user } = useContext(UserContext);
@@ -106,7 +106,7 @@ const Routes = () => {
         </Route>
         <Route path="/reset-password">
           <div className="routes__container-reset-password">
-            <PasswordResetForm />
+            <PasswordReset/>
           </div>
         </Route>
         <Route path="/">
