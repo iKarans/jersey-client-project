@@ -1,28 +1,41 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./DeviceMap.scss";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 
-const DeviceMap = () => {
+const DeviceMap = (props) => {
+  const { lastIP } = props;
   const [details, setDetails] = useState(null);
 
   const getUserGeolocationDetails = () => {
     fetch(
-      "https://geolocation-db.com/json/d802faa0-10bd-11ec-b2fe-47a0872c6708/152.15.152.50"
+      `https://geolocation-db.com/json/d802faa0-10bd-11ec-b2fe-47a0872c6708/${lastIP}`
     )
       .then((response) => response.json())
       .then((data) => setDetails(data));
   };
+
   console.log(details);
+
+  useEffect(() => {
+    getUserGeolocationDetails();
+  }, []);
+
+  const deviceLatitude = details ? details.latitude : "";
+  const deviceLongitude = details ? details.longitude : "";
+
+  const mapPosition = [deviceLatitude, deviceLongitude];
+
+  console.log(mapPosition);
+
   return (
     <>
-      <button onClick={getUserGeolocationDetails}>Click</button>
       <div className="map-card">
         <h4 className="map-card__title">Last Known Location</h4>
 
         <div>
           <MapContainer
-            center={[51.505, -0.09]}
+            center={[mapPosition]}
             zoom={13}
             scrollWheelZoom={true}
             className="map-card__map"
@@ -41,15 +54,18 @@ const DeviceMap = () => {
         <div className="map-card__details">
           <div className="map-card__longitude">
             <p className="map-card__details-title">Longitude</p>
-            <p className="map-card__details-content">159.5398</p>
+            <p className="map-card__details-content">{deviceLongitude}</p>
           </div>
           <div className="map-card__latitude">
             <p className="map-card__details-title">Latitude</p>
-            <p className="map-card__details-content">75.3913</p>
+            <p className="map-card__details-content">{deviceLatitude}</p>
           </div>
           <div className="map-card__location">
             <p className="map-card__details-title">Location</p>
-            <p className="map-card__details-content">London, UK</p>
+            <p className="map-card__details-content">
+              {" "}
+              {details ? `${details.city}, ${details.country_code}` : ""}
+            </p>
           </div>
         </div>
       </div>
