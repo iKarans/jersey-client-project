@@ -70,7 +70,7 @@ const Routes = () => {
             <SideNav selectedPage="Security" />
           </div>
           <div className="routes__container-security">
-            <Header pageHeading="Security" />
+            <Header pageHeading="Security" showAlert={true} />
             <Security />
           </div>
         </Route>

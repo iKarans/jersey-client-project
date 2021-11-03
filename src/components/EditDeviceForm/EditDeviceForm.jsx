@@ -11,7 +11,6 @@ const EditDeviceForm = (props) => {
 
     const filteredDevice = devicesResponse.find(
         (singleDevice) => singleDevice.name === device
-
     );
 
 

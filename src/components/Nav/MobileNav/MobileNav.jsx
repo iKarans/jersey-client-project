@@ -45,7 +45,7 @@ const MobileNav = (props) => {
       <div className="mobile-nav__item">
         <AlertIcon className="mobile-nav__item--image" />
         <Link
-          to="/alert"
+          to="/alerts"
           className="mobile-nav__item--text "
           onClick={handleClick}
         >
