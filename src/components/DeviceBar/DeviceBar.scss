@@ -7,7 +7,7 @@
   position: relative;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   width: 100%;
   margin: 5px auto;
   padding: 0.625rem 6rem 0.625rem 2rem;
@@ -23,9 +23,9 @@
     color: rgba(115, 120, 134, 1);
     font-size: 0.75rem;
     font-weight: 700;
-    width: 15%;
+    width: 10%;
     text-align: start;
-    padding-left: 1.3rem;
+    margin-left: 1.3rem;
 
     @include mobile {
       width: 40%;
@@ -68,7 +68,6 @@
     color: rgba(115, 120, 134, 1);
     font-size: 0.75rem;
     width: 10%;
-    padding-right: 10px;
 
     @include mobile {
       display: none;
@@ -79,7 +78,6 @@
     color: rgba(115, 120, 134, 1);
     font-size: 0.75rem;
     width: 10%;
-    padding-right: 1rem;
 
     @include mobile {
       display: none;
@@ -90,7 +88,6 @@
     color: rgba(115, 120, 134, 1);
     font-size: 0.75rem;
     width: 10%;
-    padding-right: 1.2rem;
 
     @include mobile {
       display: none;
@@ -123,9 +120,8 @@
   &__security-risk {
     border-radius: 13px;
     padding: 5px;
-    margin-right: 1rem;
-    width: 6.25rem;
-    margin-left: 2.5rem;
+    width: 11%;
+    
 
     @include mobile {
       margin-right: 1rem;
