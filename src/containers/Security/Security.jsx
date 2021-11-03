@@ -7,9 +7,7 @@ import NetworkAlert from "../../components/SecurityBar/NetworkAlert/NetworkAlert
 import greenTick from "../../assets/login/green-tick.svg";
 import { useState } from 'react'
 
-const Security = (props) => {
-
-    const { alertImg, alertText, atRisk } = props;
+const Security = () => {
 
   const [moreInfo, setMoreInfo] = useState(false)
 
