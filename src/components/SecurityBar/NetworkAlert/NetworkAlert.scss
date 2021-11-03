@@ -2,22 +2,21 @@
 @use "../../../assets/styles/mixins" as *;
 
 .network-alert {
-  height: 47%;
+  
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 20px;
+  padding: 20px;
   border: none;
   border-radius: 12px;
 
   &--risk {
     background-color: rgba($high-color, 0.1);
     color: $high-color;
-    height: 47%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 20px;
+    padding: 20px;
     border: none;
     border-radius: 12px;
   }
@@ -25,11 +24,10 @@
   &--secure {
     background-color: rgba($primary-color, 0.1);
     color: $primary-color;
-    height: 47%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 20px;
+    padding: 20px;
     border: none;
     border-radius: 12px;
   }
