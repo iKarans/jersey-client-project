@@ -33,7 +33,7 @@ const devicesResponse = [{
   "deviceType": "mobile",
   "model": "iPhone X",
   "opSystem": "OSX",
-  "securityRisk": "low"
+  "securityRisk": "Low"
 }, {
   "hostName": "LuJamNetPicket",
   "subnet": 0,
@@ -68,7 +68,7 @@ const devicesResponse = [{
   "deviceType": "laptop",
   "model": "XPS 15",
   "opSystem": "Linux",
-  "securityRisk": "medium"
+  "securityRisk": "Medium"
 }, {
   "hostName": "Richards-MBP",
   "subnet": 0,
@@ -105,7 +105,7 @@ const devicesResponse = [{
   "deviceType": "laptop",
   "model": "iPhone X",
   "opSystem": "Windows 11",
-  "securityRisk": "high"
+  "securityRisk": "High"
 }, {
   "hostName": "",
   "subnet": 0,
@@ -138,7 +138,7 @@ const devicesResponse = [{
   "deviceType": "mobile",
   "model": "iPhone X",
   "opSystem": "OSX",
-  "securityRisk": "medium"
+  "securityRisk": "Medium"
 }, {
   "hostName": "",
   "subnet": 0,
@@ -171,7 +171,7 @@ const devicesResponse = [{
   "deviceType": "laptop",
   "model": "Zenbook",
   "opSystem": "Windows 10",
-  "securityRisk": "low"
+  "securityRisk": "Low"
 }, {
   "hostName": "",
   "subnet": 0,
@@ -204,7 +204,7 @@ const devicesResponse = [{
   "deviceType": "laptop",
   "model": "iPhone X",
   "opSystem": "Windows 10",
-  "securityRisk": "low"
+  "securityRisk": "Low"
 }];
 
 export default devicesResponse;
