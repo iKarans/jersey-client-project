@@ -5,42 +5,34 @@
   position: absolute;
   height: 100vh;
   width: 100%;
-  display: grid; 
-  grid-template-columns: 20% 80%; 
-  grid-template-rows: 1fr; 
+  display: grid;
+  grid-template-columns: 20% 80%;
+  grid-template-rows: 1fr;
   gap: 0px 0px;
-  
+
   margin-right: 10px;
 
   @include mobile {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-
-
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
   }
 }
-.routes__sidenav { 
-  grid-area: 1 / 1 / 2 / 2; 
-
-
+.routes__sidenav {
+  grid-area: 1 / 1 / 2 / 2;
 }
 
-.routes__container-dashboard { 
-
+.routes__container-dashboard {
   grid-area: 1 / 2 / 2 / 3;
   background-color: $background-color;
-  
-
 
   @include mobile {
     width: 100%;
   }
- 
- }
+}
 
- .routes__container-security { 
+.routes__container-security {
   position: relative;
 
   display: flex;
@@ -52,18 +44,17 @@
   @include mobile {
     width: 100%;
   }
- 
- }
- .routes__container-settings {
+}
+.routes__container-settings {
   grid-area: 1 / 2 / 2 / 3;
   background-color: $background-color;
 
   @include mobile {
     width: 100%;
   }
- }
+}
 
- .routes__container-devices {
+.routes__container-devices {
   grid-area: 1 / 2 / 2 / 3;
   background-color: $background-color;
   display: flex;
@@ -74,25 +65,26 @@
   @include mobile {
     width: 100%;
   }
- }
+}
 
- .routes__container-alerts {
+.routes__container-alerts {
   grid-area: 1 / 2 / 2 / 3;
   background-color: $background-color;
 
   @include mobile {
     width: 100%;
   }
+}
 
- }
+.routes__login {
+  grid-area: 1 / 1 / 2 / 3;
+}
 
- .routes__login {
-  grid-area: 1 / 1 / 2 / 3; 
- }
-
- 
- .routes__container-signup {
+.routes__container-signup {
   grid-area: 1 / 1 / 2 / 3;
   background-color: $background-color;
-
-  }
+}
+.routes__container-forgotten-password {
+  grid-area: 1 / 1 / 2 / 3;
+  background-color: $background-color;
+}
