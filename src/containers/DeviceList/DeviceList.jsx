@@ -43,8 +43,8 @@ export const DeviceList = () => {
           <label htmlFor="deviceSearch" className="search-bar__label"></label>
         </form>
         <div className="devices__search-options--filter-and-sort">
-          <img src={sortIcon} alt="sort icon" />
-          <img src={filterIcon} alt="filter icon" />
+          <img src={sortIcon} alt="sort icon" className="devices__filter-sort-icon"/> <span className="devices__filter-sort-label">Sort</span>
+          <img src={filterIcon} alt="filter icon" className="devices__filter-sort-icon"/> <span className="devices__filter-sort-label">Filter</span>
         </div>
       </div>
       <div className="devices__list--labels">

@@ -25,7 +25,7 @@
     font-weight: 700;
     width: 15%;
     text-align: start;
-    padding-left: 5px;
+    padding-left: 0.7rem;
 
     @include mobile {
       width: 40%;
@@ -68,6 +68,7 @@
     color: rgba(115, 120, 134, 1);
     font-size: 0.75rem;
     width: 10%;
+    padding-right: 10px;
 
     @include mobile {
       display: none;
@@ -78,6 +79,7 @@
     color: rgba(115, 120, 134, 1);
     font-size: 0.75rem;
     width: 10%;
+    padding-right: 1rem;
 
     @include mobile {
       display: none;
@@ -88,6 +90,7 @@
     color: rgba(115, 120, 134, 1);
     font-size: 0.75rem;
     width: 10%;
+    padding-right: 1.2rem;
 
     @include mobile {
       display: none;
@@ -120,7 +123,7 @@
   &__security-risk {
     border-radius: 13px;
     padding: 5px;
-    min-width: 100px;
+    width: 6.25rem;
     margin-left: 1rem;
 
     @include mobile {

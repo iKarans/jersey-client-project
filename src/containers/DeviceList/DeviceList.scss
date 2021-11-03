@@ -96,16 +96,35 @@
     }
 
     &--filter-and-sort {
+      width: 10%;
       display: flex;
       justify-content: space-between;
-      gap: 20px;
 
-      &:hover {
-          cursor: pointer;
-      }
 
       @include mobile {
         display: none;
+      }
+
+      .devices__filter-sort-icon{
+        
+        width: 8%;
+        height: auto;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+
+      
+
+      .devices__filter-sort-label {
+        padding-right: 1.5rem;
+        font-size: 0.875rem;
+        color: #737886;
+
+        &:hover {
+          cursor: pointer;
+        }
       }
     }
   }

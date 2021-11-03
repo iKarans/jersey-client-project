@@ -79,7 +79,7 @@ export const DeviceBar = (props) => {
       <p className="device-bar__os"> {opSystem}</p>
       <p className="device-bar__ip">{lastIP}</p>
       <p className="device-bar__last-active">{getDate()}</p>
-
+      
       <span
         className={`device-bar__security-risk device-bar__security-risk--${securityRisk}`}
       >
