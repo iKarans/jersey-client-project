@@ -7,8 +7,5 @@
     width: 95%;
     margin: 7vh auto;
   
-    @include mobile {   
-      display: none; 
-      height: 100vh;
-   }
+  
 }

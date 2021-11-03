@@ -43,19 +43,19 @@ export const DeviceList = () => {
           <label htmlFor="deviceSearch" className="search-bar__label"></label>
         </form>
         <div className="devices__search-options--filter-and-sort">
-          <img src={sortIcon} alt="sort icon" />
-          <img src={filterIcon} alt="filter icon" />
+          <img src={sortIcon} alt="sort icon" className="devices__filter-sort-icon"/> <span className="devices__filter-sort-label">Sort</span>
+          <img src={filterIcon} alt="filter icon" className="devices__filter-sort-icon" id="devices__filter-icon"/> <span className="devices__filter-sort-label">Filter</span>
         </div>
       </div>
       <div className="devices__list--labels">
-        <p>Device Name</p>
-        <p>Device Type</p>
-        <p>Brand</p>
-        <p>Model</p>
-        <p>Operating System</p>
-        <p>IP Address</p>
-        <p>Last Active</p>
-        <p>Security Risk</p>
+        <p className="devices__list--labels-name">Device Name</p>
+        <p className="devices__list--labels-type">Device Type</p>
+        <p className="devices__list--labels-brand">Brand</p>
+        <p className="devices__list--labels-model">Model</p>
+        <p className="devices__list--labels-os">Operating System</p>
+        <p className="devices__list--labels-ip">IP Address</p>
+        <p className="devices__list--labels-last-active">Last Active</p>
+        <p className="devices__list--labels-risk">Security Risk</p>
       </div>
       <div className="devices__list">
         {deviceList && deviceList.length !== 0 ? (
