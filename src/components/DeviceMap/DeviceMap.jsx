@@ -8,7 +8,7 @@ const DeviceMap = () => {
 
   const getUserGeolocationDetails = () => {
     fetch(
-      "https://geolocation-db.com/json/d802faa0-10bd-11ec-b2fe-47a0872c6708"
+      "https://geolocation-db.com/json/d802faa0-10bd-11ec-b2fe-47a0872c6708/2.101.181.112"
     )
       .then((response) => response.json())
       .then((data) => setDetails(data));
@@ -16,7 +16,7 @@ const DeviceMap = () => {
   console.log(details);
   return (
     <>
-      {/* <button onClick={getUserGeolocationDetails}>Click</button> */}
+      <button onClick={getUserGeolocationDetails}>Click</button>
       <div className="map-card">
         <h4 className="map-card__title">Last Known Location</h4>
 
