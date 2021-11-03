@@ -15,6 +15,7 @@ import { auth } from "../../firebase";
 import "./PasswordResetForm.scss";
 
 const PasswordResetForm = () => {
+  let history = useHistory();
   const user = auth.currentUser;
   const [newPassword, setNewPassword] = useState({
     newPassword: "",
@@ -38,12 +39,11 @@ const PasswordResetForm = () => {
   };
 
   const handlePasswordReset = () => {
-    const user = auth().currentUser;
     const credential = EmailAuthProvider.credentialWithLink(
       localStorage.getItem("emailForSignIn"),
       window.location.href
     );
-    user.reauthenticateWithCredential(credential).then(() => {
+    reauthenticateWithCredential(user, credential).then(() => {
       console.log("button fires");
       console.log(user);
       updatePassword(user, newPassword.newPassword)
@@ -55,6 +55,7 @@ const PasswordResetForm = () => {
           console.log(" not working");
         });
     });
+    history.push("/security");
   };
   const checkPasswordLengthJSX = () => {
     const passwordLength = newPassword.newPassword.length;
