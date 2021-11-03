@@ -71,8 +71,8 @@
     }
   }
   &__search-options {
-    width: 95%;
-    margin: 40px auto;
+    width: 100%;
+    margin: 1.5rem auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -100,22 +100,27 @@
       display: flex;
       justify-content: space-between;
 
+      #devices__filter-icon {
 
-      @include mobile {
-        display: none;
-      }
-
-      .devices__filter-sort-icon{
-        
-        width: 8%;
-        height: auto;
-
-        &:hover {
-          cursor: pointer;
+        @include mobile {
+          display: block;
+          height: 1rem;
+          width: auto;
+          margin-left: 0.8rem;
         }
       }
 
-      
+      .devices__filter-sort-icon{
+        width: 8%;
+        height: auto;
+        
+        &:hover {
+          cursor: pointer;
+        }
+        @include mobile {
+          display: none;
+        }
+      }      
 
       .devices__filter-sort-label {
         padding-right: 1.5rem;
@@ -124,6 +129,10 @@
 
         &:hover {
           cursor: pointer;
+        }
+
+        @include mobile {
+          display: none;
         }
       }
     }
