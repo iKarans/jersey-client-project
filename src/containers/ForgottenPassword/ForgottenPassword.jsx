@@ -1,13 +1,21 @@
 import ChatButton from "../../components/ChatButton/ChatButton.jsx";
-import ForgottenPasswordForm from "../../components/ForgottenPasswordForm/ForgottenPaswordForm";
 
+import Logo from "../../assets/global/lujam-logo-white.svg";
+
+import ForgottenPasswordForm from "../../components/ForgottenPasswordForm/ForgottenPaswordForm";
+import LoginPageNav from "../../components/LoginPageNav/LoginPageNav";
 import "./ForgottenPassword.scss";
 
 const ForgottenPassword = () => {
   return (
     <div>
       <section className="forgotten-password-page">
-        <ForgottenPasswordForm />
+        <LoginPageNav />
+
+        <div className="forgotten-password-page__container">
+          <img src={Logo} alt="lujam logo" />
+          <ForgottenPasswordForm />
+        </div>
         <ChatButton />
       </section>
     </div>
