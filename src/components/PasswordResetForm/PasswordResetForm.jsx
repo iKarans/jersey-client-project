@@ -5,7 +5,11 @@ import ShowPassword from "../../assets/login/show-password.svg";
 import HidePassword from "../../assets/login/hide-password.svg";
 import { ReactComponent as ValidInputIcon } from "../../assets/login/green-tick.svg";
 import { ReactComponent as InvalidInputIcon } from "../../assets/login/red-cross.svg";
-import { updatePassword } from "firebase/auth";
+import {
+  updatePassword,
+  reauthenticateWithCredential,
+  EmailAuthProvider,
+} from "firebase/auth";
 import { auth } from "../../firebase";
 
 import "./PasswordResetForm.scss";
@@ -32,17 +36,25 @@ const PasswordResetForm = () => {
   const handleShowPassword = () => {
     setShowPassword(!showPassword);
   };
-  const checksPass = Object.values(validPassword).every((password) => password);
+
   const handlePasswordReset = () => {
-    console.log("button fires");
-    console.log(user);
-    updatePassword(user, newPassword.newPassword)
-      .then(() => {
-        console.log("working");
-      })
-      .catch((error) => {
-        console.log(" not working");
-      });
+    const user = auth().currentUser;
+    const credential = EmailAuthProvider.credentialWithLink(
+      localStorage.getItem("emailForSignIn"),
+      window.location.href
+    );
+    user.reauthenticateWithCredential(credential).then(() => {
+      console.log("button fires");
+      console.log(user);
+      updatePassword(user, newPassword.newPassword)
+        .then(() => {
+          console.log("working");
+        })
+        .catch((error) => {
+          console.log(error);
+          console.log(" not working");
+        });
+    });
   };
   const checkPasswordLengthJSX = () => {
     const passwordLength = newPassword.newPassword.length;
@@ -126,7 +138,22 @@ const PasswordResetForm = () => {
       );
     }
   };
-
+  const buttonJSX = () => {
+    const checksPass = Object.values(validPassword).every(
+      (password) => password
+    );
+    return (
+      <div>
+        <button
+          className="reset-form__button"
+          onClick={handlePasswordReset}
+          disabled={!checksPass}
+        >
+          Submit
+        </button>
+      </div>
+    );
+  };
   return (
     <div className="reset-form">
       <form className="reset-form__input">
@@ -180,14 +207,8 @@ const PasswordResetForm = () => {
         <div className="reset-form__validation-item">
           {checkPasswordsMatchJSX()}
         </div>
+        {buttonJSX()}
       </div>
-      <button
-        className="reset-form__button"
-        onClick={handlePasswordReset}
-        disabled={!checksPass}
-      >
-        Submit
-      </button>
     </div>
   );
 };
