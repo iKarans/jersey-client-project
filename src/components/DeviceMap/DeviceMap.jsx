@@ -26,7 +26,7 @@ const DeviceMap = (props) => {
 
   const deviceLatitude = details ? details.latitude : "";
   const deviceLongitude = details ? details.longitude : "";
-  const cityDetails = details.city != null ? `${details.city},` : "";
+  const cityDetails = details && details.city != null ? `${details.city},` : "";
   const countryDetails = details ? details.country_code : "";
 
   const mapPosition = [deviceLatitude, deviceLongitude];
