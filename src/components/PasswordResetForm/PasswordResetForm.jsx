@@ -156,11 +156,12 @@ const PasswordResetForm = () => {
     );
   };
   return (
-    <div className="reset-password">
-      <form className="reset-password-form">
-        <label htmlFor="text" className="reset-password-form__label">
-          password{" "}
-        </label>
+    <div className="reset-password-form">
+      <h3 className="reset-password-form__header">Reset Password</h3>
+      <label htmlFor="text" className="reset-password-form__label">
+        New Password{" "}
+      </label>
+      <div className="reset-password-form__password-container">
         <input
           type={!showPassword ? "password" : "text"}
           name="newPassword"
@@ -184,9 +185,11 @@ const PasswordResetForm = () => {
             onClick={handleShowPassword}
           />
         )}
-        <label htmlFor="text" className="reset-password-form__label">
-          confirm password{" "}
-        </label>
+      </div>
+      <label htmlFor="text" className="reset-password-form__label">
+        Confirm new password{" "}
+      </label>
+      <div className="reset-password-form__password-container">
         <input
           type={!showPassword ? "password" : "text"}
           name="confirmPassword"
@@ -194,19 +197,19 @@ const PasswordResetForm = () => {
           onChange={handleInput}
           required
         />
-        <div className="reset-password-form__validation">
-          <div className="reset-password-form__validation-item">
-            {checkPasswordLengthJSX()}
-          </div>
-          <div className="reset-password-form__validation-item">
-            {checkPasswordHasUppercaseJSX()}
-          </div>
-          <div className="reset-password-form__validation-item">
-            {checkPasswordsMatchJSX()}
-          </div>
-          {buttonJSX()}
+      </div>
+      <div className="reset-password-form__validation">
+        <div className="reset-password-form__validation-item">
+          {checkPasswordLengthJSX()}
         </div>
-      </form>
+        <div className="reset-password-form__validation-item">
+          {checkPasswordHasUppercaseJSX()}
+        </div>
+        <div className="reset-password-form__validation-item">
+          {checkPasswordsMatchJSX()}
+        </div>
+        {buttonJSX()}
+      </div>
     </div>
   );
 };
