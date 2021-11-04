@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-/* eslint-disable no-unused-vars */
 import { Link, useHistory } from "react-router-dom";
 import { auth } from "../../firebase";
 import { sendPasswordResetEmail } from "firebase/auth";
