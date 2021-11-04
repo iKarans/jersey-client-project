@@ -19,6 +19,7 @@ const Alerts = () => {
   const [sortTime, setSortTime] = useState(false);
   const [sortImportance, setSortImportance] = useState(false);
   const [searchWord, setSearchWord] = useState("");
+  
   const handleSearchWord = (event) => {
     setSearchWord(event.target.value);
   };
@@ -64,7 +65,7 @@ const Alerts = () => {
   };
 
   const handleIncrement = () => {
-    if (pages >= 0 && pages < alertsArrayFiltered.length / 9 - 1) {
+    if (pages >= 0 && pages < (alertsArrayFilteredLength / 9) - 1) {
       setPages(pages + 1);
     }
   };
