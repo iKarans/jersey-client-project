@@ -110,7 +110,6 @@
   :any-link {
     text-decoration: none;
     color: rgba(115, 120, 134, 1);
-    // width: 8%;
 
     &:hover {
       cursor: pointer;
@@ -122,16 +121,16 @@
     border-radius: 13px;
     padding: 5px;
     width: 11%;
-
-    h4 {  
-        @include mobile {
-            font-size: .9rem;
-        }
-    }
     
     @include mobile {
       width: 30%;
       padding: 8px;
+    }
+
+    &--title { 
+        @include mobile {
+            font-size: .9rem;
+        }
     }
 
     &--Low {
