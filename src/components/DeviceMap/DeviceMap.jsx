@@ -24,8 +24,8 @@ const DeviceMap = (props) => {
     getUserGeolocationDetails();
   }, []);
 
-  const deviceLatitude = details ? details.latitude : "";
-  const deviceLongitude = details ? details.longitude : "";
+  const deviceLatitude = details && typeof(details.latitude) == "number" ? details.latitude : "";
+  const deviceLongitude = details && typeof(details.longitude) == "number" ? details.longitude : "";
   const cityDetails = details && details.city != null ? `${details.city},` : "";
   const countryDetails = details ? details.country_code : "";
 
@@ -42,8 +42,7 @@ const DeviceMap = (props) => {
 
   return (
     <>
-      {(deviceLatitude == "Not Found" && deviceLatitude) ||
-      (deviceLongitude == "Not Found" && deviceLongitude) ? (
+      {deviceLatitude && deviceLongitude ? (
         <div className="map-card">
           <h4 className="map-card__title">Last Known Location</h4>
 
