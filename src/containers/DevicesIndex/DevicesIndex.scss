@@ -12,17 +12,12 @@
     "alert map"
     "info map"
     "info map";
-  // justify-content: stretch;
-  // justify-items: stretch;
-  // align-items: stretch;
-
-  // .alert { grid-area: alert; }
-  // .Map { grid-area: Map; }
-  // .Info { grid-area: Info; }
 
   @include mobile {
-    display: none;
     height: 100vh;
+    padding: 6vh 3vw;
+    display: flex;
+    flex-direction: column;
   }
 }
 
@@ -42,7 +37,7 @@
   grid-area: map;
   width: 100%;
   margin: auto;
-  height: 100%
+  height: 100%;
 }
 
 body.active-modal {

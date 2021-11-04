@@ -38,6 +38,8 @@ const DeviceMap = (props) => {
 
   L.Marker.prototype.options.icon = DefaultIcon;
 
+  console.log(details)
+
   return (
     <>
       {deviceLatitude && deviceLongitude ? (
