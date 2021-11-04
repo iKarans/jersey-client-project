@@ -10,8 +10,9 @@
 
   @include mobile {
     flex-direction: column;
-    width: 70%;
+    width: 100%;
     height: calc(100vh - 100px);
-    margin: 0;
+    margin: auto;
+    padding: 3.75rem 1rem;
   }
 }
