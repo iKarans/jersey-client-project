@@ -52,3 +52,13 @@
     color: $text-primary;
   }
 }
+
+.leaflet-tile-pane {
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+
+.leaflet-marker-icon {
+  filter: invert(54%) sepia(86%) saturate(367%) hue-rotate(119deg)
+    brightness(97%) contrast(87%);
+}

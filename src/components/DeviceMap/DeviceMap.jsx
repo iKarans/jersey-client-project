@@ -18,20 +18,18 @@ const DeviceMap = (props) => {
       .then((data) => setDetails(data));
   };
 
-  console.log(details);
-
   useEffect(() => {
     getUserGeolocationDetails();
   }, []);
 
-  const deviceLatitude = details ? details.latitude : "";
-  const deviceLongitude = details ? details.longitude : "";
+  const deviceLatitude =
+    details && typeof details.latitude == "number" ? details.latitude : "";
+  const deviceLongitude =
+    details && typeof details.longitude == "number" ? details.longitude : "";
   const cityDetails = details && details.city != null ? `${details.city},` : "";
   const countryDetails = details ? details.country_code : "";
 
   const mapPosition = [deviceLatitude, deviceLongitude];
-
-  console.log(mapPosition);
 
   let DefaultIcon = L.icon({
     iconUrl: icon,
@@ -40,11 +38,11 @@ const DeviceMap = (props) => {
 
   L.Marker.prototype.options.icon = DefaultIcon;
 
-  console.log(details)
+  
+
   return (
     <>
-      {(deviceLatitude !== 'Not Found' && deviceLatitude) ||
-      (deviceLongitude !== 'Not Found' && deviceLongitude) ? (
+      {deviceLatitude && deviceLongitude ? (
         <div className="map-card">
           <h4 className="map-card__title">Last Known Location</h4>
 
@@ -57,11 +55,11 @@ const DeviceMap = (props) => {
               key={mapPosition}
             >
               <TileLayer
-                attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+              attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+              url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
               />
               <Marker position={mapPosition} className="map-card__pin">
-                <Popup></Popup>
+                <Popup>Device Location</Popup>
               </Marker>
             </MapContainer>
           </div>
