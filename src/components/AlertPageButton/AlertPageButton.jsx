@@ -9,9 +9,9 @@ const AlertPageButton = (props) => {
     let className;
 
     if(pages === index - 1) {
-        className = "alerts-table__pages-buttons-button alert__button-active"
+        className = "alerts-table__pages-buttons-button alert__button--active"
     } else {
-        className = "alerts-table__pages-buttons-button"
+        className = "alerts-table__pages-buttons--button"
     }
     
 

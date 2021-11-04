@@ -19,9 +19,10 @@ const Alerts = () => {
   const [sortTime, setSortTime] = useState(false);
   const [sortImportance, setSortImportance] = useState(false);
   const [searchWord, setSearchWord] = useState("");
+  
   const handleSearchWord = (event) => {
     setSearchWord(event.target.value);
-  }
+  };
 
   const handleSortAlert = () => {
     setSortAlert(!sortAlert);
@@ -58,11 +59,13 @@ const Alerts = () => {
     setFiltersArray([]);
     setImportanceArray([]);
     setCreatedArray([]);
-    document.querySelectorAll('input[type=checkbox]').forEach( el => el.checked = false );
+    document
+      .querySelectorAll("input[type=checkbox]")
+      .forEach((el) => (el.checked = false));
   };
 
   const handleIncrement = () => {
-    if (pages >= 0 && pages < alertsArrayFiltered.length / 9 - 1) {
+    if (pages >= 0 && pages < (alertsArrayFilteredLength / 9) - 1) {
       setPages(pages + 1);
     }
   };
@@ -143,19 +146,14 @@ const Alerts = () => {
   const alertsArrayFilteredLength = alertsArrayFiltered.length;
 
   if (filterNumber === 1) {
-    alertsArrayFiltered.sort((a, b) =>
-      sortAlert
-        ? a.alertType > b.alertType
-          ? 1
-          : b.alertType > a.alertType
-          ? -1
-          : 0
-        : a.alertType > b.alertType
-        ? -1
-        : b.alertType > a.alertType
-        ? 1
-        : 0
-    );
+      (sortAlert
+        ? alertsArrayFiltered.sort((a, b) =>
+            a.alertType.localeCompare(b.alertType)
+          )
+        : alertsArrayFiltered.sort((a, b) =>
+            b.alertType.localeCompare(a.alertType)
+          ));
+    
   } else if (filterNumber === 2) {
     alertsArrayFiltered.sort((a, b) =>
       sortTime ? a.createdTime - b.createdTime : b.createdTime - a.createdTime
@@ -218,7 +216,7 @@ const Alerts = () => {
       <section className="alerts">
         <div
           className={`${
-            filterStatus ? "alert__filter-active" : "alert__filter-inactive"
+            filterStatus ? "alert__filter-active" : "alert__filter--inactive"
           }`}
         >
           <AlertFilter
@@ -266,8 +264,8 @@ const Alerts = () => {
                 onClick={handleSortAlert}
                 className={`${
                   sortAlert
-                    ? "alerts-table__alert-arrow-active"
-                    : "alerts-table__alert-arrow-inactive"
+                    ? "alerts-table__alert-arrow--active"
+                    : "alerts-table__alert-arrow--inactive"
                 }`}
                 id="Alert"
               />
@@ -283,8 +281,8 @@ const Alerts = () => {
                 onClick={handleSortTime}
                 className={`${
                   sortTime
-                    ? "alerts-table__time-arrow-active"
-                    : "alerts-table__time-arrow-inactive"
+                    ? "alerts-table__time-arrow--active"
+                    : "alerts-table__time-arrow--inactive"
                 }`}
                 id="Time"
               />
@@ -297,8 +295,8 @@ const Alerts = () => {
                 onClick={handleSortImportance}
                 className={`${
                   sortImportance
-                    ? "alerts-table__importance-arrow-active"
-                    : "alerts-table__importance-arrow-inactive"
+                    ? "alerts-table__importance-arrow--active"
+                    : "alerts-table__importance-arrow--inactive"
                 }`}
                 id="Importance"
               />
@@ -306,7 +304,7 @@ const Alerts = () => {
           </div>
           <div className="alerts-table__alerts">{alertsItemJSX}</div>
           <div className="alerts-table__pages">
-            {alerts.length > 9 && (
+            {alertsArrayFilteredLength > 9 && (
               <div className="alerts-table__pages-buttons">
                 <button
                   className="alerts-table__pages-buttons-button"
@@ -333,7 +331,6 @@ const Alerts = () => {
             )}
           </div>
         </div>
-        {/* <ChatButton /> */}
       </section>
     </>
   );
