@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import "./DeviceMap.scss";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import L from "leaflet";
@@ -10,17 +10,17 @@ const DeviceMap = (props) => {
   const { lastIP } = props;
   const [details, setDetails] = useState(null);
 
-  const getUserGeolocationDetails = () => {
+  const getUserGeolocationDetails = useCallback(() => {
     fetch(
       `https://geolocation-db.com/json/d802faa0-10bd-11ec-b2fe-47a0872c6708/${lastIP}`
     )
       .then((response) => response.json())
       .then((data) => setDetails(data));
-  };
+  },[lastIP]);
 
   useEffect(() => {
     getUserGeolocationDetails();
-  }, []);
+  }, [getUserGeolocationDetails]);
 
   const deviceLatitude =
     details && typeof details.latitude == "number" ? details.latitude : "";
