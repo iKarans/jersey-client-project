@@ -15,6 +15,7 @@ import ForgottenPassword from "../ForgottenPassword/ForgottenPassword";
 import { UserContext } from "../../context/UserContext/UserContext";
 import EditDeviceForm from "../../components/EditDeviceForm/EditDeviceForm";
 import PasswordReset from "../PasswordReset/PasswordReset";
+import EmailSubmitContainer from "../EmailSubmitContainer/EmailSubmitContainer";
 
 const Routes = () => {
   const { user } = useContext(UserContext);
@@ -97,6 +98,11 @@ const Routes = () => {
         <Route exact path="/signup">
           <div className="routes__container-signup">
             <SignUp />
+          </div>
+        </Route>
+        <Route path="/email-submitted">
+          <div className="routes__container-email-submit">
+            <EmailSubmitContainer />
           </div>
         </Route>
         <Route path="/forgotten-password">

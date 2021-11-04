@@ -1,6 +1,11 @@
-import { Link } from "react-router-dom";
-return (
-  <div classname="successful-submit">
+import React from 'react'
+import { Link } from 'react-router-dom'
+import "./EmailSubmit.scss"
+
+const EmailSubmit = () => {
+  return (
+    <div>
+      <div classname="successful-submit">
     <div classname="successful-submit__box">
       <h3 classname="successful-submit__header">Successfully sumbitted!</h3>
       <p classname="successful-submit__text">
@@ -12,4 +17,8 @@ return (
       </p>
     </div>
   </div>
-);
+    </div>
+  )
+}
+
+export default EmailSubmit

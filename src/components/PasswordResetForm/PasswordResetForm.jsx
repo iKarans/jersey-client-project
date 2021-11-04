@@ -159,7 +159,7 @@ const PasswordResetForm = () => {
     <div className="reset-password">
       <form className="reset-password-form">
         <label htmlFor="text" className="reset-password-form__label">
-          password{" "}
+          new password{" "}
         </label>
         <input
           type={!showPassword ? "password" : "text"}
