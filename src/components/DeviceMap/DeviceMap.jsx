@@ -38,8 +38,6 @@ const DeviceMap = (props) => {
 
   L.Marker.prototype.options.icon = DefaultIcon;
 
-  
-
   return (
     <>
       {deviceLatitude && deviceLongitude ? (
@@ -55,8 +53,8 @@ const DeviceMap = (props) => {
               key={mapPosition}
             >
               <TileLayer
-              attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-              url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
               />
               <Marker position={mapPosition} className="map-card__pin">
                 <Popup>Device Location</Popup>
