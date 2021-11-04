@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+/* eslint-disable no-unused-vars */
 import { Link, useHistory } from "react-router-dom";
 import { auth } from "../../firebase";
 import { sendPasswordResetEmail } from "firebase/auth";
@@ -14,10 +15,12 @@ const ForgottenPasswordForm = () => {
   const submitResetEmail = () => {
     sendPasswordResetEmail(auth, userEmail)
       .then(() => {
-        history.push("/security");
+        history.push("/email-submitted");
       })
 
-      .catch((error) => {});
+      .catch((error) => {
+        console.log(error);
+      });
   };
   const buttonJSX = () => {
     if (/^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(userEmail)) {

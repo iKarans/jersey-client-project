@@ -2,6 +2,30 @@
 @use "../../assets/styles/mixins" as *;
 @use "../../assets/styles/typography" as *;
 
-.successful-submit {
- 
+.successful-submit-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(20, 126, 136, 0.42);
+  border-radius: 5px 5px 15px 15px;
+  height: 29rem;
+  width: 28.6rem;
+  margin: 4rem 0 2rem 0;
+  &__header {
+    color: white;
+    text-align: center;
+    display: block;
+    margin: 2rem 0;
+  }
+  &__text {
+    color: $text-tertiary;
+    text-align: center;
+    display: block;
+    margin: 2rem;
+  }
+
+  @include mobile {
+    width: 90vw;
+  }
 }

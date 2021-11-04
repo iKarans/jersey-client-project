@@ -14,7 +14,6 @@ import DevicesIndex from "../DevicesIndex/DevicesIndex";
 import ForgottenPassword from "../ForgottenPassword/ForgottenPassword";
 import { UserContext } from "../../context/UserContext/UserContext";
 import EditDeviceForm from "../../components/EditDeviceForm/EditDeviceForm";
-import PasswordReset from "../PasswordReset/PasswordReset";
 import EmailSubmitContainer from "../EmailSubmitContainer/EmailSubmitContainer";
 
 const Routes = () => {
