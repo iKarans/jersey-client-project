@@ -18,7 +18,7 @@ The `src` folder contains the following:
 
 ## Features & Pages
 
-**Sign up & login**: a user is able to sign up, create a password and use this to login in to the website. The sign up form checks for password length, that it has at least one uppercase letter and that it doesn't match a password already in use. The website is inaccessible without logging in.
+**Sign up & login**: a user is able to sign up, create a password and use this to login in to the website. The sign up form checks for password length, that it has at least one uppercase letter and that it doesn't match a password already in use. The website is inaccessible without logging in. If a user has forgotten their password, they can reset their password by providing their email address. They will be sent a link which will take them to a page to set a new password. Once complete they will be logged in again.
 
 **Security Page**: once logged in the user will land on the security page. This displays a security score chart with a key, the calculation summary and the devices can be accessed from the bottom of the page. The security score has been hooked up to a mock data file of users with different scores. Different users can then be passed in to the chart and it will display their score. This can be done from the ‘SecurityScore.jsx’ file in the components folder.
 
@@ -65,7 +65,7 @@ const largeLineGraphHoverLabel = "Devices on Network";
 
 3.  Here you can change the inputs and the graph will re-render with the new information. This code block is for the 'Devices on Network' graph. Below in 'Dashboard.jsx' you find the data for the other graphs on the dashboard page that can also be changed if required.
 
-**Devices**: this page contains a list of devices on the network, supplied with a data file sent over by Lujam (devicesResponse.js). The user can search for device by name using the search bar above the table. Clicking on a device name will take the user to a new page with further information – including the ability to block the device and go through to an edit device form. We added a few new key value pairs to each object in the array so that we could render the information the same as the wireframe design.
+**Devices**: this page contains a list of devices on the network, supplied with a data file sent over by Lujam (devicesResponse.js). The user can search for device by name using the search bar above the table. Clicking on a device name will take the user to a new page with further information – including the ability to block the device, see the last location on a map (if available) and go through to an edit device form. We added a few new key value pairs to each object in the array so that we could render the information the same as the wireframe design.
 
 1.  Open devicesResponse.js in the data folder.
 2.  On line 33 you'll see the new data we added to the first device:
