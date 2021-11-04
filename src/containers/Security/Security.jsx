@@ -4,6 +4,8 @@ import SecurityScore from '../../components/SecurityScore/SecurityScore'
 import CalculationSummary from '../../components/CalculationSummary/CalculationSummary'
 import CalculationInfo from '../../components/CalculationInfo/CalculationInfo'
 import DeviceList from "../DeviceList/DeviceList";
+import NetworkAlert from "../../components/SecurityBar/NetworkAlert/NetworkAlert"
+import greenTick from "../../assets/login/green-tick.svg"
 
 import { useState } from 'react'
 
@@ -44,6 +46,12 @@ const Security = () => {
 
   return (
     <div className="security">
+       <div className="network-alert-show">
+            <NetworkAlert
+            alertImg={greenTick}
+            alertText="Your network is secure. Great work!"
+            atRisk={false} />
+        </div>
       <div className="security__score-summary">
         <SecurityScore />
         <CalculationSummary calculationSummaryStatus={calculationSummaryStatus} showMoreInfo={showMoreInfo}/>
