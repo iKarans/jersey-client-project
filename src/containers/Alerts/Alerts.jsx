@@ -304,7 +304,7 @@ const Alerts = () => {
           </div>
           <div className="alerts-table__alerts">{alertsItemJSX}</div>
           <div className="alerts-table__pages">
-            {alerts.length > 9 && (
+            {alertsArrayFilteredLength > 9 && (
               <div className="alerts-table__pages-buttons">
                 <button
                   className="alerts-table__pages-buttons-button"
