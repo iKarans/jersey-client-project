@@ -104,11 +104,6 @@ const Routes = () => {
             <ForgottenPassword />
           </div>
         </Route>
-        <Route path="/reset-password">
-          <div className="routes__container-reset-password">
-            <PasswordReset/>
-          </div>
-        </Route>
         <Route path="/">
           <div className="routes__login">
             <Login />

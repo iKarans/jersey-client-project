@@ -1,19 +1,22 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import { auth } from "../../firebase";
 import { sendPasswordResetEmail } from "firebase/auth";
 import "./ForgottenPasswordForm.scss";
 
 const ForgottenPasswordForm = () => {
   const [userEmail, setUserEmail] = useState("");
-
+  let history = useHistory();
   const handleInput = (event) => {
     const emailInput = event.target.value;
     setUserEmail(emailInput);
   };
   const submitResetEmail = () => {
     sendPasswordResetEmail(auth, userEmail)
-      .then(() => {})
+      .then(() => {
+        history.push("/security");
+      })
+
       .catch((error) => {});
   };
   const buttonJSX = () => {
