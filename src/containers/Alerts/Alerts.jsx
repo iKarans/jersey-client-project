@@ -145,15 +145,14 @@ const Alerts = () => {
   const alertsArrayFilteredLength = alertsArrayFiltered.length;
 
   if (filterNumber === 1) {
-    {
-      sortAlert
+      (sortAlert
         ? alertsArrayFiltered.sort((a, b) =>
             a.alertType.localeCompare(b.alertType)
           )
         : alertsArrayFiltered.sort((a, b) =>
             b.alertType.localeCompare(a.alertType)
-          );
-    }
+          ));
+    
   } else if (filterNumber === 2) {
     alertsArrayFiltered.sort((a, b) =>
       sortTime ? a.createdTime - b.createdTime : b.createdTime - a.createdTime
