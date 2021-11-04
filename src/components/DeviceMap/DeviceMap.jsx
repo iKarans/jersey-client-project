@@ -31,8 +31,6 @@ const DeviceMap = (props) => {
 
   const mapPosition = [deviceLatitude, deviceLongitude];
 
-  console.log(mapPosition);
-
   let DefaultIcon = L.icon({
     iconUrl: icon,
     shadowUrl: iconShadow,
