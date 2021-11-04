@@ -10,6 +10,7 @@ const UserInfo = () => {
   const userInfo = auth.currentUser;
   const { handleLogout } = useContext(UserContext);
 
+
   const userName = auth.currentUser ? userInfo.displayName : "";
 
 
