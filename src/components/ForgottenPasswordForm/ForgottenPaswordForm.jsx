@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { auth } from "../../firebase";
-import { sendSignInLinkToEmail } from "firebase/auth";
+import { sendSignInLinkToEmail, sendPasswordResetEmail } from "firebase/auth";
 import "./ForgottenPasswordForm.scss";
 
 const ForgottenPasswordForm = () => {
@@ -17,7 +17,7 @@ const ForgottenPasswordForm = () => {
     setUserEmail(emailInput);
   };
   const submitResetEmail = () => {
-    sendSignInLinkToEmail(auth, userEmail, actionCodeSettings)
+    sendPasswordResetEmail(auth, userEmail)
       .then(() => {})
       .catch((error) => {});
   };
@@ -42,7 +42,7 @@ const ForgottenPasswordForm = () => {
 
   return (
     <div className="forgotten-password">
-      <form className="forgotten-password forgotten-password-form ">
+      <div className="forgotten-password forgotten-password-form ">
         <h3 className="forgotten-password-form__header">
           Forgotten your Password?
         </h3>
@@ -61,7 +61,7 @@ const ForgottenPasswordForm = () => {
         <p className="forgotten-password__login">
           Already have an account? <Link to="/login">Login</Link>
         </p>
-      </form>
+      </div>
     </div>
   );
 };

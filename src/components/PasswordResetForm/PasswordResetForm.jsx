@@ -11,11 +11,11 @@ import {
   EmailAuthProvider,
 } from "firebase/auth";
 import { auth } from "../../firebase";
-
 import "./PasswordResetForm.scss";
 
 const PasswordResetForm = () => {
   let history = useHistory();
+
   const user = auth.currentUser;
   const [newPassword, setNewPassword] = useState({
     newPassword: "",
