@@ -1,0 +1,55 @@
+@use "../../assets/styles/variables"as *;
+@use "../../assets/styles/mixins"as *;
+@use "../../assets/styles/typography"as *;
+
+.themesettings {
+   width: 26.68rem;
+   height: 17.75rem;
+   border-radius: 15px;
+   background-color: #ffffff;
+   padding: 1.88rem 2.44rem;
+
+   &__header {
+      font-weight: 600;
+      color: #2D3748;
+      margin-bottom: 1rem;
+   }
+
+   &__message {
+      color: #A0AEC0;
+   }
+
+   &__form {
+      margin-top: 1rem;
+
+      &--header {
+         color: #2D3748;
+      }
+
+      &--radio {
+         margin-top: 0.8rem;
+         margin-bottom: 1.88rem;
+
+         label {
+            margin-right: 0.5rem;
+         }
+
+         input {
+            margin-right: 1.75rem;
+         }
+
+         &-applybutton {
+            background-color: $primary-color;
+            width: 6.19rem;
+            height: 1.8rem;
+            border-radius: 4.4px;
+            border: none;
+            font-size: 10px;
+            color: #ffffff;
+            font-weight: 500;
+         }
+      }
+
+
+   }
+}
