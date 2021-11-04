@@ -65,7 +65,7 @@ const largeLineGraphHoverLabel = "Devices on Network";
 
 3.  Here you can change the inputs and the graph will re-render with the new information. This code block is for the 'Devices on Network' graph. Below in 'Dashboard.jsx' you find the data for the other graphs on the dashboard page that can also be changed if required.
 
-**Devices**: this page contains a list of devices on the network, supplied with a data file sent over by Lujam (devicesResponse.js). The user can search for device by name using the search bar above the table. Clicking on a device name will take the user to a new page with further information – including the ability to block the device, see the last location on a map (if available) and go through to an edit device form. We added a few new key value pairs to each object in the array so that we could render the information the same as the wireframe design.
+**Devices**: this page contains a list of devices on the network, supplied with a data file sent over by Lujam (devicesResponse.js). The user can search for device by name using the search bar above the table. Clicking on a device name will take the user to a new page with further information – including the ability to block the device, see the last location on a map (if available) and go through to an edit device form. The location comes from the the last IP address key found in the (devicesResponse.js) file, and uses an api response to calculate the position. We added a few new key value pairs to each object in the array so that we could render the information the same as the wireframe design.
 
 1.  Open devicesResponse.js in the data folder.
 2.  On line 33 you'll see the new data we added to the first device:
@@ -98,3 +98,5 @@ const largeLineGraphHoverLabel = "Devices on Network";
 ---
 
 ## Outstanding Bugs
+
+
