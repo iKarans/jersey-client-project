@@ -40,10 +40,11 @@ const DeviceMap = (props) => {
 
   L.Marker.prototype.options.icon = DefaultIcon;
 
+  console.log(details)
   return (
     <>
-      {(deviceLatitude == "Not Found" && deviceLatitude) ||
-      (deviceLongitude == "Not Found" && deviceLongitude) ? (
+      {(deviceLatitude !== 'Not Found' && deviceLatitude) ||
+      (deviceLongitude !== 'Not Found' && deviceLongitude) ? (
         <div className="map-card">
           <h4 className="map-card__title">Last Known Location</h4>
 
