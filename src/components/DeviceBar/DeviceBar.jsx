@@ -10,19 +10,11 @@ import laptopIcon from "../../assets/devices/laptop.svg";
 import mobileIcon from "../../assets/devices/mobile.svg";
 import { Link } from "react-router-dom";
 import lujamIcon from "../../assets/devices/lujam-logo-green.svg";
+import unknownManufacturer from "../../assets/devices/questionMarkIcon.svg"
 
 export const DeviceBar = (props) => {
-  const {
-    name,
-    deviceType,
-    brand,
-    manufacturer,
-    model,
-    opSystem,
-    lastIP,
-    lastSeen,
-    securityRisk,
-  } = props.device;
+  const { name, deviceType, brand, manufacturer, model, opSystem, lastIP, lastSeen, securityRisk } =
+    props.device;
 
   const typeIcon = () => {
     let typeText = "";
@@ -31,73 +23,75 @@ export const DeviceBar = (props) => {
   };
 
   const getDate = () => {
-    const lastOnline = Date.parse(lastSeen);
-    const currentTime = new Date();
-    const timeSinceOnline = currentTime - lastOnline;
+    const lastOnline = Date.parse(lastSeen)
+    const currentTime = new Date()
+    const timeSinceOnline = currentTime - lastOnline
     const seconds = (timeSinceOnline / 1000).toFixed(1);
     const minutes = (timeSinceOnline / (1000 * 60)).toFixed(1);
     const hours = (timeSinceOnline / (1000 * 60 * 60)).toFixed(0);
     const days = (timeSinceOnline / (1000 * 60 * 60 * 24)).toFixed(0);
-    if (seconds < 60) {
-      return "less than 1 min ago";
-    } else if (minutes < 60) {
-      return minutes + " min ago";
-    } else if (hours < 24) {
-      return hours + " hrs ago";
-    } else {
-      return days + " days ago";
-    }
-  };
+    if (seconds < 60) { return "less than 1 min ago" }
+    else if (minutes < 60) { return minutes + " min ago" }
+    else if (hours < 24) { return hours + " hrs ago" }
+    else { return days + " days ago" }
+  }
+
+
 
   const brandIcon = () => {
-    let brandText = lujamIcon;
     let manufacturerToLower = manufacturer.toLowerCase();
     switch (true) {
       case manufacturerToLower.includes("dell"):
-        return (brandText = dellIcon);
+        return dellIcon
       case manufacturerToLower.includes("apple"):
-        return (brandText = appleIcon);
+        return appleIcon
       case manufacturerToLower.includes("huawei"):
-        return (brandText = huaweiIcon);
+        return huaweiIcon
       case manufacturerToLower.includes("lenovo"):
-        return (brandText = lenovoIcon);
+        return lenovoIcon
       case manufacturerToLower.includes("samsung"):
-        return (brandText = samsungIcon);
+        return samsungIcon
+      case manufacturerToLower.includes("lujam"):
+        return lujamIcon
       default:
-        return brandText;
+        return unknownManufacturer
     }
   };
 
   return (
     <div className="device-bar">
-      <Link to={`/device/${name}`}>
-        <h4 className="device-bar__device-name">{name}</h4>
-      </Link>
+      <Link to={`/device/${name}`} className="device-bar__name"><h4 >{name}</h4></Link>
+      <div className="device-bar__type">
       <img
         src={typeIcon()}
         alt={deviceType}
-        className="device-bar__hidden-on-mobile"
+        className="device-bar__type-img"
       />
+      </div>
+      <div className="device-bar__brand">
       <img
         src={brandIcon()}
         alt={brand}
-        className="device-bar__hidden-on-mobile"
+        className="device-bar__brand-image"
       />
-      <p className="device-bar__hidden-on-mobile">{model}</p>
-      <p className="device-bar__hidden-on-mobile"> {opSystem}</p>
-      <p className="device-bar__hidden-on-mobile">{lastIP}</p>
-      <p className="device-bar__hidden-on-mobile">{getDate()}</p>
-
+      </div>
+      <p className="device-bar__model">{model}</p>
+      <p className="device-bar__os"> {opSystem}</p>
+      <p className="device-bar__ip">{lastIP}</p>
+      <p className="device-bar__last-active">{getDate()}</p>
+      
       <span
         className={`device-bar__security-risk device-bar__security-risk--${securityRisk}`}
       >
         <h4>{securityRisk}</h4>
       </span>
+      <div className="device-bar__options">
       <img
         src={optionsIcon}
         alt="options"
-        className="device-bar__hidden-on-mobile"
+        className="device-bar__options-img"
       ></img>
+      </div>
     </div>
   );
 };

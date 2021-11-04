@@ -5,13 +5,60 @@
   height: 100vh;
   width: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
   background-color: $background-color;
 
+  &__score-summary {
+    display: flex;
+    justify-content: space-between;
+    width: 97%;
 
-  @include mobile {    
+    @include mobile {    
+      flex-direction: column;
+   }
+    
+  }
+
+  &__devices--list {
+    margin: auto;
+    width: 91%;
+
+    &-header {
+      margin-bottom: 0.88rem;
+      color: #2D3748;
+      font-weight: 600;
+
+      @include mobile {    
+        text-align: center;
+     }
+    }
+
+    &-text {
+      max-width: 41.25rem;
+      color: $security-calc-text;
+
+      @include mobile {    
+        text-align: center;
+     }
+    }
+  }
+
+
+  @include mobile {  
+    margin-top: 12vh;  
     flex-direction: column;
     margin-left: 0;
+    align-items: center;
  }
-npm}
+
+ .network-alert-show {
+     display: none;
+
+    @include mobile {
+        display: block;
+    }
+ }
+
+}

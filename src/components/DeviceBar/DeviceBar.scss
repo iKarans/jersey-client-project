@@ -4,22 +4,112 @@
 .device-bar {
   border: 1px solid $text-primary;
   border-radius: 50px;
-  display: grid;
-  grid-template-columns: repeat(9, 1fr);
-  gap: 10px;
+  position: relative;
+  display: flex;
   align-items: center;
-  justify-items: center;
-  text-align: center;
-  margin: 5px;
-  padding: 10px 20px;
-  color: $text-secondary;
+  justify-content: space-between;
+  width: 100%;
+  margin: 5px auto;
+  padding: 0.625rem 6rem 0.625rem 2rem;
   background-color: $text-tertiary;
+  text-align: center;
 
-  &__device-name a,
-  :active,
+  @include mobile {
+    padding:  0.5rem 2rem;
+    justify-content: space-between;
+  }
+
+  &__name {
+    color: rgba(115, 120, 134, 1);
+    font-size: 0.75rem;
+    font-weight: 700;
+    width: 10%;
+    text-align: start;
+    margin-left: 1.3rem;
+
+    @include mobile {
+      width: 40%;
+    }
+  }
+
+  &__type {
+    color: rgba(115, 120, 134, 1);
+    display: flex;
+    justify-content: center;
+    width: 6%;
+
+    @include mobile {
+      display: none;
+    }
+  }
+
+  &__brand {
+    color: rgba(115, 120, 134, 1);
+    display: flex;
+    justify-content: center;
+    width: 6%;
+
+    @include mobile {
+      display: none;
+    }
+  }
+
+  &__model {
+    color: rgba(115, 120, 134, 1);
+    font-size: 0.75rem;
+    width: 14%;
+
+    @include mobile {
+      display: none;
+    }
+  }
+
+  &__os {
+    color: rgba(115, 120, 134, 1);
+    font-size: 0.75rem;
+    width: 10%;
+
+    @include mobile {
+      display: none;
+    }
+  }
+
+  &__ip {
+    color: rgba(115, 120, 134, 1);
+    font-size: 0.75rem;
+    width: 10%;
+
+    @include mobile {
+      display: none;
+    }
+  }
+
+  &__last-active {
+    color: rgba(115, 120, 134, 1);
+    font-size: 0.75rem;
+    width: 10%;
+
+    @include mobile {
+      display: none;
+    }
+  }
+
+  &__options {
+   position: absolute;
+   right: 4rem;
+
+   @include mobile {
+     display: none;
+   }
+
+  }
+
+  &__name a,
   :any-link {
     text-decoration: none;
-    color: $text-secondary;
+    color: rgba(115, 120, 134, 1);
+    width: 8%;
+    
 
     &:hover {
       cursor: pointer;
@@ -28,33 +118,29 @@
   }
 
   &__security-risk {
-    border-radius: 10px;
+    border-radius: 13px;
     padding: 5px;
-    min-width: 100px;
+    width: 11%;
+    
 
-    &--low {
+    @include mobile {
+      margin-right: 1rem;
+      }
+
+    &--Low {
       color: $low-color;
       background-color: rgba($low-color, 0.17);
     }
 
-    &--medium {
+    &--Medium {
       color: $medium-color;
       background-color: rgba($medium-color, 0.17);
     }
 
-    &--high {
+    &--High {
       color: $high-color;
       background-color: rgba($high-color, 0.17);
     }
   }
 
-  @include mobile {
-    display: flex;
-    justify-content: space-around;
-
-    &__hidden-on-mobile {
-      display: none;
-      max-height: 25px;
-    }
-  }
 }

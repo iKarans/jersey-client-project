@@ -16,7 +16,7 @@ const SecurityScore = () => {
           <img className="security-score__key--icon" src={infoIcon} alt="info icon" />
 
         </div>
-        <p className="security-score__key--info">The security score assesess the overall security of your network, depending on a number of factors. For more information, look at the summary section.</p>
+        <p className="security-score__key--info">The security score assesses the overall security of your network, depending on a number of factors. For more information, look at the summary section.</p>
         <div className="security-score__key--grid">
           <ScoreKey />
         </div>
