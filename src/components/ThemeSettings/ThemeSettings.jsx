@@ -20,7 +20,7 @@ const ThemeSettings = () => {
                <label for="dark">Dark</label>
                <input type="radio" id="dark" name="fav_language" value="CSS" />
             </div>
-            <button onClick={handleApply} className="themesettings__form--radio-applybutton">Apply</button>
+            <button onClick={handleApply} className="themesettings__form--applybutton">Apply</button>
          </form>
       </div>
    )
