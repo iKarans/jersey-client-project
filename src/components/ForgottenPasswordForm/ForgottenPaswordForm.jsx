@@ -48,9 +48,8 @@ const ForgottenPasswordForm = () => {
           Forgotten your Password?
         </h3>
         <p className="forgotten-password-form__text">
-          {" "}
           Not to worry! It happens to the best of us. Enter your email addresss
-          below and we’ll send you a link to reset your password.{" "}
+          below and we’ll send you a link to reset your password.
         </p>
         <input
           type="email"
