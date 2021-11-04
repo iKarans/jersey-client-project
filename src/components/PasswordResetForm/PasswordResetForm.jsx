@@ -146,7 +146,7 @@ const PasswordResetForm = () => {
     return (
       <div>
         <button
-          className="reset-form__button"
+          className="reset-password-form__button"
           onClick={handlePasswordReset}
           disabled={!checksPass}
         >
@@ -156,16 +156,15 @@ const PasswordResetForm = () => {
     );
   };
   return (
-    <div className="reset-form">
-      <form className="reset-form__input">
-        <label htmlFor="text" className="reset-form__label">
+    <div className="reset-password">
+      <form className="reset-password-form">
+        <label htmlFor="text" className="reset-password-form__label">
           password{" "}
         </label>
         <input
           type={!showPassword ? "password" : "text"}
-          id="password"
           name="newPassword"
-          className="signup-form__input"
+          className="reset-password-form__input"
           onChange={handleInput}
           required
         />
@@ -185,31 +184,29 @@ const PasswordResetForm = () => {
             onClick={handleShowPassword}
           />
         )}
-        <label htmlFor="text" className="reset-form__label">
+        <label htmlFor="text" className="reset-password-form__label">
           confirm password{" "}
         </label>
         <input
           type={!showPassword ? "password" : "text"}
-          id="password-confirm"
           name="confirmPassword"
-          className="signup-form__input"
+          className="reset-password-form__input"
           onChange={handleInput}
           required
         />
+        <div className="reset-password-form__validation">
+          <div className="reset-password-form__validation-item">
+            {checkPasswordLengthJSX()}
+          </div>
+          <div className="reset-password-form__validation-item">
+            {checkPasswordHasUppercaseJSX()}
+          </div>
+          <div className="reset-password-form__validation-item">
+            {checkPasswordsMatchJSX()}
+          </div>
+          {buttonJSX()}
+        </div>
       </form>
-
-      <div className="reset-form__validation">
-        <div className="reset-form__validation-item">
-          {checkPasswordLengthJSX()}
-        </div>
-        <div className="reset-form__validation-item">
-          {checkPasswordHasUppercaseJSX()}
-        </div>
-        <div className="reset-form__validation-item">
-          {checkPasswordsMatchJSX()}
-        </div>
-        {buttonJSX()}
-      </div>
     </div>
   );
 };

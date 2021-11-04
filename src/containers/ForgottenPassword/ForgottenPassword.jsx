@@ -11,7 +11,6 @@ const ForgottenPassword = () => {
     <div>
       <section className="forgotten-password-page">
         <LoginPageNav />
-
         <div className="forgotten-password-page__container">
           <img src={Logo} alt="lujam logo" />
           <ForgottenPasswordForm />
