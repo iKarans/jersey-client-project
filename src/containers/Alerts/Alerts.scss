@@ -1,8 +1,6 @@
 @use "../../assets/styles/variables" as *;
 @use "../../assets/styles/mixins" as *;
 
-
-
 .alerts {
   position: relative;
   display: flex;
@@ -17,11 +15,9 @@
   }
 
   &__search {
-
     @include mobile {
       display: none;
     }
-
 
     width: 100%;
     display: flex;
@@ -44,6 +40,7 @@
       width: 30%;
       display: flex;
       justify-content: flex-end;
+      margin-right: 3%;
 
       .alerts-sort,
       .alerts-filter {
@@ -69,9 +66,21 @@
     }
   }
 
-  &-table {
+  &__active-filters {
+    position: absolute;
+    width: 11px;
+    height: 11px;
+    margin-top: -7px;
+    margin-left: 55px;
+    background: $primary-color;
+    color: $text-tertiary;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 0.6em;
+    font-weight: 500;
+  }
 
-    
+  &-table {
     &__header {
       width: 100%;
       height: 39px;
@@ -85,7 +94,7 @@
         justify-content: space-between;
         padding: 0 1rem;
       }
-      
+
       &-alert,
       &-summary,
       &-created,
@@ -95,32 +104,28 @@
         justify-content: space-between;
         align-items: center;
 
-
         .alert-header {
           font-size: 0.62rem;
           font-weight: 700;
         }
       }
-      
 
       &-alert {
         width: 13%;
-        
+
         @include mobile {
           width: 20%;
         }
-      
       }
 
       &-summary {
         width: 40%;
         text-align: start;
-        padding:0 1rem;
+        padding: 0 1rem;
 
         @include mobile {
           display: none;
         }
-
       }
 
       &-created {
@@ -141,11 +146,40 @@
         }
       }
     }
+    &__alert-arrow--active {
+      transform: rotate(180deg);
+      cursor: pointer;
+      padding: 12px;
+    }
+    &__alert-arrow--inactive {
+      padding: 12px;
+      display: block;
+      cursor: pointer;
+    }
+    &__time-arrow--active {
+      transform: rotate(180deg);
+      cursor: pointer;
+      padding: 12px;
+    }
+    &__time-arrow--inactive {
+      display: block;
+      cursor: pointer;
+      padding: 12px;
+    }
+    &__importance-arrow--active {
+      transform: rotate(180deg);
+      cursor: pointer;
+      padding: 12px;
+    }
+    &__importance-arrow--inactive {
+      display: block;
+      cursor: pointer;
+      padding: 12px;
+    }
 
     &__alerts {
       height: 50vh;
       border-bottom: 1px solid $network-alerts-border;
-      
     }
 
     &__pages {
@@ -159,39 +193,33 @@
         align-items: center;
         padding-left: 1.5rem;
         height: 100%;
-        
-        .alerts-table__pages-buttons-button{
+
+        .alerts-table__pages-buttons--button {
           width: 2rem;
           height: 2rem;
           border-radius: 4px;
-          border: 1px solid #E8E8E8;
+          border: 1px solid #e8e8e8;
           background: none;
           display: flex;
           justify-content: center;
           align-items: center;
           cursor: pointer;
           margin: 0 0.1rem;
-      
-          
-      }
-      .alerts__left-arrow{
+        }
+        .alerts__left-arrow {
           transform: rotate(180deg);
           padding-bottom: 0.08rem;
-      }
-      
-      .alert__button-active {
+        }
+
+        .alert__button--active {
           background-color: $primary-color;
           color: $text-tertiary;
+        }
       }
-  
-      }
-      
     }
   }
-  
 }
 
-.alert__filter-inactive {
-    display: none;
-  }
-
+.alert__filter--inactive {
+  display: none;
+}
