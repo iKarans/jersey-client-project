@@ -2,7 +2,6 @@
 @use "../../assets/styles/mixins" as *;
 @use "../../assets/styles/typography" as *;
 
-
 .alert-filters {
   position: absolute;
   top: 35px;
@@ -18,30 +17,54 @@
     display: none;
   }
 
-
   &__header-text {
     font-size: 14px;
     font-weight: 600;
-    color: #454756;
+    color: $header-text;
     margin: 30px 0 10px 0;
   }
 
   &__filter-text {
     font-size: 10px;
-    color: #AAB3BE;
+    color: $filter-text;
     margin: 20px 0 10px 0;
   }
 
   &__checkbox-text {
     margin: 10px;
-    color: #2D3748;
+    color: #2d3748;
     font-size: 10px;
   }
 
+  &__buttons-wrapper {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
   &__apply {
+    cursor: pointer;
     margin-top: 30px;
     background-color: $primary-color;
-    width: 144px;
+    width: 60px;
+    height: 30px;
+    border-radius: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+
+    p {
+      font-size: 10px;
+      font-weight: 700;
+      color: $text-tertiary;
+    }
+  }
+
+  &__reset {
+    cursor: pointer;
+    margin-top: 30px;
+    background-color: $text-primary;
+    width: 60px;
     height: 30px;
     border-radius: 7px;
     display: flex;
@@ -54,5 +77,6 @@
       color: $text-tertiary;
     }
   }
+
 
 }
