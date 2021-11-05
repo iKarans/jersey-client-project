@@ -1,5 +1,5 @@
-@use '../../assets/styles/variables' as *;
-@use '../../assets/styles/mixins' as *;
+@use "../../assets/styles/variables" as *;
+@use "../../assets/styles/mixins" as *;
 
 .security {
   position: unset;
@@ -10,51 +10,46 @@
   align-items: flex-start;
   background-color: $background-color;
 
-
-    @include mobile {    
-      flex-direction: column;
-      align-items: center;
-   }
-    
-  }
-
-  &__devices--list {
-    margin: auto;
-    width: 91%;
-
-    &-header {
-      margin-bottom: 0.88rem;
-      color: #2D3748;
-      font-weight: 600;
-
-      @include mobile {    
-        text-align: center;
-     }
-    }
-
-    &-text {
-      max-width: 41.25rem;
-      color: $security-calc-text;
-
-      @include mobile {    
-        text-align: center;
-     }
-    }
-  }
-
-
-  @include mobile {  
-    margin-top: 12vh;  
+  @include mobile {
     flex-direction: column;
-    margin-left: 0;
- }
+    align-items: center;
+  }
+}
 
- .network-alert-show {
-     display: none;
+&__devices--list {
+  margin: auto;
+  width: 91%;
+
+  &-header {
+    margin-bottom: 0.88rem;
+    color: #2d3748;
+    font-weight: 600;
 
     @include mobile {
-        display: block;
+      text-align: center;
     }
- }
+  }
 
+  &-text {
+    max-width: 41.25rem;
+    color: $security-calc-text;
+
+    @include mobile {
+      text-align: center;
+    }
+  }
+}
+
+@include mobile {
+  margin-top: 12vh;
+  flex-direction: column;
+  margin-left: 0;
+}
+
+.network-alert-show {
+  display: none;
+
+  @include mobile {
+    display: block;
+  }
 }
