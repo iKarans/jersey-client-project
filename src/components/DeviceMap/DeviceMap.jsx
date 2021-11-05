@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback } from "react";
 import "./DeviceMap.scss";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
-import L from "leaflet";
+import Leaflet from "leaflet";
 import "leaflet/dist/leaflet.css";
 import icon from "leaflet/dist/images/marker-icon.png";
 import iconShadow from "leaflet/dist/images/marker-shadow.png";
@@ -16,10 +16,11 @@ const DeviceMap = (props) => {
     )
       .then((response) => response.json())
       .then((data) => setDetails(data));
-  },[lastIP]);
+  }, [lastIP]);
 
   useEffect(() => {
     getUserGeolocationDetails();
+    return () => setDetails(null);
   }, [getUserGeolocationDetails]);
 
   const deviceLatitude =
@@ -31,14 +32,14 @@ const DeviceMap = (props) => {
 
   const mapPosition = [deviceLatitude, deviceLongitude];
 
-  let DefaultIcon = L.icon({
+  let DefaultIcon = Leaflet.icon({
     iconUrl: icon,
     shadowUrl: iconShadow,
   });
 
-  L.Marker.prototype.options.icon = DefaultIcon;
+  Leaflet.Marker.prototype.options.icon = DefaultIcon;
 
-  console.log(details)
+  console.log(details);
 
   return (
     <>
