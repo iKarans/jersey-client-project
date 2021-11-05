@@ -1,5 +1,5 @@
-@use "../../assets/styles/variables"as *;
-@use "../../assets/styles/mixins"as *;
+@use "../../assets/styles/variables" as *;
+@use "../../assets/styles/mixins" as *;
 
 .device-bar {
   border: 1px solid $text-primary;
@@ -15,11 +15,101 @@
   color: $text-secondary;
   background-color: $text-tertiary;
 
-  &__device-name a,
-  :active,
+  @include mobile {
+    padding: 0.6rem 1.2rem;
+    justify-content: space-between;
+  }
+
+  &__name {
+    color: rgba(115, 120, 134, 1);
+    font-size: 0.75rem;
+    font-weight: 700;
+    width: 10%;
+    text-align: start;
+    margin-left: 1.3rem;
+
+    @include mobile {
+      width: 40%;
+      font-size: 0.95rem;
+      margin: none;
+    }
+  }
+
+  &__type {
+    color: rgba(115, 120, 134, 1);
+    display: flex;
+    justify-content: center;
+    width: 6%;
+
+    @include mobile {
+      display: none;
+    }
+  }
+
+  &__brand {
+    color: rgba(115, 120, 134, 1);
+    display: flex;
+    justify-content: center;
+    width: 6%;
+
+    @include mobile {
+      display: none;
+    }
+  }
+
+  &__model {
+    color: rgba(115, 120, 134, 1);
+    font-size: 0.75rem;
+    width: 14%;
+
+    @include mobile {
+      display: none;
+    }
+  }
+
+  &__os {
+    color: rgba(115, 120, 134, 1);
+    font-size: 0.75rem;
+    width: 10%;
+
+    @include mobile {
+      display: none;
+    }
+  }
+
+  &__ip {
+    color: rgba(115, 120, 134, 1);
+    font-size: 0.75rem;
+    width: 10%;
+
+    @include mobile {
+      display: none;
+    }
+  }
+
+  &__last-active {
+    color: rgba(115, 120, 134, 1);
+    font-size: 0.75rem;
+    width: 10%;
+
+    @include mobile {
+      display: none;
+    }
+  }
+
+  &__options {
+    position: absolute;
+    right: 4rem;
+
+    @include mobile {
+      display: none;
+    }
+  }
+
+  &__name a,
   :any-link {
     text-decoration: none;
-    color: $text-secondary;
+    color: rgba(115, 120, 134, 1);
 
     &:hover {
       cursor: pointer;
@@ -30,7 +120,18 @@
   &__security-risk {
     border-radius: 10px;
     padding: 5px;
-    min-width: 100px;
+    width: 11%;
+
+    @include mobile {
+      width: 30%;
+      padding: 8px;
+    }
+
+    &--title {
+      @include mobile {
+        font-size: 0.9rem;
+      }
+    }
 
     &--low {
       color: $low-color;
