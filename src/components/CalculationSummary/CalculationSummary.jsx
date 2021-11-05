@@ -6,7 +6,7 @@ import RightArrow from "../../assets/global/right-arrow.svg";
 
 
 
-const CalulationSummary = (props) => {
+const CalculationSummary = (props) => {
 
     const { showMoreInfo, calculationSummaryStatus } = props;
 
@@ -56,4 +56,4 @@ const CalulationSummary = (props) => {
     )
 }
 
-export default CalulationSummary;
+export default CalculationSummary;
