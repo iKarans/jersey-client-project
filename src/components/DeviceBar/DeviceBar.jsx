@@ -83,7 +83,7 @@ export const DeviceBar = (props) => {
       <span
         className={`device-bar__security-risk device-bar__security-risk--${securityRisk}`}
       >
-        <h4>{securityRisk}</h4>
+        <h4 className="device-bar__security-risk--title">{securityRisk}</h4>
       </span>
       <div className="device-bar__options">
       <img
