@@ -14,38 +14,37 @@
     flex-direction: column;
     align-items: center;
   }
-}
 
-&__devices--list {
-  margin: auto;
-  width: 91%;
+  &__devices--list {
+    margin: auto;
+    width: 91%;
 
-  &-header {
-    margin-bottom: 0.88rem;
-    color: #2d3748;
-    font-weight: 600;
+    &-header {
+      margin-bottom: 0.88rem;
+      color: #2d3748;
+      font-weight: 600;
 
-    @include mobile {
-      text-align: center;
+      @include mobile {
+        text-align: center;
+      }
+    }
+
+    &-text {
+      max-width: 41.25rem;
+      color: $security-calc-text;
+
+      @include mobile {
+        text-align: center;
+      }
     }
   }
 
-  &-text {
-    max-width: 41.25rem;
-    color: $security-calc-text;
-
-    @include mobile {
-      text-align: center;
-    }
+  @include mobile {
+    margin-top: 12vh;
+    flex-direction: column;
+    margin-left: 0;
   }
 }
-
-@include mobile {
-  margin-top: 12vh;
-  flex-direction: column;
-  margin-left: 0;
-}
-
 .network-alert-show {
   display: none;
 
