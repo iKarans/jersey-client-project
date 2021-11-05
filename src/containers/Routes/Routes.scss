@@ -44,25 +44,15 @@
   @include mobile {
     width: 100%;
   }
-<<<<<<< HEAD
- 
- }
- .routes__container-settings {
-=======
 }
 .routes__container-settings {
->>>>>>> 20148dc7684a717592306cef8d851bf25c62ae45
   grid-area: 1 / 2 / 2 / 3;
   background-color: $background-color;
 
   @include mobile {
     width: 100%;
   }
-<<<<<<< HEAD
- }
-=======
 }
->>>>>>> 20148dc7684a717592306cef8d851bf25c62ae45
 
 .routes__container-devices {
   grid-area: 1 / 2 / 2 / 3;
@@ -75,11 +65,7 @@
   @include mobile {
     width: 100%;
   }
-<<<<<<< HEAD
- }
-=======
 }
->>>>>>> 20148dc7684a717592306cef8d851bf25c62ae45
 
 .routes__container-alerts {
   grid-area: 1 / 2 / 2 / 3;
@@ -88,16 +74,11 @@
   @include mobile {
     width: 100%;
   }
-<<<<<<< HEAD
-
- }
-=======
 }
 
 .routes__login {
   grid-area: 1 / 1 / 2 / 3;
 }
->>>>>>> 20148dc7684a717592306cef8d851bf25c62ae45
 
 .routes__container-signup {
   grid-area: 1 / 1 / 2 / 3;
@@ -108,21 +89,12 @@
   background-color: $background-color;
 }
 
-<<<<<<< HEAD
- 
- .routes__container-signup {
-=======
 .routes__container-reset-password {
->>>>>>> 20148dc7684a717592306cef8d851bf25c62ae45
   grid-area: 1 / 1 / 2 / 3;
   background-color: $background-color;
 }
 
-<<<<<<< HEAD
-  }
-=======
 .routes__container-email-submit {
   grid-area: 1 / 1 / 2 / 3;
   background-color: $background-color;
 }
->>>>>>> 20148dc7684a717592306cef8d851bf25c62ae45
